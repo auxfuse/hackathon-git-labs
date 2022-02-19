@@ -1,10 +1,16 @@
-{ "participants": [
-        {
-            "name": "auxfuse",
-            "course_stage": "Alumni",
-            "course_start": "2019",
-            "favorite_language": "CSS",
-            "currently_learning": "PHP/ThreeJS"
-        }
-    ]
-}
+[
+    {
+        "name": "auxfuse",
+        "course_stage": "Alumni",
+        "course_start": "2019",
+        "favorite_language": "CSS",
+        "currently_learning": "PHP/ThreeJS"
+    },
+    {
+        "name": "Person",
+        "course_stage": "Student",
+        "course_start": "1990",
+        "favorite_language": "VBA",
+        "currently_learning": "Soft skills"
+    }
+]
