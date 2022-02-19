@@ -30,18 +30,23 @@ fetch("community.json")
                 const courseStage = createElement("p", "card-sub");
                 const favLanguage = createElement("p", "card-detail");
                 const currentLearn = createElement("p", "card-detail");
+                const linkTo = createElement("a", "participant-link");
                 
                 // Inject data to new Created elements
-                name.innerHTML = participant[0];
-                courseStart.innerHTML = participant[1];
-                courseStage.innerHTML = participant[2];
-                favLanguage.innerHTML = participant[3];
-                currentLearn.innerHTML = participant[4];
+                name.innerHTML += participant[0];
+                courseStart.innerHTML += "📅 Started: " + participant[1];
+                courseStage.innerHTML += "🎓 Stage: " + participant[2];
+                favLanguage.innerHTML += "😍 Loves: " + participant[3];
+                currentLearn.innerHTML += "📚 Learning: " + participant[4];
+                linkTo.innerHTML += "More";
+
+                let linkRef = participant[0];
+                linkTo.setAttribute("href", `community/${linkRef}`)
 
                 // Hierarchy of Container
                 communityContainer.append(card);
                 card.append(
-                    name, courseStart, courseStage, favLanguage, currentLearn
+                    name, courseStart, courseStage, favLanguage, currentLearn, linkTo
                 );
             })
         }
