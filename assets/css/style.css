@@ -11,3 +11,14 @@
     box-sizing: border-box;
 }
 
+#community {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    margin: 1rem;
+}
+
