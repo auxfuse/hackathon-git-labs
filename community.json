@@ -1,0 +1,10 @@
+{ "participants": [
+        {
+            "name": "auxfuse",
+            "course_stage": "Alumni",
+            "course_start": "2019",
+            "favorite_language": "CSS",
+            "currently_learning": "PHP/ThreeJS"
+        }
+    ]
+}
