@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300&display=swap');
+
 /* Globals */
 :root {
-    --background-color: #c7c1c1;
+    /* Project Colors */
+    --background-color: #f3f3f3;
     --font-color: #202020;
+    --font-color-lt: #f3f3f3;
+    --primary-color: #072c30;
+    --secondary-color: #0dbcc9;
+    --tertiary-color: #94b0b3;
+
+    /* Project Font Pairings */
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Nunito', sans-serif;
 }
 
     /* CSS Reset */
@@ -11,17 +22,66 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+#content {
+    background-color: var(--primary-color);
+    color: var(--font-color-lt);
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: 1fr;
+}
+
+#content-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#content-column * {
+    margin-left: 2rem;
+}
+
+.heading-group {
+    text-align: left;
+}
+
+#content-column p {
+    width: 80%;
+    line-height: 1.6rem;
+}
+
+#content-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-image img {
+    height: 50%;
+    object-fit: contain;
+}
+
 #community {
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    margin: 1rem;
+    justify-content:  center;
+    align-items: center;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
-    background-color: ;
+    padding: 1rem;
 }
 
+.card-title {
+    font-family: var(--secondary-font);
+}
