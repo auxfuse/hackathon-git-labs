@@ -6,8 +6,8 @@
     --background-color: #f3f3f3;
     --font-color: #202020;
     --font-color-lt: #f3f3f3;
-    --primary-color: #072c30;
-    --secondary-color: #0dbcc9;
+    --primary-color: #0dbcc9;
+    --secondary-color: #072c30;
     --tertiary-color: #94b0b3;
 
     /* Project Font Pairings */
@@ -16,61 +16,80 @@
 }
 
     /* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
     font-family: var(--primary-font);
     background-color: var(--background-color);
     color: var(--font-color);
+    min-height: 100vh;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* Utilities */
+
+.margin-yt-md {
+    margin: 2rem 0 0;
+}
+
+/* Index */
 
 #content {
     background-color: var(--primary-color);
-    color: var(--font-color-lt);
     display: grid;
-    grid-template-columns: auto min-content;
     grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 #content-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 2rem 0;
 }
 
-#content-column * {
-    margin-left: 2rem;
-}
-
-.heading-group {
-    text-align: left;
-}
-
-#content-column p {
-    width: 80%;
-    line-height: 1.6rem;
+.primary-heading {
+    font-size: 2rem;
 }
 
 #content-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 3rem 0 1rem;
 }
 
 #content-image img {
-    height: 50%;
+    height: 13rem;
+    display: block;
+    margin: 0 auto;
     object-fit: contain;
 }
 
 #community {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin: 1rem;
     justify-content:  center;
     align-items: center;
 }
@@ -84,4 +103,32 @@ body {
 
 .card-title {
     font-family: var(--secondary-font);
+}
+
+/* Media Queries */
+
+@media (min-width: 576px) {
+    .primary-heading {
+        font-size: 3rem;
+    }
+
+    #content-column p {
+        line-height: 1.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #content {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto;
+    }
+
+    #content-column p {
+        grid-column: 1 / 2;
+    }
+
+    #content-image {
+        grid-column: 2 / -1;
+    }
 }
