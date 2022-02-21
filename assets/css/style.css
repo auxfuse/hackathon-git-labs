@@ -33,6 +33,23 @@ body {
     background-color: var(--background-color);
     color: var(--font-color);
     min-height: 100vh;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../images/git_icon.png');
+    background-size: 20rem 20rem;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    filter: hue-rotate(150deg);
 }
 
 img {
@@ -50,12 +67,20 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Utilities */
 
-.margin-yt-md {
+.margin-yt-sm {
     margin: 1.5rem 0 0;
 }
 
 .margin-yb-sm {
     margin: 0 0 1.5rem;
+}
+
+.margin-y-md {
+    margin: 3rem 0;
+}
+
+.center-txt {
+    text-align: center;
 }
 
 /* Index */
@@ -68,6 +93,7 @@ p, h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
     padding: 1rem;
     gap: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
 
 #content-column {
@@ -93,7 +119,6 @@ p, h1, h2, h3, h4, h5, h6 {
     margin: 0 0 1rem;
     background-color: var(--secondary-color);
 }
-
 
 .sub-heading::after {
     content: '';
@@ -124,6 +149,15 @@ p, h1, h2, h3, h4, h5, h6 {
     filter: hue-rotate(330deg) drop-shadow(8px 8px 10px var(--secondary-color));
 }
 
+#community-section h1::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 80%;
+    margin: 1rem auto;
+    background-color: var(--secondary-color);
+}
+
 #community {
     display: flex;
     flex-wrap: wrap;
@@ -134,17 +168,27 @@ p, h1, h2, h3, h4, h5, h6 {
 .card {
     display: flex;
     flex-direction: column;
+    width: 20rem;
     border-radius: 0.5rem;
     padding: 1rem;
 }
 
 .card-title {
     font-family: var(--secondary-font);
+    align-self: center;
+}
+
+.participant-link {
+    align-self: center;
 }
 
 /* Media Queries */
 
 @media (min-width: 576px) {
+    #content {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
     .primary-heading {
         font-size: 3rem;
     }
@@ -159,6 +203,7 @@ p, h1, h2, h3, h4, h5, h6 {
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr auto;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
 
     #content-column {
@@ -199,6 +244,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 1200px) {
+    #content {
+        height: 60vh;
+    }
+
     #content-column {
         margin-left: 5rem;
         margin-right: 5rem;
