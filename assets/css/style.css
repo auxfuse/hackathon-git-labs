@@ -107,6 +107,9 @@ p, h1, h2, h3, h4, h5, h6 {
 #content-column p {
     line-height: 2rem;
     font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: justify;
 }
 
 #content-image {
@@ -147,7 +150,7 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     #content-column p {
-        line-height: 1.6rem;
+        word-spacing: 5px;
     }
 }
 
