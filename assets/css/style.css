@@ -6,7 +6,7 @@
     --background-color: #f3f3f3;
     --font-color: #202020;
     --font-color-lt: #f3f3f3;
-    --primary-color: #0dbcc9;
+    --primary-color: #94ebf1;
     --secondary-color: #072c30;
     --tertiary-color: #94b0b3;
 
@@ -51,13 +51,18 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Utilities */
 
 .margin-yt-md {
-    margin: 2rem 0 0;
+    margin: 1.5rem 0 0;
+}
+
+.margin-yb-sm {
+    margin: 0 0 1.5rem;
 }
 
 /* Index */
 
 #content {
     background-color: var(--primary-color);
+    color: var(--secondary-color);
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
@@ -76,8 +81,36 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
 }
 
+.sub-heading {
+    line-height: 2rem;
+}
+
+.sub-heading::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 0 0 1rem;
+    background-color: var(--secondary-color);
+}
+
+
+.sub-heading::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 1rem 0 0;
+    background-color: var(--secondary-color);
+}
+
+#content-column p {
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
 #content-image {
-    margin: 3rem 0 1rem;
+    margin: 3rem 0;
 }
 
 #content-image img {
@@ -85,6 +118,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: block;
     margin: 0 auto;
     object-fit: contain;
+    filter: hue-rotate(330deg) drop-shadow(8px 8px 10px var(--secondary-color));
 }
 
 #community {
@@ -146,6 +180,10 @@ p, h1, h2, h3, h4, h5, h6 {
     #content-column {
         margin-left: 4rem;
         margin-right: 4rem;
+    }
+
+    .primary-heading {
+        font-size: 4rem;
     }
 
     #content-image {
