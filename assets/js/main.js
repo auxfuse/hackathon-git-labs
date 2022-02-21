@@ -26,18 +26,18 @@ fetch("community.json")
                 // Create Elements
                 const card = createElement("div", "card");
                 const name = createElement("h2", "card-title");
-                const courseStart = createElement("p", "card-sub");
-                const courseStage = createElement("p", "card-sub");
+                const courseStart = createElement("p", "card-sub margin-yt-sm");
+                const courseStage = createElement("p", "card-sub margin-yb-sm custom-underline");
                 const favLanguage = createElement("p", "card-detail");
-                const currentLearn = createElement("p", "card-detail");
+                const currentLearn = createElement("p", "card-detail custom-underline");
                 const linkTo = createElement("a", "participant-link");
                 
                 // Inject data to new Created elements
                 name.innerHTML += participant[0];
                 courseStart.innerHTML += "📅 Started: " + participant[1];
                 courseStage.innerHTML += "🎓 Stage: " + participant[2];
-                favLanguage.innerHTML += "😍 Loves: " + participant[3];
-                currentLearn.innerHTML += "📚 Learning: " + participant[4];
+                favLanguage.innerHTML += "Loves: " + participant[3] + " 😍";
+                currentLearn.innerHTML += "Learning: " + participant[4] + " 📚";
                 linkTo.innerHTML += "More";
 
                 let linkRef = participant[0];

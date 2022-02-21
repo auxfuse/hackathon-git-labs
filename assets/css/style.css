@@ -71,6 +71,10 @@ p, h1, h2, h3, h4, h5, h6 {
     margin: 1.5rem 0 0;
 }
 
+.margin-yt-md {
+    margin-top: 2rem;
+}
+
 .margin-yb-sm {
     margin: 0 0 1.5rem;
 }
@@ -81,6 +85,15 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .center-txt {
     text-align: center;
+}
+
+.custom-underline::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 70%;
+    background-color: var(--tertiary-color);
+    margin: 1rem auto 0;
 }
 
 /* Index */
@@ -168,18 +181,37 @@ p, h1, h2, h3, h4, h5, h6 {
 .card {
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    width: 18rem;
     border-radius: 0.5rem;
     padding: 1rem;
+    border: 2px solid var(--secondary-color);
+    margin: 1rem;
 }
 
 .card-title {
+    width: inherit;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 2rem;
     font-family: var(--secondary-font);
-    align-self: center;
+    background-color: rgba(148, 235, 241, 0.75);
+}
+
+.card-sub, .card-detail {
+    font-size: 1.3rem;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.card-detail {
+    text-align: right;
 }
 
 .participant-link {
     align-self: center;
+    margin: 2rem 0 1.5rem;
 }
 
 /* Media Queries */
