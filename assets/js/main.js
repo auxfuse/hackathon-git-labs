@@ -38,10 +38,11 @@ fetch("community.json")
                 courseStage.innerHTML += "🎓 Stage: " + participant[2];
                 favLanguage.innerHTML += "Loves: " + participant[3] + " 😍";
                 currentLearn.innerHTML += "Learning: " + participant[4] + " 📚";
-                linkTo.innerHTML += "More";
+                linkTo.innerHTML += "View Work ➡";
 
                 let linkRef = participant[0];
-                linkTo.setAttribute("href", `community/${linkRef}`)
+                linkTo.setAttribute("href", `community/${linkRef}`);
+                linkTo.setAttribute("data-content", "View Work ➡");
 
                 // Hierarchy of Container
                 communityContainer.append(card);

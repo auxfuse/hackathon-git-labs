@@ -8,11 +8,16 @@
     --font-color-lt: #f3f3f3;
     --primary-color: #94ebf1;
     --secondary-color: #072c30;
+    --secondary-color-lt: #1f5d64;
     --tertiary-color: #94b0b3;
+    --tertiary-color-dk: #434f50;
 
     /* Project Font Pairings */
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Nunito', sans-serif;
+
+    /* Card Watermark links */
+    --gh-watermark: url('../images/gh-icon-1.png');
 }
 
     /* CSS Reset */
@@ -186,6 +191,24 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
     border: 2px solid var(--secondary-color);
     margin: 1rem;
+    position: relative;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: var(--gh-watermark);
+    background-size: 40%, contain;
+    background-position: -10% 100%;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    filter: hue-rotate(150deg);
+    z-index: 1;
 }
 
 .card-title {
@@ -212,6 +235,27 @@ p, h1, h2, h3, h4, h5, h6 {
 .participant-link {
     align-self: center;
     margin: 2rem 0 1.5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: var(--secondary-font);
+    color: var(--tertiary-color-dk);
+    font-weight: bold;
+    cursor: pointer;
+    font-style: italic;
+    z-index: 2;
+}
+
+.participant-link::before {
+    position: absolute;
+    content: attr(data-content);
+    color: var(--secondary-color);
+    text-decoration: underline;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    transition: all 275ms ease-in-out;
+}
+
+.participant-link:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Media Queries */
