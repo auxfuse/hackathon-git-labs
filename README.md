@@ -26,7 +26,8 @@ The Basic stream for this project will allow the user to learn & demonstrate:
 The Intermediate stream for this project will allow the user to learn & demonstrate:
 - HTML/CSS mini-creation which will be automatically linked to from the Landing Page.
 
-    Sometimes, it's great to showcase your work in a directory like this. You never know who you might one day be sitting beside for work 🙂😀
+    Sometimes, it's great to showcase your work in a directory like this. You never know who you might one day be sitting beside for work 🙂😀 So use this as an opportunity to create something bespoke and unique, showcasing your skills using HTML & CSS.
+
 - Directory surfing and creating sub-directories
 - Optional review and delve into the default files of the project where you will find Grid, Flexbox, Root variables, Fetch API, JSON etc. All of these are are done in vanilla languages, and this project is completely framework-LESS.
 

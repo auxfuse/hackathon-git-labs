@@ -220,12 +220,18 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 2rem;
     font-family: var(--secondary-font);
     background-color: rgba(148, 235, 241, 0.75);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-sub, .card-detail {
     font-size: 1.3rem;
     padding: 5px 0;
     font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-detail {
