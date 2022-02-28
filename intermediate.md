@@ -1,4 +1,4 @@
-# Intermediate guide to making a Pull Request to this project
+# Intermediate guide to making your first Pull Request (PR)
 
 ## Participant steps:
 * This guide assumes you have read and implemented the steps from the basics.md file.
