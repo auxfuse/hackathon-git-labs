@@ -4,13 +4,13 @@ By following the below guide, your actions will have created a card on the Landi
 
 Get started! Make your first PR and get going into the world of open source! 
 
-## Participant steps:
+## 👇 Participant steps: 👇
 - Fork the repo
 - Go to your preferred IDE/Editor and clone the Forked repo. This can be found on the fork on your account.
 - Using your preferred IDE, Open the project
 - Set the upstream
 - Create a branch
-- Go to the `community.json` file and copy the following JSON object and replace the values with your own:
+- Go to the `community.json` file and copy the following JSON object and replace the _**values**_ with your own:
 ```json
 {
     "name": "your_name_or_alias",
@@ -20,6 +20,10 @@ Get started! Make your first PR and get going into the world of open source!
     "currently_learning": "latest_learning"
 }
 ```
+
+For reference, the _**values**_ are on the right side of the colon (`:`), and are contained inside the double quotes (`""`). Take a look at this snapshot:
+
+![JSON Values Reference](https://github.com/auxfuse/hackathon-git-labs/docs/images/JSONvalue.png)
 
 Keep these short and sweet. This is just a small blurb about you as a developer. _Anything that exceeds the bounds of the card itself will be truncated._
 
