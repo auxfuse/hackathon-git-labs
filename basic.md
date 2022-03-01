@@ -14,7 +14,9 @@ Get started! Make your first PR and get going into the world of open source!
 - Go to your preferred IDE/Editor and clone the Forked repo.
     - Go to the forked repository in Github. This can be found in your account, under "repositories".
     - Hit the green "Code" button, and then click on "HTTPS" and copy the link.
+
     ![Repository Clone](docs/images/clone.png)
+    
     - In your IDE/Editor, open a terminal/command line, and enter the following: `git clone {insert copied url here}` and hit "Enter" on your keyboard.
     - The Forked repository will now clone to your preferred development method.
         - If you are using Gitpod, you do not need to do these steps. Instead, you can go to the forked repository and click on the green "Gitpod" Extension button to open the project for editing.
