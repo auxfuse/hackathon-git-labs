@@ -1,6 +1,6 @@
 # Hackathon Git Labs Project PR 🎉🎉
 
-Please remove the below and replace with your own values, leaving the headers where they are.
+👉 _**Please remove the below and replace with your own values, leaving the headers where they are.**_ 👈
 
 ## PR contains:
 - INFO ABOUT YOUR PULL REQUEST GOES HERE (Please be as descriptive as possible) 🤜

@@ -6,7 +6,8 @@ Get started! Make your first PR and get going into the world of open source!
 
 ## 👇 Participant steps: 👇
 
-### **Project Setup**
+### **1. Project Setup**
+---
 - Fork the repo. Super simple here, go to [the repo](https://github.com/auxfuse/hackathon-git-labs), and click on the "Fork" button in the top right of the screen. The window should then refresh, and you should be redirected to your newly created Fork of the project.
 
     🍴 <-- So what is a fork? It's a copy of the original repository. But one that you own. Any changes you make to the project in the fork won't affect the original. To affect the original, continue following the steps below to make a Pull Request! 😉 [Learn more about Forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
@@ -45,8 +46,8 @@ Get started! Make your first PR and get going into the world of open source!
 
 **_All of the initial git setup is done. All in all, if you follow this to the letter, this is a few minutes of work._ 😅 _Crazy to think of something you do regularly just by muscle memory alone, when viewed in the written word, is quite a lengthy process._ 🤯🧠**
 
-### **Adding to the Project**
-
+### **2. Adding to the Project**
+---
 - Go to the `community.json` file and copy the following JSON object and replace the _**values**_ with your own:
 ```json
 {
@@ -80,11 +81,11 @@ Keep these short and sweet. This is just a small blurb about you as a developer.
 - After you have added yourself to the `community.json` file, you can now view the project in preview mode to see your card added to the website.
     - Depending on your IDE/Editor of choice, there are a few ways to do this. Most IDEs/Editors will have a built in preview option. If you are unsure, a quick google search on how to do this for your editor is the best course of action.
 
-### **Git and The Pull Request**
-
+### **3. Git and The Pull Request**
+---
 - Add all your work to the branch using `git add .`, using the terminal/command line in your IDE/Editor. 
 - Commit it using `git commit -m "meaningful commit message here"`.
-- Push your work using `git push`. 👋 And say goodbye....because now it's time to go to our Forked Repository in our Github account 😁.
+- Push your work using `git push`. 👋 And say goodbye to your IDE/Editor for now....because now it's time to go to our Forked Repository in our Github account 💻😁.
     - At this stage, if you didn't earlier, you might be reminded to set the branch as the current trackable option. In that case just run `git push -u origin branch-name`. 🌿🌳 Don't worry, the terminal is very good and will tell you if it needs to be set or not.
 
 We are almost there!
@@ -102,8 +103,26 @@ We are almost there!
 ![Compare and Create Pull Request Button](docs/images/ComparePR.PNG)
 
 - Click on the green button, "Compare & Pull Request" to start the PR process.
+    - You should see the following, and more so you should see the PR Template information in the "Write" tab.
+
+![PR Window](docs/images/PRwindow.PNG)
+
 - On this screen we have multiple things going on, but the main thing is to follow the template and replace the values with your own.
-- Your PR should look something like this:
+- When you are ready, click on "Create pull request". 🎉💥💥🎉
+
+### **4. Closing comments:**
+---
+And Voila! Well done...you've just added your very first Pull Request. So what happens now?
+
+Now, your PR will go through some simple checks and balances, and if all is satisfied it will be approved and merged by one of a few select Maintainers of this repo.
+
+If there is anything wrong, we will notify you back through the PR itself, which you will get notified via email.😉
+
+This is just the start. Get your PR in, wait for it to be reviewed/approved/merged. And then throw your efforts at adding another PR, but this time following along to the [Intermediate Guide](intermediate.md), and making adding a HTML & CSS Single page creation.
+
+🤜 Thank you! 😀
+
+
 
 
 
