@@ -80,13 +80,31 @@ Keep these short and sweet. This is just a small blurb about you as a developer.
 - After you have added yourself to the `community.json` file, you can now view the project in preview mode to see your card added to the website.
     - Depending on your IDE/Editor of choice, there are a few ways to do this. Most IDEs/Editors will have a built in preview option. If you are unsure, a quick google search on how to do this for your editor is the best course of action.
 
-### **The Pull Request**
+### **Git and The Pull Request**
 
 - Add all your work to the branch using `git add .`, using the terminal/command line in your IDE/Editor. 
 - Commit it using `git commit -m "meaningful commit message here"`.
-- push to the branch
-- at this stage, you might be reminded to set the branch as the current trackable option.
-- create PR
+- Push your work using `git push`. 👋 And say goodbye....because now it's time to go to our Forked Repository in our Github account 😁.
+    - At this stage, if you didn't earlier, you might be reminded to set the branch as the current trackable option. In that case just run `git push -u origin branch-name`. 🌿🌳 Don't worry, the terminal is very good and will tell you if it needs to be set or not.
+
+We are almost there!
+
+- Go to the original repo: https://github.com/auxfuse/hackathon-git-labs.
+- From here, click on the "Pull requests" tab, located in the top navigational menu of the repository.
+
+![Pull Request Tab in Github](docs/images/PRtab.PNG)
+
+- You should see the following screen:
+    - As long as you have followed all the steps above to this point, you should see a banner at the top of this screen with a Green Github Button saying "Compare & Pull Request".
+
+    **N.B**: If you do not see this, make sure that you have added, commited, and pushed your work to a branch within your forked repository.
+
+![Compare and Create Pull Request Button](docs/images/ComparePR.PNG)
+
+- Click on the green button, "Compare & Pull Request" to start the PR process.
+- On this screen we have multiple things going on, but the main thing is to follow the template and replace the values with your own.
+- Your PR should look something like this:
+
 
 
 

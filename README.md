@@ -16,7 +16,7 @@ Community Stats:
 
 ## About the ... Dev, Project, Scope. 🤔
 
-Hey there! 👋 I'm Anthony (aka Auxfuse), a Frontend Developer and an avid open source hackathon enthusiast, especially those held by [Code Institute's Community](https://codeinstitute.net/ie/). I built this project as a structured approach to submitting your first, of hopefully many, Pull Requests to Open Source. To learn more about me and follow my other work, click here 👉 [Auxfuse](https://github.com/auxfuse). One small tidbit about me, is I love Emojis, they are so damn colorful and can really help to spice up a wall of text. 📃
+Hey there! 👋 I'm Anthony (aka Auxfuse), a Frontend Developer and an avid open source hackathon enthusiast, especially those held by [Code Institute's Community](https://codeinstitute.net/ie/). I built this project as a structured approach to submitting your first, of hopefully many, Pull Requests to Open Source. To learn more about me and follow my other work, click here 👉 [Auxfuse](https://github.com/auxfuse). One small tidbit about me, I love Emojis, they are so damn colorful and can really help to spice up a wall of text. 📃
 
 It's common knowledge that the inner workings to Git are often the initial stumbling blocks to most people making their first Pull Request (PR) to a project. It can be frustrating, confusing and just a bit of an undertaking trying to get to grips with it.
 
