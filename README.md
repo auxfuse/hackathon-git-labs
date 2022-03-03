@@ -34,9 +34,11 @@ There are two proposed streams to this project for the participant to throw thei
 
 --- 
 
-### Project Streams
+### Project Streams 👇👇
 
-The [Basic](https://github.com/auxfuse/hackathon-git-labs/blob/main/basic.md) stream for this project will enable the user to learn & demonstrate:
+Pick from the below to start your PR journey:
+
+The [Basic](basic.md) stream for this project will enable the user to learn & demonstrate:
 - Minimum knowledge required to submit a PR
     - Forking the main repo
     - Setting the upstream from their Fork back to the main repo
@@ -49,7 +51,7 @@ The [Basic](https://github.com/auxfuse/hackathon-git-labs/blob/main/basic.md) st
 - Engaging with the nominated maintainers of the repo via the PR threads
 - Having their PRs approved/decline or merged into the project
 
-The [Intermediate](https://github.com/auxfuse/hackathon-git-labs/blob/main/intermediate.md) stream for this project will enable the user to learn & demonstrate:
+The [Intermediate](intermediate.md) stream for this project will enable the user to learn & demonstrate:
 - HTML/CSS mini-creation which will be automatically linked to from the Landing Page.
 
     Sometimes, it's great to showcase your work in a directory like this. You never know who you might one day be sitting beside for work 🙂😀 So use this as an opportunity to create something bespoke and unique, showcasing your skills using HTML & CSS.
