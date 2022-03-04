@@ -6,29 +6,26 @@ html {
 	inline-size: 100%;
 }
 
-body {
-	min-block-size: 100%;
-	min-inline-size: 100%;
-	margin: 0;
-	box-sizing: border-box;
+.card-container {
 	display: grid;
-	place-content: center;
-	font-family: system-ui, sans-serif;
-	background-color: salmon;
 }
 
 h1 {
-	color: white;
+	color: #322112;
 	font-family: 'gravesend-sans', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 300;
 	position: relative;
-	font-size: 5rem;
+	font-size: 3rem;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
 /* https://codepen.io/alissatnyc/pen/OJOEMVM */
-h1::before {
+/* h1::before {
 	transform: scaleX(0);
 	transform-origin: bottom right;
 }
@@ -55,11 +52,15 @@ h1::before {
 
 h1:hover {
 	color: salmon;
-}
+} */
 
 
-@media (orientation: landscape) {
-	body {
-		grid-auto-flow: column;
+@media (min-width: 768px) {
+	 .card-container {
+		display: grid;
+		grid-template-rows: repeat(3, auto);
+		grid-template-columns: 4fr, 4fr, 5fr;
+
+	 }
+		
 	}
-}
