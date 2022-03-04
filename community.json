@@ -8,9 +8,9 @@
     },
     {
         "name": "Person",
-        "course_start": "1990",
-        "course_stage": "Student",
-        "favorite_language": "VBA",
-        "currently_learning": "Soft skills"
+        "course_start": "2016",
+        "course_stage": "Mentor",
+        "favorite_language": "Python 🐍",
+        "currently_learning": "Docker"
     }
 ]
