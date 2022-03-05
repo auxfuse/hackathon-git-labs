@@ -12,5 +12,12 @@
         "course_stage": "Alumni",
         "favorite_language": "Python",
         "currently_learning": "PHP"
+    },
+    {
+        "name": "Andrew",
+        "course_start": "2019",
+        "course_stage": "Alumni",
+        "favorite_language": "Javascript",
+        "currently_learning": "C++"
     }
 ]
