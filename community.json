@@ -7,13 +7,6 @@
         "currently_learning": "PHP/ThreeJS"
     },
     {
-        "name": "Person",
-        "course_start": "2016",
-        "course_stage": "Mentor",
-        "favorite_language": "Python 🐍",
-        "currently_learning": "Docker"
-    },
-    {
         "name": "Alissa",
         "course_start": "2020",
         "course_stage": "Alumni",
