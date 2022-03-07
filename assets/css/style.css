@@ -181,6 +181,7 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     justify-content:  center;
     align-items: center;
+    margin-bottom: 7rem;
 }
 
 .card {
@@ -262,6 +263,56 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .participant-link:hover::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Footer */
+
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#repo-go {
+    position: absolute;
+    top: -25%;
+    width: 80%;
+    padding: 1rem;
+    background-color: rgba(7, 44, 48, 0.85);
+    color: var(--font-color-lt);
+    border-radius: 1rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#repo-go a {
+    color: var(--font-color-lt);
+    cursor: pointer;
+    align-self: center;
+    margin: 1rem 0;
+}
+
+#additional-info {
+    margin-top: 5rem;
+}
+
+#additional-info p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+#team-list > li {
+    margin: 0.5rem 0;
 }
 
 /* Media Queries */
