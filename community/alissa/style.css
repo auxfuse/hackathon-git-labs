@@ -1,0 +1,147 @@
+/* @import url("https://use.typekit.net/okm0fpl.css"); */
+
+/* Global */
+body {
+	/* background-color: rgb(233, 233, 232); */
+	background: #8ca5a886;
+}
+
+h1 {
+	color: #0a0a0a;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+	font-family: playfair-display, serif;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	position: relative;
+	font-size: 2.3rem;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-family: 'futura-pt', sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: rgb(46, 53, 58);
+	text-align: center;
+	margin: 5px 20px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin: 10px 10px;
+	/* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
+}
+
+p {
+	font-family: 'Futura-PT', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+/*---------------./end-global */
+
+/* ---------------Profile Card */
+.card-container {
+	position: relative;
+	top: 75px;
+	z-index: 1;
+	height: 100%;
+    margin-top: 75px;
+	align-items: center;
+}
+
+.avatar {
+	position: relative;
+	top: 75px;
+	z-index: 1;
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+}
+
+img {
+	width: 150px;
+	height: auto;
+	border-radius: 50%;
+}
+
+.profile-card {
+	/* Box shadow #71 copied from https://getcssscan.com/css-box-shadow-examples */
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+	background-color: #fafafa;
+	max-width: 500px;
+	min-height: 60vh;
+	margin: auto;
+	text-align: center;
+}
+
+.profile-about p {
+	color: #0a0a0a;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 1rem;
+	margin: 30px 50px;
+}
+
+.profile-card .profile-header {
+	text-align: center;
+	position: relative;
+	min-width: 100%;
+    height: auto;
+}
+
+.profile-card .profile-header a > img {
+	width: 150px;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.fab {
+	margin: 0px 10px;
+	color: #0a0a0a;
+}
+
+.fab:hover {
+	color: #2e6066;
+}
+
+.profile-socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 50px;
+}
+
+.icons {
+	margin: 0px 40px;
+}
+
+.row {
+	margin-top: 80px;
+	text-align: center;
+}
+
+.projects {
+	margin-top: 30px;
+}
+
+button {
+	border: none;
+	font-family: 'futura-pt', sans-serif;
+	letter-spacing: 2px;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+	padding: 20px 0px;
+  }
