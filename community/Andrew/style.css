@@ -1,13 +1,16 @@
+/* grab a font from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* Holds the video */
 div, iframe {
     width: 560px;
     height: 315px;
     margin: 0 auto;
 }
 
+/* background animation */
+/* GIF courtesy of Dean Roach */
 body {
-    /* GIF courtesy of Dean Roach */
     background-image: url('http://i.stack.imgur.com/kx8MT.gif');
     background-size: cover;
     height: 50vh;
@@ -21,6 +24,13 @@ h1, h2, h3, h4, h5 {
     font-family: 'Press Start 2P', cursive;
 }
 
+/* make the heading stand out */
 h1 {
     text-decoration: underline overline;
+}
+
+/* make anchor link conform to the page style */
+#back_to_main {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
