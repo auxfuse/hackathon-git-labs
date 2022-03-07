@@ -1,1 +1,22 @@
 notes.txt
+
+# ide/editor default files/directories
+.vscode
+.DS_Store
+.idea/
+
+# dependencies
+/node_modules
+_build
+.coverage
+dist/
+
+# misc
+*.pem
+venv/
+.venv/
+__pycache__/
+
+# local env files
+.env
+env.py 
