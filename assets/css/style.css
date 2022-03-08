@@ -283,19 +283,31 @@ p, h1, h2, h3, h4, h5, h6 {
 
 footer {
     margin-top: 2rem;
-    border-top: 1px solid var(--secondary-color);
-    background-color: var(--primary-color);
     color: var(--font-color);
     font-size: 1.3rem;
     padding: 1rem 2rem;
     position: relative;
+    z-index: 0;
     display: flex;
     flex-direction: column;
 }
 
+footer::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-color: var(--primary-color);
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+}
+
 #repo-go {
     position: absolute;
-    top: -25%;
+    top: -20%;
     width: 80%;
     margin-top: 1rem;
     padding: 1rem;
@@ -305,30 +317,25 @@ footer {
     align-self: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
 #repo-go p {
-    font-size: 1.8rem;
     font-family: var(--secondary-font);
     margin: 1rem 0;
-    padding-left: 2rem;
     letter-spacing: 0.3ch;
     font-style: italic;
 }
 
 #repo-go a {
+    position: relative;
     color: var(--font-color-lt);
-    font-size: 1.6rem;
     letter-spacing: 0.3ch;
     cursor: pointer;
-    align-self: center;
     margin: 1rem 2rem;
-    align-self: flex-end;
     text-decoration: none;
     border: 2px solid transparent;
-    position: relative;
 }
 
 #repo-go a:hover::after {
@@ -344,7 +351,7 @@ footer {
 }
 
 #additional-info {
-    margin-top: 10rem;
+    margin-top: 13rem;
 }
 
 #additional-info p {
@@ -397,6 +404,25 @@ footer {
     #content-image img {
         height: 15.5rem;
     }
+
+    /* Footer */
+    #repo-go {
+        top: -25%;
+        align-items: flex-start;
+    }
+
+    #repo-go p {
+        font-size: 1.6rem;
+    }
+
+    #repo-go a {
+        font-size: 1.4rem;
+        align-self: flex-end;
+    }
+
+    #additional-info {
+        margin-top: 10.5rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -415,6 +441,19 @@ footer {
 
     #content-image img {
         height: 18rem;
+    }
+
+    /* Footer */
+    #repo-go p {
+        font-size: 1.8rem;
+    }
+
+    #repo-go a {
+        font-size: 1.6rem;
+    }
+
+    #additional-info {
+        margin-top: 10rem;
     }
 }
 
