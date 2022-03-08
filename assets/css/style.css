@@ -302,7 +302,7 @@ footer::before {
     bottom: 0;
     display: block;
     background-color: var(--primary-color);
-    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 }
 
 #repo-go {
@@ -377,6 +377,11 @@ footer::before {
 
     #content-column p {
         word-spacing: 5px;
+    }
+
+    /* Footer */
+    footer::before {
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
     }
 }
 
