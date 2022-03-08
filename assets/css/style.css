@@ -70,6 +70,20 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
+/* Animations/Keyframes */
+
+@keyframes line-grow {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
 /* Utilities */
 
 .margin-yt-sm {
@@ -283,6 +297,7 @@ footer {
     position: absolute;
     top: -25%;
     width: 80%;
+    margin-top: 1rem;
     padding: 1rem;
     background-color: rgba(7, 44, 48, 0.85);
     color: var(--font-color-lt);
@@ -294,15 +309,42 @@ footer {
     justify-content: center;
 }
 
+#repo-go p {
+    font-size: 1.8rem;
+    font-family: var(--secondary-font);
+    margin: 1rem 0;
+    padding-left: 2rem;
+    letter-spacing: 0.3ch;
+    font-style: italic;
+}
+
 #repo-go a {
     color: var(--font-color-lt);
+    font-size: 1.6rem;
+    letter-spacing: 0.3ch;
     cursor: pointer;
     align-self: center;
-    margin: 1rem 0;
+    margin: 1rem 2rem;
+    align-self: flex-end;
+    text-decoration: none;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+#repo-go a:hover::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 0.5rem auto 0;
+    background-color: var(--primary-color);
+    transform-origin: 100%;
+    animation: line-grow 0.75s ease-in-out;
 }
 
 #additional-info {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 #additional-info p {
