@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&display=swap');
+
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Road Rage', cursive;
+    color: aliceblue;
+    text-shadow: 0 0 5px black;
+    text-align: center;
+    position: fixed;
+    left: 5%;
+    right: 0;
+    top: 18vh;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+p{
+    font-size: 3rem;
+}
+
+#socials {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+i {
+    color: brown;
+    /* margin: 0 5vw; */
+    text-shadow: none;
+}
