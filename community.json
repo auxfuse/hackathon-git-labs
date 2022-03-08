@@ -19,5 +19,12 @@
         "course_stage": "Alumni",
         "favorite_language": "Javascript",
         "currently_learning": "C++"
+    },
+    {
+        "name": "Aramantos",
+        "course_start": "2019",
+        "course_stage": "Alumni",
+        "favorite_language": "Swift",
+        "currently_learning": "C#, PHP"
     }
 ]
