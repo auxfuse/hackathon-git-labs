@@ -32,5 +32,13 @@ p{
 i {
     color: brown;
     /* margin: 0 5vw; */
-    text-shadow: none;
+    text-shadow: 0 0 5px white;
+}
+
+button {
+    font-family: 'Road Rage';
+    font-size: xxx-large;
+    background: #a6292a;
+    color: aliceblue;
+    text-shadow: 0 0 5px black;
 }
