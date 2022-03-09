@@ -26,5 +26,12 @@
         "course_stage": "Alumni",
         "favorite_language": "Swift",
         "currently_learning": "C#, PHP"
+    },
+    {
+        "name": "Jim",
+        "course_start": "2020",
+        "course_stage": "Staff",
+        "favorite_language": "Python",
+        "currently_learning": "React"
     }
 ]
