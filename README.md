@@ -10,9 +10,9 @@ Project Stats:
 
 Community Stats:
 
-![GitHub contributors](https://img.shields.io/github/contributors/auxfuse/hackathon-git-labs?label=Contributors)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/auxfuse/hackathon-git-labs?label=Open%20Pull%20Requests)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/auxfuse/hackathon-git-labs?label=Closed%20Pull%20Requests)
+![GitHub contributors](https://img.shields.io/github/contributors/auxfuse/hackathon-git-labs?label=Contributors&color=94ebf1)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/auxfuse/hackathon-git-labs?label=Open%20Pull%20Requests&color=072c30)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/auxfuse/hackathon-git-labs?label=Closed%20Pull%20Requests&color=94ebf1)
 
 ## About the ... Dev, Project, Scope. 🤔
 
