@@ -33,5 +33,12 @@
         "course_stage": "Staff",
         "favorite_language": "Python",
         "currently_learning": "React"
+    },
+    {
+        "name": "Ciara",
+        "course_start": "2021",
+        "course_stage": "Student",
+        "favorite_language": "Python",
+        "currently_learning": "Django"
     }
 ]
