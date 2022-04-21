@@ -33,5 +33,12 @@
         "course_stage": "Staff",
         "favorite_language": "Python",
         "currently_learning": "React"
+    },
+    {
+        "name": "Ale",
+        "course_start": "2019",
+        "course_stage": "Alumni",
+        "favorite_language": "Javascript",
+        "currently_learning": "Python"
     }
 ]
