@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* 
+  Global styling
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Initialise gloabl vars */
+  /* Sans-Serif font family fallbacks: Arial, Helvetica, sans-serif */
+  /* Serif font family fallbacks: Georgia, Times, serif */
+
+  --bg-colour: #eef4f4; /* sitewide background colour */
+  --text-colour: #000; /* sitewide text colour */
+  --text-font-family: 'Lato', Arial, Helvetica, sans-serif;
+  --text-font-size: 1.6rem;
+}
+
+html {
+  /* Set root font-size to 10px so that 1rem becomes 10px  */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+  font-family: var(--text-font-family);
+  font-size: var(--text-font-size);
+}
+
+h1 {
+  font-family: var(--header-font-family);
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+p {
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.main-content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card {
+  background-color: white;
+  border: solid 1px #000;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.socials {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link {
+  color: black;
+}
+
+.cta {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
