@@ -24,7 +24,7 @@ Get started! Make your first PR and get going into the world of open source!
 
 - Your project should already be opened in your preferred IDE/Editor at this point, but just in case. Open your IDE/Editor, and then open the project. 😀
 - Before doing any code, lets open a terminal/command line.
-- Set the upstream by running this command `git remote add upstrem https://github.com/auxfuse/hackathon-git-labs.git`, in your opened terminal/command line.
+- Set the upstream by running this command `git remote add upstream https://github.com/auxfuse/hackathon-git-labs.git`, in your opened terminal/command line.
     - We can then check to ensure that the remote has been added correctly by running `git remote -v` in the terminal. And you should get this type of response.
     ```
     $ git remote -v
