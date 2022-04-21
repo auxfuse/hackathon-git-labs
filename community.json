@@ -54,5 +54,12 @@
         "course_stage": "Student",
         "favorite_language": "Python",
         "currently_learning": "Hackathon-ing!"
+    },
+    {
+        "name": "SuzyBeeeee",
+        "course_start": "2021",
+        "course_stage": "Alumus",
+        "favorite_language": "Python",
+        "currently_learning": "React!"
     }
 ]
