@@ -67,5 +67,12 @@
         "course_stage": "Alumus",
         "favorite_language": "Python",
         "currently_learning": "React!"
+    },
+    {
+        "name": "Kera",
+        "course_start": "2021",
+        "course_stage": "Python",
+        "favorite_language": "Python",
+        "currently_learning": "Databases"
     }
 ]
