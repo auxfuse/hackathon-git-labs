@@ -1,0 +1,7 @@
+body > h1, .container{
+    text-align: center;
+}
+.container > p{
+    font-size: 150%;
+    margin: 50px 400px 0 400px;
+}
