@@ -47,5 +47,12 @@
         "course_stage": "Alumni",
         "favorite_language": "Javascript",
         "currently_learning": "Python"
+    },
+    {
+        "name": "DaveWatters",
+        "course_start": "2021",
+        "course_stage": "Student",
+        "favorite_language": "Python",
+        "currently_learning": "Hackathon-ing!"
     }
 ]
