@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&family=Roboto+Serif:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'My Soul', cursive;
+    font-size: 2em;
+    color: rgb(101, 165, 254);
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+    transition: 150ms ease-in-out;
+}
+
+a:hover {
+    color: rgb(76, 120, 181);
+    transition: 150ms ease-in-out;
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 40%;
+    height: 90%;
+}
+
+.logo_img {
+    width: 40%;
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(2, 92, 217));
+}
+
+main {
+    height: 80vh;
+    background: url('./img/pexels-luana-kirsch-concatto.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+section {
+    width: 50%;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 500;
+    font-size: .8em;
+}
+
+.links {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    gap: 2em;
+    margin-left: 3em;
+}
+
+.about {
+    width: 35%;
+}
+
+.about_content {
+    width: 80%;
+    margin: 5%;
+    padding: 2%;
+    text-shadow: 2px 2px rgb(161, 82, 3);
+    animation: about 3s ease-in-out;
+}
+
+@keyframes about {
+    0% {
+        transform: translateY(120%);
+        opacity: 0;
+    }
+
+    80% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
