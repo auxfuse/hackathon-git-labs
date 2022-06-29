@@ -103,5 +103,12 @@
         "course_stage": "Student",
         "favorite_language": "Python",
         "currently_learning": "CSS"
-    }    
+    },  
+    {
+        "name": "Shaun Bonner",
+        "course_start": "2022",
+        "course_stage": "student",
+        "favorite_language": "!JavaScript",
+        "currently_learning": "Python"
+    }
 ]
