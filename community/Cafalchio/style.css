@@ -43,7 +43,16 @@ h4 {
     text-align: left;
   }
 
-#links {
-    text-align: left;
+.links {
+    /* copies from alissa  */
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: left;
+	margin: 30px 30px;
+}
 
+.icons {
+    margin: 25px 10px;
+    align-items: left;
 }
