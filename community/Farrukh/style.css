@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Hi+Melody&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1A0E02;
+    position: relative;
+}
+
+#neon-container {
+    height: 100vh;
+    width: 100%;
+    /* background-color: aliceblue; */
+    position: relative;
+}
+
+#neon {
+    font-size: 10rem;
+    font-family: 'Hi Melody', cursive;
+    color: #FA55E6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.25em 0.5em;
+    border: 0.12em solid #FA55E6;
+    border-radius: 0.08em;
+    text-shadow: 0 0 0.25em #FA55E6;
+    box-shadow: inset 0 0 0.25em #FA55E6, 0 0 0.5em #FA55E6;
+}
+
+#neon::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FA55E6;
+    transform: perspective(1.5em) rotateX(40deg) scale(1, 0.5);
+    filter: blur(1em);
+}
+
+#home {
+    position: absolute;
+    top:5%;
+    right: 2%;
+    font-size: 1rem;
+    padding: 0.25em 0.8em;
+    background: none;
+    border: 0.125em solid #14DEB4;
+    border-radius: 0.313em;
+    cursor: pointer;
+}
+
+#home > a {
+    text-decoration: none;
+    color: #14DEB4;
+    font-family: 'Arima', cursive;
+    font-weight: 700;
+}
