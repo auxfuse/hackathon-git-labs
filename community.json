@@ -124,5 +124,12 @@
         "course_stage": "Alumni",
         "favorite_language": "Python",
         "currently_learning": "PHP"
+    },
+    {
+        "name":"amy",
+        "course_start":"2022",
+        "course_stage":"Student",
+        "favorite_language":"CSS",
+        "currently_learning":"CSS"
     }
 ]
