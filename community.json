@@ -1,5 +1,13 @@
 [
     {
+        "name": "vikmah",
+        "course_start": "2021",
+        "course_stage": "alumni",
+        "favorite_language": "CSS",
+        "currently_learning": "React"
+    },
+
+    {
         "name": "auxfuse",
         "course_start": "2019",
         "course_stage": "Alumni",
