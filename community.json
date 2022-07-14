@@ -131,5 +131,12 @@
         "course_stage": "student",
         "favorite_language": "Python",
         "currently_learning": "JavaScript"
+     },
+     {
+        "name":"amy",
+        "course_start":"2022",
+        "course_stage":"Student",
+        "favorite_language":"CSS",
+        "currently_learning":"CSS"
     }
 ]
