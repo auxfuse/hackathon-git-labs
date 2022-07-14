@@ -119,10 +119,31 @@
       "currently_learning": "JavaScript"
   },
   {
-    "name": "Cinthia Fontoura",
-    "course_start": "2022",
-    "course_stage": "Student",
-    "favorite_language": "Python",
-    "currently_learning": "Agile"
-  }
+      "name": "alyssa",
+      "course_start": "2019",
+      "course_stage": "Alumni",
+      "favorite_language": "Python",
+      "currently_learning": "PHP"
+  },
+  {
+      "name": "joe",
+      "course_start": "2022",
+      "course_stage": "student",
+      "favorite_language": "Python",
+      "currently_learning": "JavaScript"
+   },
+   {
+      "name":"amy",
+      "course_start":"2022",
+      "course_stage":"Student",
+      "favorite_language":"CSS",
+      "currently_learning":"CSS"
+  },
+    {
+      "name": "Cinthia Fontoura",
+      "course_start": "2022",
+      "course_stage": "Student",
+      "favorite_language": "Python",
+      "currently_learning": "Agile"
+    }
 ]
