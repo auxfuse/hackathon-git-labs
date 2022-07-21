@@ -145,5 +145,12 @@
         "course_stage": "Student",
         "favorite_language": "Python",
         "currently_learning": "Agile"
+    },
+    {
+        "name": "Vikmah",
+        "course_start": "2021",
+        "course_stage": "Alumni",
+        "favorite_language": "CSS",
+        "currently_learning": "React"
     }
 ]
