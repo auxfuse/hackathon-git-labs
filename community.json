@@ -1,5 +1,4 @@
 [
-
     {
         "name": "auxfuse",
         "course_start": "2019",
@@ -78,11 +77,11 @@
         "currently_learning": "Databases"
     },
     {
-    "name": "Cillian",
-    "course_start": "2021",
-    "course_stage": "Student",
-    "favorite_language": "Python",
-    "currently_learning": "Django"
+        "name": "Cillian",
+        "course_start": "2021",
+        "course_stage": "Student",
+        "favorite_language": "Python",
+        "currently_learning": "Django"
     },
     {
         "name": "John",
@@ -118,6 +117,34 @@
         "course_stage": "Student",
         "favorite_language": "Python",
         "currently_learning": "JavaScript"
+    },
+    {
+        "name": "alyssa",
+        "course_start": "2019",
+        "course_stage": "Alumni",
+        "favorite_language": "Python",
+        "currently_learning": "PHP"
+    },
+    {
+        "name": "joe",
+        "course_start": "2022",
+        "course_stage": "student",
+        "favorite_language": "Python",
+        "currently_learning": "JavaScript"
+     },
+     {
+        "name":"amy",
+        "course_start":"2022",
+        "course_stage":"Student",
+        "favorite_language":"CSS",
+        "currently_learning":"CSS"
+    },
+    {
+        "name": "Cinthia Fontoura",
+        "course_start": "2022",
+        "course_stage": "Student",
+        "favorite_language": "Python",
+        "currently_learning": "Agile"
     },
     {
         "name": "Vikmah",
