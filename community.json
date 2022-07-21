@@ -77,11 +77,11 @@
         "currently_learning": "Databases"
     },
     {
-    "name": "Cillian",
-    "course_start": "2021",
-    "course_stage": "Student",
-    "favorite_language": "Python",
-    "currently_learning": "Django"
+        "name": "Cillian",
+        "course_start": "2021",
+        "course_stage": "Student",
+        "favorite_language": "Python",
+        "currently_learning": "Django"
     },
     {
         "name": "John",
@@ -138,5 +138,12 @@
         "course_stage":"Student",
         "favorite_language":"CSS",
         "currently_learning":"CSS"
+    },
+    {
+        "name": "Cinthia Fontoura",
+        "course_start": "2022",
+        "course_stage": "Student",
+        "favorite_language": "Python",
+        "currently_learning": "Agile"
     }
 ]
