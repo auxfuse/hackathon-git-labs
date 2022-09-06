@@ -161,10 +161,10 @@
         "currently_learning": "Flask"
     },
     {
-        "name": "neil",
+        "name": "Neil",
         "course_start": "2021",
-        "course_stage": "alumni",
-        "favorite_language": "python",
-        "currently_learning": "swift"
+        "course_stage": "Alumni",
+        "favorite_language": "Python",
+        "currently_learning": "Swift"
     }
 ]
