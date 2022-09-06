@@ -152,5 +152,12 @@
         "course_stage": "Alumni",
         "favorite_language": "CSS",
         "currently_learning": "React"
+    },
+    {
+        "name": "Gerard",
+        "course_start": "2022",
+        "course_stage": "StudentP4",
+        "favorite_language": "Python",
+        "currently_learning": "Flask"
     }
 ]
