@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;400&family=Nunito:ital,wght@0,300;0,400;1,300&display=swap');
+
+body{
+    background-color: rgb(250, 240, 228);
+}
+.container{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main-content{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(178, 178, 218);
+    border: 3px solid rgb(172, 157, 216);
+    box-sizing: border-box;
+    top: 15%;
+    position: relative;
+    display: flex;
+}
+
+.descriptions {
+    width: 33%;
+    flex-direction: column;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+}
+
+.descriptions h2 {
+    margin-top: 30px;
+}
+
+.descriptions li {
+    padding: 10px;
+    list-style: none;
+}
+
+.headings {
+    padding: 20px;
+}
+
+#name-heading {
+    font-family: Nunito, sans-serif;
+    letter-spacing: 5px;
+    padding-top: 40px;
+    font-size: 2.0rem;
+}
+
+
+
