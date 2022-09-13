@@ -1,9 +1,17 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&family=Prompt&display=swap');
+
+/* Root variables */
 :root {
     --p-color: #29144b;
     --s-color: #fffade;
     --t-color: #936bc6;
+
+    --font-header: 'Exo', sans-serif;
+    --font-content: 'Prompt', sans-serif;
 }
 
+/* CSS Resets */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -11,7 +19,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+}
+
+/* Globals */
+html {
+    font-size: 62.5%;
 }
 
 html, body {
@@ -23,16 +35,14 @@ body {
     color: var(--s-color);
     min-height: 100%;
     position: relative;
+    font-family: var(--font-content);
+    font-size: 1.6rem;
 }
 
-#svg-bg {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    opacity: 30%;
-    position: absolute;
-    z-index: 1;
-    filter: blur(3px) brightness(500%) invert(90%);
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: var(--font-header);
+    font-size: 1.6rem;
 }
 
 a {
@@ -41,6 +51,17 @@ a {
 
 a:hover, a:focus, a:active {
     color: var(--t-color);
+}
+
+/* Content styles */
+#svg-bg {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    opacity: 30%;
+    position: absolute;
+    z-index: 1;
+    filter: blur(3px) brightness(500%) invert(90%);
 }
 
 #content {
