@@ -9,6 +9,34 @@
     <title>Anthony O' Brien - Developer</title>
 </head>
 <body>
-    <h1>Add some type of text here...</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" id="svg-bg">
+        <filter id="noise">
+            <feTurbulence type="turbulance" seed="24" baseFrequency="0.02"/>
+            <feColorMatrix type="hueRotate" values="0">
+              <animate
+                attributeName="values"
+                from="0"
+                to="360"
+                dur="8s" 
+                repeatCount="indefinite"
+               />
+            </feColorMatrix>
+            <feColorMatrix 
+               type="matrix" 
+               values="0 0 0 1 0
+                       0 0 0 0 0
+                       0 1 0 0 0
+                       1 0 0 0 0"
+            />
+            <feDisplacementMap in="SourceGraphic" scale="3000"/>
+        </filter>
+        <rect filter="url(#noise)" width="100%" height="100%"/>
+    </svg>
+
+    <div id="content">
+        <h1>Add some type of text here...</h1>
+        <a href="../../index.html">Community</a>
+    </div>
+    
 </body>
 </html>

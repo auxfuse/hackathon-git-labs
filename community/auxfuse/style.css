@@ -1,4 +1,54 @@
+:root {
+    --p-color: #29144b;
+    --s-color: #fffade;
+    --t-color: #936bc6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
-    background-color: red;
-    color: white;
+    background-color: var(--p-color);
+    color: var(--s-color);
+    min-height: 100%;
+    position: relative;
+}
+
+#svg-bg {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    opacity: 30%;
+    position: absolute;
+    z-index: 1;
+    filter: blur(3px) brightness(500%) invert(90%);
+}
+
+a {
+    color: var(--s-color);
+}
+
+a:hover, a:focus, a:active {
+    color: var(--t-color);
+}
+
+#content {
+    position:  relative;
+    height: 100%;       
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
