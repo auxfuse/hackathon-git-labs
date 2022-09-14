@@ -59,7 +59,7 @@ a:hover, a:focus, a:active {
     min-height: 100vh;
     margin: 0;
     opacity: 30%;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     filter: blur(3px) brightness(500%) invert(90%);
 }
@@ -72,4 +72,9 @@ a:hover, a:focus, a:active {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    padding: 1rem;
+    margin: 2rem;
+    border: 1.6rem solid rgba(255, 250, 222, 0.02);
+    border-radius: 5rem 1rem 10rem 1rem;
+    backdrop-filter: blur(10px) sepia(10%) saturate(2);
 }
