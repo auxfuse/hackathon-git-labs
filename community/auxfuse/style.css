@@ -26,55 +26,155 @@ html {
     font-size: 62.5%;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     background-color: var(--p-color);
     color: var(--s-color);
-    min-height: 100%;
+    min-height: 100vh;
     position: relative;
     font-family: var(--font-content);
-    font-size: 1.6rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+h1::selection, h2::selection,
+p::selection, span::selection {
+    background-color: var(--t-color);
 }
 
 h1, h2, h3,
 h4, h5, h6 {
     font-family: var(--font-header);
-    font-size: 1.6rem;
+    font-size: 1rem;
 }
 
 a {
     color: var(--s-color);
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: var(--s-color);
+    margin-top: 3px;
 }
 
 a:hover, a:focus, a:active {
     color: var(--t-color);
 }
 
+/* Utilities */
+
+.margin-small {
+    margin: 1rem 0;
+}
+
+.margin-med {
+    margin: 2.5rem 0;
+}
+
+.margin-large {
+    margin: 4rem 0;
+}
+
+.medium-txt {
+    font-size: 3rem;
+}
+
+.large-txt {
+    font-size: 5rem;
+}
+
+.larger-txt {
+    font-size: 7.5rem;
+}
+
+.rotate-10 {
+    width: fit-content;
+    display: inline-block;
+    rotate: -10deg;
+}
+
 /* Content styles */
 #svg-bg {
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     margin: 0;
     opacity: 30%;
     position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
     filter: blur(3px) brightness(500%) invert(90%);
 }
 
 #content {
-    position:  relative;
-    height: 100%;       
+    position: relative;
+    min-height: fit-content;       
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     z-index: 2;
-    padding: 1rem;
-    margin: 2rem;
+    padding: 1.5rem;
+    margin: 2rem 1rem;
     border: 1.6rem solid rgba(255, 250, 222, 0.02);
-    border-radius: 5rem 1rem 10rem 1rem;
+    border-radius: 5rem 2rem 2rem 2rem;
     backdrop-filter: blur(10px) sepia(10%) saturate(2);
+}
+
+.content-heading {
+    font-family: var(--font-header);
+}
+
+.content-subheading {
+    font-family: var(--font-content);
+    font-style: italic;
+}
+
+.content-detail {
+    letter-spacing: 1px;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 48rem) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-size: 2.2rem;
+    }
+
+    .medium-txt {
+        font-size: 5rem;
+    }
+    
+    .large-txt {
+        font-size: 7.5rem;
+    }
+    
+    .larger-txt {
+        font-size: 10rem;
+    }
+
+    #content {
+        width: 60%;
+        margin: 4rem auto;
+    }
+}
+
+@media only screen and (min-width: 62rem) {
+
+}
+
+@media only screen and (min-width: 75rem) {
+
 }
