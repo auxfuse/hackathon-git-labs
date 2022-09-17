@@ -146,7 +146,7 @@ img {
     filter: blur(3px) brightness(500%) invert(90%);
 }
 
-#landing-content, #dev-content {
+.content {
     position: relative;
     min-height: fit-content;       
     display: flex;
@@ -178,9 +178,6 @@ img {
 @media only screen and (min-width: 48rem) {
 
     body {
-        display: flex;
-        justify-content: center;
-        align-content: center;
         font-size: 2.2rem;
     }
 
@@ -196,16 +193,18 @@ img {
         font-size: 10rem;
     }
 
-    #content {
-        width: 60%;
+    .content {
+        width: 80%;
         margin: 4rem auto;
     }
 }
 
 @media only screen and (min-width: 62rem) {
 
-}
-
-@media only screen and (min-width: 75rem) {
+    body {
+        flex-direction: row;
+        gap: 5rem;
+        margin: 2.5rem;
+    }
 
 }
