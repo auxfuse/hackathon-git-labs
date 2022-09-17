@@ -1,56 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Developer CSS Link -->
-    <link rel="stylesheet" href="style.css">
-    <title>Anthony O' Brien - Developer</title>
-</head>
-<body>
-    <svg xmlns="http://www.w3.org/2000/svg" id="svg-bg">
-        <filter id="noise">
-            <feTurbulence type="turbulence" seed="24" baseFrequency="0.02"/>
-            <feColorMatrix type="hueRotate" values="0">
-                <animate
-                    attributeName="values"
-                    from="0"
-                    to="360"
-                    dur="8s" 
-                    repeatCount="indefinite"
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Developer CSS Link -->
+        <link rel="stylesheet" href="style.css">
+        <title>Anthony O' Brien - Developer</title>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" id="svg-bg">
+            <filter id="noise">
+                <feTurbulence type="turbulence" seed="24" baseFrequency="0.02"/>
+                <feColorMatrix type="hueRotate" values="0">
+                    <animate
+                        attributeName="values"
+                        from="0"
+                        to="360"
+                        dur="8s" 
+                        repeatCount="indefinite"
+                    />
+                </feColorMatrix>
+                <feColorMatrix 
+                type="matrix" 
+                values="0 0 0 1 0
+                        0 0 0 0 0
+                        0 1 0 0 0
+                        1 0 0 0 0"
                 />
-            </feColorMatrix>
-            <feColorMatrix 
-               type="matrix" 
-               values="0 0 0 1 0
-                       0 0 0 0 0
-                       0 1 0 0 0
-                       1 0 0 0 0"
-            />
-            <feDisplacementMap in="SourceGraphic" scale="3000"/>
-        </filter>
-        <rect filter="url(#noise)" width="100%" height="100%"/>
-    </svg>
+                <feDisplacementMap in="SourceGraphic" scale="3000"/>
+            </filter>
+            <rect filter="url(#noise)" width="100%" height="100%"/>
+        </svg>
 
-    <div id="content">
-        <h1 class="content-heading medium-txt margin-med rotate-10">Yo!🤜</h1>
-        <h2 class="content-heading large-txt margin-med">I'm Anthony 👨‍🦰</h2>
-        <span class="content-subheading medium-txt margin-small">Frontend Web & Filemaker Developer</span>
+        <section id="landing-content">
+            <h1 class="content-heading medium-txt margin-med rotate-10">Yo!🤜</h1>
+            <h2 class="content-heading large-txt margin-med">I'm Anthony 👨‍🦰</h2>
+            <span class="content-subheading medium-txt margin-small">Frontend Web & Filemaker Developer</span>
 
-        <p class="content-detail margin-med">
-            One of my biggest passions is building Community. Code 
-            Institute Grad since 2020, and the Slack community there is
-            second to none!
-        </p>
-        <p class="content-detail margin-med">
-            Without that community, I wouldn't of made it as far as I 
-            have in my career. From on-demand problem solving, to making
-            some of the best friends I've ever met. 👏
-        </p>
+            <p class="content-detail margin-med">
+                Married to my teenage crush, Charlene, and together since
+                2006!🧡 We have two daughters and a son🚸, and of course a
+                fur-child too!🐶
+            </p>
+            <p class="content-detail margin-small">
+                Software Dev Grad since 2020 from Code Institute, and the Slack 
+                community there is second to none! One of my biggest passions is 
+                building Community.
+            </p>
+            <p class="content-detail margin-med">
+                Without that community, I wouldn't of made it as far as I 
+                have in my career. From on-demand problem solving, to making
+                some of the best friends I've ever met. 👏
+            </p>
+            <p class="content-detail margin-small">
+                Meet some of the Community by clicking below!
+            </p>
 
-        <a href="../../index.html" class="margin-small">👉Community = Product👈</a>
-    </div>
-    
-</body>
+            <a href="../../index.html" class="margin-small">👉Community = Product👈</a>
+        </section>
+
+        <section id="dev-content">
+            <h1 class="content-heading medium-txt margin-med rotate-10-r flex-end">🎮Fuse!🏋️‍♂️</h1>
+
+            <p class="content-detail margin-med">
+                Gaming! Something about it, from the creativeness of 
+                each game, to the musical score, and not to mention
+                the Story elements too. I would be lying if it hasn't
+                moulded me enough over the years. From gaming as a
+                child, to now in my adult life. 😅 I've only recently
+                finished the Final Fantasy 7 Remake, and I was like
+                an excited child hearing the Prelude in it for the first
+                time. And then got chills hearing One-Winged Angel!
+                <br>
+                And the visuals...just look at this screenshot I took
+                of Cloud & Sephiroth ⚔. Hidden behind a collapsable element
+                to save anyone from Spoilers, 🙈, you've been warned.
+            </p>
+
+            <details>
+                <summary>Final Fantasy 7 Screenshot</summary>
+                <img src="ff7_cloud_sephiroth.png" alt="Final Fantasy 7 - Cloud & Sephiroth Screenshot" class="margin-med img-transparent-med">
+            </details>
+
+            <p class="content-detail margin-med">
+                To counteract all the stationary moments in my day-to-day
+                lifestyle from Work to Gaming, I'm an avid Olympic Weightlifter.
+                No...no, I have not gone to the Olympics rather the sport is
+                called Olympic Weightlifting.🏋️‍♀️ And I get to train alongside my
+                Wife, Charlene. One of the biggest primary drivers in my life to
+                date.🧡
+                <br>
+                The mental health gains and the physical prowess improvements,
+                have made my stationary life that much more sustainable. Lifting
+                weights doesn't just make you stronger or leaner, it allows your
+                mind to decompress, your psyche to re-stabilise, and brings focus.
+                <br>
+                No spoiler tags this time, just me and a barbell.
+            </p>
+
+            <img src="aob_barbell.jpg" alt="Anthony performing Split Jerk with a barbell" class="img-small img-transparent-small margin-small">
+
+        </section>
+
+        <script src="main.js" defer />
+        
+    </body>
 </html>

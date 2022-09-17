@@ -34,6 +34,7 @@ body {
     font-family: var(--font-content);
     font-size: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
 }
@@ -68,6 +69,26 @@ a:hover, a:focus, a:active {
     color: var(--t-color);
 }
 
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.img-small {
+    width: 50%;
+    align-self: center;
+    border-radius: 1rem;
+}
+
+.img-transparent-small {
+    opacity: 0.8;
+}
+
+.img-transparent-med {
+    opacity: 0.65;
+}
+
 /* Utilities */
 
 .margin-small {
@@ -100,6 +121,16 @@ a:hover, a:focus, a:active {
     rotate: -10deg;
 }
 
+.rotate-10-r {
+    width: fit-content;
+    display: inline-block;
+    rotate: 10deg;
+}
+
+.flex-end {
+    align-self: end;
+}
+
 /* Content styles */
 #svg-bg {
     width: 100%;
@@ -115,7 +146,7 @@ a:hover, a:focus, a:active {
     filter: blur(3px) brightness(500%) invert(90%);
 }
 
-#content {
+#landing-content, #dev-content {
     position: relative;
     min-height: fit-content;       
     display: flex;
