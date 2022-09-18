@@ -12,4 +12,4 @@ function detectDevice(touch_device) {
     }
 };
 
-detectDevice(touch_device);
+window.onload = detectDevice(touch_device);
