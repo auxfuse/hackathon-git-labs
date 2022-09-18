@@ -10,7 +10,28 @@
     </head>
     <body>
 
-        <img src="svg-bg.svg" id="svg-bg" alt="SVG animated background">
+        <svg xmlns="http://www.w3.org/2000/svg" id="svg-bg">
+            <filter id="n">
+                <feTurbulence seed="24" baseFrequency="0.02"/>
+                <feColorMatrix type="hueRotate" values="0" id="animateCM">
+                    <animate
+                        attributeName="values"
+                        from="0"
+                        to="360"
+                        dur="8s" 
+                        repeatCount="indefinite"
+                    />
+                </feColorMatrix>
+                <feColorMatrix 
+                    values="0 0 0 1 0
+                            0 0 0 0 0
+                            0 1 0 0 0
+                            1 0 0 0 0"
+                />
+                <feDisplacementMap in="SourceGraphic" scale="3000"/>
+            </filter>
+            <rect filter="url(#n)" width="100%" height="100%"/>
+        </svg>
 
         <section class="content" id="landing-content">
             <h1 class="content-heading medium-txt margin-med rotate-10">Yo!🤜</h1>
@@ -86,5 +107,6 @@
             <img src="aob_barbell.jpg" alt="Anthony performing Split Jerk with a barbell" class="img-small img-transparent-small margin-small">
         </section>
         
+        <script src="main.js" defer/>
     </body>
 </html>
