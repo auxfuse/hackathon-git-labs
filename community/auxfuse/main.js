@@ -1,6 +1,6 @@
 // Global variables
 let touch_device = (navigator.maxTouchPoints || 'ontouchstart' in document.documentElement);
-let animateSVG = document.querySelector('#animateCM');
+let bgSVG = document.querySelector('#svg-bg');
 
 /**
  * If browser is "Mobile" variant, remove ColorMatrix Element
@@ -8,7 +8,7 @@ let animateSVG = document.querySelector('#animateCM');
 */
 function detectDevice(touch_device) {
     if(touch_device) {
-        animateSVG.remove();
+        bgSVG.remove();
     }
 };
 
