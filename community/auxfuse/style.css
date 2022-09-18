@@ -144,6 +144,7 @@ img {
     right: 0;
     z-index: 1;
     filter: blur(3px) brightness(500%) invert(90%);
+    object-fit: cover;
 }
 
 .content {
