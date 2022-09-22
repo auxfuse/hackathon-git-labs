@@ -55,6 +55,7 @@ body::after {
     background-repeat: no-repeat;
     opacity: 0.2;
     filter: hue-rotate(150deg);
+    pointer-events: none;
 }
 
 img {
