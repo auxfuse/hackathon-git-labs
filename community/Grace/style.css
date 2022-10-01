@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.image {
+  grid-area: 2 / 2 / 5 / 4;
+}
+.name {
+  grid-area: 5 / 2 / 6 / 4;
+}
+.social-media {
+  grid-area: 6 / 2 / 7 / 4;
+}
+.about {
+  grid-area: 2 / 5 / 3 / 7;
+}
+.intro {
+  grid-area: 3 / 5 / 5 / 7;
+}
+.resume {
+  grid-area: 5 / 5 / 6 / 7;
+}
+.github {
+  grid-area: 6 / 5 / 7 / 7;
+}
