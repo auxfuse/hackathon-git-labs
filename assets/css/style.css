@@ -182,6 +182,13 @@ p, h1, h2, h3, h4, h5, h6 {
     filter: hue-rotate(330deg) drop-shadow(8px 8px 10px var(--secondary-color));
 }
 
+.twitter-link {
+    color: var(--font-color);
+    letter-spacing: 0.2ch;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 #community-section h1::after {
     content: '';
     display: block;
