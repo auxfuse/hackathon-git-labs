@@ -4,7 +4,12 @@
 
 ## PR contains:
 - INFO ABOUT YOUR PULL REQUEST GOES HERE (Please be as descriptive as possible) 🤜
-- If this is your first ever PR, please just add your JSON Object data here and a small note about your experience following this guide.
+- If this PR followed the `basic.md` guide, please just add your JSON Object data here and a small note about your experience following this guide.
+
+## Hacktoberfest 2022:
+- [ ] Does this PR follow the `intermediate.md` guide and submitted as part of Hacktoberfest 2022?
+
+_Please note, we cannot accept `basic.md` PR submissions for Hacktoberfest, it must be a custom HTML or CSS creation following the `intermediate.md` guide._
 
 ## Breaking changes
 - IF ANYTHING YOU'RE COMMITTING WOULD BREAK SOMETHING, INCLUDE HERE WHAT WOULD BREAK
