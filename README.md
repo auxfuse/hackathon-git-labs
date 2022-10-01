@@ -24,6 +24,16 @@ In the last 18 months or so, (2020/2021), Hackathons became a regular routine of
 
 This is a fundamental competency that most don't realise along their Coding journey. Because learning can be somewhat of a solo, lonely undertaking. The need to learn Version Control in a team is not a priority. You might learn how to create a repo, add to the staging area, commit, and push to same....but you wouldn't (or might not) have the opportunity to do all those things all at the same time as a few team members, with code conflicts, branches, forks, merges. You can see that this is starting to grow legs. 😅
 
+## Important notice about Hacktoberfest 2022
+
+🎃🌐💻
+
+This project is all about Open Source and learning how to submit your first Pull Requests. As it is now Hacktoberfest (today is 01/10/2022), we are now accepting Pull Requests that meet the `intermediate.md` specification. That is, a fully custom directory added to the Community utilising HTML, CSS & JS and of course with your details added to the `community.json` file!
+
+Please still use the `basic.md` guide! It would be great to get your first Pull Request in using that guide, and then to see you come back to the `intermediate.md` guide adding your own custom creations to this platform! We can then review your PR, approve it, and merge it. And if you manage to submit 4 accepting PRs in the month of Hacktoberfest to repos with the Hacktoberfest topic, you can grab yourself some neat swag! Check it out here: [Hacktoberfest](https://hacktoberfest.com/)
+
+🎃🌐💻
+
 --- --- --- --- --- --- --- ---
 
 Take your time with this process. Rome wasn't built in a day... 🏛, (ugh, that term is a bit stale now 😂), and your competencies or skillsets won't either.
@@ -45,6 +55,9 @@ The [Basic](basic.md) stream for this project will enable the user to learn & de
     - Cloning the Forked project to their local development IDE/Editor
     - Creating a branch from within the IDE/Editor using the Command Line Interface
 - Adding to a JSON file following a pre-defined format
+
+    ***Any PR that only satisfies this guide will not be Hacktoberfest approved and valid. For Hacktoberfest submissions, please utilise the `intermediate.md` guide.***
+
 - Commiting work to their branch
 - Creating a PR
 - Completing the PR template
@@ -55,6 +68,8 @@ The [Intermediate](intermediate.md) stream for this project will enable the user
 - HTML/CSS mini-creation which will be automatically linked to from the Landing Page.
 
     Sometimes, it's great to showcase your work in a directory like this. You never know who you might one day be sitting beside for work 🙂😀 So use this as an opportunity to create something bespoke and unique, showcasing your skills using HTML & CSS.
+    
+    ***Any PR that satisfies this guide will be Hacktoberfest approved and valid 👏👏***
 
 - Directory surfing and creating sub-directories
 - Optional review and delve into the default files of the project where you will find Grid, Flexbox, Root variables, Fetch API, JSON etc. All of these are are done in vanilla languages, and this project is completely framework-LESS.

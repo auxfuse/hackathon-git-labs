@@ -4,6 +4,8 @@ This guide is intended for those who want to create a PR with some unique conten
 
 Then dive in below! This can be your first, or maybe your second...or even your third PR. Don't be afraid to submit a few different JSON objects, and then sub-directories to boot. 🤜
 
+***Any PR satisfying this guide with a custom directory of HTML, CSS, JS will be applicable for Hacktoberfest 2022!*** 🎃🌐💻
+
 If at any stage you want to submit a PR to revise the content you already submitted, then feel free. This project is made for you, the Participant, but over time most of the work in this project will be associated to all of you out there you contribute. 🤗
 
 ## 👇 Participant steps: 👇
@@ -11,6 +13,8 @@ If at any stage you want to submit a PR to revise the content you already submit
 **_This guide assumes you have read and implemented the steps from the [basic.md](basic.md) file._**
 
 - As per the [basic.md](basic.md) file, please make a branch before doing the work below.
+
+    - ***If you are jumping straight into this guide without having completed the `basic.md`. Please follow that guide in tandem with this guide, found here 👉👉 [basic.md](basic.md).***
 
 - As a side note, you may need to pull down the project from the upstream.
     - Create your branch.
