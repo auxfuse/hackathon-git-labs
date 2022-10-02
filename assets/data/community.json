@@ -201,5 +201,12 @@
     "course_stage": "Student",
     "favorite_language": "Python",
     "currently_learning": "React"
+  },
+  {
+    "name": "Daniel",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Gosu"
   }
 ]
