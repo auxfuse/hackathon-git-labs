@@ -180,5 +180,12 @@
     "course_stage": "Mentor",
     "favorite_language": "JavaScript",
     "currently_learning": "Go"
-  }
+  },
+  {
+    "name": "Tinashe",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Java"
+}
 ]
