@@ -180,5 +180,12 @@
     "course_stage": "Mentor",
     "favorite_language": "JavaScript",
     "currently_learning": "Go"
+  },
+  {
+    "name": "Emanuel",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Ruby"
   }
 ]
