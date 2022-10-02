@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+      overflow-X: hidden;
+  }
+
+main {
+    min-height: 80vh;
+}
+
+:root {
+    --dark-blue: #24265d;
+    --light-blue:#3871c1;
+    --main-tan: #f3a257;
+    --light-tan: #FFD75C;
+    --purple: #9d3860;
+    --main-red: #ed1c24;
+    --light-red: #ef2e32; 
+    --off-white: #faf9f6;
+    --off-grey: #615766;
+  }
+
+  .header {
+    --background: transparent;
+    font-family: 'Lora', serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 999; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8em 1em;
+    transition:  250ms ease-in-out;
+}
+
+  .hide {
+      display: none;
+  }
+
+  .logo-small{
+      opacity: 0;
+  }
+
+  .logo-small-style {
+    position: relative;
+    top: .4em; left: .5em;
+    transition: .5s;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+.big-screen {
+    display: none;
+}
+
+.medium-screen {
+    display: none;
+}
+
+
+
+.fa-icon {
+    font-size: 1.8rem;
+}
+
+.fa-github-square {
+    color: var(--dark-blue);
+}
+
+
+a {
+    color: var(--purple);
+    text-decoration: none;
+   
+}
+
+.heading {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8rem;
+}
+
+.txt {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+.fa-linkedin {
+    color: var(--light-blue);
+}
+
+.logo-pic {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+
+
+/* ############## Hero ##########################
+################################################## */
+
+.home-hero {
+    background: var(--light-tan);
+    padding: 1em 0 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+    background: linear-gradient(185deg, var(--light-tan)0%, var(--off-white) 100%);
+}
+
+.hero-img {
+    margin: 1em 0 0;
+    background:  url('./assets/images/niu.png') no-repeat center;
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    width: 100%; height: 50vh; max-height: 600px; 
+    max-width: 600px;
+  
+}
+
+.hero-txt {
+    padding: 1em;
+    color: rgb(36, 34, 34); 
+}
+
+.social-links {
+    gap: .5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+    margin: 1em auto;
+    max-width: 300px;
+
+}
+
+
+/* ############## End Hero ##########################
+################################################## */
+
+
+/* ############## media query ##################
+################################################## */
+
+@media screen and (min-width: 600px){
+
+    .fa-icon {
+        font-size: 1.8rem;
+        padding: 1.2em;
+    }
+
+    .home-hero {
+        height: 100vh;
+        background-color: var(--light-tan);
+        min-height: 900px;
+        
+    }
+
+    .logo-pic {
+        width: 1.6em;
+        height: 1.8em;
+    }
+
+    .logo-small-style {
+        left: 1.5em; top: .5em;
+    }
+
+    .menu-toggle {
+       
+        right: 3em; top: 2em;
+    }
+
+    .hero-txt {
+        padding: 5em;
+    }
+
+    .small-screen {
+        display: none;
+    }
+
+    .medium-screen {
+        display: initial;
+    }
+
+    .hero-links {
+        padding: 2em;
+    }
+
+    .hero-links a {
+        margin: 0 1.5em;
+    }
+
+  
+    .hero-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1200px){
+    .sm-screen,
+    .medium-screen {
+        display: none;
+    }
+
+    .big-screen {
+        display: initial;
+    }
+
+    .home-hero {
+        flex-direction: row;
+        align-items: center;
+        background: linear-gradient(135deg, var(--light-tan)0%, var(--off-white) 100%);
+    }
+
+    .hero-img {
+        width: 50%;
+        height: 60vh;
+
+    }
+
+    .hero-txt {
+        padding: 3em;
+        width: 50%;
+    }
+
+    .txt {
+        font-size: 1.2rem;
+    }
+
+    .fa-icon {
+        font-size: 2rem;
+    }
+    .heading {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (min-width: 2000px){
+    .logo {
+        font-size: 6rem;
+    }
+
+    .hero-img {
+        width: 50%;
+        max-width: 1200px;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+
+    .txt {
+        font-size: 2rem;
+    }
+
+    .fa-icon {
+        font-size: 3rem;
+    }
+
+
+    .hero-links {
+        margin: 3em 0;
+    }
+}
+
+
+@media screen and (max-height: 550px){
+    .hero-img {
+        height: 40vh; max-height: 300px;
+        background-size: contain;
+    }
+
+    .heading {
+        font-size: 1.2rem;
+    }
+
+    .txt {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        padding: .2em;
+    }
+
+    .home-hero {
+        max-height: 300px;
+    }
+
+}
