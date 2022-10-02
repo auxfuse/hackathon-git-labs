@@ -1,48 +1,41 @@
 const communityContainer = document.querySelector("#community");
 
-createElement = (element, className) => {
-  // Simple function for defining Elements and class names of same
-  const el = document.createElement(element);
-  el.className = className;
-  return el;
+/**
+ * A function that creates an element and assigns a class name to it.
+ */
+const createElement = (element, className) => {
+  const createdElement = document.createElement(element);
+  createdElement.className = className;
+  return createdElement;
+};
+const getRandomEmoji = async () => {
+  return fetch("assets/data/emojis.json")
+    .then((response) => response.json())
+    .then((data) => data[Math.floor(Math.random() * data.length)]);
+};
+
+/**
+ * It takes an array of objects, l
+ * oops through each object, and creates a card for each object
+ * @param listOfParticipants {Array} - This is the array of objects that we get from the API.
+ */
+const createParticipantes = (listOfParticipants) => {
+  listOfParticipants.forEach(async (participant) => {
+    const cardHTML = `
+      <h2 class="card-title">${await getRandomEmoji()} ${participant.name}</h2>
+      <p class="card-sub margin-yt-sm">📅 Started: ${participant.course_start}</p>
+      <p class="card-sub margin-yb-sm custom-underline">🎓 Stage:  ${participant.course_stage}</p>
+      <p class="card-detail">Loves: ${participant.favorite_language} 😍 </p>
+      <p class="card-detail custom-underline">Learning: ${participant.currently_learning} 📚 </p>
+      <a class="participant-link" href="community/${participant.name}" data-content="View Work ➡">View Work ➡</a>
+      `;
+
+    const card = createElement("div", "card");
+    card.innerHTML = cardHTML;
+    communityContainer.appendChild(card);
+  });
 };
 
 fetch("assets/data/community.json")
-  // Fetch JSON data & add to DOM
   .then((response) => response.json())
-  .then((data) => {
-    let participants = data.map((participant) => [
-      participant.name,
-      participant.course_start,
-      participant.course_stage,
-      participant.favorite_language,
-      participant.currently_learning,
-    ]);
-
-    participants.forEach((participant) => {
-      // Create Elements
-      const card = createElement("div", "card");
-      const name = createElement("h2", "card-title");
-      const courseStart = createElement("p", "card-sub margin-yt-sm");
-      const courseStage = createElement("p", "card-sub margin-yb-sm custom-underline");
-      const favLanguage = createElement("p", "card-detail");
-      const currentLearn = createElement("p", "card-detail custom-underline");
-      const linkTo = createElement("a", "participant-link");
-
-      // Inject data to new Created elements
-      name.innerHTML += participant[0];
-      courseStart.innerHTML += "📅 Started: " + participant[1];
-      courseStage.innerHTML += "🎓 Stage: " + participant[2];
-      favLanguage.innerHTML += "Loves: " + participant[3] + " 😍";
-      currentLearn.innerHTML += "Learning: " + participant[4] + " 📚";
-      linkTo.innerHTML += "View Work ➡";
-
-      let linkRef = participant[0];
-      linkTo.setAttribute("href", `community/${linkRef}`);
-      linkTo.setAttribute("data-content", "View Work ➡");
-
-      // Hierarchy of Container
-      communityContainer.append(card);
-      card.append(name, courseStart, courseStage, favLanguage, currentLearn, linkTo);
-    });
-  });
+  .then((data) => createParticipantes(data));
