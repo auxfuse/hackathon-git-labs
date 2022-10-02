@@ -194,5 +194,12 @@
     "course_stage": "Alumni",
     "favorite_language": "Python",
     "currently_learning": "Ruby"
+  },
+  {
+    "name": "Jason",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "React"
   }
 ]
