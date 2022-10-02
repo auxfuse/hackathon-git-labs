@@ -187,5 +187,12 @@
     "course_stage": "Alumni",
     "favorite_language": "Python",
     "currently_learning": "Java"
-}
+  },
+  {
+    "name": "Emanuel",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Ruby"
+  }
 ]
