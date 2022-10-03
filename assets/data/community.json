@@ -215,5 +215,12 @@
     "course_stage": "Alumni",
     "favorite_language": "JavaScript",
     "currently_learning": "Gosu"
+  },
+  {
+    "name": "Alissa2",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Python"
   }
 ]
