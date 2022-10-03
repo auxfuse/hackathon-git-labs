@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Yanone+Kaffeesatz:wght@300;500&display=swap');
+
+:root {
+    --white: #fff;
+    --purple: #170022;
+}
+
+body {
+    margin:0 auto;
+    background: linear-gradient(90deg, rgb(94, 57, 243) 0%, rgb(143, 74, 159) 50%, rgb(176, 159, 243) 100%);
+    color: var(--white);
+    margin-bottom: 175px;
+}
+
+h1{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-size:14px;
+    color: var(--white);
+}
+
+p:last-of-type {
+    margin-bottom: 100px;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--purple);
+    cursor: grab;
+}
+
+main {
+    flex-direction: column;
+    width:90%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+img {
+    height: 200px;
+
+}
+.flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    height:40vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height: 50px;
+    max-height: 100px;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: var(--white);
+}
+
+
+/*----- FOOTER -----*/
+
+li {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+/* Wave Animation */
+/* Simple CSS Waves animation code from: https://codepen.io/goodkatz/pen/LYPGxQz */
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% { 
+        transform: translate3d(85px,0,0);
+    }
+}
+
+
+/*----- MEDIA QUERIES -----*/
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        margin-bottom: 0;
+    }
+    main {
+        width: 80%;
+    }
+    .waves {
+        height:30vh;
+        bottom: 120px;
+        min-height: 75px;
+        max-height: 125px;
+    }
+    h1 {
+        font-size:75px;
+        margin-bottom: 35px;
+    }
+    p {
+        font-size: 18px;
+    }
+    li {
+        font-size: 50px;
+    }
+    .content {
+        height: 10vh;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    h1 {
+        font-size:100px;
+    }
+    img {
+        height: 300px;
+    }
+}
