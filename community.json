@@ -168,10 +168,17 @@
         "currently_learning": "Swift"
     },
     {
-        "name": "Alissa T.",
-        "course_start": "2020",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "React"
+        "name": "Grace",
+        "course_start": "2022",
+        "course_stage": "Student",
+        "favorite_language": "JavaScript",
+        "currently_learning": "Python"
+    },
+    {
+        "name": "Alissa2",
+        "course_start": "2022",
+        "course_stage": "Student",
+        "favorite_language": "JavaScript",
+        "currently_learning": "Python"
     }
 ]
