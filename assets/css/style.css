@@ -167,7 +167,6 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
-    text-align: justify;
 }
 
 #content-image {
@@ -186,7 +185,6 @@ p, h1, h2, h3, h4, h5, h6 {
     color: var(--font-color);
     letter-spacing: 0.2ch;
     cursor: pointer;
-    text-decoration: none;
 }
 
 #community-section h1::after {
@@ -249,7 +247,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .card-sub, .card-detail {
-    font-size: 1.3rem;
     padding: 5px 0;
     font-weight: bold;
     overflow: hidden;
