@@ -27,7 +27,7 @@ const createParticipantes = (listOfParticipants) => {
       <h3 class="card-sub margin-yb-sm custom-underline">🎓 Stage:  ${participant.course_stage}</h3>
       <h3 class="card-detail">Loves: ${participant.favorite_language} 😍 </h3>
       <h3 class="card-detail custom-underline">Learning: ${participant.currently_learning} 📚 </h3>
-      <a class="participant-link" href="community/${participant.name}" data-content= "">${participant.name}'s Work ➡</a>
+      <a class="participant-link" href="community/${participant.name}" data-content="View Work ➡">View Work ➡</a>
       `;
 
     const card = createElement("div", "card");
