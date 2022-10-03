@@ -120,7 +120,7 @@ li {
 /* Tablet */
 @media (min-width: 768px) {
     body {
-        margin-bottom: 0;
+        margin-bottom: 300px;
     }
     main {
         width: 80%;
