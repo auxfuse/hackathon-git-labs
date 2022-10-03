@@ -223,4 +223,12 @@
     "favorite_language": "JavaScript",
     "currently_learning": "Python"
   }
+  ,
+  {
+    "name": "CluelessBiker",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "ReactJS"
+  }
 ]
