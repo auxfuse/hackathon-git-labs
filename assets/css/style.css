@@ -20,8 +20,10 @@
     --gh-watermark: url('../images/gh-icon-1.png');
 }
 
-    /* CSS Reset */
-*, *::before, *::after {
+/* CSS Reset */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -29,7 +31,8 @@
     margin: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -63,11 +66,18 @@ img {
     max-width: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
 }
 
-#root, #__next {
+#root,
+#__next {
     isolation: isolate;
 }
 
@@ -201,7 +211,7 @@ p, h1, h2, h3, h4, h5, h6 {
 #community {
     display: flex;
     flex-wrap: wrap;
-    justify-content:  center;
+    justify-content: center;
     align-items: center;
     margin-bottom: 7rem;
 }
@@ -248,7 +258,8 @@ p, h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-.card-sub, .card-detail {
+.card-sub,
+.card-detail {
     font-size: 1.3rem;
     padding: 5px 0;
     font-weight: bold;
@@ -368,7 +379,7 @@ footer::before {
     font-style: italic;
 }
 
-#team-list > li {
+#team-list>li {
     margin: 0.5rem 0;
 }
 
@@ -384,7 +395,31 @@ footer::before {
     margin: 0 20px;
 }
 
+.form-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
 
+input[type='text'],
+[type='email'],
+select,
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px var(--secondary-color);
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    width: 100%;
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
 
 
 /* Media Queries */
