@@ -243,5 +243,12 @@
     "course_stage": "Alumni",
     "favorite_language": "CSS",
     "currently_learning": "NodeJS"
+  },
+  {
+    "name": "Sean",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "React"
   }
 ]
