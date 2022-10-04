@@ -166,3 +166,72 @@ h3 {
 .banner img {
   max-width: 648px;
 }
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2%;
+  background: black;
+}
+#socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+  text-align: center;
+}
+#socials > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#socials li {
+  display: inline-flex;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+#socials a {
+  text-decoration: none;
+  color: #f7dfd6;
+}
+#socials i {
+  font-size: 160%;
+  margin: 1%;
+  padding: 5%;
+}
+#socials a:hover {
+  color: #fdf3f0;
+}
+.copyright {
+  float: left;
+  font-size: 14px;
+  word-spacing: 2px;
+  color: #f7dfd6;
+}
+/* bottom menu in footer */
+.bottom-menu {
+  float: right;
+}
+
+.bottom-menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom-menu ul li {
+  padding-right: 10px;
+  display: block;
+}
+
+.bottom-menu ul li a {
+  color: #f7dfd6;
+  text-decoration: none;
+}
+
+.bottom-menu ul li a:hover {
+  color: #fdf3f0;
+}
