@@ -29,5 +29,12 @@ const createShowcases = (participants, template, container, showcaseCount) => {
     container.append(fragment);
 }
 (()=>{
-    let showcaseCount = 5;
+    const showcaseCount = 5;
+    const showcaseContainer = document.getElementById("showcases");
+    const showcaseTemplate = document.getElementById("participant-card-template");
+
+    fetch("assets/data/community.json")
+        .then((response) => response.json())
+        .then((data) => createShowcases(data, showcaseTemplate, showcaseContainer, showcaseCount));
+
 })();
