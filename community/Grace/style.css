@@ -12,13 +12,13 @@ h3 {
 .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(10, 0.5fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .image {
-  grid-area: 2 / 2 / 5 / 4;
+  grid-area: 3 / 2 / 6 / 4;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-size: cover;
@@ -27,20 +27,20 @@ h3 {
 }
 
 .name {
-  grid-area: 5 / 2 / 6 / 4;
+  grid-area: 6 / 2 / 7 / 4;
 }
 .social-media {
-  grid-area: 6 / 2 / 7 / 4;
+  grid-area: 7 / 2 / 8 / 4;
 }
 .about {
   grid-area: 2 / 5 / 3 / 7;
   font-size: larger;
 }
 .intro {
-  grid-area: 3 / 5 / 5 / 7;
+  grid-area: 3 / 5 / 6 / 7;
 }
 .resume-github {
-  grid-area: 5 / 5 / 6 / 7;
+  grid-area: 6 / 5 / 7 / 7;
 }
 
 /* Button CSS - source: https://getcssscan.com/css-buttons-examples*/
@@ -135,4 +135,29 @@ h3 {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.slider {
+  grid-area: 7 / 5 / 10 / 7;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 50vw);
+  grid-template-rows: 1fr;
+
+  overflow: scroll;
+  scroll-snap-type: both mandatory;
+  scroll-padding: 1rem;
+  max-width: 432px;
+  max-height: 251.19px;
+}
+
+.active {
+  scroll-snap-type: unset;
+}
+
+.slider > li {
+  scroll-snap-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 0;
 }
