@@ -18,7 +18,7 @@ h3 {
 }
 
 .image {
-  grid-area: 3 / 2 / 6 / 4;
+  grid-area: 2 / 2 / 5 / 4;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-size: cover;
@@ -27,10 +27,10 @@ h3 {
 }
 
 .name {
-  grid-area: 6 / 2 / 7 / 4;
+  grid-area: 5 / 2 / 6 / 4;
 }
 .social-media {
-  grid-area: 7 / 2 / 8 / 4;
+  grid-area: 6 / 2 / 7 / 4;
 }
 .about {
   grid-area: 2 / 5 / 3 / 7;
@@ -139,16 +139,14 @@ h3 {
 
 .slider {
   grid-area: 7 / 5 / 10 / 7;
-  padding: 1.5rem;
+  padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, 50vw);
+  grid-template-columns: repeat(2, 40vw);
   grid-template-rows: 1fr;
 
   overflow: scroll;
   scroll-snap-type: both mandatory;
   scroll-padding: 1rem;
-  max-width: 432px;
-  max-height: 251.19px;
 }
 
 .active {
@@ -158,6 +156,13 @@ h3 {
 .slider > li {
   scroll-snap-align: center;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 1px;
   font-size: 0;
+}
+
+.banner {
+  grid-area: 7 / 1 / 11 / 4;
+}
+.banner img {
+  max-width: 648px;
 }
