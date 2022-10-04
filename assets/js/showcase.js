@@ -28,6 +28,15 @@ const createShowcases = (participants, template, container, showcaseCount) => {
     }
     container.append(fragment);
 }
+
+const shuffle = (arr) => {
+    for(let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i+1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
 (()=>{
     const showcaseCount = 5;
     const showcaseContainer = document.getElementById("showcases");
@@ -35,6 +44,6 @@ const createShowcases = (participants, template, container, showcaseCount) => {
 
     fetch("assets/data/community.json")
         .then((response) => response.json())
-        .then((data) => createShowcases(data, showcaseTemplate, showcaseContainer, showcaseCount));
+        .then((data) => createShowcases(shuffle(data), showcaseTemplate, showcaseContainer, showcaseCount));
 
 })();
