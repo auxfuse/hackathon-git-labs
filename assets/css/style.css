@@ -378,13 +378,10 @@ footer::before {
     height: 100vh;
 }
 
-.contact-column {
-    padding-top: 80px;
-}
-
-#contact-header {
-    text-align: center;
+.contact-header {
+    text-align: left;
     padding-top: 50px;
+    margin: 0 20px;
 }
 
 
