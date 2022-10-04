@@ -12,7 +12,7 @@ h3 {
 .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(10, 0.5fr);
+  grid-template-rows: repeat(9, 0.5fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
