@@ -18,10 +18,14 @@ body {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 6.2rem;
   text-align: center;
   color: #001819;
   padding: 2rem;
+}
+
+h1 span {
+  font-size: 3.6rem;
 }
 
 main {
@@ -48,4 +52,5 @@ main {
 .right-side p {
   font-size: 2.4rem;
   padding: 2rem;
+  margin: 0 6.4rem;
 }
