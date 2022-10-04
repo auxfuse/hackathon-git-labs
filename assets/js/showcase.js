@@ -1,19 +1,20 @@
 
 const generateCard = (participant, template) => {
-    // Create a new card element based on the template
     const card = template.content.firstElementChild.cloneNode(true);
-    for (const child of card.children) {
-        if (child.dataset.id == 'link') {
-            child.setAttribute('href', `community/${participant.name}`);
+    const fields = card.querySelectorAll('[data-field]');
+
+    for (const field of fields) {
+        if (field.dataset.field == 'link') {
+            field.setAttribute('href', `community/${participant.name}`);
         } else {
-            child.children[0].innerText = participant[child.dataset.id];
+            field.children[0].innerText = participant[field.dataset.field];
         }
     }
     return card;
 }
 
 /**
- * Creates and appends 
+ * Creates and appends showcase cards 
  * @param {Array} participants - Array of participant objects 
  * @param {Element} template - The template element object to build individual cards from
  * @param {Element} container - The dom element to appened the cards too
