@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Intermediate Guide</title>
+</head>
+
+<body>
+    <section id="content">
+        <header>
+            <h1>Intermediate guide to making your first Pull Request (PR)</h1>
+            <hr>
+        </header>
+        <main>
+            <section id="overview">
+                <p>
+                    This guide is intended for those who want to create a PR with some unique content associated with
+                    it.
+                    💄💄
+                    Maybe you've done a PR before with a Hackathon team and need a refresher? Or you have just completed
+                    the
+                    <a href="#">basic.md</a> portion of this Community Guide Project, and now want to do another PR with
+                    a
+                    custom developed HTML & CSS Creation?
+                </p>
+
+                <p>Then dive in below! This can be your first, or maybe your second...or even your third PR. Don't be
+                    afraid
+                    to
+                    submit a few different JSON objects, and then sub-directories to boot. 🤜
+                </p>
+
+                <p>
+                    <em><strong>Any PR satisfying this guide with a custom directory of HTML, CSS, JS will be applicable
+                            for
+                            Hacktoberfest 2022! 🎃🌐💻</strong></em>
+                </p>
+                <p>
+                    If at any stage you want to submit a PR to revise the content you already submitted, then feel free.
+                    This project is made for you, the Participant, but over time most of the work in this project will
+                    be
+                    associated to all of you out there you contribute. 🤗
+                </p>
+            </section>
+
+            <section id="participation-steps">
+                <h2>👇 Participant steps: 👇
+                    <hr>
+                </h2>
+                <p><em>
+                        <strong>This guide assumes you have read and implemented the steps from the <a
+                                href="#">basic.md</a> file.</strong>
+                    </em></p>
+                <ul>
+                    <li>
+                        <p>As per the basic.md file, please make a branch before doing the work below.</p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>If you are jumping straight into this guide without having completed the
+                                        <span>basic.md</span>.
+                                        Please
+                                        follow that guide in tandem with this guide, found here 👉👉 <a
+                                            href="#">basic.md</a>.</strong>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p>As a side note, you may need to pull down the project from the upstream.</p>
+                        <ul>
+                            <li>
+                                <p>Create your branch.</p>
+                            </li>
+                            <li>
+                                <p>
+                                    Open your terminal/command line in your preferred IDE/Editor and run this command:
+                                    <span>git
+                                        pull
+                                        upstream main</span>.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    At this stage the project files will be updated to whats in the original repo, and
+                                    you
+                                    may
+                                    encounter Merge Conflicts.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Where possible, please review and resolve these merge conflicts as they pertain to
+                                    you
+                                    and your files only!</p>
+
+                            </li>
+                            <p>If the Merge conflict is in the <span>community.json</span> file, please move your
+                                inclusion to the bottom
+                                of the file as the last JSON Object in the file.</p>
+                            <p>If you have resolved the Merge Conflicts, please then add, commit, and push to your
+                                branch to
+                                confirm those changes and make your branch up-to-date. 🌳✔</p>
+                            <li>Continue with the below steps to now add your custom creation. 🤗</li>
+                        </ul>
+
+
+                    </li>
+                    <li>
+                        <p>In the File Directory, click on the "community" directory:</p>
+                        <img src="/docs/images/communityDir.png" alt="communityDir">
+                    </li>
+
+                    <li>
+                        <p>Inside the <span>community</span> directory, add a folder using the same value as the name
+                            (case sensitive)
+                            you used in the JSON object for the <span>name</span> Key/Value pair.</p>
+                        <p>For example, if the name in the JSON object was "John", then the name of the directory inside
+                            the
+                            <span>community</span> directory must be also called "John". See next snapshot:
+                        </p>
+                        <img src="/docs/images/DirnameKVname.png" alt="DirnameKVname">
+                    </li>
+
+                    <li>
+                        <p>Inside this newly created directory, please create an <span>index.html</span> file and a
+                            <span>style.css</span> file and
+                            link them together appropriately using the <span>link</span> HTML element inside the head of
+                            the index.html
+                            file. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">More
+                                information
+                                on the "link" element.</a></p>
+                        <img src="/docs/images/dirFiles.png" alt="">
+                    </li>
+                    <li>
+                        <p>Then you can create your custom html/css piece.</p>
+                        <p>Make this unique. Be creative! Maybe it's a small frontend component, a card/navbar/section?
+                            What
+                            about a little portfolio piece? 🖌🎨🖼 Maybe consider keeping to a height of
+                            <span>100vh</span>!</p>
+                        <ul>
+                            <li>
+                                <p>Keep it unique, but not huge. 😂 While we would love to see you all create beautiful,
+                                    expansive works of art, the reality is we will still be doing Code Reviews and the
+                                    management of a huge piece would be a little much.</p>
+                            </li>
+                            <p>Our maintainers of this repo are all voluntary! Give them serious respect, because
+                                without
+                                them this project wouldn't be possible! 🤜🤜</p>
+                        </ul>
+                        <p>Up to here, you will have successfully forked the project, cloned it, opened it, added to a
+                            dataset, created a sub-directory, and done some coding too. We do all of this so that the
+                            default project structure is left un-mutated and that you are automatically added to the
+                            root <span>index.html</span> file Community section.</p>
+                        <p>This is a fun way to meet new developers who you may one day be coding alongside of in a
+                            team, or asking them for help with a query in the Slack CI community, so please take a look
+                            at some of the other creations! And check back often to see all the new ones as they come
+                            in. 🤩</p>
+                        <ul>
+                            <li>
+                                <p>Once you are happy with your custom piece, create a PR! ↪</p>
+                                <p>All of the PR steps can be found in <a href="#">basic.md</a> file, so if you get
+                                    stuck refer back to it!</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </section>
+        </main>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+:root{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+body{
+    margin: 0px;
+    padding: 1em;
+    background-color: rgb(61, 61, 61);
+}
+header>h1{
+    margin-bottom: .2em;
+}
+
+#participation-steps{
+    margin-bottom: 0em;
+}
+
+#content{
+    background-color: white;
+    border: 1px solid black;   
+    border-radius: 1em;
+    padding: 1em;
+    box-shadow: 4px 4px 4px 4px  gray;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-shadow: 8px 8px 8px black;
+}
+
+span{
+    background-color: #afb8c133;
+    padding: 5px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: royalblue;
+}
+a:hover{
+    text-decoration: underline;
+}
