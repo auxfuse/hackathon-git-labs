@@ -23,10 +23,10 @@ const createParticipantes = (listOfParticipants) => {
   listOfParticipants.forEach(async (participant) => {
     const cardHTML = `
       <h2 class="card-title">${await getRandomEmoji()} ${participant.name}</h2>
-      <p class="card-sub margin-yt-sm">📅 Started: ${participant.course_start}</p>
-      <p class="card-sub margin-yb-sm custom-underline">🎓 Stage:  ${participant.course_stage}</p>
-      <p class="card-detail">Loves: ${participant.favorite_language} 😍 </p>
-      <p class="card-detail custom-underline">Learning: ${participant.currently_learning} 📚 </p>
+      <h3 class="card-sub margin-yt-sm">📅 Started: ${participant.course_start}</h3>
+      <h3 class="card-sub margin-yb-sm custom-underline">🎓 Stage:  ${participant.course_stage}</h3>
+      <h3 class="card-detail">Loves: ${participant.favorite_language} 😍 </h3>
+      <h3 class="card-detail custom-underline">Learning: ${participant.currently_learning} 📚 </h3>
       <a class="participant-link" href="community/${participant.name}" data-content="View Work ➡">View Work ➡</a>
       `;
 

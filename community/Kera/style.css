@@ -120,7 +120,7 @@ li {
 /* Tablet */
 @media (min-width: 768px) {
     body {
-        margin-bottom: 0;
+        margin-bottom: 300px;
     }
     main {
         width: 80%;
@@ -142,7 +142,7 @@ li {
         font-size: 50px;
     }
     .content {
-        height: 10vh;
+        height: 120px;
     }
 }
 
@@ -152,6 +152,6 @@ li {
         font-size:100px;
     }
     img {
-        height: 300px;
+        height: 400px;
     }
 }
