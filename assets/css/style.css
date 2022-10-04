@@ -372,6 +372,24 @@ footer::before {
     margin: 0.5rem 0;
 }
 
+/* Contact */
+#contact {
+    background-color: var(--primary-color);
+    height: 100vh;
+}
+
+.contact-column {
+    padding-top: 80px;
+}
+
+#contact-header {
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
 /* Media Queries */
 
 @media (min-width: 576px) {
