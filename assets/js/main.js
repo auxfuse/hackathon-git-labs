@@ -4,7 +4,7 @@
  * @param {Number} min - (optional) Minimum number in range
  * @returns Randomised list of numbers
  */
- const genRandomIndexes = (max, min = 0) => new Array(max - min).fill(0).map((v,i)=>i+min);
+ const genRandomIndexes = (max, min = 0) => shuffle(new Array(max - min).fill(0).map((_,i)=>i+min));
 
  const getRandomEmoji = emojis => emojis[Math.floor(Math.random() * emojis.length)];
  
@@ -84,7 +84,7 @@
    elements.container.append(fragment);
  }
  
- 
+
  (()=>{
  
    const communityElements = {
