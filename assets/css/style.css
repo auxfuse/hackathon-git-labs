@@ -197,6 +197,7 @@ h6 {
     cursor: pointer;
 }
 
+#showcases-section h1::after,
 #community-section h1::after {
     content: '';
     display: block;
@@ -206,6 +207,7 @@ h6 {
     background-color: var(--secondary-color);
 }
 
+#showcases,
 #community {
     display: flex;
     flex-wrap: wrap;

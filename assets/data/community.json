@@ -250,5 +250,19 @@
     "course_stage": "Alumni",
     "favorite_language": "Python",
     "currently_learning": "Java"
+  },
+  {
+    "name": "Sean",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "React"
+  },
+  {
+    "name": "IreneN2",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript"
   }
 ]
