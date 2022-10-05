@@ -12,7 +12,7 @@ h3 {
 .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(9, 0.5fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -37,10 +37,10 @@ h3 {
   font-size: larger;
 }
 .intro {
-  grid-area: 3 / 5 / 5 / 7;
+  grid-area: 3 / 5 / 6 / 7;
 }
 .resume-github {
-  grid-area: 5 / 5 / 6 / 7;
+  grid-area: 6 / 5 / 7 / 7;
 }
 
 /* Button CSS - source: https://getcssscan.com/css-buttons-examples*/
@@ -91,4 +91,147 @@ h3 {
 .button-30:active {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Modal text */
+.modal-content p {
+  text-align: center;
+  font-size: large;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.slider {
+  grid-area: 7 / 5 / 10 / 7;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 40vw);
+  grid-template-rows: 1fr;
+
+  overflow: scroll;
+  scroll-snap-type: both mandatory;
+  scroll-padding: 1rem;
+}
+
+.active {
+  scroll-snap-type: unset;
+}
+
+.slider > li {
+  scroll-snap-align: center;
+  display: inline-block;
+  border-radius: 1px;
+  font-size: 0;
+}
+
+.banner {
+  grid-area: 7 / 1 / 11 / 4;
+}
+.banner img {
+  max-width: 648px;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2%;
+  background: black;
+}
+#socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+  text-align: center;
+}
+#socials > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#socials li {
+  display: inline-flex;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+#socials a {
+  text-decoration: none;
+  color: #f7dfd6;
+}
+#socials i {
+  font-size: 160%;
+  margin: 1%;
+  padding: 5%;
+}
+#socials a:hover {
+  color: #fdf3f0;
+}
+.copyright {
+  float: left;
+  font-size: 14px;
+  word-spacing: 2px;
+  color: #f7dfd6;
+}
+/* bottom menu in footer */
+.bottom-menu {
+  float: right;
+}
+
+.bottom-menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom-menu ul li {
+  padding-right: 10px;
+  display: block;
+}
+
+.bottom-menu ul li a {
+  color: #f7dfd6;
+  text-decoration: none;
+}
+
+.bottom-menu ul li a:hover {
+  color: #fdf3f0;
 }

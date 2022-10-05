@@ -177,7 +177,6 @@ h6 {
     font-size: 1.2rem;
     font-weight: bold;
     font-style: italic;
-    text-align: justify;
 }
 
 #content-image {
@@ -196,7 +195,6 @@ h6 {
     color: var(--font-color);
     letter-spacing: 0.2ch;
     cursor: pointer;
-    text-decoration: none;
 }
 
 #community-section h1::after {
@@ -258,9 +256,7 @@ h6 {
     white-space: nowrap;
 }
 
-.card-sub,
-.card-detail {
-    font-size: 1.3rem;
+.card-sub, .card-detail {
     padding: 5px 0;
     font-weight: bold;
     overflow: hidden;
@@ -385,7 +381,6 @@ footer::before {
 
 /* Contact */
 #contact {
-    background-color: var(--primary-color);
     height: 100vh;
 }
 
@@ -393,13 +388,6 @@ footer::before {
     text-align: left;
     padding-top: 50px;
     margin: 0 20px;
-}
-
-.form-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
 }
 
 input[type='text'],
@@ -421,9 +409,41 @@ textarea:focus {
     padding: 0 0 0.875em 0;
 }
 
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form.contact-form {
+    background-color: var(--primary-color);
+    padding: 50px 0;
+    width: 75%;
+    height: fit-content;
+    margin: 20px;
+    border: 2px solid var(--tertiary-color);
+    box-shadow: 1px -5px 10px var(--tertiary-color);
+}
+
+.contact-image {
+    margin: 3rem 0;
+}
+
+.contact-image img {
+    height: 13rem;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    filter: hue-rotate(330deg) drop-shadow(8px 8px 10px var(--secondary-color));
+}
+
+.name,
+.email,
+.message {
+    margin: 10px 30px;
+}
 
 /* Media Queries */
-
 @media (min-width: 576px) {
     #content {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -485,6 +505,15 @@ textarea:focus {
 
     #additional-info {
         margin-top: 10.5rem;
+    }
+    /* Contact */
+    form.contact-form {
+        background-color: var(--primary-color);
+        margin-top: 50px;
+        width: 75%;
+        height: 480px;
+        border: 2px solid var(--tertiary-color);
+        box-shadow: 1px -5px 10px var(--tertiary-color);
     }
 }
 

@@ -74,7 +74,7 @@
     "course_start": "2021",
     "course_stage": "Student",
     "favorite_language": "Python",
-    "currently_learning": "Databases"
+    "currently_learning": "Django"
   },
   {
     "name": "Cillian",
@@ -215,5 +215,40 @@
     "course_stage": "Alumni",
     "favorite_language": "JavaScript",
     "currently_learning": "Gosu"
+  },
+  {
+    "name": "Alissa2",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Python"
+  },
+  {
+    "name": "IreneN",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript"
+  },
+  {
+    "name": "CluelessBiker",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "ReactJS"
+  },
+  {
+    "name": "Andrius",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "CSS",
+    "currently_learning": "NodeJS"
+  },
+  {
+    "name": "Tinashe",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Java"
   }
 ]

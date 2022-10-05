@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Git Community - 🟠CI🟠</title>
-</head>
 
+    <title>Document</title>
+</head>
 <body>
+    <section id="content">
+        <div id="content-column">
+            <h1 class="primary-heading margin-yb-sm">Contact Us</h1>
+            <h2 class="sub-heading">We'd love to hear from you!</h2>
+        </div>
+        <div class="contact-image">
+            <img src="assets/images/octocat.png" alt="Github octocat mascot">
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
-            <div class="row">
-                <div class="col contact-header">
-                    <h1 class="primary-heading margin-yb-sm">Contact Us</h1>
-                    <h4 class="sub-heading">We'd love to hear from you!</h4>
-                </div>
-            </div>
             <div class="row form-row">
-                <div class="col form-col">
-                <form clsss="contact-form" action="#" method="POST" id="contact_form">
+                <form class="contact-form" action="#" method="POST" id="contact_form">
                     <div class="name">
                         <label for="name"></label>
                         <input type="text" placeholder="name" name="name" id="name_input" required>
@@ -40,10 +42,97 @@
                 </form>
             </div>
         </div>
-        </div>
     </section>
+
+    <footer>
+        <div id="repo-go">
+            <p>
+                Want to contribute to this project?
+            </p>
+            <p>
+                Learn to submit your first PR?
+            </p>
+            <a href="https://github.com/auxfuse/hackathon-git-labs/blob/main/README.md">Start here 🙌</a>
+        </div>
+
+        <div id="additional-info">
+            <p>Meet the team:</p>
+            <ul id="team-list">
+                <li>
+                    <a href="https://github.com/auxfuse" target="_blank" rel="noopener noreferrer">
+                        Anthony - Owner/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/NaoiseGaffney" target="_blank" rel="noopener noreferrer">
+                        Gaff - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/AideenM12" target="_blank" rel="noopener noreferrer">
+                        Aideen - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Gwen-Bradbury" target="_blank" rel="noopener noreferrer">
+                        Gwen - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/andrewdempsey2018" target="_blank" rel="noopener noreferrer">
+                        Andrew - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/alissatroiano" target="_blank" rel="noopener noreferrer">
+                        Alissa - Maintainer/Developer
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Custom JS Files -->
+    <script src="assets/js/main.js" defer=""></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
 
 </body>
-
 </html>
