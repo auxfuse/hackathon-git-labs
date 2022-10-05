@@ -445,6 +445,26 @@ form.contact-form {
     margin: 10px 30px;
 }
 
+#form_button {
+    width: inherit;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 2rem;
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    background-color: rgba(148, 235, 241, 0.75);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.submit {
+    align-items: center;
+    text-align: center;
+}
+
 /* Media Queries */
 @media (min-width: 576px) {
     #content {
