@@ -46,6 +46,12 @@
    return card;
  }
  
+ /**
+  * Builds participant cards and adds them to the community section
+  * @param {Array} participants - List of all participants
+  * @param {Object} elements - Object of elements to be used for container and template
+  * @param {Array} emojis - Array of emojis
+  */
  const createParticipantes = (participants, elements, emojis) => {
    const fragment = new DocumentFragment();
    participants.forEach(participant => {
@@ -54,6 +60,13 @@
    elements.container.append(fragment);
  }
  
+ /**
+  * Builds participant showcases and adds them to the showcase section
+  * @param {Array} participants - List of all participants
+  * @param {Array} pages - List of custom pages
+  * @param {Object} elements - Object of elements to be used for container and template
+  * @param {Array} emojis - Array of emojis
+  */
  const createShowcases = (participants, pages, elements, emojis) => {
    const fragment = new DocumentFragment();
    // Generate random indexes
@@ -70,6 +83,7 @@
  
    elements.container.append(fragment);
  }
+ 
  
  (()=>{
  
