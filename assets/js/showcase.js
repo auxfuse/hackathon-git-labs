@@ -1,5 +1,5 @@
 
-const generateCard = (participant, template) => {
+const generateCardFromTemplate = (participant, template) => {
     const card = template.content.firstElementChild.cloneNode(true);
     const fields = card.querySelectorAll('[data-field]');
 
@@ -16,18 +16,24 @@ const generateCard = (participant, template) => {
 /**
  * Creates and appends showcase cards 
  * @param {Array} participants - Array of participant objects 
- * @param {Element} template - The template element object to build individual cards from
- * @param {Element} container - The dom element to appened the cards too
- * @param {Number} showcaseCount - The number of showcases to create
+ * @param {Array} indexes - List of random indexes of participants
+ * @param {Array} pages - Array of participants with custom pages
+ * @param {Object} showcases - Object of showcase data
  */
-const createShowcases = (participants, template, container, showcaseCount) => {
+const createShowcases = (participants, indexes, pages, showcases) => {
     const fragment = new DocumentFragment();
-    showcaseCount = Math.min(participants.length, showcaseCount);
+    let remaining = showcases.count;
 
-    for (let i = 0; i < showcaseCount; i++) {
-        fragment.append(generateCard(participants[i], template));
+    for (const idx of indexes) {
+        // Check participant has custom page
+        if (pages.includes(participants[idx].name)) {
+            remaining--;
+            fragment.append(generateCardFromTemplate(participants[idx], showcases.template))
+        }
+        if (!remaining) break;
     }
-    container.append(fragment);
+
+    showcases.container.append(fragment);
 }
 
 const shuffle = (arr) => {
@@ -38,13 +44,29 @@ const shuffle = (arr) => {
     return arr;
 }
 
-(()=>{
-    const showcaseCount = 5;
-    const showcaseContainer = document.getElementById("showcases");
-    const showcaseTemplate = document.getElementById("participant-card-template");
+const genRandomIndexes = (max, min = 0) => {
+    const indexes = new Array(max - min).fill(0).map((v,i)=>i+min);
+    return shuffle(indexes);
+}
 
-    fetch("assets/data/community.json")
-        .then((response) => response.json())
-        .then((data) => createShowcases(shuffle(data), showcaseTemplate, showcaseContainer, showcaseCount));
+(()=>{
+    const showcases = {
+        count: 5,
+        container: document.getElementById("showcases"),
+        template: document.querySelector("#showcases > .item-template")
+    };
+
+    // Preload data
+    Promise.all([
+        fetch("assets/data/community.json")
+            .then(response => response.json()),
+        fetch("assets/data/communitypages.json")
+            .then(response => response.json()),
+    ]).then((values) => {
+        // When all data has loaded:
+        if (showcases.container && showcases.template) {
+            createShowcases(values[0], genRandomIndexes(values[0].length), values[1], showcases);
+        }
+    });
 
 })();
