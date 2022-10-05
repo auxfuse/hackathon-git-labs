@@ -119,13 +119,6 @@
         "currently_learning": "JavaScript"
     },
     {
-        "name": "alyssa",
-        "course_start": "2019",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "PHP"
-    },
-    {
         "name": "joe",
         "course_start": "2022",
         "course_stage": "student",
