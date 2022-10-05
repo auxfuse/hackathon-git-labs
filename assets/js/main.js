@@ -41,11 +41,13 @@ const generateCardFromTemplate = (participant, template) => {
   const fields = card.querySelectorAll('[data-field]');
 
   for (const field of fields) {
-      if (field.dataset.field == 'link') {
-          field.setAttribute('href', `community/${participant.name}`);
-      } else {
-          field.children[0].innerText = participant[field.dataset.field];
-      }
+    if (field.dataset.field == 'link') {
+      field.setAttribute('href', `community/${participant.name}`);
+    } else if (field.dataset.field == 'random_emoji') {
+
+    } else {
+      field.innerText = participant[field.dataset.field];
+    }
   }
   return card;
 }
@@ -62,12 +64,12 @@ const createShowcases = (participants, indexes, pages, showcases) => {
   let remaining = showcases.count;
 
   for (const idx of indexes) {
-      // Check participant has custom page
-      if (pages.includes(participants[idx].name)) {
-          remaining--;
-          fragment.append(generateCardFromTemplate(participants[idx], showcases.template))
-      }
-      if (!remaining) break;
+    // Check participant has custom page
+    if (pages.includes(participants[idx].name)) {
+      remaining--;
+      fragment.append(generateCardFromTemplate(participants[idx], showcases.template))
+    }
+    if (!remaining) break;
   }
 
   showcases.container.append(fragment);
