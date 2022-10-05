@@ -14,8 +14,6 @@ const getRandomEmoji = async () => {
     .then((data) => data[Math.floor(Math.random() * data.length)]);
 };
 
-
-
 /**
  * It takes an array of objects, l
  * oops through each object, and creates a card for each object
