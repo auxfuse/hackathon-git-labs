@@ -14,6 +14,19 @@ const getRandomEmoji = async () => {
     .then((data) => data[Math.floor(Math.random() * data.length)]);
 };
 
+const shuffle = (arr) => {
+  for(let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i+1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+const genRandomIndexes = (max, min = 0) => {
+  const indexes = new Array(max - min).fill(0).map((v,i)=>i+min);
+  return shuffle(indexes);
+}
+
 /**
  * It takes an array of objects, l
  * oops through each object, and creates a card for each object
@@ -73,19 +86,6 @@ const createShowcases = (participants, indexes, pages, showcases) => {
   }
 
   showcases.container.append(fragment);
-}
-
-const shuffle = (arr) => {
-  for(let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i+1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-const genRandomIndexes = (max, min = 0) => {
-  const indexes = new Array(max - min).fill(0).map((v,i)=>i+min);
-  return shuffle(indexes);
 }
 
 (()=>{
