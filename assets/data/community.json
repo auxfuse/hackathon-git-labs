@@ -278,5 +278,12 @@
         "course_stage": "student",
         "favorite_language": "JavaScript",
         "currently_learning": "React"
+    },
+    {
+        "name": "Emanuel",
+        "course_start": "2022",
+        "course_stage": "Awaiting final grade",
+        "favorite_language": "Python",
+        "currently_learning": "NodeJS"
     }
 ]
