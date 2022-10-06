@@ -14,15 +14,14 @@
             <h1 class="primary-heading margin-yb-sm">Contact Us</h1>
             <h2 class="sub-heading">We'd love to hear from you!</h2>
         </div>
-        <div class="contact-image">
-            <img src="assets/images/octocat.png" alt="Github octocat mascot">
-        </div>
+
     </section>
 
     <section id="contact">
         <div class="container">
             <div class="row form-row">
-                <form class="contact-form" action="#" method="POST" id="contact_form">
+                <div class="contact-form">
+                <form  action="#" method="POST" id="contact_form">
                     <div class="name">
                         <label for="name"></label>
                         <input type="text" placeholder="name" name="name" id="name_input" required>
@@ -30,6 +29,15 @@
                     <div class="email">
                         <label for="email"></label>
                         <input type="email" placeholder="e-mail" name="email" id="email_input" required>
+                    </div>
+                    <div class="select">
+                        <label for="category"></label>
+                        <select id="category" name="category">
+                            <option value="technical">Technical</option>
+                            <option value="enhancement">Enhancement</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="bug">Bug</option>
+                          </select>
                     </div>
                     <div class="message">
                         <label for="message"></label>
@@ -40,6 +48,10 @@
                         <input type="submit" value="submit" id="form_button" />
                     </div>
                 </form>
+                </div>
+                <div class="debug">
+                    <pre><code>{{ $data }}</code></pre>
+                  </div>
             </div>
         </div>
     </section>
