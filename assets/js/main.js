@@ -86,10 +86,26 @@ const createShowcases = (participants, pages, elements, emojis) => {
   elements.container.append(fragment);
 }
 
+/**
+ * Creates and appends skeleton loader elements.
+ * @param {Object} elements - Object of elements to be used for container and template
+ */
+const createSkeletonLoaders = elements => {
+  const fragment = new DocumentFragment();
+
+  for (let i = 0; i < elements.count; i++) {
+    const el = elements.template.content.firstElementChild.cloneNode(true);
+    el.classList.add('skeleton');
+    fragment.append(el);
+  }
+
+  elements.container.append(fragment);
+}
 
 (() => {
 
   const communityElements = {
+    count: 10,
     container: document.querySelector("#community"),
     template: document.querySelector("#community > .item-template")
   };
@@ -98,6 +114,14 @@ const createShowcases = (participants, pages, elements, emojis) => {
     container: document.getElementById("showcases"),
     template: document.querySelector("#showcases > .item-template")
   };
+
+  // Create Loaders
+  if (showcaseElements.container && showcaseElements.template) {
+    createSkeletonLoaders(showcaseElements);
+  }
+  if (communityElements.container && communityElements.template) {
+    createSkeletonLoaders(communityElements);
+  }
 
   // Preload data
   Promise.all([
@@ -116,9 +140,13 @@ const createShowcases = (participants, pages, elements, emojis) => {
     // When all data has loaded:
     const [participants, pages, emojis] = values;
     if (showcaseElements.container && showcaseElements.template) {
+      showcaseElements.container.innerHTML = "";
       createShowcases(participants, pages, showcaseElements, emojis);
     }
-    createParticipantes(participants, communityElements, emojis);
+    if (communityElements.container && communityElements.template) {
+      communityElements.container.innerHTML = "";
+      createParticipantes(participants, communityElements, emojis);
+    }
   });
 
 })();
