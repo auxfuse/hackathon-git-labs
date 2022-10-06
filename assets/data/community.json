@@ -271,5 +271,12 @@
 		"course_stage": "Alumni",
 		"favorite_language": "JavaScript",
 		"currently_learning": "Next.js"
+	},
+	{
+		"name": "Emanuel",
+		"course_start": "2022",
+		"course_stage": "Awaiting final grade",
+		"favorite_language": "Python",
+		"currently_learning": "NodeJS"
 	}
 ]
