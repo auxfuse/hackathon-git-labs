@@ -116,6 +116,35 @@ p, h1, h2, h3, h4, h5, h6 {
     margin: 1rem auto 0;
 }
 
+/* Skeleton Loading */
+.card.skeleton{
+    animation: skeleton-loader 2s infinite;
+}
+
+.card.skeleton > * {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.card.skeleton > *::before {
+    content: '';
+    position: absolute;
+    background-color: var(--tertiary-color);
+    height: 1.5rem;
+    left: 1rem; right: 1rem;
+    z-index: 99;
+}
+
+@keyframes skeleton-loader {
+    0%, 100% {
+        opacity: 100%;
+    }
+    45%,55% {
+        opacity: 10%;
+    }
+}
+
 /* Index */
 
 #content {
