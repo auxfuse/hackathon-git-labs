@@ -477,6 +477,7 @@ textarea:focus {
 
 .debug {
     border-radius: 4px;
+    color: #ffffff;
     margin: 50px auto;
     width: 50%;
     height: 650px;
@@ -490,6 +491,12 @@ textarea:focus {
     color: #ffffff;
     font-size: 18px;
     line-height: 30px;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 300;
+    white-space: pre-wrap;
+  }
+
+  #debugBox {
     font-family: "Source Code Pro", monospace;
     font-weight: 300;
     white-space: pre-wrap;

@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <section id="content">
+    <section id="contact-header">
         <div id="content-column">
             <h1 class="primary-heading margin-yb-sm">Contact Us</h1>
             <h2 class="sub-heading">We'd love to hear from you!</h2>
@@ -19,12 +19,12 @@
 
     <section id="contact">
         <div class="container">
-            <div class="row form-row">
+            <div class="row form-row" id="contactForm">
                 <div class="contact-form">
-                <form  action="#" method="POST" id="contact_form">
+                <form action="#" method="POST" id="contact_form">
                     <div class="name">
                         <label for="name"></label>
-                        <input type="text" placeholder="name" name="name" id="name_input" required>
+                        <input type="text" placeholder="name" name="name" id="name_input" class="name_input" required>
                     </div>
                     <div class="email">
                         <label for="email"></label>
@@ -49,9 +49,11 @@
                     </div>
                 </form>
                 </div>
-                <div class="debug">
-                    <pre><code>{{ $data }}</code></pre>
-                  </div>
+                <div class="debug" id="debugBox">
+                 <div class='print_name' id='print_name'></div>
+                 <div class='print_email' id='print_email'></div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -105,46 +107,7 @@
     </footer>
 
     <!-- Custom JS Files -->
-    <script src="assets/js/main.js" defer=""></script>
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
+    <script src="assets/js/contact.js"></script>
 
 </body>
 </html>
