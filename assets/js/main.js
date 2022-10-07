@@ -1,11 +1,12 @@
 /**
  * Creates an array of numbers in a given range
  * @param {Number} max - Maximum number in range 
- * @param {Number} min - (optional) Minimum number in range
+ * @param {Number} min - (optional) Minimum number in range. Defaults to 0
  * @returns Randomised list of numbers
  */
 const genIndexes = (max, min = 0) => new Array(max - min).fill(0).map((_, i) => i + min);
 
+/** Returns a random emoji from the emoji array passed */
 const getRandomEmoji = emojis => emojis[Math.floor(Math.random() * emojis.length)];
 
 /**
@@ -50,13 +51,13 @@ const generateCardFromTemplate = (participant, emojis, template) => {
  * Creates a list of participant cards based on the HTML template and participant data passed.
  * @param {Array} participants - Participant data
  * @param {Array} emojis - Emoji array
- * @param {Object} elements - Object of DOM elements and maximum cards to be produced
+ * @param {Object} elements - Object of DOM elements and maximum number of cards to be produced
  * @param {Array} indexes - (Optional) List of participant indexes to use. If not present all participants are created in order. Indexes are assumed to be valid.
  * @param {Array} pages - (Optional) List of custom pages. If present this is used to filter participants so only those with valid pages are appended.
  */
 const createParticipantesCards = (participants, emojis, elements, indexes = null, pages = null) => {
-  // By using a document fragment lots of little DOM mutations
-  // can be cached into one big one for better performance
+  /* By using a document fragment lots of little DOM mutations
+      can be cached into one big one for better performance. */
   const fragment = new DocumentFragment();
 
   let remaining = elements.count;
@@ -95,8 +96,11 @@ const createSkeletonLoaders = elements => {
 (() => {
 
   const communityElements = {
+    // Maximum number of cards to append for this section
     count: 10,
+    // The element to append cards to
     container: document.querySelector("#community"),
+    // The HTML template to use as a base for each card
     template: document.querySelector("#community > .item-template")
   };
   const showcaseElements = {
