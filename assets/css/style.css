@@ -446,7 +446,7 @@ select,
     margin: 30px;
 }
 
-#form_button {
+#submitForm {
     width: inherit;
     margin-bottom: 1rem;
     padding: 1rem;

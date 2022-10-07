@@ -40,11 +40,11 @@
                 </div>
                 <div class="message">
                     <label for="message"></label>
-                    <textarea name="message" placeholder="message" id="message_input" cols="30" rows="3"
+                    <textarea name="message" placeholder="message" id="message_input" maxlength="140" rows="5"
                         required></textarea>
                 </div>
                 <div class="submit">
-                    <input type="submit" value="submit" id="form_button" />
+                    <input type="submit" value="submit" id="submitForm" />
                 </div>
             </form>
             <div class="debug">
@@ -108,7 +108,9 @@
     </footer>
 
     <!-- Custom JS Files -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="assets/js/contact.js"></script>
+    <script src="assets/js/email.js"></script>
 
 </body>
 
