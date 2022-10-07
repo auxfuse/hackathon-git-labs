@@ -399,8 +399,7 @@ footer::before {
 
 input[type='text'],
 [type='email'],
-[type='select'],
-select#category,
+[type='message'],
 textarea {
     background: none;
     border: none;
@@ -408,6 +407,23 @@ textarea {
     margin: 0em 0 1.875em 0;
     padding: 0 0 0.875em 0;
     width: 100%;
+    font-family: var(--secondary-font);
+    color: var(--font-color);
+}
+
+label {
+    font-family: var(--secondary-font);
+    color: var(--tertiary-color-dk);
+}
+
+select[name='category'] {
+    padding: 0 0 0.875em 0;
+    width: 85%;
+    background: none;
+    border: none;
+    border-bottom: solid 2px var(--secondary-color);
+    font-family: var(--secondary-font);
+    color: var(--tertiary-color-dk);
 }
 
 input[type='text']:focus,
@@ -421,11 +437,16 @@ textarea:focus {
     display: flex;
 }
 
+.name {
+    padding-top: 40px;
+}
+
 .name,
 .email,
 .message,
-.category {
-    margin: 40px 30px;
+select,
+#category {
+    margin: 30px;
 }
 
 #form_button {
