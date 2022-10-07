@@ -381,13 +381,9 @@ footer::before {
 }
 
 /* Contact */
-/* #contact {
-    height: 70vh;
-} */
-
-.contact-header {
+#contact-header {
     text-align: left;
-    margin: 10px 20px;
+    margin: 20px 40px;
 }
 
 #contact-column {
@@ -435,6 +431,7 @@ textarea:focus {
 
 .form-row {
     display: flex;
+    padding-bottom: 60px;
 }
 
 .name {
@@ -478,8 +475,7 @@ select,
     padding: 15px 30px;
     border-radius: 4px;
     margin: 50px auto;
-    border: 2px solid var(--tertiary-color);
-    box-shadow: 1px -5px 10px var(--tertiary-color);
+    box-shadow: rgba(12.2, 36.5, 39.2, 0.25) 0px 50px 100px -20px, rgba(32, 32, 32, 0.3) 0px 30px 60px -30px, rgba(12.2, 36.5, 39.2, 0.35) 0px -2px 6px 0px inset;
 }
 
 .debug {
@@ -491,10 +487,10 @@ select,
     padding: 50px;
     margin: 50px auto;
     background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
-  }
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
   
-  .debug pre {
+.debug pre {
     color: #ffffff;
     font-size: 18px;
     line-height: 20px;
