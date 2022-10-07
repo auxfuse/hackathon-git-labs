@@ -64,7 +64,7 @@ const createParticipantesCards = (participants, emojis, elements, indexes = null
   if (!indexes) indexes = genIndexes(participants.length);
 
   for (const idx of indexes) {
-    // If the user has a custom page or we don't care if they have one
+    // If the user has a custom page or if we don't care if they have one
     if (!pages || pages.includes(participants[idx].name)) {
       remaining--;
       fragment.appendChild(generateCardFromTemplate(participants[idx], emojis, elements.template));
@@ -87,10 +87,10 @@ const createSkeletonLoaders = elements => {
   for (let i = 0; i < elements.count; i++) {
     const el = elements.template.content.firstElementChild.cloneNode(true);
     el.classList.add('skeleton');
-    fragment.append(el);
+    fragment.appendChild(el);
   }
 
-  elements.container.append(fragment);
+  elements.container.appendChild(fragment);
 }
 
 (() => {
