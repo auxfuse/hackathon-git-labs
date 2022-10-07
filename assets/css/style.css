@@ -381,14 +381,20 @@ footer::before {
 }
 
 /* Contact */
-#contact {
-    height: 100vh;
-}
+/* #contact {
+    height: 70vh;
+} */
 
 .contact-header {
     text-align: left;
-    padding-top: 50px;
-    margin: 0 20px;
+    margin: 10px 20px;
+}
+
+#contact-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 20px;
 }
 
 input[type='text'],
@@ -413,37 +419,13 @@ textarea:focus {
 
 .form-row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* .contact-form {
-    background-color: var(--primary-color);
-    width: 500px;
-    padding: 15px 30px;
-    border-radius: 4px;
-    margin: 50px auto;
-    border: 2px solid var(--tertiary-color);
-    box-shadow: 1px -5px 10px var(--tertiary-color);
-} */
-
-.contact-image {
-    margin: 3rem 0;
-}
-
-.contact-image img {
-    height: 13rem;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-    filter: hue-rotate(330deg) drop-shadow(8px 8px 10px var(--secondary-color));
 }
 
 .name,
 .email,
 .message,
 .category {
-    margin: 10px 30px;
+    margin: 40px 30px;
 }
 
 #form_button {
@@ -469,20 +451,24 @@ textarea:focus {
 .contact-form {
     background-color: var(--primary-color);
     border-radius: 4px;
-    margin: 50px auto;
-    width: 50%;
+    margin: 0 auto;
+    width: 500px;
     height: 650px;
-    padding: 50px;
+    padding: 15px 30px;
+    border-radius: 4px;
+    margin: 50px auto;
+    border: 2px solid var(--tertiary-color);
+    box-shadow: 1px -5px 10px var(--tertiary-color);
 }
 
 .debug {
     border-radius: 4px;
     color: #ffffff;
-    margin: 50px auto;
-    width: 50%;
+    width: 500px;
     height: 650px;
     background-color: #000;
     padding: 50px;
+    margin: 50px auto;
     background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
   }
@@ -490,7 +476,7 @@ textarea:focus {
   .debug pre {
     color: #ffffff;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 20px;
     font-family: "Source Code Pro", monospace;
     font-weight: 300;
     white-space: pre-wrap;
@@ -498,8 +484,12 @@ textarea:focus {
 
   #debugBox {
     font-family: "Source Code Pro", monospace;
-    font-weight: 300;
-    white-space: pre-wrap;
+    align-items: center;
+  }
+
+  #nameJSON, #emailJSON {
+    margin-top: 10px;
+    margin-left: 30px;
   }
 
 /* Media Queries */
@@ -564,15 +554,6 @@ textarea:focus {
 
     #additional-info {
         margin-top: 10.5rem;
-    }
-    /* Contact */
-    form.contact-form {
-        background-color: var(--primary-color);
-        margin-top: 50px;
-        width: 75%;
-        height: 480px;
-        border: 2px solid var(--tertiary-color);
-        box-shadow: 1px -5px 10px var(--tertiary-color);
     }
 }
 

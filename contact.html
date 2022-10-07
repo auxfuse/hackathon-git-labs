@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,54 +9,51 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <section id="contact-header">
-        <div id="content-column">
+        <div id="contact-column">
             <h1 class="primary-heading margin-yb-sm">Contact Us</h1>
             <h2 class="sub-heading">We'd love to hear from you!</h2>
         </div>
-
     </section>
 
     <section id="contact">
-        <div class="container">
             <div class="row form-row" id="contactForm">
-                <div class="contact-form">
-                <form action="#" method="POST" id="contact_form">
-                    <div class="name">
-                        <label for="name"></label>
-                        <input type="text" placeholder="name" name="name" id="name_input" class="name_input" required>
-                    </div>
-                    <div class="email">
-                        <label for="email"></label>
-                        <input type="email" placeholder="e-mail" name="email" id="email_input" required>
-                    </div>
-                    <div class="select">
-                        <label for="category"></label>
-                        <select id="category" name="category">
-                            <option value="technical">Technical</option>
-                            <option value="enhancement">Enhancement</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="bug">Bug</option>
-                          </select>
-                    </div>
-                    <div class="message">
-                        <label for="message"></label>
-                        <textarea name="message" placeholder="message" id="message_input" cols="30" rows="3"
-                            required></textarea>
-                    </div>
-                    <div class="submit">
-                        <input type="submit" value="submit" id="form_button" />
-                    </div>
+                <form action="#" method="POST" class="contact-form" id="contact_form">
+                        <div class="name">
+                            <label for="name"></label>
+                            <input type="text" placeholder="name" name="name" id="name_input" class="name_input"
+                                required>
+                        </div>
+                        <div class="email">
+                            <label for="email"></label>
+                            <input type="email" placeholder="e-mail" name="email" id="email_input" required>
+                        </div>
+                        <div class="select">
+                            <label for="category"></label>
+                            <select class="select" id="category" name="category" onchange="showQueryType()">
+                                <option value="technical">Technical</option>
+                                <option value="enhancement">Enhancement</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="bug">Bug</option>
+                            </select>
+                        </div>
+                        <div class="message">
+                            <label for="message"></label>
+                            <textarea name="message" placeholder="message" id="message_input" cols="30" rows="3"
+                                required></textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="submit" id="form_button" />
+                        </div>
                 </form>
-                </div>
-                <div class="debug" id="debugBox">
-                 <div class='print_name' id='print_name'></div>
-                 <div class='print_email' id='print_email'></div>
-
+                <div class="debug">
+                    <pre><code>{ </code></pre>
+                   <pre id="nameJSON">name: <code class='print_name' id='print_name'></code>,</pre>
+                   <pre id="emailJSON">email: <code class='print_email' id='print_email'></code>,</pre>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer>
@@ -110,4 +108,5 @@
     <script src="assets/js/contact.js"></script>
 
 </body>
+
 </html>
