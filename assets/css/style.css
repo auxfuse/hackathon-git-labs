@@ -499,16 +499,13 @@ select,
     white-space: pre-wrap;
   }
 
-  #debugBox {
-    font-family: "Source Code Pro", monospace;
-    align-items: center;
-  }
-
 #nameJSON, 
 #emailJSON,
-#queryJSON {
+#queryJSON,
+#messageJSON {
     margin-top: 10px;
     margin-left: 30px;
+    line-height: 30px;
   }
 
 /* Media Queries */

@@ -19,42 +19,44 @@
     </section>
 
     <section id="contact">
-            <div class="row form-row" id="contactForm">
-                <form action="#" method="POST" class="contact-form" id="contact_form">
-                        <div class="name">
-                            <label for="name"></label>
-                            <input type="text" placeholder="name" name="name" id="name_input" class="name_input"
-                                required>
-                        </div>
-                        <div class="email">
-                            <label for="email"></label>
-                            <input type="email" placeholder="e-mail" name="email" id="email_input" required>
-                        </div>
-                        <div class="select">
-                            <label for="category"></label>
-                            <select id="category" name="category" onchange="showQueryType()">
-                                <option value="technical">Technical</option>
-                                <option value="enhancement">Enhancement</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="bug">Bug</option>
-                            </select>
-                        </div>
-                        <div class="message">
-                            <label for="message"></label>
-                            <textarea name="message" placeholder="message" id="message_input" cols="30" rows="3"
-                                required></textarea>
-                        </div>
-                        <div class="submit">
-                            <input type="submit" value="submit" id="form_button" />
-                        </div>
-                </form>
-                <div class="debug">
-                    <pre><code>{ </code></pre>
-                   <pre id="nameJSON">name: <code class='print_name' id='print_name'></code>,</pre>
-                   <pre id="emailJSON">email: <code class='print_email' id='print_email'></code>,</pre>
-                   <pre id="queryJSON">query: <code class='print_query' id='print_query'></code>,</pre>
+        <div class="row form-row" id="contactForm">
+            <form action="#" method="POST" class="contact-form" id="contact_form">
+                <div class="name">
+                    <label for="name"></label>
+                    <input type="text" placeholder="name" name="name" id="name_input" class="name_input" required>
                 </div>
+                <div class="email">
+                    <label for="email"></label>
+                    <input type="email" placeholder="e-mail" name="email" id="email_input" required>
+                </div>
+                <div class="select">
+                    <label for="category"></label>
+                    <select id="category" name="category" onchange="showQueryType()">
+                        <option value="technical">Technical</option>
+                        <option value="enhancement">Enhancement</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="bug">Bug</option>
+                    </select>
+                </div>
+                <div class="message">
+                    <label for="message"></label>
+                    <textarea name="message" placeholder="message" id="message_input" cols="30" rows="3"
+                        required></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="submit" id="form_button" />
+                </div>
+            </form>
+            <div class="debug">
+                <pre><code>{ </code></pre>
+                <pre id="nameJSON">name: <code class='print_name' id='print_name'></code>,</pre>
+                <pre id="emailJSON">email: <code class='print_email' id='print_email'></code>,</pre>
+                <pre id="queryJSON">category: <code class='print_query' id='print_query'></code>,</pre>
+                <pre id="messageJSON">message: <code class='print_message' id='print_message'></code></pre>
+                <br>
+                <pre><code>} </code></pre>
             </div>
+        </div>
     </section>
 
     <footer>
