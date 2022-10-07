@@ -1,78 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Damion&family=Lato&display=swap');
 
-* {
-    box-sizing: border-box;
-}
 body {
     font-family: 'Lato', sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
 }
 
-h1 {
-    font-size: 4rem;
-    color: #fff;
-    text-shadow: 2px 2px #000;
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translateX(-50%);
-    white-space: nowrap;
+.splitright, .splitleft {
+    height: 50vh;
+    width: 100%
 }
 
-h2 {
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: 2px 2px #000;
-    position: absolute;
-    left: 50%;
-    top: 18%;
-    transform: translate(-50%);
-    white-space: nowrap;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(141, 141, 141);
-}
-
-.split{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.split.left{
-    left: 0;
-    background-image: url(/community/IreneN/background-right.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.split.left::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.split.right {
-    right: 0;
+.splitright {
     background-image: url(/community/IreneN/background-left2.jpg);
     opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.split.right::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.splitleft {
+    background-image: url(/community/IreneN/background-right.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
 }
 
 .btn {
@@ -85,5 +37,14 @@ h2 {
     transform: translateX(-50%);
     text-decoration: none;
     color: rgb(245, 245, 245);
-    font-size: 6rem;
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .splitright, .splitleft {
+        height: 100vh;
+    }
+    .btn {
+        font-size: 5rem;
+    }
 }
