@@ -504,7 +504,9 @@ select,
     align-items: center;
   }
 
-  #nameJSON, #emailJSON {
+#nameJSON, 
+#emailJSON,
+#queryJSON {
     margin-top: 10px;
     margin-left: 30px;
   }

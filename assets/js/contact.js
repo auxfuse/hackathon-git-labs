@@ -1,7 +1,3 @@
-// function handleUserInput(data) {
-
-// }
-
 var inputName = document.getElementById('name_input');
 var inputEmail = document.getElementById('email_input')
 var queryType = document.getElementById('category');
@@ -14,9 +10,8 @@ inputEmail.onkeyup = function(){
     document.getElementById('print_email').innerHTML = JSON.stringify(inputEmail.value);
 }
 
-queryType.onselect = function(){
-    for (category in categories) {
-        document.getElementById('print_query').innerHTML = JSON.stringify(queryType.value);
-    }
+function showQueryType() {
+    selElement = document.querySelector('#category');
+    option = selElement.value;
+    document.querySelector('.print_query').textContent = option;
 }
-
