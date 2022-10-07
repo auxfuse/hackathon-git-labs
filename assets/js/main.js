@@ -1,10 +1,10 @@
 /**
- * Creates an array of numbers in a given range in a random order
+ * Creates an array of numbers in a given range
  * @param {Number} max - Maximum number in range 
  * @param {Number} min - (optional) Minimum number in range
  * @returns Randomised list of numbers
  */
-const genRandomIndexes = (max, min = 0) => shuffle(new Array(max - min).fill(0).map((_, i) => i + min));
+const genIndexes = (max, min = 0) => new Array(max - min).fill(0).map((_, i) => i + min);
 
 const getRandomEmoji = emojis => emojis[Math.floor(Math.random() * emojis.length)];
 
@@ -47,43 +47,33 @@ const generateCardFromTemplate = (participant, emojis, template) => {
 }
 
 /**
- * Builds participant cards and adds them to the community section
- * @param {Array} participants - List of all participants
- * @param {Object} elements - Object of elements to be used for container and template
- * @param {Array} emojis - Array of emojis
+ * Creates a list of participant cards based on the HTML template and participant data passed.
+ * @param {Array} participants - Participant data
+ * @param {Array} emojis - Emoji array
+ * @param {Object} elements - Object of DOM elements and maximum cards to be produced
+ * @param {Array} indexes - (Optional) List of participant indexes to use. If not present all participants are created in order. Indexes are assumed to be valid.
+ * @param {Array} pages - (Optional) List of custom pages. If present this is used to filter participants so only those with valid pages are appended.
  */
-const createParticipantes = (participants, elements, emojis) => {
+const createParticipantesCards = (participants, emojis, elements, indexes = null, pages = null) => {
   // By using a document fragment lots of little DOM mutations
   // can be cached into one big one for better performance
   const fragment = new DocumentFragment();
-  participants.forEach(participant => {
-    fragment.append(generateCardFromTemplate(participant, emojis, elements.template));
-  });
-  elements.container.append(fragment);
-}
 
-/**
- * Builds participant showcases and adds them to the showcase section
- * @param {Array} participants - List of all participants
- * @param {Array} pages - List of custom pages
- * @param {Object} elements - Object of elements to be used for container and template
- * @param {Array} emojis - Array of emojis
- */
-const createShowcases = (participants, pages, elements, emojis) => {
-  const fragment = new DocumentFragment();
-  // Generate random indexes
-  const indexes = genRandomIndexes(participants.length);
   let remaining = elements.count;
+  if (!indexes) indexes = genIndexes(participants.length);
+
   for (const idx of indexes) {
-    // Check participant has custom page
-    if (pages.includes(participants[idx].name)) {
+    // If the user has a custom page or we don't care if they have one
+    if (!pages || pages.includes(participants[idx].name)) {
       remaining--;
-      fragment.append(generateCardFromTemplate(participants[idx], emojis, elements.template))
+      fragment.appendChild(generateCardFromTemplate(participants[idx], emojis, elements.template));
     }
     if (!remaining) break;
   }
 
-  elements.container.append(fragment);
+  // Ensure the container is empty then add the new cards
+  elements.container.innerHTML = "";
+  elements.container.appendChild(fragment);
 }
 
 /**
@@ -111,7 +101,7 @@ const createSkeletonLoaders = elements => {
   };
   const showcaseElements = {
     count: 5,
-    container: document.getElementById("showcases"),
+    container: document.querySelector("#showcases"),
     template: document.querySelector("#showcases > .item-template")
   };
 
@@ -139,13 +129,15 @@ const createSkeletonLoaders = elements => {
   ]).then((values) => {
     // When all data has loaded:
     const [participants, pages, emojis] = values;
+
     if (showcaseElements.container && showcaseElements.template) {
-      showcaseElements.container.innerHTML = "";
-      createShowcases(participants, pages, showcaseElements, emojis);
+      const indexes = shuffle(genIndexes(participants.length));
+      createParticipantesCards(participants, emojis, showcaseElements, indexes, pages);
     }
+
     if (communityElements.container && communityElements.template) {
-      communityElements.container.innerHTML = "";
-      createParticipantes(participants, communityElements, emojis);
+      communityElements.count = participants.length;
+      createParticipantesCards(participants, emojis, communityElements);
     }
   });
 
