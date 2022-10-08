@@ -309,7 +309,7 @@
         "course_stage": "Alumni",
         "favorite_language": "JavaScript",
         "currently_learning": "Next.js",
-        "showcase": false
+        "showcase": true
     },
     {
         "name": "Vaibhav",
@@ -317,6 +317,22 @@
         "course_stage": "student",
         "favorite_language": "JavaScript",
         "currently_learning": "React",
+        "showcase": true
+    },
+    {
+        "name": "Emanuel",
+        "course_start": "2022",
+        "course_stage": "Awaiting final grade",
+        "favorite_language": "Python",
+        "currently_learning": "NodeJS",
+        "showcase": false
+    },
+    {
+        "name": "IreneN3",
+        "course_start": "2022",
+        "course_stage": "Alumni",
+        "favorite_language": "Python",
+        "currently_learning": "JavaScript",
         "showcase": false
     }
 ]

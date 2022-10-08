@@ -59,6 +59,7 @@ main {
 
 .right-side p {
   font-size: 2rem;
+  line-height: 1.5;
   padding: 2rem;
   margin: 0 6.4rem;
 }
@@ -84,4 +85,113 @@ main {
 
 .soc-links a i:hover {
   color: #ccfdff;
+}
+
+@media only screen and (max-width: 91em) {
+  h1 {
+    line-height: 1;
+  }
+
+  main {
+    gap: 1.6rem;
+  }
+
+  .right-side {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 80em) {
+  main {
+    gap: 0.8rem;
+  }
+  h1 {
+    font-size: 4.8rem;
+    padding: 1.6rem;
+  }
+
+  h1 span {
+    font-size: 2.4rem;
+  }
+
+  .left-side {
+    min-width: 30%;
+  }
+
+  .right-side {
+    max-width: 55%;
+  }
+
+  .right-side p {
+    font-size: 1.8rem;
+    margin: 0 2.4rem;
+    padding: 0 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 66em) {
+  body {
+    height: 100%;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .left-side,
+  .right-side,
+  .last-side {
+    max-width: 100%;
+    margin-bottom: 3.2rem;
+  }
+
+  h1 {
+    font-size: 6.2rem;
+    margin-bottom: 3.8rem;
+  }
+
+  .right-side p {
+    padding: 1.2rem 4.8rem;
+    margin: 0 2.4rem;
+  }
+
+  .soc-links {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 38em) {
+  .left-side {
+    text-align: center;
+  }
+
+  .left-side img {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 4.4rem;
+  }
+}
+
+@media only screen and (max-width: 28em) {
+  main {
+    gap: 2.4rem;
+  }
+  .left-side img {
+    width: 70%;
+  }
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .right-side p {
+    padding: 0.8rem 1.6rem;
+    margin: 0;
+  }
+
+  .soc-links {
+    font-size: 3rem;
+  }
 }
