@@ -339,8 +339,7 @@
         "course_start": "2020",
         "course_stage": "Student",
         "favorite_language": "JavaScript",
-        "currently_learning": "Node.js"
-        "currently_learning": "JavaScript",
+        "currently_learning": "Node.js",
         "showcase": false
     },
     {
