@@ -334,5 +334,13 @@
         "favorite_language": "Python",
         "currently_learning": "JavaScript",
         "showcase": false
+    },
+    {
+        "name": "arioum",
+        "course_start": "2021",
+        "course_stage": "Student",
+        "favorite_language": "JavaScript",
+        "currently_learning": "React Native",
+        "showcase": false
     }
 ]
