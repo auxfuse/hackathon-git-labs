@@ -32,7 +32,7 @@ const shuffle = (arr) => {
 const generateCardFromTemplate = (participant, emojis, template) => {
   const card = template.content.firstElementChild.cloneNode(true);
   const fields = card.querySelectorAll('[data-field]');
-  
+
   const action = {
     'default': field => field.innerText = participant[field.dataset.field],
     'random_emoji': field => field.innerText = getRandomEmoji(emojis),
@@ -105,7 +105,7 @@ const createSkeletonLoaders = elements => {
     template: document.querySelector("#community > .item-template")
   };
   const showcaseElements = {
-    count: 2,
+    count: 5,
     container: document.querySelector("#showcases"),
     template: document.querySelector("#showcases > .item-template")
   };

@@ -216,37 +216,6 @@ p, h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-.showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    width: 200px;
-    aspect-ratio: 1/1;
-}
-
-.showcase-link {
-    text-decoration: none;
-}
-
-.showcase-title {
-    position:absolute;
-    bottom: 5px;
-    background: #f3f3f3;
-    z-index: 99;
-}
-
-.showcase-preview {
-    position: absolute;
-    top:0; left:0;
-    width: 800px;
-    height: 800px;
-    transform-origin: top left;
-    transform: scale(0.25);
-    pointer-events: none;
-}
-
 #showcases-section h1::after,
 #community-section h1::after {
     content: '';
