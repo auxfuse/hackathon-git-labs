@@ -216,11 +216,35 @@ p, h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-.star {
-    width: 500px;
-    height: 500px;
-    clip-path: path("M 118.957 56.0038 L 118.327 64.7121 L 110.339 61.1867 L 105.439 68.4132 L 100.284 61.3662 L 92.4272 65.1746 L 91.4864 56.4943 L 82.7781 55.864 L 86.3035 47.8763 L 79.077 42.9763 L 86.1239 37.8214 L 82.3156 29.9646 L 90.9959 29.0238 L 91.6262 20.3155 L 99.6139 23.8409 L 104.514 16.6144 L 109.669 23.6614 L 117.526 19.853 L 118.466 28.5333 L 127.175 29.1636 L 123.649 37.1513 L 130.876 42.0513 L 123.829 47.2062 L 127.637 55.063 Z");
-    background-color: red;
+.showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 200px;
+    aspect-ratio: 1/1;
+}
+
+.showcase-link {
+    text-decoration: none;
+}
+
+.showcase-title {
+    position:absolute;
+    bottom: 5px;
+    background: #f3f3f3;
+    z-index: 99;
+}
+
+.showcase-preview {
+    position: absolute;
+    top:0; left:0;
+    width: 800px;
+    height: 800px;
+    transform-origin: top left;
+    transform: scale(0.25);
+    pointer-events: none;
 }
 
 #showcases-section h1::after,
@@ -241,6 +265,11 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin-bottom: 7rem;
 }
+
+#showcases {
+    justify-content: space-around;
+}
+
 
 .card {
     display: flex;

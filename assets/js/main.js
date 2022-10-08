@@ -38,6 +38,8 @@ const generateCardFromTemplate = (participant, emojis, template) => {
       field.setAttribute('href', `community/${participant.name}`);
     } else if (field.dataset.field === 'random_emoji') {
       field.innerText = getRandomEmoji(emojis);
+    } else if (field.dataset.field === 'preview') {
+      field.src = `community/${participant.name}`;
     } else {
       field.innerText = participant[field.dataset.field];
     }
@@ -104,7 +106,7 @@ const createSkeletonLoaders = elements => {
     template: document.querySelector("#community > .item-template")
   };
   const showcaseElements = {
-    count: 5,
+    count: 2,
     container: document.querySelector("#showcases"),
     template: document.querySelector("#showcases > .item-template")
   };
@@ -143,6 +145,7 @@ const createSkeletonLoaders = elements => {
       communityElements.count = participants.length;
       createParticipantesCards(participants, emojis, communityElements);
     }
+
   });
 
 })();
