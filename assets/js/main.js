@@ -32,17 +32,16 @@ const shuffle = (arr) => {
 const generateCardFromTemplate = (participant, emojis, template) => {
   const card = template.content.firstElementChild.cloneNode(true);
   const fields = card.querySelectorAll('[data-field]');
+  
+  const action = {
+    'default': field => field.innerText = participant[field.dataset.field],
+    'random_emoji': field => field.innerText = getRandomEmoji(emojis),
+    'preview': field => field.src = `community/${participant.name}`,
+    'link': field => field.setAttribute('href', `community/${participant.name}`)
+  };
 
   for (const field of fields) {
-    if (field.dataset.field === 'link') {
-      field.setAttribute('href', `community/${participant.name}`);
-    } else if (field.dataset.field === 'random_emoji') {
-      field.innerText = getRandomEmoji(emojis);
-    } else if (field.dataset.field === 'preview') {
-      field.src = `community/${participant.name}`;
-    } else {
-      field.innerText = participant[field.dataset.field];
-    }
+    (action[field.dataset.field] || action['default'])(field);
     // We don't need the data-field anymore:
     delete field.dataset.field;
   }
