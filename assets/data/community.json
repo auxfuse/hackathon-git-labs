@@ -292,5 +292,12 @@
         "course_stage": "Alumni",
         "favorite_language": "Python",
         "currently_learning": "JavaScript"
+    },
+    {
+        "name": "Shubham",
+        "course_start": "2020",
+        "course_stage": "Student",
+        "favorite_language": "JavaScript",
+        "currently_learning": "Node.js"
     }
 ]
