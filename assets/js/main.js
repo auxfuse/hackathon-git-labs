@@ -55,9 +55,9 @@ const generateCardFromTemplate = (participant, emojis, template) => {
  * @param {Array} emojis - Emoji array
  * @param {Object} elements - Object of DOM elements and maximum number of cards to be produced
  * @param {Array} indexes - (Optional) List of participant indexes to use. If not present all participants are created in order. Indexes are assumed to be valid.
- * @param {Array} pages - (Optional) List of custom pages. If present this is used to filter participants so only those with valid pages are appended.
+ * @param {Boolean} pages - (Optional) If true the partipant will only be added if they have a custom page
  */
-const createParticipantesCards = (participants, emojis, elements, indexes = null, pages = null) => {
+const createParticipantesCards = (participants, emojis, elements, indexes = null, pages = false) => {
   /* By using a document fragment lots of little DOM mutations
       can be cached into one big one for better performance. */
   const fragment = new DocumentFragment();
@@ -67,7 +67,7 @@ const createParticipantesCards = (participants, emojis, elements, indexes = null
 
   for (const idx of indexes) {
     // If the user has a custom page or if we don't care if they have one
-    if (!pages || pages.includes(participants[idx].name)) {
+    if (!pages || participants[idx].showcase) {
       remaining--;
       fragment.appendChild(generateCardFromTemplate(participants[idx], emojis, elements.template));
     }
@@ -125,20 +125,17 @@ const createSkeletonLoaders = elements => {
     // Participant records
     fetch("assets/data/community.json")
       .then(response => response.json()),
-    // List of participant custom pages
-    fetch("assets/data/communitypages.json")
-      .then(response => response.json()),
     // Emoji list
     fetch("assets/data/emojis.json")
       .then((response) => response.json()),
 
   ]).then((values) => {
     // When all data has loaded:
-    const [participants, pages, emojis] = values;
+    const [participants, emojis] = values;
 
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
-      createParticipantesCards(participants, emojis, showcaseElements, indexes, pages);
+      createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
     }
 
     if (communityElements.container && communityElements.template) {
