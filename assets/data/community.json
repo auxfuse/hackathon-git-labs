@@ -350,5 +350,12 @@
         "favorite_language": "JavaScript",
         "currently_learning": "React Native",
         "showcase": false
+    },
+    {
+        "name": "Muzhda",
+        "course_start": "2022",
+        "course_stage": "Student",
+        "favorite_language": "Java",
+        "currently_learning": "JavaScript"
     }
 ]
