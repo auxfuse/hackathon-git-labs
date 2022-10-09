@@ -18,12 +18,7 @@
 	--black: #010101;
   }
   
-  body {
-	/* background-color: rgb(10, 10, 10); */
-	margin: 0px;
-  }
   
-
   /* ---------- Cover Page Navigation */
 #welcome {
 	min-height: 100vh;

@@ -1,0 +1,202 @@
+:root {
+    /* --orange: #ff5101;
+	--bright: #fe6601; */
+    --primary: #f25939;
+    --primary-2: #f06236;
+    --primary-3: #f57d65;
+    --primary-4: #e2492a;
+    --dark: #15112d;
+    --light: #fafafa;
+    --pink: #e28883;
+    --yellow-1: #f2bc0c;
+    --yellow-2: #f9e296;
+    --yellow-3: #f2bc0c6f;
+    --blue: #6fb1bd;
+    --blue-2: #b3effb;
+    --grey: #838888;
+    --grey-2: #414342;
+    --black: #010101;
+}
+
+/* ---------------- Header ---------------- */
+header {
+    background: var(--black);
+}
+
+#header-icon {
+    color: var(--primary-3);
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1.87px;
+    font-size: 1.25rem;
+    color: var(--light);
+}
+
+.navbar-brand:hover {
+    color: var(--grey);
+}
+
+.nav-pills .nav-link.active {
+    background-color: #01090f;
+}
+
+
+/* ---------------------- Hamburger */
+label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+label .menu {
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+label .hamburger {
+    position: absolute;
+    top: 135px;
+    right: 50px;
+    width: 30px;
+    height: 2px;
+    background: #fafafa;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+}
+
+label .hamburger:before {
+    top: -10px;
+}
+
+label .hamburger:after {
+    bottom: -10px;
+}
+
+label input {
+    display: none;
+}
+
+label input:checked+.menu {
+    box-shadow: 0 0 0 100vw rgb(0, 0, 0), 0 0 0 100vh rgba(49, 45, 45, 0.59), 0 0 100vh rgba(1, 1, 1, 0.79);
+    background-color: #000;
+    opacity: .965;
+    border-radius: 0;
+}
+
+label input:checked+.menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label input:checked+.menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+
+}
+
+label input:checked+.menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+}
+
+label input:checked+.menu+ul {
+    opacity: 1;
+}
+
+label ul {
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: .25s 0s ease-in-out;
+    transition: .25s 0s ease-in-out;
+    align-self: center;
+    vertical-align: center;
+}
+
+label a {
+    margin-bottom: .5em;
+    display: block;
+    color: var(--grey);
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 0 35px var(--light);
+    font-weight: 200;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    text-align: center;
+     animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+label a:hover {
+    color: var(--light);
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.main-nav {
+    list-style: none;
+}
+
+ul.hamburger-nav {
+    font-family: 'futura-pt', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    list-style: none;
+    line-height: 3em;
+    color: #fafafa;
+}
+
+ul.hamburger-nav:hover {
+    color: rgb(26, 201, 201);
+}
+
+/* ---------------------- Hero */
+#hero {
+    height: 100vh;
+    max-width: 100%;
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    overflow: hidden;
+     background-image: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.946), rgba(26, 25, 25, 0.712), rgba(18, 18, 18, 0.68)), url('../images/bg4.jpeg');
+     background-repeat: no-repeat;
+}
