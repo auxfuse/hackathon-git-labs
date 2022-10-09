@@ -85,3 +85,16 @@
 	opacity: .35;
 	transform: translate(-50%, -50%) scale(1);
   }
+
+  /* ------------ About */
+  #about { 
+	padding-top: 30px;
+	background-color: var(--grey);
+	height: 650px;
+  }
+
+  .card > img {
+		width: 200px;
+		height: 100%;
+		border-radius: 50%;
+	}
