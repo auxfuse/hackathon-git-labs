@@ -65,26 +65,52 @@ h2 {
     top: -260px;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:1024px) {
     /* TOP PANEL */
-    .heroSection {
+    .heroSection,
+    .heroText {
+        height: 400px;
+    }
+
+    h2 {
+        font-size: 9vw;
+        top: 65px;
+        left: 50px;
+    }
+
+    .borderBox {
+        border-width: 10px;
+        height: 170px;
+        width: 70%;
+        top: -140px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /* TOP PANEL */
+    .heroSection,
+    .heroText {
         height: 300px;
     }
 
+    .borderBox {
+        height: 150px;
+        top: -100px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    /* TOP PANEL */
     .heroText {
         height: 300px;
     }
 
     h2 {
-        font-size: 9vw;
         top: 100px;
         left: 25px;
     }
 
     .borderBox {
-        border-width: 10px;
-        height: 150px;
-        width: 70%;
         top: -50px;
     }
 }
