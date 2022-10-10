@@ -47,7 +47,7 @@ main {
   max-width: 40%;
 }
 
-.right-side {
+.middle-side {
   font-family: "Ubuntu", sans-serif;
 
   max-width: 50%;
@@ -57,7 +57,7 @@ main {
   align-items: center;
 }
 
-.right-side p {
+.middle-side p {
   font-size: 2rem;
   line-height: 1.5;
   padding: 2rem;
@@ -87,6 +87,19 @@ main {
   color: #ccfdff;
 }
 
+/* --------------------------------------- Hide content */
+.content {
+  display: none;
+}
+
+.tab-btn.active {
+  background: #fff;
+}
+
+.content.active {
+  display: block;
+}
+
 @media only screen and (max-width: 91em) {
   h1 {
     line-height: 1;
@@ -96,7 +109,7 @@ main {
     gap: 1.6rem;
   }
 
-  .right-side {
+  .middle-side {
     max-width: 60%;
   }
 }
@@ -118,11 +131,11 @@ main {
     min-width: 30%;
   }
 
-  .right-side {
+  .middle-side {
     max-width: 55%;
   }
 
-  .right-side p {
+  .middle-side p {
     font-size: 1.8rem;
     margin: 0 2.4rem;
     padding: 0 1.6rem;
@@ -140,7 +153,7 @@ main {
   }
 
   .left-side,
-  .right-side,
+  .middle-side,
   .last-side {
     max-width: 100%;
     margin-bottom: 3.2rem;
@@ -151,7 +164,7 @@ main {
     margin-bottom: 3.8rem;
   }
 
-  .right-side p {
+  .middle-side p {
     padding: 1.2rem 4.8rem;
     margin: 0 2.4rem;
   }
@@ -186,7 +199,7 @@ main {
     font-size: 3.6rem;
   }
 
-  .right-side p {
+  .middle-side p {
     padding: 0.8rem 1.6rem;
     margin: 0;
   }
