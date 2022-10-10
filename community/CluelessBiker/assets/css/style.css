@@ -65,6 +65,22 @@ h2 {
     top: -260px;
 }
 
+@media screen and (max-width:1200px) {
+    /* TOP PANEL */
+    h2 {
+        font-size: 9vw;
+        top: 165px;
+        left: 65px;
+    }
+
+    .borderBox {
+        border-width: 10px;
+        height: 400px;
+        width: 70%;
+        top: -200px;
+    }
+}
+
 @media screen and (max-width:1024px) {
     /* TOP PANEL */
     .heroSection,
@@ -73,13 +89,11 @@ h2 {
     }
 
     h2 {
-        font-size: 9vw;
         top: 65px;
         left: 50px;
     }
 
     .borderBox {
-        border-width: 10px;
         height: 170px;
         width: 70%;
         top: -140px;
