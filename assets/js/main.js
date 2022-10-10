@@ -97,7 +97,6 @@ const createSkeletonLoaders = elements => {
 }
 
 (() => {
-  console.log(import.meta);
   const communityElements = {
     // Maximum number of cards to append for this section
     count: 10,
