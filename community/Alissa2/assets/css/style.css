@@ -225,18 +225,18 @@ a.dropdown-item {
   }
   
   /* Element styles */
-  .marquee svg {
+  .marquee i {
 	display: grid;
 	place-items: center;
 	width: clamp(10rem, 1rem + 40vmin, 30rem);
-	fill: var(--light);
+	color: var(--light);
 	background: var(--primary);
-	aspect-ratio: 16/9;
-	padding: clamp(10rem, 1rem + 40vmin, 30rem / 10);
+	padding: 50px;
 	border-radius: 0.5rem;
+	font-size: 5em;
   }
   
-  .marquee--vertical svg {
+  .marquee--vertical i {
 	aspect-ratio: 1;
 	width: calc(var(--size) / 1.5);
 	padding: calc(var(--size) / 6);
@@ -250,56 +250,3 @@ a.dropdown-item {
 	margin: auto;
 	max-width: 100vw;
   }
-  
-  .wrapper--vertical {
-	flex-direction: row;
-	height: 100vh;
-  }
-  
-  /* Toggle direction button */
-  .toggle {
-	--size: 3rem;
-	position: relative;
-	position: absolute;
-	top: 1rem;
-	left: 1rem;
-	width: var(--size);
-	height: var(--size);
-	font: inherit;
-	text-align: center;
-	cursor: pointer;
-	outline: none;
-	border: none;
-	border-radius: 50%;
-	color: inherit;
-	background-color: var(--color-bg-accent);
-	z-index: 1;
-  }
-  
-  .toggle:focus-visible {
-	box-shadow: 0 0 0 2px var(--color-text);
-  }
-  
-  .toggle span {
-	position: absolute;
-	display: inline-block;
-	top: 50%;
-	left: calc(100% + 0.4em);
-	width: fit-content;
-	white-space: nowrap;
-	transform: translateY(-50%);
-	animation: fade 400ms 4s ease-out forwards;
-	user-select: none;
-  }
-  
-  .toggle--vertical svg {
-	transform: translate(-50%, -50%) rotate(-90deg);
-  }
-  
-  @keyframes fade {
-	to {
-	  opacity: 0;
-	  visibility: hidden;
-	}
-  }
-  
