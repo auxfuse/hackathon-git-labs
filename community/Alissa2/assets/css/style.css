@@ -55,7 +55,7 @@ ul#nav {
 	display: flex;
 	flex-direction: column;
 	padding: clamp(2rem, 5vw, 6rem);
-	margin: 20px 0;
+	margin-bottom: 20vh;
 	height: auto;
 }
 
@@ -93,7 +93,7 @@ ul#nav {
 }
 
 #nav>li>img {
-	position: fixed;
+	position: absolute;
 	opacity: 0;
 	transform: translate(-50%, -50%) scale(0.5);
 	transition: transform 250ms, opacity 250ms;
