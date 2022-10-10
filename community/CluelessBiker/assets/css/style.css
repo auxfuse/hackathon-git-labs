@@ -64,3 +64,27 @@ h2 {
     z-index: 20;
     top: -260px;
 }
+
+@media screen and (max-width:480px) {
+    /* TOP PANEL */
+    .heroSection {
+        height: 300px;
+    }
+
+    .heroText {
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 9vw;
+        top: 100px;
+        left: 25px;
+    }
+
+    .borderBox {
+        border-width: 10px;
+        height: 150px;
+        width: 70%;
+        top: -50px;
+    }
+}
