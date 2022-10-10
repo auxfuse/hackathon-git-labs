@@ -65,14 +65,14 @@
             </template> -->
 
             <div class="slideshow">
-                <button class="slideshow-control" aria-label="Back">
+                <button class="slideshow-control" aria-label="Prev">
                     <svg class="control-icon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
                         <path d="m6.2851 1.0156 1.4142 1.4142-2.5702 2.5702 2.5702 2.5702-1.4142 1.4142-3.9844-3.9844z"/>
                     </svg>
                 </button>
 
                 <div class="slideshow-content">
-                    <iframe src="community/auxfuse" frameborder="0"></iframe>
+                    <iframe src="community/none" frameborder="0"></iframe>
                 </div>
                 
                 <button class="slideshow-control" aria-label="Next">
@@ -81,11 +81,19 @@
                     </svg>
                 </button>
                 
-                <ul class="slideshow-items">
+                <div class="slideshow-items">
                     <template class="item-template">
-
+                        <div class="slideshow-item">
+                            <h2 class="item-title">
+                                <span data-field="random_emoji"></span> 
+                                <span data-field="name">_</span>
+                            </h2>
+                            <a href="" class="participant-link" data-content="View Work ➡" data-field="link">
+                                View Work ➡
+                            </a>
+                        </div>
                     </template>
-                </ul>
+                </div>
             </div>
 
         </div>

@@ -262,8 +262,9 @@ h6 {
     aspect-ratio: 1/0.5;
 }
 
-.slideshow-content > iframe {
+.slideshow-content iframe {
     position: absolute;
+    display: block;
     top: 0;
     left: 0;
     width: 150vw;
@@ -271,14 +272,24 @@ h6 {
     min-height: 800px;
     aspect-ratio: 1/0.5;
 
+    border: none;
     transform-origin: top left;
     transform: scale(0.5);
 }
 
 .slideshow-control {
     background: none;
-    border: none;
-    width: 5rem;
+    border: 1px solid black;
+    width: 2.5rem;
+}
+.slideshow-control:hover {
+    background: var(--primary-color);
+}
+.slideshow-control[aria-label="Prev"] {
+    border-radius: 1rem 0 0 1rem;
+}
+.slideshow-control[aria-label="Next"] {
+    border-radius: 0 1rem 1rem 0;
 }
 
 .slideshow-items {
