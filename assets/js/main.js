@@ -1,11 +1,12 @@
 /**
- * Creates an array of numbers in a given range in a random order
+ * Creates an array of numbers in a given range
  * @param {Number} max - Maximum number in range 
- * @param {Number} min - (optional) Minimum number in range
+ * @param {Number} min - (optional) Minimum number in range. Defaults to 0
  * @returns Randomised list of numbers
  */
-const genRandomIndexes = (max, min = 0) => shuffle(new Array(max - min).fill(0).map((_, i) => i + min));
+const genIndexes = (max, min = 0) => new Array(max - min).fill(0).map((_, i) => i + min);
 
+/** Returns a random emoji from the emoji array passed */
 const getRandomEmoji = emojis => emojis[Math.floor(Math.random() * emojis.length)];
 
 /**
@@ -32,14 +33,15 @@ const generateCardFromTemplate = (participant, emojis, template) => {
   const card = template.content.firstElementChild.cloneNode(true);
   const fields = card.querySelectorAll('[data-field]');
 
+  const action = {
+    'default': field => field.innerText = participant[field.dataset.field],
+    'random_emoji': field => field.innerText = getRandomEmoji(emojis),
+    'preview': field => field.src = `community/${participant.name}`,
+    'link': field => field.setAttribute('href', `community/${participant.name}`)
+  };
+
   for (const field of fields) {
-    if (field.dataset.field == 'link') {
-      field.setAttribute('href', `community/${participant.name}`);
-    } else if (field.dataset.field == 'random_emoji') {
-      field.innerText = getRandomEmoji(emojis);
-    } else {
-      field.innerText = participant[field.dataset.field];
-    }
+    (action[field.dataset.field] || action['default'])(field);
     // We don't need the data-field anymore:
     delete field.dataset.field;
   }
@@ -47,76 +49,99 @@ const generateCardFromTemplate = (participant, emojis, template) => {
 }
 
 /**
- * Builds participant cards and adds them to the community section
- * @param {Array} participants - List of all participants
- * @param {Object} elements - Object of elements to be used for container and template
- * @param {Array} emojis - Array of emojis
+ * Creates a list of participant cards based on the HTML template and participant data passed.
+ * @param {Array} participants - Participant data
+ * @param {Array} emojis - Emoji array
+ * @param {Object} elements - Object of DOM elements and maximum number of cards to be produced
+ * @param {Array} indexes - (Optional) List of participant indexes to use. If not present all participants are created in order. Indexes are assumed to be valid.
+ * @param {Boolean} pages - (Optional) If true the partipant will only be added if they have a custom page
  */
-const createParticipantes = (participants, elements, emojis) => {
+const createParticipantesCards = (participants, emojis, elements, indexes = null, pages = false) => {
+  /* By using a document fragment lots of little DOM mutations
+      can be cached into one big one for better performance. */
   const fragment = new DocumentFragment();
-  participants.forEach(participant => {
-    fragment.append(generateCardFromTemplate(participant, emojis, elements.template));
-  });
-  elements.container.append(fragment);
-}
 
-/**
- * Builds participant showcases and adds them to the showcase section
- * @param {Array} participants - List of all participants
- * @param {Array} pages - List of custom pages
- * @param {Object} elements - Object of elements to be used for container and template
- * @param {Array} emojis - Array of emojis
- */
-const createShowcases = (participants, pages, elements, emojis) => {
-  const fragment = new DocumentFragment();
-  // Generate random indexes
-  const indexes = genRandomIndexes(participants.length);
   let remaining = elements.count;
+  if (!indexes) indexes = genIndexes(participants.length);
+
   for (const idx of indexes) {
-    // Check participant has custom page
-    if (pages.includes(participants[idx].name)) {
+    // If the user has a custom page or if we don't care if they have one
+    if (!pages || participants[idx].showcase) {
       remaining--;
-      fragment.append(generateCardFromTemplate(participants[idx], emojis, elements.template))
+      fragment.appendChild(generateCardFromTemplate(participants[idx], emojis, elements.template));
     }
     if (!remaining) break;
   }
 
-  elements.container.append(fragment);
+  // Ensure the container is empty then add the new cards
+  elements.container.innerHTML = "";
+  elements.container.appendChild(fragment);
 }
 
+/**
+ * Creates and appends skeleton loader elements.
+ * @param {Object} elements - Object of elements to be used for container and template
+ */
+const createSkeletonLoaders = elements => {
+  const fragment = new DocumentFragment();
+
+  for (let i = 0; i < elements.count; i++) {
+    const el = elements.template.content.firstElementChild.cloneNode(true);
+    el.classList.add('skeleton');
+    fragment.appendChild(el);
+  }
+
+  elements.container.appendChild(fragment);
+}
 
 (() => {
 
   const communityElements = {
+    // Maximum number of cards to append for this section
+    count: 10,
+    // The element to append cards to
     container: document.querySelector("#community"),
+    // The HTML template to use as a base for each card
     template: document.querySelector("#community > .item-template")
   };
   const showcaseElements = {
     count: 5,
-    container: document.getElementById("showcases"),
+    container: document.querySelector("#showcases"),
     template: document.querySelector("#showcases > .item-template")
   };
+
+  // Create Loaders
+  if (showcaseElements.container && showcaseElements.template) {
+    createSkeletonLoaders(showcaseElements);
+  }
+  if (communityElements.container && communityElements.template) {
+    createSkeletonLoaders(communityElements);
+  }
 
   // Preload data
   Promise.all([
 
     // Participant records
     fetch("assets/data/community.json")
-    .then(response => response.json()),
-    // List of participant custom pages
-    fetch("assets/data/communitypages.json")
-    .then(response => response.json()),
+      .then(response => response.json()),
     // Emoji list
     fetch("assets/data/emojis.json")
-    .then((response) => response.json()),
+      .then((response) => response.json()),
 
   ]).then((values) => {
     // When all data has loaded:
-    const [participants, pages, emojis] = values;
+    const [participants, emojis] = values;
+
     if (showcaseElements.container && showcaseElements.template) {
-      createShowcases(participants, pages, showcaseElements, emojis);
+      const indexes = shuffle(genIndexes(participants.length));
+      createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
     }
-    createParticipantes(participants, communityElements, emojis);
+
+    if (communityElements.container && communityElements.template) {
+      communityElements.count = participants.length;
+      createParticipantesCards(participants, emojis, communityElements);
+    }
+
   });
 
 })();
@@ -124,25 +149,27 @@ const createShowcases = (participants, pages, elements, emojis) => {
 // pagination
 
 const paginationEl = document.getElementById("pagination");
-const paginationLimit = 6;
-let res;
+const perPage = 6;
 
-// get data from json file
-fetch('assets/data/community.json')
-  .then((response) => response.json())
-  .then((response) => res);
-  // needed to get into the array first before getting the data
-
-  console.log(response);
-
-// add data to ul tag
-const li = document.createElement('li');
-li.textContent = 'Hello Manni';
-paginationEl.appendChild(li);
-
-// for (let i = 0; i < .length; i++) {
-
-// }
-
-// populate data to page
-// style
+function pagePagination(participants) {
+  const totalPages = Math.ceil(participants.length / perPage);
+  
+  for (let i = 0; i < totalPages; i++) {
+    const paginationLi = document.createElement('li');
+    const paginationLink = document.createElement('a');
+    
+    paginationLink.textContent = i + 1;
+    paginationLink.href = `?page=${i+1}`;
+    paginationEl.appendChild(paginationLi);
+    paginationLi.append(paginationLink);
+    
+    console.log(paginationLink.href);
+    
+    const currentPage = window.location.pathname;
+    console.log(`${currentPage} - current page`);
+  }
+  
+  
+  console.log(Math.ceil(participants.length / perPage));
+  console.log(participants);
+}

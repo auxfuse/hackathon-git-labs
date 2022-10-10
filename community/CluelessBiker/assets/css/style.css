@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+.heroSection {
+    height: 600px;
+    width: 100%;
+    contain: content;
+}
+
+.bg {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heroImage1 {
+    background-image: url("../images/decebal.png");
+}
+
+.heroImage2 {
+    background-image: url("../images/image1.png");
+}
+
+.heroImage3 {
+    background-image: url("../images/skopje.png");
+}
+
+.heroImage4 {
+    background-image: url("../images/transfagarasan.png");
+}
+
+.heroText {
+    background-color: #000;
+    width: 100%;
+    height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: multiply;
+    z-index: 10;
+}
+
+h2, .borderBox {
+    position: relative;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 8vw;
+    color: #FFFFFF;
+    z-index: 20;
+    top: 100px;
+    left: 170px;
+}
+
+.borderBox {
+    border: 15px solid #FFFFFF;
+    width: 55%;
+    height: 400px;
+    margin: 50px auto;
+    z-index: 20;
+}
+
+@media screen and (max-width:2000px) {
+    /* TOP PANEL */
+    .borderBox {
+        top: -375px;
+    }
+}
+
+@media screen and (max-width:1700px) {
+    /* TOP PANEL */
+    .borderBox {
+        top: -310px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    /* TOP PANEL */
+    .borderBox {
+        top: -250px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    /* TOP PANEL */
+    h2 {
+        font-size: 9vw;
+        top: 165px;
+        left: 65px;
+    }
+
+    .borderBox {
+        border-width: 10px;
+        height: 400px;
+        width: 70%;
+        top: -200px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    /* TOP PANEL */
+    .heroSection,
+    .heroText {
+        height: 400px;
+    }
+
+    h2 {
+        top: 65px;
+        left: 50px;
+    }
+
+    .borderBox {
+        height: 170px;
+        width: 70%;
+        top: -140px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /* TOP PANEL */
+    .heroSection,
+    .heroText {
+        height: 300px;
+    }
+
+    .borderBox {
+        height: 150px;
+        top: -100px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    /* TOP PANEL */
+    .heroText {
+        height: 300px;
+    }
+
+    h2 {
+        top: 100px;
+        left: 25px;
+    }
+
+    .borderBox {
+        top: -50px;
+    }
+}
