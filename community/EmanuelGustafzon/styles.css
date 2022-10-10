@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    background: url('https://res.cloudinary.com/dl535zny9/image/upload/v1659983114/mig_trolltunga_jaazgv.jpg') no-repeat center center;
+}
+.card {
+    min-height: 350px;
+    width: 40%;
+    background: #fafafa;
+    opacity: 0.9;
+    margin-left: 30%;
+    border-radius: 5%;
+}
+h3,
+h4,
+p
+ {
+    text-align: center;
+    color: cadetblue;
+    font-family: sans-serif;
+}
+h3 {
+    font-size: 180%;
+}
+i {
+    float: left;
+    padding: 10%;
+    font-size: 180%;
+    margin-left: 15%;
+    color: cadetblue;
+}
+
+@media (max-width: 780px) {
+.card {
+    width: 60%;
+    margin-left: 20%;
+}
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 80%;
+        margin-left: 10%;}
+
+        p {
+            font-size: 90%;
+        }
+        h3{
+            font-size: 150%;    
+        }
+        
+    
+    }
