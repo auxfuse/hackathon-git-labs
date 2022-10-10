@@ -7,6 +7,7 @@
 	--dark-2: #131313bd;
 	--light: #fafafa;
 	--pink: #e28883;
+	--purple: rgb(156, 70, 218);
 	--yellow-1: #f2bc0c;
 	--yellow-2: #f9e296;
 	--yellow-3: #f2bc0c6f;
@@ -88,8 +89,8 @@ ul#nav {
 }
 
 #nav>li:hover>span {
-	border-top-color: var(--primary-3);
-	border-bottom-color: var(--primary-3);
+	border-top-color: var(--purple);
+	border-bottom-color: var(--purple);
 }
 
 #nav>li>img {
@@ -155,8 +156,14 @@ a.dropdown-item {
 	min-height: 100vh;
 	font-size: 1rem;
 	color: var(--light);
-	background-color: var(--pink);
-  }
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.946), rgba(26, 25, 25, 0.712), rgba(18, 18, 18, 0.68)), url('../images/bg4.jpeg');
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
   
   .slider {
 	display: flex;
@@ -230,7 +237,7 @@ a.dropdown-item {
 	place-items: center;
 	width: clamp(10rem, 1rem + 40vmin, 30rem);
 	color: var(--light);
-	background: var(--primary);
+	background: rgb(156, 70, 218);
 	padding: 50px;
 	border-radius: 0.5rem;
 	font-size: 5em;
@@ -239,7 +246,7 @@ a.dropdown-item {
 
 
   .slider svg {
-	background: var(--primary);
+	background: rgb(156, 70, 218);
 	fill: var(--light);
 	width: clamp(10rem, 1rem + 40vmin, 30rem);
 	padding: 15px 10px;
