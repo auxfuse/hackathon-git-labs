@@ -1,3 +1,5 @@
+import * as slideshow from './modules/slideshow.js';
+
 /**
  * Creates an array of numbers in a given range
  * @param {Number} max - Maximum number in range 
@@ -95,7 +97,7 @@ const createSkeletonLoaders = elements => {
 }
 
 (() => {
-
+  console.log(import.meta);
   const communityElements = {
     // Maximum number of cards to append for this section
     count: 10,
@@ -117,6 +119,9 @@ const createSkeletonLoaders = elements => {
   if (communityElements.container && communityElements.template) {
     createSkeletonLoaders(communityElements);
   }
+
+  // Create Slideshow
+  slideshow.setupSlideshow(document.querySelector(".slideshow"));
 
   // Preload data
   Promise.all([

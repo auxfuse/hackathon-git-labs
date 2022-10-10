@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <!-- Custom JS Files -->
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js" type="module"></script>
 
     <title>Git Community - 🟠CI🟠</title>
 </head>
@@ -40,7 +40,7 @@
         <div id="showcases">
 
             <!-- Showcase card template -->
-            <template class="item-template">
+            <!-- <template class="item-template">
                 <div class="card">
                     <h2 class="card-title">
                         <span data-field="random_emoji"></span> 
@@ -62,7 +62,31 @@
                         View Work ➡
                     </a>
                 </div>
-            </template>
+            </template> -->
+
+            <div class="slideshow">
+                <button class="slideshow-control" aria-label="Back">
+                    <svg class="control-icon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
+                        <path d="m6.2851 1.0156 1.4142 1.4142-2.5702 2.5702 2.5702 2.5702-1.4142 1.4142-3.9844-3.9844z"/>
+                    </svg>
+                </button>
+
+                <div class="slideshow-content">
+                    <iframe src="community/auxfuse" frameborder="0"></iframe>
+                </div>
+                
+                <button class="slideshow-control" aria-label="Next">
+                    <svg class="control-icon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
+                        <path d="m2.3007 2.4298 1.4142-1.4142 3.9844 3.9844-3.9844 3.9844-1.4142-1.4142 2.5702-2.5702z"/>
+                    </svg>
+                </button>
+                
+                <ul class="slideshow-items">
+                    <template class="item-template">
+
+                    </template>
+                </ul>
+            </div>
 
         </div>
     </section>
