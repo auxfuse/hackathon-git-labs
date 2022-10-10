@@ -62,7 +62,27 @@ h2 {
     height: 400px;
     margin: 50px auto;
     z-index: 20;
-    top: -260px;
+}
+
+@media screen and (max-width:2000px) {
+    /* TOP PANEL */
+    .borderBox {
+        top: -375px;
+    }
+}
+
+@media screen and (max-width:1700px) {
+    /* TOP PANEL */
+    .borderBox {
+        top: -310px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    /* TOP PANEL */
+    .borderBox {
+        top: -250px;
+    }
 }
 
 @media screen and (max-width:1200px) {
