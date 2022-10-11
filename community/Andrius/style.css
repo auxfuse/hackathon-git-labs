@@ -38,13 +38,23 @@ main {
   background-color: #00f3ff;
   display: flex;
   flex-direction: row;
-  gap: 2.4rem;
+  gap: 1.6rem;
   justify-content: center;
   align-items: center;
 }
 
 .left-side {
-  max-width: 40%;
+  max-width: 50%;
+  height: 50rem;
+  display: flex;
+  flex-direction: row;
+  gap: 6.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side img {
+  max-width: 42%;
 }
 
 /* --------------------------------------- Middle section */
@@ -52,9 +62,8 @@ main {
 .middle-side {
   font-family: "Ubuntu", sans-serif;
 
-  /* max-width: 50%; */
-  width: 100rem;
-  height: 100%;
+  min-width: 40%;
+  height: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -69,12 +78,14 @@ main {
 }
 
 .about {
-  max-width: 90%;
+  min-width: 60rem;
+  /* max-width: 90%; */
   /* height: 32rem; */
-  height: 50rem;
+  height: 46rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  justify-content: flex-end;
 }
 
 .btn-container {
@@ -117,6 +128,10 @@ main {
 
 .about-content {
   max-width: 60rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 33rem;
 }
 
 /* --------------------------------------- Hide content */
@@ -136,7 +151,11 @@ main {
 }
 
 .content.active {
-  display: block;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .last-side {
