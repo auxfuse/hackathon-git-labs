@@ -107,8 +107,8 @@ const createSkeletonLoaders = elements => {
   };
   const showcaseElements = {
     count: 5,
-    container: document.querySelector("#showcases"),
-    template: document.querySelector("#showcases > .item-template")
+    container: document.querySelector(".slideshow-items"),
+    template: document.querySelector(".slideshow-items > .item-template")
   };
 
   // Create Loaders

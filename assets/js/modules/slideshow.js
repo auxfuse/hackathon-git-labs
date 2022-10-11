@@ -24,10 +24,6 @@ export const setupSlideshow = (rootEl) => {
         }
     });
 
-    details.addEventListener('click', e => {
-        console.log('details clicked');
-    });
-
     // Attach forward/back button events
     prevBtn.addEventListener('click', e => {
         console.log('back clicked');
