@@ -2,8 +2,8 @@
 export const setupSlideshow = (rootEl) => {
 
     const content = rootEl.querySelector('.slideshow-content > iframe');
-    const prevBtn = rootEl.querySelector('.slideshow-control[aria-label="Prev"]');
-    const nextBtn = rootEl.querySelector('.slideshow-control[aria-label="Next"]');
+    const prevBtn = rootEl.querySelector('.slideshow-control.prev');
+    const nextBtn = rootEl.querySelector('.slideshow-control.next');
     
     // Prevents click events within the iframe
     content.contentDocument.body.style.pointerEvents = 'none';

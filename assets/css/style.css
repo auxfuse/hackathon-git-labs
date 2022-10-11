@@ -279,23 +279,26 @@ h6 {
 
 .slideshow-control {
     background: none;
-    border: 1px solid black;
-    width: 2.5rem;
+    width: 4rem;
 }
-.slideshow-control:hover {
+/* .slideshow-control:hover {
     background: var(--primary-color);
-}
-.slideshow-control[aria-label="Prev"] {
+} */
+.slideshow-control.prev {
     border-radius: 1rem 0 0 1rem;
 }
-.slideshow-control[aria-label="Next"] {
+.slideshow-control.next {
     border-radius: 0 1rem 1rem 0;
+}
+
+.control-icon > path {
+    fill: var(--font-color-lt);
+    stroke: var(--font-color);
 }
 
 .slideshow-items {
     display: none;
 }
-
 
 .card {
     display: flex;
