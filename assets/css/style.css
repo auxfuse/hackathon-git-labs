@@ -308,6 +308,30 @@ h6 {
 
 .slideshow-item > .card-title {
     transform: translateY(-50%);
+    max-width: 400px;
+}
+
+.slideshow-link {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: end;
+    text-decoration: none;
+    color: var(--font-color-lt);
+}
+.slideshow-link-text {
+    padding: 0 5rem 0;
+    font-size: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #072C3000 0%, #072C30FF 100%);
+    transition: all 1s linear;
+}
+.slideshow-link:hover > .slideshow-link-text {
+    padding: 2rem 5rem 0.25rem;
+    max-height: 5rem;
 }
 
 .card {
