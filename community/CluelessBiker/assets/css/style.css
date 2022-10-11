@@ -47,7 +47,8 @@
     align-items: center;
 }
 
-.mainHeader {
+.mainHeader,
+.aboutTextBox {
     border: 15px solid #FFFFFF;
     width: 50%;
     height: 50%;
@@ -57,10 +58,22 @@
     right: -22%;
 }
 
-h2, h3, h4, h5, p {
+h2, h3, h4, p {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-size: 0.9rem;
+}
+
+p {
+    font-size: 0.8rem;
 }
 
 h2 {
@@ -71,6 +84,8 @@ h2 {
 /* ABOUT SECTION */
 .aboutSection {
     background-color: #3A3A3A;
+    display: flex;
+    align-items: center;
 }
 
 /* SOCIAL LINKS */
