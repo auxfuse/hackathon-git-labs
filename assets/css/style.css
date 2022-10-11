@@ -247,10 +247,11 @@ h6 {
 
 .slideshow {
     position: relative;
-    display: flex;
-    flex-flow: row;
+    /* display: flex;
+    flex-flow: row; */
     width: 75vw;
     max-width: 1000px;
+    max-height: 75vh;
     aspect-ratio: 1/1.25;
     margin-top: 1.5rem;
 }
@@ -262,12 +263,20 @@ h6 {
 }
 
 .slideshow-control {
+    position: absolute;
+    top: 0;
     width: 5em;
+    height: 100%;
     background: none;
     border: none;
     opacity: 0.25;
 }
-
+.slideshow-control.prev {
+    left: 0;
+}
+.slideshow-control.next {
+    right: 0;
+}
 .slideshow-control:hover {
     opacity: 0.75;
 }
@@ -289,7 +298,11 @@ h6 {
 }
 
 .slideshow-details {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     flex: 1 1 auto;
 }
 
