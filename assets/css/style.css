@@ -270,6 +270,7 @@ h6 {
     background: none;
     border: none;
     opacity: 0.25;
+    cursor: pointer;
 }
 .slideshow-control.prev {
     left: 0;
