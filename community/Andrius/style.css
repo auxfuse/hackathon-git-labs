@@ -47,13 +47,16 @@ main {
   max-width: 40%;
 }
 
+/* --------------------------------------- Middle section */
+
 .middle-side {
   font-family: "Ubuntu", sans-serif;
 
   max-width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -61,7 +64,71 @@ main {
   font-size: 2rem;
   line-height: 1.5;
   padding: 2rem;
-  margin: 0 6.4rem;
+  margin: 0 2.4rem;
+}
+
+.about {
+  max-width: 90%;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  justify-self: center;
+
+  border-top-left-radius: 15px;
+}
+
+.tab-btn {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1.2rem;
+  background-color: #00aab3;
+  color: #e6feff;
+
+  border: 2px solid #4df7ff;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: all 0.5s;
+}
+
+.tab-btn:hover {
+  background-color: #99faff;
+  color: #00c2cc;
+  border-color: #00dbe6;
+}
+
+.content h2 {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  padding-left: 3.2rem;
+}
+
+/* --------------------------------------- Hide content */
+.content {
+  display: none;
+}
+
+.tab-btn.active {
+  background: #e6feff;
+  color: #00c2cc;
+  border-color: #00dbe6;
+}
+
+.tab-btn.active:hover {
+  background-color: #b3fbff;
+  color: #009299;
+}
+
+.content.active {
+  display: block;
 }
 
 .last-side {
@@ -85,19 +152,6 @@ main {
 
 .soc-links a i:hover {
   color: #ccfdff;
-}
-
-/* --------------------------------------- Hide content */
-.content {
-  display: none;
-}
-
-.tab-btn.active {
-  background: #fff;
-}
-
-.content.active {
-  display: block;
 }
 
 @media only screen and (max-width: 91em) {
