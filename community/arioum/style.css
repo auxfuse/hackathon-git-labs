@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+strong {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: .9rem;
+}
+
+li {
+    font-size: .8rem;
+}
+
+hr {
+    margin: .5em 0;
+}
+
+.container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(19, 19, 19, 0.709);
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 2rem;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border: #FFFFFF solid 3px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.sub-heading {
+    font-weight: 600;
+}
+
+.my-name {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;   
+}
+
+.socials-redirect {
+    display: flex;
+    justify-content: space-between;
+}

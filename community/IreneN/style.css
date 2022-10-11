@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.splitright, .splitleft {
+    height: 50vh;
+    width: 100%
+}
+
+.splitright {
+    background-image: url(/community/IreneN/background-left2.jpg);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.splitleft {
+    background-image: url(/community/IreneN/background-right.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .splitright, .splitleft {
+        height: 100vh;
+    }
+    .btn {
+        font-size: 5rem;
+    }
+}

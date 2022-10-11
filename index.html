@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Custom JS Files -->
+    <script src="assets/js/main.js" defer></script>
+
     <title>Git Community - 🟠CI🟠</title>
 </head>
 
@@ -20,13 +24,46 @@
                 have specified tasks that emulate a
                 Ticket in a live environment.
                 <br>
-                Help us by sharing the project to Twitter:
-                <a href="https://ctt.ac/qZN6i" target="_blank" rel="noopener noreferrer" class="twitter-link">👉 click here!</a>
+                Help us by sharing the project to 👉
+                <a href="https://ctt.ac/qZN6i" target="_blank" rel="noopener noreferrer" class="twitter-link">Twitter!</a>
             </p>
         </div>
 
         <div id="content-image">
-            <img src="assets/images/Octocat.png" alt="Github octocat mascot">
+            <img src="assets/images/octocat.png" alt="Github octocat mascot">
+        </div>
+    </section>
+
+    <section id="showcases-section" class="margin-y-md">
+        <h1 class="primary-heading center-txt">Showcases</h1>
+
+        <div id="showcases">
+
+            <!-- Showcase card template -->
+            <template class="item-template">
+                <div class="card">
+                    <h2 class="card-title">
+                        <span data-field="random_emoji"></span> 
+                        <span data-field="name">_</span>
+                    </h2>
+                    <h3 class="card-sub margin-yt-sm">
+                        📅 Started: <span data-field="course_start"></span>
+                    </h3>
+                    <h3 class="card-sub margin-yb-sm custom-underline">
+                        🎓 Stage: <span data-field="course_stage"></span>
+                    </h3>
+                    <h3 class="card-detail">
+                        Loves: <span data-field="favorite_language"></span> 😍 
+                    </h3>
+                    <h3 class="card-detail custom-underline">
+                        Learning: <span data-field="currently_learning"></span> 📚 
+                    </h3>
+                    <a class="participant-link" href="" data-content="View Work ➡" data-field="link">
+                        View Work ➡
+                    </a>
+                </div>
+            </template>
+
         </div>
     </section>
 
@@ -34,7 +71,34 @@
         <h1 class="primary-heading center-txt">Meet the Community</h1>
 
         <!-- Container to hold participant cards from JSON file -->
-        <div id="community"></div>
+        <div id="community">
+
+            <!-- Community card template -->
+            <template class="item-template">
+                <div class="card">
+                    <h2 class="card-title">
+                        <span data-field="random_emoji"></span>
+                        <span data-field="name">_</span>
+                    </h2>
+                    <h3 class="card-sub margin-yt-sm">
+                        📅 Started: <span data-field="course_start"></span>
+                    </h3>
+                    <h3 class="card-sub margin-yb-sm custom-underline">
+                        🎓 Stage: <span data-field="course_stage"></span>
+                    </h3>
+                    <h3 class="card-detail">
+                        Loves: <span data-field="favorite_language"></span> 😍 
+                    </h3>
+                    <h3 class="card-detail custom-underline">
+                        Learning: <span data-field="currently_learning"></span> 📚 
+                    </h3>
+                    <a class="participant-link" href="" data-content="View Work ➡" data-field="link">
+                        View Work ➡
+                    </a>
+                </div>
+            </template>
+
+        </div>
     </section>
 
     <footer>
@@ -49,7 +113,7 @@
         </div>
 
         <div id="additional-info">
-            <p>Meet the team:</p>
+            <h3>Meet the team:</h3>
             <ul id="team-list">
                 <li>
                     <a href="https://github.com/auxfuse" target="_blank" rel="noopener noreferrer">
@@ -84,9 +148,6 @@
             </ul>
         </div>
     </footer>
-
-    <!-- Custom JS Files -->
-    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

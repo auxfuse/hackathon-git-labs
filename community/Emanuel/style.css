@@ -1,0 +1,31 @@
+body {
+    background-color: #000;
+    background: url('../Emanuel/coding-image.jpg') center top / cover no-repeat;
+}
+
+.welcome-title {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.description-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 130px;
+    border: 3px #00C1D2 solid;
+    opacity: 0.9;
+}
+
+.card-title {
+    text-transform: capitalize;
+}
+
+.card-text {
+    padding-top: 20px;
+}
+
+.card-link {
+    color: #00C1D2;
+}

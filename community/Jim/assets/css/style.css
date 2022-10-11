@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    height: 100vh;
+}
+
+h1 {
+    color: red;
+}
+
+.container {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.warning {
+    display: flex;
+    justify-content: center;
+}
+
+.warning img {
+    width: 5rem;
+    margin-right: 20px;
+}
