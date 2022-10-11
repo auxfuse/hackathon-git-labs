@@ -39,41 +39,26 @@
 
         <div id="showcases">
 
-            <!-- Showcase card template -->
-            <!-- <template class="item-template">
-                <div class="card">
-                    <h2 class="card-title">
-                        <span data-field="random_emoji"></span> 
-                        <span data-field="name">_</span>
-                    </h2>
-                    <h3 class="card-sub margin-yt-sm">
-                        📅 Started: <span data-field="course_start"></span>
-                    </h3>
-                    <h3 class="card-sub margin-yb-sm custom-underline">
-                        🎓 Stage: <span data-field="course_stage"></span>
-                    </h3>
-                    <h3 class="card-detail">
-                        Loves: <span data-field="favorite_language"></span> 😍 
-                    </h3>
-                    <h3 class="card-detail custom-underline">
-                        Learning: <span data-field="currently_learning"></span> 📚 
-                    </h3>
-                    <a class="participant-link" href="" data-content="View Work ➡" data-field="link">
-                        View Work ➡
-                    </a>
-                </div>
-            </template> -->
-
             <div class="slideshow">
+
+                <iframe class="slideshow-contents" src="community/auxfuse/" scrolling="yes" frameborder="0"></iframe>
+
                 <button class="slideshow-control prev" aria-label="Previous slide">
                     <svg class="control-icon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
                         <path d="m6.2851 1.0156 1.4142 1.4142-2.5702 2.5702 2.5702 2.5702-1.4142 1.4142-3.9844-3.9844z"/>
                     </svg>
                 </button>
-
-                <div class="slideshow-content">
-                    <iframe src="community/auxfuse/" frameborder="0"></iframe>
-                    <h2></h2>
+                
+                <div class="slideshow-details">
+                    <div class="slideshow-item">
+                        <h2 class="card-title">
+                            <span>😰</span>
+                            <span>AuxFuse</span>
+                        </h2>
+                        <a class="participant-link" href="community/auxfuse/" data-content="View Work ➡">
+                            View Work ➡
+                        </a>
+                    </div>
                 </div>
                 
                 <button class="slideshow-control next" aria-label="Next slide">
@@ -81,20 +66,21 @@
                         <path d="m2.3007 2.4298 1.4142-1.4142 3.9844 3.9844-3.9844 3.9844-1.4142-1.4142 2.5702-2.5702z"/>
                     </svg>
                 </button>
-                
+
                 <div class="slideshow-items">
-                    <template class="item-template">
+                    <template>
                         <div class="slideshow-item">
-                            <h2 class="item-title">
-                                <span data-field="random_emoji"></span> 
+                            <h2 class="card-title">
+                                <span data-field="random_emoji"></span>
                                 <span data-field="name">_</span>
                             </h2>
-                            <a href="" class="participant-link" data-content="View Work ➡" data-field="link">
+                            <a class="participant-link" href="" data-content="View Work ➡" data-field="link">
                                 View Work ➡
                             </a>
                         </div>
                     </template>
                 </div>
+
             </div>
 
         </div>
@@ -102,7 +88,7 @@
 
     <section id="community-section" class="margin-y-md">
         <h1 class="primary-heading center-txt">Meet the Community</h1>
-
+S
         <!-- Container to hold participant cards from JSON file -->
         <div id="community">
 
