@@ -57,12 +57,15 @@
     right: -22%;
 }
 
-h2 {
+h2, h3, h4, h5, p {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 8vw;
     color: #FFFFFF;
+}
+
+h2 {
     z-index: 20;
+    font-size: 8vw;
 }
 
 /* ABOUT SECTION */
