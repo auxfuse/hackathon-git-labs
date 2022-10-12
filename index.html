@@ -41,17 +41,11 @@
 
             <div class="slideshow">
 
-                <iframe class="slideshow-contents" src="community/auxfuse/" scrolling="yes" frameborder="0"></iframe>
-                
-                <div class="slideshow-details">
-                    <div class="slideshow-item">
-                        <h2 class="card-title">
-                            <span>😰</span>
-                            <span>AuxFuse</span>
-                        </h2>
-                        <a class="slideshow-link" href="community/auxfuse/" >
-                            <h3 class="slideshow-link-text">View Work ➡</h3>
-                        </a>
+                <div class="slideshow-container">
+                    <iframe class="slideshow-contents" src="community/auxfuse/" scrolling="yes" frameborder="0"></iframe>
+                    
+                    <div class="slideshow-details">
+                        
                     </div>
                 </div>
 
@@ -69,13 +63,13 @@
 
                 <div class="slideshow-items">
                     <template class="item-template">
-                        <div class="slideshow-item">
+                        <div class="slideshow-item" data-address="">
                             <h2 class="card-title">
                                 <span data-field="random_emoji"></span>
                                 <span data-field="name">_</span>
                             </h2>
                             <a class="slideshow-link" href="" data-field="link">
-                                <h3 class="slideshow-link-text">View Work ➡</h3>
+                                <span class="slideshow-link-text">View Work ➡</span>
                             </a>
                         </div>
                     </template>

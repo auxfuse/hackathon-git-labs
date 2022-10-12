@@ -35,6 +35,8 @@ const generateCardFromTemplate = (participant, emojis, template) => {
   const card = template.content.firstElementChild.cloneNode(true);
   const fields = card.querySelectorAll('[data-field]');
 
+  card.dataset.address = `community/${participant.name}`;
+
   const action = {
     'default': field => field.innerText = participant[field.dataset.field],
     'random_emoji': field => field.innerText = getRandomEmoji(emojis),
@@ -119,9 +121,6 @@ const createSkeletonLoaders = elements => {
     createSkeletonLoaders(communityElements);
   }
 
-  // Create Slideshow
-  slideshow.setupSlideshow(document.querySelector(".slideshow"));
-
   // Preload data
   Promise.all([
 
@@ -139,6 +138,8 @@ const createSkeletonLoaders = elements => {
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
       createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
+      // Create Slideshow
+      slideshow.createSlideshow(document.querySelector(".slideshow"));
     }
 
     if (communityElements.container && communityElements.template) {

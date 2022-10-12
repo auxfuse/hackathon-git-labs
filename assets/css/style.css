@@ -247,8 +247,6 @@ h6 {
 
 .slideshow {
     position: relative;
-    /* display: flex;
-    flex-flow: row; */
     width: 75vw;
     max-width: 1000px;
     max-height: 75vh;
@@ -305,6 +303,15 @@ h6 {
     width: 100%;
     height: 100%;
     flex: 1 1 auto;
+}
+
+.slideshow-container {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.fade-slide {
+    opacity: 0;
 }
 
 .slideshow-items {
