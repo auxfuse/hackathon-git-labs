@@ -13,11 +13,29 @@ export const createSlideshow = (rootEl) => {
     const nextBtn = rootEl.querySelector('.slideshow-control.next');
     const slides = rootEl.querySelector('.slideshow-items').childNodes;
     const container = rootEl.querySelector('.slideshow-container');
+
+    /*
+     * State
+     */
     let currentSlide = 0;
+    let timer = null;
 
     /*
      * Utillities
      */
+    const moveToNewSlide = (inc = 1) => {
+        // Ensure we're not currently fading out
+        container.classList.remove('fade-slide');
+        // Advance the currentSlide index
+        currentSlide = wrapInRange(0, currentSlide + inc, slides.length - 1);
+        // Set the fade out
+        container.classList.add('fade-slide');
+        // Cancel the waiting timed slide change
+        clearInterval(timer);
+        // Create a new slide change
+        setTimeout(moveToNewSlide, 10000);
+    };
+
     const showCurrentSlide = () => {
         // Clear the current slide details
         details.innerHTML = '';
@@ -28,7 +46,7 @@ export const createSlideshow = (rootEl) => {
         content.src = slide.dataset.address;
         // Ensure the container isn't hidden
         container.classList.remove('fade-slide');
-    }
+    };
 
     /*
      * Events
@@ -54,15 +72,11 @@ export const createSlideshow = (rootEl) => {
 
     // Previous slide button
     prevBtn.addEventListener('click', e => {
-        container.classList.remove('fade-slide');
-        currentSlide = wrapInRange(0, currentSlide - 1, slides.length - 1);
-        container.classList.add('fade-slide');
+        moveToNewSlide(-1);
     });
     // Next slide button
     nextBtn.addEventListener('click', e => {
-        container.classList.remove('fade-slide');
-        currentSlide = wrapInRange(0, currentSlide + 1, slides.length - 1);
-        container.classList.add('fade-slide');
+        moveToNewSlide(1);
     });
     // Listens for the container fade out/in transition end event
     container.addEventListener('transitionend', e => {
@@ -72,12 +86,15 @@ export const createSlideshow = (rootEl) => {
         }
     });
 
+    /*
+     * Initialise
+     */
     // Show initial slide
     showCurrentSlide();
     // Setup the slide progression timed trigger
-    setInterval(() => {
-        container.classList.remove('fade-slide');
-        currentSlide = wrapInRange(0, currentSlide + 1, slides.length - 1);
-        container.classList.add('fade-slide');
-    }, 10000);
+    setTimeout(moveToNewSlide, 10000);
+
+    //TODO: 
+    // Interval time in props
+
 };
