@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
+/* FONTS */
+h2, h3, h4, p {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+h2 {
+    z-index: 20;
+    font-size: 8vw;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-size: 0.9rem;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+.aboutTextBox h2,
+.aboutTextBox h3,
+.aboutTextBox h4,
+.aboutTextBox p {
+    color: #EC4899;
+    z-index: 20;
+    padding: 5px;
+}
+
 /* SECTION SIZING */
 .heroSection,
 .aboutSection {
@@ -58,32 +91,10 @@
     right: -22%;
 }
 
-h2, h3, h4, p {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-h3 {
-    font-size: 1rem;
-}
-
-h4 {
-    font-size: 0.9rem;
-}
-
-p {
-    font-size: 0.8rem;
-}
-
-h2 {
-    z-index: 20;
-    font-size: 8vw;
-}
-
 /* ABOUT SECTION */
 .aboutSection {
-    background-color: #3A3A3A;
+    background-color: #ECECEC;
+    /* background-color: #3A3A3A; */
     display: flex;
     align-items: center;
 }
@@ -114,21 +125,13 @@ h2 {
     -o-transition: all 0.35s ease-in-out;
 }
 
-@media screen and (max-width:2000px) {
-    /* TOP PANEL */
-}
+@media screen and (max-width:2000px) {}
 
-@media screen and (max-width:1700px) {
-    /* TOP PANEL */
-}
+@media screen and (max-width:1700px) {}
 
-@media screen and (max-width:1400px) {
-    /* TOP PANEL */
-}
+@media screen and (max-width:1400px) {}
 
-@media screen and (max-width:1200px) {
-    /* TOP PANEL */
-}
+@media screen and (max-width:1200px) {}
 
 @media screen and (max-width:1024px) {
     /* TOP PANEL */
@@ -150,6 +153,25 @@ h2 {
     .mainHeader,
     .aboutTextBox {
         border-width: 10px;
+    }
+
+    /* ABOUT SECTION */
+    h3 {
+        font-size: 0.8rem;
+    }
+    
+    h4 {
+        font-size: 0.6rem;
+    }
+    
+    p {
+        font-size: 0.5rem;
+    }
+
+    .aboutSection h3,
+    .aboutSection h4,
+    .aboutSection p {
+        display: contents
     }
 
     /* SOCIAL ICONS */
