@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <section id="contact-header">
+        <div id="contact-column">
+            <h1 class="primary-heading margin-yb-sm">Contact Us</h1>
+            <h2 class="sub-heading">We'd love to hear from you!</h2>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="row form-row" id="contactForm">
+            <form action="#" method="POST" class="contact-form" id="contact_form">
+                <div class="name">
+                    <label for="name"></label>
+                    <input type="text" placeholder="name" name="name" id="name_input" class="name_input" required>
+                </div>
+                <div class="email">
+                    <label for="email"></label>
+                    <input type="email" placeholder="e-mail" name="email" id="email_input" required>
+                </div>
+                <div class="select">
+                    <label for="category"></label>
+                    <select id="category" name="category" onchange="showQueryType()">
+                        <option value="technical">Technical</option>
+                        <option value="enhancement">Enhancement</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="bug">Bug</option>
+                    </select>
+                </div>
+                <div class="message">
+                    <label for="message"></label>
+                    <textarea name="message" placeholder="message" id="message_input" maxlength="140" rows="5"
+                        required></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="submit" id="submitForm" />
+                </div>
+            </form>
+            <div class="debug">
+                <pre><code>{ </code></pre>
+                <pre id="nameJSON">name: <code class='print_name' id='print_name'></code>,</pre>
+                <pre id="emailJSON">email: <code class='print_email' id='print_email'></code>,</pre>
+                <pre id="queryJSON">category: <code class='print_query' id='print_query'></code>,</pre>
+                <pre id="messageJSON">message: <code class='print_message' id='print_message'></code></pre>
+                <br>
+                <pre><code>} </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="repo-go">
+            <p>
+                Want to contribute to this project?
+            </p>
+            <p>
+                Learn to submit your first PR?
+            </p>
+            <a href="https://github.com/auxfuse/hackathon-git-labs/blob/main/README.md">Start here 🙌</a>
+        </div>
+
+        <div id="additional-info">
+            <p>Meet the team:</p>
+            <ul id="team-list">
+                <li>
+                    <a href="https://github.com/auxfuse" target="_blank" rel="noopener noreferrer">
+                        Anthony - Owner/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/NaoiseGaffney" target="_blank" rel="noopener noreferrer">
+                        Gaff - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/AideenM12" target="_blank" rel="noopener noreferrer">
+                        Aideen - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Gwen-Bradbury" target="_blank" rel="noopener noreferrer">
+                        Gwen - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/andrewdempsey2018" target="_blank" rel="noopener noreferrer">
+                        Andrew - Maintainer/Developer
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/alissatroiano" target="_blank" rel="noopener noreferrer">
+                        Alissa - Maintainer/Developer
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Custom JS Files -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/email.js"></script>
+
+</body>
+
+</html>

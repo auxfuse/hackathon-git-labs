@@ -181,22 +181,22 @@ main {
 .soc-links a i:hover {
   color: #ccfdff;
 }
-/* 1456px */
+
 @media only screen and (max-width: 91em) {
   h1 {
     line-height: 1;
   }
-
   .left-side {
     gap: 1rem;
   }
 }
-/* 1280px */
+
 @media only screen and (max-width: 80em) {
   main {
     gap: 0.8rem;
   }
   h1 {
+
     font-size: 5.2rem;
     padding: 1.6rem;
   }
@@ -204,7 +204,7 @@ main {
   h1 span {
     font-size: 2.4rem;
   }
-
+  
   .middle-side {
     height: 33rem;
   }
@@ -236,7 +236,7 @@ main {
     padding-bottom: 0.8rem;
   }
 }
-/* 1056px */
+
 @media only screen and (max-width: 66em) {
   .left-side {
     flex-direction: column-reverse;
@@ -256,7 +256,6 @@ main {
   }
 }
 
-/* 864px */
 @media only screen and (max-width: 54em) {
   body {
     height: 100%;
@@ -295,7 +294,6 @@ main {
   }
 }
 
-/* 512px */
 @media only screen and (max-width: 32em) {
   .left-side {
     max-width: 60%;
