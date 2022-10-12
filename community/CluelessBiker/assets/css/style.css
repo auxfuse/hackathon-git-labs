@@ -151,6 +151,20 @@ h2 {
     .aboutTextBox {
         border-width: 10px;
     }
+
+    /* SOCIAL ICONS */
+    .socialLinks {
+        display: flex;
+        position: fixed;
+        bottom: 7%;
+        left: 5%;
+    }
+
+    .socialLinks a i {
+        width: 20px;
+        padding: 6px 1px;
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width:480px) {
