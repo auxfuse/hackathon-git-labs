@@ -17,7 +17,7 @@ export const createSlideshow = (rootEl) => {
     /*
      * Settings
      */
-    const timeout = (parseInt(rootEl.dataset.timeout) * 1000) || 10000;
+    const timeout = (parseInt(rootEl.dataset.timeout) * 1000);
 
     /*
      * State
@@ -35,10 +35,13 @@ export const createSlideshow = (rootEl) => {
         currentSlide = wrapInRange(0, currentSlide + inc, slides.length - 1);
         // Set the fade out
         container.classList.add('fade-slide');
-        // Cancel the waiting timed slide change
-        clearInterval(timer);
-        // Create a new slide change
-        timer = setTimeout(moveToNewSlide, timeout);
+
+        if (timeout) {
+            // Cancel the waiting timed slide change
+            clearInterval(timer);
+            // Create a new slide change
+            timer = setTimeout(moveToNewSlide, timeout);
+        }
     };
 
     const showCurrentSlide = () => {
@@ -97,6 +100,6 @@ export const createSlideshow = (rootEl) => {
     // Show initial slide
     showCurrentSlide();
     // Setup the slide progression timed trigger
-    timer = setTimeout(moveToNewSlide, timeout);
+    if (timeout) timer = setTimeout(moveToNewSlide, timeout);
 
 };
