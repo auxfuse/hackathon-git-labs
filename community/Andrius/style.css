@@ -102,9 +102,9 @@ main {
 .tab-btn {
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  padding: 1.2rem;
+  padding: 0.8rem;
   background-color: #00aab3;
   color: #e6feff;
 
@@ -123,7 +123,7 @@ main {
 .content h2 {
   text-transform: capitalize;
   font-size: 2.4rem;
-  padding-left: 3.2rem;
+  /* padding-left: 3.2rem; */
 }
 
 .about-content {
@@ -160,6 +160,7 @@ main {
 
 .last-side {
   max-width: 10%;
+  margin-right: 2.4rem;
 }
 
 .soc-links {
@@ -180,27 +181,23 @@ main {
 .soc-links a i:hover {
   color: #ccfdff;
 }
-
+/* 1456px */
 @media only screen and (max-width: 91em) {
   h1 {
     line-height: 1;
   }
 
-  main {
-    gap: 1.6rem;
-  }
-
-  .middle-side {
-    max-width: 60%;
+  .left-side {
+    gap: 1rem;
   }
 }
-
+/* 1280px */
 @media only screen and (max-width: 80em) {
   main {
     gap: 0.8rem;
   }
   h1 {
-    font-size: 4.8rem;
+    font-size: 5.2rem;
     padding: 1.6rem;
   }
 
@@ -208,46 +205,89 @@ main {
     font-size: 2.4rem;
   }
 
-  .left-side {
-    min-width: 30%;
+  .middle-side {
+    height: 33rem;
   }
 
-  .middle-side {
-    max-width: 55%;
+  .about {
+    min-width: 49rem;
+    height: 35rem;
   }
 
   .middle-side p {
     font-size: 1.8rem;
-    margin: 0 2.4rem;
-    padding: 0 1.6rem;
+    max-width: 80%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-content {
+    max-width: 53rem;
+    min-height: 26rem;
+  }
+
+  iframe {
+    max-width: 45rem;
+    height: 25rem;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+    padding-bottom: 0.8rem;
+  }
+}
+/* 1056px */
+@media only screen and (max-width: 66em) {
+  .left-side {
+    flex-direction: column-reverse;
+  }
+
+  h1 {
+    font-size: 4.4rem;
+  }
+
+  iframe {
+    max-width: 40rem;
+    height: 22rem;
+  }
+
+  .soc-links {
+    font-size: 3rem;
   }
 }
 
-@media only screen and (max-width: 66em) {
+/* 864px */
+@media only screen and (max-width: 54em) {
   body {
     height: 100%;
   }
 
   main {
     flex-direction: column;
-    gap: 3.2rem;
+    gap: 2.4rem;
+    margin-top: 3.2rem;
   }
 
-  .left-side,
-  .middle-side,
-  .last-side {
+  .left-side {
+    flex-direction: column;
     max-width: 100%;
-    margin-bottom: 3.2rem;
+    /* height: 100vh; */
+  }
+
+  .left-side img {
+    max-width: 50%;
   }
 
   h1 {
-    font-size: 6.2rem;
-    margin-bottom: 3.8rem;
+    font-size: 5.2rem;
   }
 
-  .middle-side p {
-    padding: 1.2rem 4.8rem;
-    margin: 0 2.4rem;
+  .content {
+    width: 50rem;
+  }
+
+  .last-side {
+    margin-bottom: 3.2rem;
   }
 
   .soc-links {
@@ -255,37 +295,47 @@ main {
   }
 }
 
-@media only screen and (max-width: 38em) {
+/* 512px */
+@media only screen and (max-width: 32em) {
   .left-side {
-    text-align: center;
+    max-width: 60%;
   }
 
   .left-side img {
-    width: 80%;
+    max-width: 75%;
   }
 
   h1 {
     font-size: 4.4rem;
   }
-}
 
-@media only screen and (max-width: 28em) {
-  main {
-    gap: 2.4rem;
+  .tab-btn {
+    font-size: 1.2rem;
   }
-  .left-side img {
-    width: 70%;
+
+  .about {
+    min-width: 30rem;
+    height: 38rem;
+    gap: 1.6rem;
   }
-  h1 {
-    font-size: 3.6rem;
+
+  .about-content {
+    max-width: 30rem;
+    min-height: 32rem;
   }
 
   .middle-side p {
-    padding: 0.8rem 1.6rem;
-    margin: 0;
+    font-size: 1.4rem;
   }
 
-  .soc-links {
-    font-size: 3rem;
+  .content.active {
+    gap: 1.6rem;
+  }
+
+  iframe {
+    max-width: 30rem;
+    max-height: 17rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 }
