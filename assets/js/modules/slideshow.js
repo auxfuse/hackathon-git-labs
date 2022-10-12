@@ -15,6 +15,11 @@ export const createSlideshow = (rootEl) => {
     const container = rootEl.querySelector('.slideshow-container');
 
     /*
+     * Settings
+     */
+    const timeout = (parseInt(rootEl.dataset.timeout) * 1000) || 10000;
+
+    /*
      * State
      */
     let currentSlide = 0;
@@ -33,7 +38,7 @@ export const createSlideshow = (rootEl) => {
         // Cancel the waiting timed slide change
         clearInterval(timer);
         // Create a new slide change
-        setTimeout(moveToNewSlide, 10000);
+        timer = setTimeout(moveToNewSlide, timeout);
     };
 
     const showCurrentSlide = () => {
@@ -92,9 +97,6 @@ export const createSlideshow = (rootEl) => {
     // Show initial slide
     showCurrentSlide();
     // Setup the slide progression timed trigger
-    setTimeout(moveToNewSlide, 10000);
-
-    //TODO: 
-    // Interval time in props
+    timer = setTimeout(moveToNewSlide, timeout);
 
 };
