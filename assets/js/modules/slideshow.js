@@ -19,7 +19,6 @@ export const createSlideshow = (rootEl) => {
      * Utillities
      */
     const showCurrentSlide = () => {
-        console.log('showing now!')
         // Clear the current slide details
         details.innerHTML = '';
         const slide = slides[currentSlide].cloneNode(true);
@@ -75,4 +74,10 @@ export const createSlideshow = (rootEl) => {
 
     // Show initial slide
     showCurrentSlide();
+    // Setup the slide progression timed trigger
+    setInterval(() => {
+        container.classList.remove('fade-slide');
+        currentSlide = wrapInRange(0, currentSlide + 1, slides.length - 1);
+        container.classList.add('fade-slide');
+    }, 10000);
 };
