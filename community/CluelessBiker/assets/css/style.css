@@ -88,6 +88,11 @@ h2 {
     align-items: center;
 }
 
+.aboutHeader {
+    position: relative;
+    left: -20%;
+}
+
 /* SOCIAL LINKS */
 .socialLinks a i:hover {
     color: #000000;
@@ -128,7 +133,8 @@ h2 {
 @media screen and (max-width:1024px) {
     /* TOP PANEL */
     .heroSection,
-    .heroTextBox {
+    .heroTextBox,
+    .aboutSection {
         height: 400px;
     }
 }
@@ -136,11 +142,13 @@ h2 {
 @media screen and (max-width:768px) {
     /* TOP PANEL */
     .heroSection,
-    .heroTextBox {
+    .heroTextBox,
+    .aboutSection {
         height: 300px;
     }
 
-    .mainHeader {
+    .mainHeader,
+    .aboutTextBox {
         border-width: 10px;
     }
 }
