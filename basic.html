@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>Basics guide to making your first Pull Request (PR)</title>
   </head>
   <style>
@@ -11,7 +15,128 @@
 
     * {
       box-sizing: border-box;
+      margin: 0;    
     }
+    /* nav bar  */
+nav{
+    background: #1f5d64;
+    height:4.8rem ;
+    width: 100%;
+    border-radius: 0px 0pc 14px 14px;
+    
+}
+label.logo
+{
+    color: white;
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    padding: 0rem 1rem;
+    line-height: 4.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul  {
+    float: right;
+    
+    margin-left: -3rem;
+    margin-right: 2rem;
+}
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    line-height:4.5rem ;
+    padding-left: 1rem;
+}
+nav ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+ul li a:hover{
+    color: #072c30;
+    background-color: antiquewhite;
+    transition: .5s;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.checkboxbtn span
+{
+    font-size:2rem ;
+    color: white;
+    float: right;
+    line-height: 4.5rem;
+    margin-right:20px;
+    cursor: pointer;
+    display: none;
+}
+#checkbox{
+    display: none;
+}
+/* nav media Queries */
+@media (max-width: 992px)
+ {
+     label.logo
+     {
+         font-size:1.5rem;
+         padding-left: 2rem;
+     }
+     nav ul li a {
+         font-size: 0.8rem;
+         
+ 
+     }
+ }
+ @media (max-width:786px)
+ {  
+  
+
+     .checkboxbtn span {
+         display: block;
+     }
+     nav ul  li{
+         display: block;
+     }
+     nav ul{
+         display:block;
+         position:fixed;
+         width: 100%;
+         height: 100vh;
+         background-color: #072c30;
+         top: 4.8rem;
+         margin: 0;
+         text-align: center;
+         left: -100%;
+         transition: all .5s;
+         border-radius: 14px;
+     }
+     nav ul li a{
+         font-size: 1rem;
+     }
+    nav ul li a:hover{
+         color: antiquewhite;
+         background: none;
+         transition: .5s;
+     }
+     #checkbox:checked ~ul {
+        left: 0;
+
+     }
+    
+ 
+ }
+ /* nav end */
 
     body {
       font-size: 16px;
@@ -20,8 +145,11 @@
       font-family: "Roboto", sans-serif;
       margin: 0 auto;
       height: 100%;
-      padding: 2%;
       
+    }
+    .bodydiv
+    {
+      padding: 0 2% 2% 2%;
     }
 
     pre {
@@ -56,8 +184,26 @@
     margin: 0 auto;
   }
   </style>
+  <!-- mav -->
+    <nav>
+      <input placeholder="#" type="checkbox" id="checkbox" />
+      <label for="checkbox" class="checkboxbtn">
+      <span class="material-symbols-outlined">
+          menu
+          </span></i
+      ></label>
+      <label class="logo">Hackathon Git Labs</label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a class="active" href="#">Pages</a></li>
+        <li><a class="active" href="#">Pages</a></li>
+        <li><a class="active" href="#">Form</a></li>
+        <li><a class="active" href="#">Contact Us</a></li>
+      </ul>
+    </nav>
   
   <body>
+    <div class="bodydiv">
     <header>
   <h1>Basics guide to making your first Pull Request (PR)</h1>
     </header>
@@ -294,5 +440,6 @@
 <p>This is just the start. Get your PR in, wait for it to be reviewed/approved/merged. And then throw your efforts at adding another PR, but this time following along to the <a href="intermediate.md">Intermediate guide</a>, and making adding a HTML & CSS Single page creation.</p>
 <p>🤜 Thank you! 😀</p>
 </main>
+</div>
   </body>
 </html>
