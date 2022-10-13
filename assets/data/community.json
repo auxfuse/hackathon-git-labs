@@ -370,6 +370,7 @@
     "course_start": "2022",
     "course_stage": "Student",
     "favorite_language": "JavaScript",
-    "currently_learning": "JavaScript"
+    "currently_learning": "JavaScript",
+    "showcase": true
   }
 ]
