@@ -245,10 +245,115 @@ h6 {
     margin-bottom: 7rem;
 }
 
-#showcases {
-    justify-content: space-around;
+.slideshow {
+    position: relative;
+    width: 75vw;
+    max-width: 1000px;
+    max-height: 75vh;
+    aspect-ratio: 1/1.25;
+    margin-top: 1.5rem;
 }
 
+@media (orientation: landscape) {
+    .slideshow {
+        aspect-ratio: 1/0.5;
+    }
+}
+
+.slideshow-control {
+    position: absolute;
+    top: 0;
+    width: 5em;
+    height: 100%;
+    background: none;
+    border: none;
+    opacity: 0.25;
+    cursor: pointer;
+}
+.slideshow-control.prev {
+    left: 0;
+}
+.slideshow-control.next {
+    right: 0;
+}
+.slideshow-control:hover {
+    opacity: 0.75;
+}
+
+.control-icon > path {
+    stroke: var(--font-color);
+    fill: var(--font-color-lt);
+}
+
+.slideshow-contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+
+    transform-origin: top left;
+    transform: scale(0.5);
+}
+
+.slideshow-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+}
+
+.slideshow-container {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.fade-slide {
+    opacity: 0;
+}
+
+.slideshow-items {
+    display: none;
+}
+
+.slideshow-item {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-item > .card-title {
+    transform: translate(-10%, -50%);
+    max-width: 400px;
+}
+
+.slideshow-link {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    width: 100%;
+    text-align: end;
+    text-decoration: none;
+    color: var(--font-color-lt);
+}
+.slideshow-link-text {
+    padding: 0 5rem 0;
+    font-size: 1.5rem;
+    height: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #072C3000 0%, #072C30FF 100%);
+    transition: all 1s linear;
+}
+.slideshow-link:hover > .slideshow-link-text {
+    padding: 2rem 5rem 0.25rem;
+    height: 4.25rem;
+}
 
 .card {
     display: flex;

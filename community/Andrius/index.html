@@ -13,33 +13,67 @@
   </head>
   <body>
     <main>
-      <div class="left-side">
-        <img src="andre-hackathon-2.png" alt="andrius photo" />
-      </div>
-
-      <div class="right-side">
+      <section class="left-side">
         <h1>
           Hey <span>👋</span>, I'm Andrius Siupinys,<br />
           a web developer
           <span>🧘‍♂️</span>
         </h1>
-        <p>
-          Hi, I am a junior web developer 💻 - a self-motivated coding
-          enthusiast. A few years ago, I dived into coding and enjoy it every
-          day. In 2021 I achieved 🎉🎈 diploma in software development at Code
-          Institute. At the moment I am learning 📚 Javascript language and
-          NodeJS framework. In the future, I plan to learn React, later, I will
-          dip into the MERN stack.
-        </p>
-        <p>
-          I love sports like football ⚽, basketball ⛹️‍♂️ and boxing 🥊. But at
-          studying time I can watch just the highlights of the match. I like to
-          play FIFA 🎮🎧 (usually on weekend mornings because it is easy to beat
-          opponents 😉), also I refresh by swimming 🤿🩳 in the Irish sea
-          🏊‍♂️🐟🐠.
-        </p>
-      </div>
-      <div class="last-side">
+        <img src="andre-hackathon-2.png" alt="andrius photo" />
+      </section>
+      <section class="middle-side">
+        <article class="about">
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="about-me">about me</button>
+            <button class="tab-btn" data-id="hobby">hobby</button>
+            <button class="tab-btn" data-id="video">video</button>
+          </div>
+
+          <article class="about-content">
+            <!-- single item -->
+            <div class="content active" id="about-me">
+              <h2>a little bit about me</h2>
+              <p>
+                Hi, I am a junior web developer 💻 - a self-motivated coding
+                enthusiast. A few years ago, I dived into coding and enjoy it
+                every day. In 2021 I achieved 🎉🎈 diploma in software
+                development at Code Institute. At the moment I am learning 📚
+                Javascript language and NodeJS framework. In the future, I plan
+                to learn React, later, I will dip into the MERN stack.
+              </p>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="hobby">
+              <h2>free time without coding</h2>
+              <p>
+                I love sports like football ⚽, basketball ⛹️‍♂️ and boxing 🥊. But
+                at studying time I can watch just the highlights of the match. I
+                like to play FIFA 🎮🎧 (usually on weekend mornings because it
+                is easy to beat opponents 😉), also I refresh by swimming 🤿🩳
+                in the Irish sea 🏊‍♂️🐟🐠.
+              </p>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="video">
+              <h2>goal!!!</h2>
+
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/aenCuW5Gujc?start=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of single item -->
+          </article>
+        </article>
+      </section>
+      <section class="last-side">
         <div class="soc-links">
           <a href="https://github.com/andrius-siup" target="_blank"
             ><i class="fa-brands fa-github-alt"></i
@@ -51,7 +85,8 @@
           ></a>
           <a href="./../../index.html"><i class="fa-solid fa-house"></i></a>
         </div>
-      </div>
+      </section>
     </main>
+    <script src="./assets/js/script.js" type="text/javascript"></script>
   </body>
 </html>

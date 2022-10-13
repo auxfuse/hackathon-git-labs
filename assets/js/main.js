@@ -1,3 +1,5 @@
+import * as slideshow from './modules/slideshow.js';
+
 /**
  * Creates an array of numbers in a given range
  * @param {Number} max - Maximum number in range 
@@ -32,6 +34,8 @@ const shuffle = (arr) => {
 const generateCardFromTemplate = (participant, emojis, template) => {
   const card = template.content.firstElementChild.cloneNode(true);
   const fields = card.querySelectorAll('[data-field]');
+
+  card.dataset.address = `community/${participant.name}`;
 
   const action = {
     'default': field => field.innerText = participant[field.dataset.field],
@@ -95,7 +99,6 @@ const createSkeletonLoaders = elements => {
 }
 
 (() => {
-
   const communityElements = {
     // Maximum number of cards to append for this section
     count: 10,
@@ -106,8 +109,8 @@ const createSkeletonLoaders = elements => {
   };
   const showcaseElements = {
     count: 5,
-    container: document.querySelector("#showcases"),
-    template: document.querySelector("#showcases > .item-template")
+    container: document.querySelector(".slideshow-items"),
+    template: document.querySelector(".slideshow-items > .item-template")
   };
 
   // Create Loaders
@@ -135,6 +138,8 @@ const createSkeletonLoaders = elements => {
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
       createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
+      // Create Slideshow
+      slideshow.createSlideshow(document.querySelector(".slideshow"));
     }
 
     if (communityElements.container && communityElements.template) {
