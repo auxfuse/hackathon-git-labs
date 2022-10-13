@@ -125,8 +125,13 @@ p {
     -o-transition: all 0.35s ease-in-out;
 }
 
+/* PROJECT SECTION */
 .projectsSection {
     background-color: #3A3A3A;
+}
+
+.projectsAll {
+    display: flex;
 }
 
 @media screen and (max-width:2000px) {}
