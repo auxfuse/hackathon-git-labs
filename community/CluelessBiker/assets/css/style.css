@@ -134,6 +134,18 @@ p {
     display: flex;
 }
 
+.projectCard a {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.projectCard a:hover {
+    font-family: 'Montserrat', sans-serif;
+    color: aqua;
+    
+}
+
 @media screen and (max-width:2000px) {}
 
 @media screen and (max-width:1700px) {}
