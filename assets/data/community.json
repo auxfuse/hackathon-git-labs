@@ -366,6 +366,13 @@
     "currently_learning": "React Native"
   },
   {
+    "name": "Brian",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "Typescript",
+    "currently_learning": "React Design Systems"
+  },
+  {
     "name": "Mustafa",
     "course_start": "2022",
     "course_stage": "Student",
