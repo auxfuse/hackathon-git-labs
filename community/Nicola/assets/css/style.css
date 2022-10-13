@@ -1,0 +1,256 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,800);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700);
+*{
+  box-sizing:border-box;
+}
+html, body{
+  width:100%;
+  height:100%;
+}
+body{
+  background: #eee;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+.container, figure{
+  width:450px;
+  height: 270px;
+}
+
+.container{
+  position:absolute;
+  perspective:1000;
+  margin-top:-135px;
+  top:50%;
+}
+
+.card{
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+figure{
+  background: #2e5d5a;
+  color: #fff;
+  backface-visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+}
+
+figure.front{
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+figure.back,
+.card.flipped{
+  transform: rotateY(180deg);
+}
+
+figure img{
+  position: relative;
+  display: block;
+  min-height: 50%;
+  opacity: 0.7;
+}
+
+figure .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  backface-visibility: hidden;
+}
+
+.front .caption{
+  font-size: 1.25em;
+}
+
+.front .caption:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+  content: '';
+  opacity: 0;
+  transform: translate3d(0,50%,0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.front:hover .caption:before{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.front h2{
+  word-spacing: -0.15em;
+  font-weight: bold;
+  font-size: 1.6em;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  transition: transform 0.35s, color 0.35s;
+  transform: translate3d(0,-50%,0);
+}
+
+.front h2:after{
+  position: absolute;
+  bottom: -10px;
+  left: 70px;
+  right: 70px;
+  height: 2px;
+  background: #ffff00;
+  content: '';
+  transition: transform 0.35s;
+  transform: translate3d(-130%,0,0);
+}
+
+.front:hover h2 {
+  color: #ffff00;
+  -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+  transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+.front:hover h2:after {
+  transform: translate3d(0,0,0);
+}
+
+.front p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  transform: translate3d(0,10px,0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.back .caption:before,
+.back .caption:after{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.45s, transform 0.45s;
+  transition-delay: 1s;
+}
+
+.back .caption:before{
+  border-top: 1px solid #ffff00;
+  border-bottom: 1px solid #ffff00;
+  transform: scale(0,1);
+}
+
+.back .caption:after{
+  border-right: 1px solid #ffff00;
+  border-left: 1px solid #ffff00;
+  transform: scale(1,0);
+}
+
+.card.flipped .back .caption:before,
+.card.flipped .back .caption:after {
+  opacity: .9;
+  transform: scale(1);  
+}
+
+.back dl{
+  font-family:'Lato', Arial, sans-serif;
+  font-weight:550;
+  bottom:70px;
+  left:80px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .35s, transform .35s;
+  transition-delay: .85s;
+  transform: translate3d(-40px,0,0);
+}
+
+.card.flipped .back dl {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+dd{
+  color: #ffff00;
+}
+
+dl dt{
+  float: left;
+  width: 60px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  font-weight:700;
+}
+
+dl dd{
+  margin-left: 80px;
+  text-align:left;
+}
+
+dl dd:before,
+dl dd:after{
+  display: table;
+  content: " ";
+}
+
+dl dd:after{
+  clear: both;
+}
+
+.front:hover p {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+figure a{
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.credit a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+}
+
+.credit {
+    text-align: center;
+    font-family: Verdana,Geneva,Tahoma,sans-serif;
+}
+@media (min-width: 450px) {
+  .container{
+    left: 50%;
+    margin-left:-225px;
+  }
+} 
