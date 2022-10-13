@@ -134,6 +134,11 @@ p {
     display: flex;
 }
 
+.projectCard {
+    margin: 20px;
+    width: 20%;
+}
+
 .projectCard a {
     font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
