@@ -1,4 +1,5 @@
 import * as slideshow from './modules/slideshow.js';
+import * as slideComponent from './components/slideshow.js';
 
 /**
  * Creates an array of numbers in a given range
