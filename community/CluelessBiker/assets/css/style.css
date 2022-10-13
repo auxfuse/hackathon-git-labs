@@ -35,7 +35,8 @@ p {
 
 /* SECTION SIZING */
 .heroSection,
-.aboutSection {
+.aboutSection,
+.projectsSection {
     height: 600px;
     width: 100%;
     contain: content;
@@ -94,7 +95,6 @@ p {
 /* ABOUT SECTION */
 .aboutSection {
     background-color: #ECECEC;
-    /* background-color: #3A3A3A; */
     display: flex;
     align-items: center;
 }
@@ -123,6 +123,10 @@ p {
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
+}
+
+.projectsSection {
+    background-color: #3A3A3A;
 }
 
 @media screen and (max-width:2000px) {}
