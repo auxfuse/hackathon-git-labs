@@ -1,9 +1,4 @@
-
-const wrapInRange = (min, val, max) => {
-    if (val < min) return max;
-    else if (val > max) return min;
-    return val;
-}
+import { wrapInRange } from "./utilities.js";
 
 export const createSlideshow = (rootEl) => {
 
@@ -63,8 +58,8 @@ export const createSlideshow = (rootEl) => {
     // Capture scroll event and pass it to the iframe
     details.addEventListener('wheel', e => {
         const scrollPos = content.contentWindow.scrollY + (e.deltaY * 2);
-        const scrollBottom = content.contentDocument.body.scrollHeight 
-                                - content.contentWindow.innerHeight;
+        const scrollBottom = content.contentDocument.body.scrollHeight
+            - content.contentWindow.innerHeight;
 
         content.contentWindow.scrollTo({
             top: scrollPos,
