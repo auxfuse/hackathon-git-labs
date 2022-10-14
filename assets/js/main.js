@@ -1,4 +1,3 @@
-import * as slideshow from './modules/slideshow.js';
 import * as slideComponent from './components/slideshow.js';
 
 /**
@@ -34,6 +33,7 @@ const shuffle = (arr) => {
  */
 const generateCardFromTemplate = (participant, emojis, template) => {
   const card = template.content.firstElementChild.cloneNode(true);
+  const fields = card.querySelectorAll('[data-field]');
 
   const action = {
     'default': field => field.innerText = participant[field.dataset.field],
@@ -107,14 +107,14 @@ const createSkeletonLoaders = elements => {
   };
   const showcaseElements = {
     count: 5,
-    container: document.querySelector(".slideshow-items"),
-    template: document.querySelector(".slideshow-items > .item-template")
+    container: document.querySelector("#showcase-slides"),
+    template: document.querySelector("#showcase-slides .item-template")
   };
 
+  console.log(document.querySelector("#showcase-slides"));
+  console.log(document.querySelector("#showcase-slides .item-template"));
+
   // Create Loaders
-  if (showcaseElements.container && showcaseElements.template) {
-    createSkeletonLoaders(showcaseElements);
-  }
   if (communityElements.container && communityElements.template) {
     createSkeletonLoaders(communityElements);
   }
@@ -136,8 +136,6 @@ const createSkeletonLoaders = elements => {
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
       createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
-      // Create Slideshow
-      slideshow.createSlideshow(document.querySelector(".slideshow"));
     }
 
     if (communityElements.container && communityElements.template) {
