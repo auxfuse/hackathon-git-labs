@@ -10,6 +10,8 @@
                 box-sizing: border-box;
             }
             #slide-controls {
+                position: relative;
+                z-index: 2;
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
@@ -19,7 +21,7 @@
                 width: 50px;
                 background: transparent;
                 border: none;
-                opacity: 0.5;
+                opacity: 0.25;
                 transition: opacity 0.5s;
             }
             .slide-btn:hover {
@@ -29,9 +31,22 @@
                 fill: white;
                 stroke: black;
             }
+            #slides::slotted(*) {
+                border: 1px solid red;
+                position: absolute;
+                top: 0; left: 0; 
+                bottom: 0; right: 0;
+                z-index: 1;
+                pointer-events: none;
+                opacity: 0;
+            }
+            .current-slide {
+                opacity: 1;
+                pointer-events: all;
+            }
         </style>
 
-        <slot></slot>
+        <slot id="slides"></slot>
 
         <div id="slide-controls">
 
@@ -63,7 +78,9 @@
             constructor() {
                 super();
                 this.shadow = this.attachShadow({mode: 'open'});
+                this.slides = null;
                 this._timeout = 0;
+                this._currentSlide = 0;
             }
 
             attributeChangedCallback(property, oldValue, newValue) {
@@ -71,14 +88,20 @@
                 this[property] = newValue;
             }
 
-            // TODO: Reflect parameter change back to DOM attibutes.
             get timeout() {return this._timeout;}
-            set timeout(val) {this._timeout = val;}
+            set timeout(val) {
+                this._timeout = val * 1000;
+                this.setAttribute('timeout', val);
+            }
 
             connectedCallback() {
                 this.shadow.append(template.content.cloneNode(true));
-                console.log(this._timeout);
+                this.slides = this.shadow.querySelector('#slides');
+
+                // Watch for slides being added or removed
+                // Setup slideshow control events
             }
         }
     );
+
 })();
