@@ -245,6 +245,7 @@ h6 {
     margin-bottom: 7rem;
 }
 
+slide-show,
 .slideshow {
     position: relative;
     width: 75vw;
@@ -255,6 +256,7 @@ h6 {
 }
 
 @media (orientation: landscape) {
+    slide-show,
     .slideshow {
         aspect-ratio: 1/0.5;
     }
