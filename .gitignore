@@ -22,4 +22,4 @@ __pycache__/
 env.py
 
 # local workflow related files
-.github/workflows/json-file-check.yml
+.github/
