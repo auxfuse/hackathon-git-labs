@@ -1,5 +1,3 @@
-import * as slideComponent from './components/slideshow.js';
-
 /**
  * Creates an array of numbers in a given range
  * @param {Number} max - Maximum number in range 
@@ -103,12 +101,12 @@ const createSkeletonLoaders = elements => {
     // The element to append cards to
     container: document.querySelector("#community"),
     // The HTML template to use as a base for each card
-    template: document.querySelector("#community > .item-template")
+    template: document.querySelector("#community-section > .item-template")
   };
   const showcaseElements = {
     count: 5,
     container: document.querySelector("#showcases-slideshow"),
-    template: document.querySelector("#showcases-slideshow > .item-template")
+    template: document.querySelector("#showcases > .item-template")
   };
 
   // Create Loaders
