@@ -34,7 +34,7 @@ body{
 }
 
 figure{
-  background: #2e5d5a;
+  background: #566376;
   color: #fff;
   backface-visibility: hidden;
   overflow: hidden;
@@ -59,10 +59,13 @@ figure.back,
 }
 
 figure img{
+  background: url();
+  background-repeat: no-repeat;
+  background-size: auto;
   position: relative;
   display: block;
   min-height: 50%;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 figure .caption {
@@ -145,8 +148,8 @@ figure .caption {
   transition: opacity 0.35s, transform 0.35s;
 }
 
-.back .caption:before,
-.back .caption:after{
+.back .icons:before,
+.back .icons:after{
   position: absolute;
   top: 30px;
   right: 30px;
@@ -158,20 +161,20 @@ figure .caption {
   transition-delay: 1s;
 }
 
-.back .caption:before{
+.back .icons:before{
   border-top: 1px solid #ffff00;
   border-bottom: 1px solid #ffff00;
   transform: scale(0,1);
 }
 
-.back .caption:after{
+.back .icons:after{
   border-right: 1px solid #ffff00;
   border-left: 1px solid #ffff00;
   transform: scale(1,0);
 }
 
-.card.flipped .back .caption:before,
-.card.flipped .back .caption:after {
+.card.flipped .back .icons:before,
+.card.flipped .back .icons:after {
   opacity: .9;
   transform: scale(1);  
 }
@@ -238,16 +241,7 @@ figure a{
   width: 100%;
   height: 100%;
 }
-.credit a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 800;
-}
 
-.credit {
-    text-align: center;
-    font-family: Verdana,Geneva,Tahoma,sans-serif;
-}
 @media (min-width: 450px) {
   .container{
     left: 50%;
