@@ -105,7 +105,7 @@ figure .caption {
   font-weight: bold;
   font-size: 1.6em;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   width: 100%;
   color: #fff;
@@ -148,6 +148,10 @@ figure .caption {
   transition: opacity 0.35s, transform 0.35s;
 }
 
+#icons {
+  margin-top: 130px;
+}
+
 .back .icons:before,
 .back .icons:after{
   position: absolute;
@@ -155,73 +159,8 @@ figure .caption {
   right: 30px;
   bottom: 30px;
   left: 30px;
-  content: '';
   opacity: 0;
-  transition: opacity 0.45s, transform 0.45s;
-  transition-delay: 1s;
-}
 
-.back .icons:before{
-  border-top: 1px solid #ffff00;
-  border-bottom: 1px solid #ffff00;
-  transform: scale(0,1);
-}
-
-.back .icons:after{
-  border-right: 1px solid #ffff00;
-  border-left: 1px solid #ffff00;
-  transform: scale(1,0);
-}
-
-.card.flipped .back .icons:before,
-.card.flipped .back .icons:after {
-  opacity: .9;
-  transform: scale(1);  
-}
-
-.back dl{
-  font-family:'Lato', Arial, sans-serif;
-  font-weight:550;
-  bottom:70px;
-  left:80px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity .35s, transform .35s;
-  transition-delay: .85s;
-  transform: translate3d(-40px,0,0);
-}
-
-.card.flipped .back dl {
-  opacity: 1;
-  transform: translate3d(0,0,0);
-}
-
-dd{
-  color: #ffff00;
-}
-
-dl dt{
-  float: left;
-  width: 60px;
-  overflow: hidden;
-  clear: left;
-  text-align: right;
-  font-weight:700;
-}
-
-dl dd{
-  margin-left: 80px;
-  text-align:left;
-}
-
-dl dd:before,
-dl dd:after{
-  display: table;
-  content: " ";
-}
-
-dl dd:after{
-  clear: both;
 }
 
 .front:hover p {
