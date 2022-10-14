@@ -107,12 +107,9 @@ const createSkeletonLoaders = elements => {
   };
   const showcaseElements = {
     count: 5,
-    container: document.querySelector("#showcase-slides"),
-    template: document.querySelector("#showcase-slides .item-template")
+    container: document.querySelector("#showcases-slideshow"),
+    template: document.querySelector("#showcases-slideshow > .item-template")
   };
-
-  console.log(document.querySelector("#showcase-slides"));
-  console.log(document.querySelector("#showcase-slides .item-template"));
 
   // Create Loaders
   if (communityElements.container && communityElements.template) {
