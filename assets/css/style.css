@@ -245,8 +245,7 @@ h6 {
     margin-bottom: 7rem;
 }
 
-slide-show,
-.slideshow {
+#showcases-slideshow {
     position: relative;
     width: 75vw;
     max-width: 1000px;
@@ -256,13 +255,12 @@ slide-show,
 }
 
 @media (orientation: landscape) {
-    slide-show,
-    .slideshow {
+    #showcases-slideshow {
         aspect-ratio: 1/0.5;
     }
 }
 
-.slideshow-control {
+/* .slideshow-control {
     position: absolute;
     top: 0;
     width: 5em;
@@ -355,7 +353,7 @@ slide-show,
 .slideshow-link:hover > .slideshow-link-text {
     padding: 2rem 5rem 0.25rem;
     height: 4.25rem;
-}
+} */
 
 .card {
     display: flex;

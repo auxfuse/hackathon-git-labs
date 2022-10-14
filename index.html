@@ -38,14 +38,11 @@
         <h1 class="primary-heading center-txt">Showcases</h1>
 
         <div id="showcases">
+            <slide-show id="showcases-slideshow" timeout="15">
 
-            <slide-show id="showcase-slides" timeout="15">
-                
                 <template class="item-template">
                     <div class="slideshow-slide">
-                        <iframe src="" frameborder="0" class="slideshow-contents" data-field="preview">
-
-                        </iframe>
+                        <iframe src="" frameborder="0" class="slideshow-contents" data-field="preview"></iframe>
                         <div class="slideshow-details">
                             <h2 class="card-title">
                                 <span data-field="random_emoji"></span>
@@ -59,8 +56,10 @@
                 </template>
 
             </slide-show>
+        </div>
 
-            <!-- <div class="slideshow" data-timeout="15">
+        <!-- <div id="showcases">
+            <div class="slideshow" data-timeout="15">
 
                 <div class="slideshow-container">
                     <iframe class="slideshow-contents" src="" scrolling="yes" frameborder="0"></iframe>
@@ -96,9 +95,9 @@
                     </template>
                 </div>
 
-            </div> -->
+            </div>
 
-        </div>
+        </div> -->
     </section>
 
     <section id="community-section" class="margin-y-md">
