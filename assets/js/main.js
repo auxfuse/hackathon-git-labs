@@ -34,9 +34,6 @@ const shuffle = (arr) => {
  */
 const generateCardFromTemplate = (participant, emojis, template) => {
   const card = template.content.firstElementChild.cloneNode(true);
-  const fields = card.querySelectorAll('[data-field]');
-
-  card.dataset.address = `community/${participant.name}`;
 
   const action = {
     'default': field => field.innerText = participant[field.dataset.field],
