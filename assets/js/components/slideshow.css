@@ -1,0 +1,32 @@
+/*
+ * These styles are applied to the element if, for some reason, it is undefined. 
+ * If undefined the slide-show is shown as a series of horizontally scrollable
+ * elements.
+ */
+slide-show:not(:defined) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+slide-show:not(:defined) > * {
+    flex: 1 0 100%;
+    scroll-snap-stop: always;
+    scroll-snap-align: center;
+}
+slide-show:not(:defined) > *:first-of-type {
+    scroll-snap-align: end;
+}
+/* Ensures overriding controls aren't shown if present */
+slide-show:not(:defined) > [slot="next-slide-icon"],
+slide-show:not(:defined) > [slot="previous-slide-icon"] {
+    display: none;
+}
+
+/*
+ * Styles applied if the custom element is defined
+ */
+slide-show:defined {
+    display: block;
+}
