@@ -1,11 +1,7 @@
+import { wrapInRange } from '../modules/utilities.js';
+
 
 (() => {
-
-    const wrapInRange = (min, val, max) => {
-        if (val < min) return max;
-        else if (val > max) return min;
-        return val;
-    }
 
     const url = new URL(import.meta.url);
     const base = url.pathname.replace(/[^\/]+$|^(\/)/g,'');
@@ -25,7 +21,7 @@
         
                     constructor() {
                         super();
-                        this.shadow = this.attachShadow({mode: 'open'});
+                        this.attachShadow({mode: 'open'});
         
                         this._slides = null;
                         this._nextBtn = null;
@@ -47,10 +43,10 @@
                     }
         
                     connectedCallback() {
-                        this.shadow.append(template.content.cloneNode(true));
-                        this._slides = this.shadow.querySelector('#slides');
-                        this._prevBtn = this.shadow.getElementById('prev');
-                        this._nextBtn = this.shadow.getElementById('next');
+                        this.shadowRoot.append(template.content.cloneNode(true));
+                        this._slides = this.shadowRoot.querySelector('#slides');
+                        this._prevBtn = this.shadowRoot.getElementById('prev');
+                        this._nextBtn = this.shadowRoot.getElementById('next');
         
                         // If there are any slides, show the first one now
                         console.log('Slide count: ', this._slides.assignedElements().length);
@@ -74,6 +70,10 @@
                     showSlide(which) {
                         which = wrapInRange(0, which, this.slideCount());
                     }
+
+                    nextSlide() {}
+
+                    prevSlide() {}
         
                     _onSlidesChange(e) {
                         console.log('Slides have changed!');

@@ -2,6 +2,7 @@ import { genIndexes, shuffle } from './modules/utilities.js';
 import { createParticipantesCards, createSkeletonLoaders } from './modules/cards.js';
 
 (() => {
+  
   const communityElements = {
     // Maximum number of cards to append for this section
     count: 10,
