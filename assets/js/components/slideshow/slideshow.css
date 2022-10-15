@@ -1,7 +1,7 @@
 /*
- * These styles are applied to the element if, for some reason, it is undefined. 
- * If undefined the slide-show is shown as a series of horizontally scrollable
- * elements.
+ * These styles are applied to the custom element if, for some reason, it is 
+ * undefined. If undefined, the slide-show fallbacks to a series of horizontally
+ * scrollable elements, using pure css (no JS).
  */
 slide-show:not(:defined) {
     display: flex;
@@ -21,7 +21,7 @@ slide-show:not(:defined) > *:first-of-type {
 slide-show:not(:defined) > *:last-of-type {
     scroll-snap-align: start;
 }
-/* Ensures overriding controls aren't shown if present */
+/* Ensures any overriding controls aren't shown if present */
 slide-show:not(:defined) > [slot="next-slide-icon"],
 slide-show:not(:defined) > [slot="previous-slide-icon"] {
     display: none;

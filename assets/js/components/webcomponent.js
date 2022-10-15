@@ -14,6 +14,8 @@ export class WebComponent extends HTMLElement {
 
     constructor() {
         super();
+
+        // Create getters and setters for reflection here
     }
 
 

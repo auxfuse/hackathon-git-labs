@@ -42,6 +42,7 @@ import { createParticipantesCards, createSkeletonLoaders } from './modules/cards
     }
 
     if (communityElements.container && communityElements.template) {
+      // Alter count to show all cards
       communityElements.count = participants.length;
       createParticipantesCards(participants, emojis, communityElements);
     }
