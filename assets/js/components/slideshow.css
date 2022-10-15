@@ -18,6 +18,9 @@ slide-show:not(:defined) > * {
 slide-show:not(:defined) > *:first-of-type {
     scroll-snap-align: end;
 }
+slide-show:not(:defined) > *:last-of-type {
+    scroll-snap-align: start;
+}
 /* Ensures overriding controls aren't shown if present */
 slide-show:not(:defined) > [slot="next-slide-icon"],
 slide-show:not(:defined) > [slot="previous-slide-icon"] {
