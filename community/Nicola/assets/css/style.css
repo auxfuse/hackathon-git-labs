@@ -53,10 +53,6 @@ figure.front{
   z-index: 2;
 }
 
-/*.back:hover {
-  pointer-events: none;
-}*/
-
 .fa-brands, .fab, .fas{
   padding: 20px;
   font-size: 30px;
@@ -78,7 +74,7 @@ figure img{
   position: relative;
   display: block;
   min-height: 50%;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 figure .caption {
@@ -94,18 +90,6 @@ figure .caption {
 .front .caption{
   font-size: 1.25em;
 }
-
-/*.front .caption:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
-  opacity: 0;
-  transform: translate3d(0,50%,0);
-  transition: opacity 0.35s, transform 0.35s;
-}*/
 
 .front:hover .caption:before{
   opacity: 1;
@@ -144,14 +128,14 @@ figure .caption {
   left: 70px;
   right: 70px;
   height: 2px;
-  background: #ffff00;
+  background: #ffd000;
   content: '';
   transition: transform 0.35s;
   transform: translate3d(-130%,0,0);
 }
 
 .front:hover h2 {
-  color: #ffff00;
+  color: #ffd000;
   -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
   transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 }
@@ -181,19 +165,6 @@ figure .caption {
   padding: 3px;
   color: #fff;
 }
-
-/*figure a{
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}*/
 
 @media (min-width: 450px) {
   .container{
