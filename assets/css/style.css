@@ -246,6 +246,9 @@ h6 {
 }
 
 #showcases-slideshow {
+    --fill-color: var(--font-color-lt);
+    --stroke-color: var(--font-color);
+
     width: 75vw;
     max-width: 1000px;
     max-height: 75vh;
