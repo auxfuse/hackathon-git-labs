@@ -379,5 +379,12 @@
     "favorite_language": "JavaScript",
     "currently_learning": "JavaScript",
     "showcase": true
+  },
+  {
+    "name": "Sarah A.",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Currently HTML",
+    "currently_learning": "CSS"
   }
 ]
