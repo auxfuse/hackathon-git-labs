@@ -1,17 +1,12 @@
-import { getComponentUrl } from '../webcomponent.js';
+import { loadTemplate } from '../webcomponent.js';
 import { wrapInRange } from '../../modules/utilities.js';
 
 
 (() => {
+    const templateUrl = new URL('slideshow.html', import.meta.url).href;
 
-    const base = getComponentUrl(import.meta.url);
-
-    fetch(base + 'slideshow.html')
-        .then(responce => responce.text())
-        .then(data => {
-
-            const template = document.createElement('template');
-            template.innerHTML = data;
+    loadTemplate(templateUrl)
+        .then(template => {
     
             customElements.define('slide-show', 
                 class extends HTMLElement {
@@ -49,7 +44,7 @@ import { wrapInRange } from '../../modules/utilities.js';
                         this._nextBtn = this.shadowRoot.getElementById('next');
         
                         // If there are any slides, show the first one now
-                        console.log('Slide count: ', this._slides.assignedElements().length);
+                        if (this._slides.assignedElements().length > 0) this.showSlide(0);
         
                         // Watch for slides being added or removed
                         this._slides.addEventListener('slotchange', this._onSlidesChange.bind(this));
@@ -69,6 +64,7 @@ import { wrapInRange } from '../../modules/utilities.js';
         
                     showSlide(which) {
                         which = wrapInRange(0, which, this.slideCount());
+                        this._slides.assignedElements()[which].classList.add('currentSlide');
                     }
 
                     nextSlide() {}

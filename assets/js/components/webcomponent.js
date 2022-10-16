@@ -5,9 +5,7 @@
  */
 export class WebComponent extends HTMLElement {
 
-    static get attributes() {
-        return null;
-    }
+    static get attributes() { return null; }
     
     static get tagName() {
         throw new Error('Component has no assigned tag name');
@@ -34,8 +32,20 @@ export class WebComponent extends HTMLElement {
 };
 
 /**
- * Pulls the component's base path from it's url.
- * @param {String} path - Component script file path. import.meta.url for instance.
+ * Loads a given template file and creates a DOM template object
+ * @param {String} file - url File path for the template
+ * @returns 
  */
-export const getComponentUrl = path => 
-    (new URL(path)).pathname.replace(/[^\/]+$|^(\/)/g,'');
+export const loadTemplate = file => {
+    return new Promise((resolve, reject) => 
+        fetch(file)
+            .then(response => response.text())
+            .then(data => {
+                const template = document.createElement('template');
+                template.innerHTML = data;
+                resolve(template);
+            })
+            .catch(reject)
+    );
+};
+
