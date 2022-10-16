@@ -33,3 +33,7 @@ slide-show:not(:defined) > [slot="previous-slide-icon"] {
 slide-show:defined {
     display: block;
 }
+
+.show-slide {
+    display: initial;
+}

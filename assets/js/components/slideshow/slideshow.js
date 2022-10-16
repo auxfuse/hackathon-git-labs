@@ -64,7 +64,7 @@ import { wrapInRange } from '../../modules/utilities.js';
         
                     showSlide(which) {
                         which = wrapInRange(0, which, this.slideCount());
-                        this._slides.assignedElements()[which].classList.add('currentSlide');
+                        this._slides.assignedElements()[which].classList.add('show-slide');
                     }
 
                     nextSlide() {}
