@@ -1,10 +1,10 @@
+import { getComponentUrl } from '../webcomponent.js';
 import { wrapInRange } from '../../modules/utilities.js';
 
 
 (() => {
 
-    const url = new URL(import.meta.url);
-    const base = url.pathname.replace(/[^\/]+$|^(\/)/g,'');
+    const base = getComponentUrl(import.meta.url);
 
     fetch(base + 'slideshow.html')
         .then(responce => responce.text())

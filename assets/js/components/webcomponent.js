@@ -5,17 +5,24 @@
  */
 export class WebComponent extends HTMLElement {
 
-    static attributes = {}
+    static get attributes() {
+        return null;
+    }
+    
+    static get tagName() {
+        throw new Error('Component has no assigned tag name');
+    }
 
     static get observedAttributes() {
-        return [];
+        if (!this.attributes) return [];
+        return Object.keys(this.attributes);
     }
 
 
     constructor() {
         super();
-
         // Create getters and setters for reflection here
+
     }
 
 
@@ -26,4 +33,9 @@ export class WebComponent extends HTMLElement {
 
 };
 
-// Component compilation code goes below, yo.
+/**
+ * Pulls the component's base path from it's url.
+ * @param {String} path - Component script file path. import.meta.url for instance.
+ */
+export const getComponentUrl = path => 
+    (new URL(path)).pathname.replace(/[^\/]+$|^(\/)/g,'');
