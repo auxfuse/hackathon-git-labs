@@ -57,12 +57,13 @@ figure.front{
   pointer-events: none;
 }*/
 
-.fab, .fas {
+.fa-brands, .fab, .fas{
   padding: 20px;
   font-size: 30px;
   width: 50px;
   text-align: center;
   text-decoration: none;
+  
 }
 
 figure.back,
@@ -178,6 +179,7 @@ figure .caption {
 .fab, .fas {
   font-size: 30px;
   padding: 3px;
+  color: #fff;
 }
 
 /*figure a{
