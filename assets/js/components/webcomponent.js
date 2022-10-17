@@ -18,10 +18,40 @@ export class WebComponent extends HTMLElement {
     }
 
 
+
+    // Object.defineProperty(this, attribute, {
+    //     get() { return this.getAttribute(attribute); },
+    //     set(attrValue) {
+    //       if (attrValue) {
+    //         this.setAttribute(attribute, attrValue);
+    //       } else {
+    //         this.removeAttribute(attribute);
+    //       }
+    //     }
+    //   }
+
+
     constructor() {
         super();
-        // Create getters and setters for reflection here
-
+        // If this component has custom attributes
+        if (this.constructor.attributes) {
+            for (const [key, value] of Object.entries(this.attributes)) {
+                const propName = `_${key}`;
+                // Create a property and set it to the default value
+                this[propName] = value.default;
+                // If getters and setters don't already exist
+                if (!Object.getOwnPropertyDescriptor(Object.getPrototypeOf(this), key)) {
+                    // Add them
+                    Object.defineProperty(this, key, {
+                        get() { return this[propName]; },
+                        set(val) {
+                            this[propName] = val;
+                            this.setAttribute(key, val);
+                        }
+                    });
+                }
+            }
+        }
     }
 
     _createShadow(properties) {
@@ -33,7 +63,7 @@ export class WebComponent extends HTMLElement {
     attributeChangedCallback(property, oldValue, newValue) {
         if (oldValue === newValue) return;
         // Attributes are always strings, so decode it to the correct datatype
-        this[property] = this.constructor.attributes[property](newValue);
+        this[property] = this.constructor.attributes[property].type(newValue);
     }
 };
 

@@ -7,9 +7,9 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         static get attributes() { 
             return {
-                'timeout': Number,
-                'animation': String,
-                'slide': Number
+                'timeout': {type: Number, default: 0},
+                'animation': {type: String, default: ''},
+                'slide': {type: Number, default: 0}
             }; 
         }
 
@@ -24,12 +24,6 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._timeout = 0;
             this._animation = 'none';
             this._slide = 0;
-        }
-
-        get timeout() { return this._timeout; }
-        set timeout(val) {
-            this._timeout = val;
-            this.setAttribute('timeout', val);
         }
 
         get slide() { return this._slide; }
