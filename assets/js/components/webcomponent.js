@@ -24,14 +24,17 @@ export class WebComponent extends HTMLElement {
 
     }
 
-
+    _createShadow(properties) {
+        const shadow = this.attachShadow(properties);
+        shadow.append(this.constructor.template.content.cloneNode(true));
+        return shadow;
+    }
 
     attributeChangedCallback(property, oldValue, newValue) {
         if (oldValue === newValue) return;
         // Attributes are always strings, so decode it to the correct datatype
         this[property] = this.constructor.attributes[property](newValue);
     }
-
 };
 
 /**
