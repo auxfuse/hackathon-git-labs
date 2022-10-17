@@ -17,31 +17,17 @@ export class WebComponent extends HTMLElement {
         return Object.keys(this.attributes);
     }
 
-
-
-    // Object.defineProperty(this, attribute, {
-    //     get() { return this.getAttribute(attribute); },
-    //     set(attrValue) {
-    //       if (attrValue) {
-    //         this.setAttribute(attribute, attrValue);
-    //       } else {
-    //         this.removeAttribute(attribute);
-    //       }
-    //     }
-    //   }
-
-
     constructor() {
         super();
+
         // If this component has custom attributes
         if (this.constructor.attributes) {
             for (const [key, value] of Object.entries(this.attributes)) {
                 const propName = `_${key}`;
                 // Create a property and set it to the default value
                 this[propName] = value.default;
-                // If getters and setters don't already exist
+                // If getters and setters don't already exist add them
                 if (!Object.getOwnPropertyDescriptor(Object.getPrototypeOf(this), key)) {
-                    // Add them
                     Object.defineProperty(this, key, {
                         get() { return this[propName]; },
                         set(val) {
