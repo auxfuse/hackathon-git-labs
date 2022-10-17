@@ -2,6 +2,7 @@ import { WebComponent, loadTemplate } from '../webcomponent.js';
 import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
+    
     class SlideShow extends WebComponent {
         static get tagName() { return 'slide-show'; }
 
@@ -41,9 +42,7 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._prevBtn = this.shadowRoot.getElementById('prev');
             this._nextBtn = this.shadowRoot.getElementById('next');
 
-            // Try to show the intial slide
-            this.slide = 0;
-
+            this.slide = this.slide
             // Watch for slides being added or removed
             this._slides.addEventListener('slotchange', () => this.slide = this.slide);
 
