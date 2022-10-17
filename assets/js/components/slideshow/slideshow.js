@@ -91,7 +91,12 @@ import { wrapInRange } from '../../modules/utilities.js';
         }
     }
 
+    const templateUrl = new URL('slideshow.html', import.meta.url).href;
     loadTemplate(templateUrl)
-        .then(template => customElements.define('slide-show', SlideShow));
+        .then(template => {
+            SlideShow.template = template;
+            
+            customElements.define(SlideShow.tagName, SlideShow)
+        });
 
 })();
