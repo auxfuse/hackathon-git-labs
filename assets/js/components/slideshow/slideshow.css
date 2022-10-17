@@ -35,5 +35,5 @@ slide-show:defined {
 }
 
 .show-slide {
-    display: initial;
+    visibility: visible;
 }
