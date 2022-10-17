@@ -22,7 +22,7 @@ export class WebComponent extends HTMLElement {
 
         // If this component has custom attributes
         if (this.constructor.attributes) {
-            for (const [key, value] of Object.entries(this.attributes)) {
+            for (const [key, value] of Object.entries(this.constructor.attributes)) {
                 const propName = `_${key}`;
                 // Create a property and set it to the default value
                 this[propName] = value.default;

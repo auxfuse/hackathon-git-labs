@@ -20,10 +20,6 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._slides = null;
             this._nextBtn = null;
             this._prevBtn = null;
-            // Properties
-            this._timeout = 0;
-            this._animation = 'none';
-            this._slide = 0;
         }
 
         get slide() { return this._slide; }
