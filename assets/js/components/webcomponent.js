@@ -4,11 +4,12 @@
  * Handles much of the boiler plate and component creation code.
  */
 export class WebComponent extends HTMLElement {
+    static template = null;
 
     static get attributes() { return null; }
     
     static get tagName() {
-        throw new Error('Component has no assigned tag name');
+        throw new Error('Component has no defined tag name');
     }
 
     static get observedAttributes() {
@@ -24,9 +25,11 @@ export class WebComponent extends HTMLElement {
     }
 
 
+
     attributeChangedCallback(property, oldValue, newValue) {
         if (oldValue === newValue) return;
         // Attributes are always strings, so decode it to the correct datatype
+        this[property] = this.constructor.attributes[property](newValue);
     }
 
 };

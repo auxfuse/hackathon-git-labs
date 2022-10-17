@@ -5,8 +5,21 @@ import { wrapInRange } from '../../modules/utilities.js';
     const templateUrl = new URL('slideshow.html', import.meta.url).href;
 
     class SlideShow extends HTMLElement {
+        static template = null;
+
+        static get tagName() { return 'slide-show'; }
+
+        static get attributes() { 
+            return {
+                'timeout': Number,
+                'animation': String,
+                'slide': Number
+            }; 
+        }
+
         static get observedAttributes() {
-            return ['timeout', 'animation'];
+            if (!this.attributes) return [];
+            return Object.keys(this.attributes);
         }
 
         constructor() {
@@ -23,7 +36,7 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         attributeChangedCallback(property, oldValue, newValue) {
             if (oldValue === newValue) return;
-            this[property] = newValue;
+            this[property] = this.constructor.attributes[property](newValue);
         }
 
         get timeout() { return this._timeout; }
