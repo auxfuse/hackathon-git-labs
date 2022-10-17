@@ -1,6 +1,6 @@
 /*
  * These styles are applied to the custom element if, for some reason, it is 
- * undefined. If undefined, the slide-show fallbacks to a series of horizontally
+ * undefined. If undefined, the slide-show fallback is a series of horizontally
  * scrollable elements, using pure css (no JS).
  */
 slide-show:not(:defined) {

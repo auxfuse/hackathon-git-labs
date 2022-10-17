@@ -291,7 +291,7 @@ h6 {
 
 .slideshow-details .card-title {
     max-width: 400px;
-    margin: 0.5rem;
+    transform: translate(-10%, -50%);
 }
 
 .slideshow-link {
