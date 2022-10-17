@@ -42,20 +42,18 @@
 
         <div id="showcases">
             <!-- Custom slideshow element -->
-            <slide-show id="showcases-slideshow" timeout="15"></slide-show>
+            <slide-show id="showcases-slideshow" timeout="15" animation="slide-fade" slide="0"></slide-show>
 
             <template class="item-template">
                 <div class="slideshow-slide">
                     <iframe src="" frameborder="0" loading="lazy" class="slideshow-contents" data-field="preview"></iframe>
-                    <div class="slideshow-details">
+                    <a class="slideshow-link" href="" data-field="link">
                         <h2 class="card-title">
                             <span data-field="random_emoji"></span>
                             <span data-field="name">_</span>
                         </h2>
-                        <a class="slideshow-link" href="" data-field="link">
-                            <span class="slideshow-link-text">View Work ➡</span>
-                        </a>
-                    </div>
+                        <span class="slideshow-link-text">View Work ➡</span>
+                    </a>
                 </div>
             </template>
         </div>

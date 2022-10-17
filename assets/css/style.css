@@ -281,39 +281,43 @@ h6 {
 }
 
 .slideshow-details {
-    display: flex;
-    flex-flow: column;
     position: relative;
     width: 100%;
     height: 100%;
-    flex: 1 1 auto;
-}
-
-.slideshow-details .card-title {
-    max-width: 400px;
-    transform: translate(-10%, -50%);
 }
 
 .slideshow-link {
     display: flex;
     flex-flow: column;
-    justify-content: flex-end;
-    flex: 1 1 auto;
-    width: 100%;
-    text-align: end;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--font-color);
     text-decoration: none;
-    color: var(--font-color-lt);
 }
+
+.slideshow-link .card-title {
+    max-width: 400px;
+    transform: translate(-10%, -50%);
+}
+
 .slideshow-link-text {
-    padding: 0 5rem 0;
-    font-size: 1.5rem;
     height: 0;
+    width: 100%;
+    padding: 0 2rem 0;
+    font-size: 1.5rem;
     overflow: hidden;
+    text-align: end;
+    color: var(--font-color-lt);
     background: linear-gradient(180deg, #072C3000 0%, #072C30FF 100%);
-    transition: all 1s linear;
+    transition: all 0.5s 1s ease;
 }
+
 .slideshow-link:hover > .slideshow-link-text {
-    padding: 2rem 5rem 0.25rem;
+    padding: 2rem 2rem 0.25rem;
     height: 4.25rem;
 }
 
