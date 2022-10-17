@@ -1,0 +1,9 @@
+body {
+    color: black;
+    font-family: "Helvetica", serif;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: "Helvetica", sans-serif;
+  }
