@@ -1,4 +1,4 @@
-import { loadTemplate } from '../webcomponent.js';
+import { WebComponent, loadTemplate } from '../webcomponent.js';
 import { wrapInRange } from '../../modules/utilities.js';
 
 
@@ -50,12 +50,8 @@ import { wrapInRange } from '../../modules/utilities.js';
                         this._slides.addEventListener('slotchange', this._onSlidesChange.bind(this));
         
                         // Setup slideshow control events
-                        this._prevBtn.addEventListener('click', e => {
-                            console.log('Previous button clicked');
-                        });
-                        this._nextBtn.addEventListener('click', e => {
-                            console.log('Next button clicked');
-                        });
+                        this._prevBtn.addEventListener('click', this.prevSlide.bind(this));
+                        this._nextBtn.addEventListener('click', this.nextSlide.bind(this));
                     }
         
                     slideCount() {
@@ -63,17 +59,22 @@ import { wrapInRange } from '../../modules/utilities.js';
                     }
         
                     showSlide(which) {
-                        which = wrapInRange(0, which, this.slideCount());
+                        this._slides.assignedElements()[this._currentSlide]?.classList.remove('show-slide');
+                        which = wrapInRange(0, which, this.slideCount() - 1);
                         this._slides.assignedElements()[which].classList.add('show-slide');
+                        return which;
                     }
 
-                    nextSlide() {}
+                    prevSlide() {
+                        this._currentSlide = this.showSlide(this._currentSlide - 1);
+                    }
 
-                    prevSlide() {}
+                    nextSlide() {
+                        this._currentSlide = this.showSlide(this._currentSlide + 1);
+                    }
         
                     _onSlidesChange(e) {
-                        console.log('Slides have changed!');
-                        console.log('Slide count: ', this._slides.assignedElements().length);
+                        this._currentSlide = this.showSlide(this._currentSlide);
                     }
                 }
             );
