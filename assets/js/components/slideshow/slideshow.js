@@ -2,9 +2,7 @@ import { WebComponent, loadTemplate } from '../webcomponent.js';
 import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
-    class SlideShow extends HTMLElement {
-        static template = null;
-
+    class SlideShow extends WebComponent {
         static get tagName() { return 'slide-show'; }
 
         static get attributes() { 
@@ -15,15 +13,9 @@ import { wrapInRange } from '../../modules/utilities.js';
             }; 
         }
 
-        static get observedAttributes() {
-            if (!this.attributes) return [];
-            return Object.keys(this.attributes);
-        }
-
         constructor() {
             super();
-            this.attachShadow({mode: 'open'});
-            this.shadowRoot.append(this.constructor.template.content.cloneNode(true));
+            this._createShadow({mode: 'open'});
             // Elements
             this._slides = null;
             this._nextBtn = null;
@@ -34,14 +26,9 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._slide = 0;
         }
 
-        attributeChangedCallback(property, oldValue, newValue) {
-            if (oldValue === newValue) return;
-            this[property] = this.constructor.attributes[property](newValue);
-        }
-
         get timeout() { return this._timeout; }
         set timeout(val) {
-            this._timeout = val * 1000;
+            this._timeout = val;
             this.setAttribute('timeout', val);
         }
 
@@ -60,7 +47,7 @@ import { wrapInRange } from '../../modules/utilities.js';
         }
 
         connectedCallback() {
-            this._slides = this.shadowRoot.querySelector('#slides');
+            this._slides = this.shadowRoot.getElementById('slides');
             this._prevBtn = this.shadowRoot.getElementById('prev');
             this._nextBtn = this.shadowRoot.getElementById('next');
 
