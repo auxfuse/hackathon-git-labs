@@ -40,6 +40,7 @@ import { wrapInRange } from '../../modules/utilities.js';
         set slide(val) {
             if (!this.slideCount) return;
 
+            // Reset slide timeout
             if (this._timeout) {
                 clearTimeout(this._timer);
                 this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
@@ -48,12 +49,12 @@ import { wrapInRange } from '../../modules/utilities.js';
             const lastSlide = this._slide;
             this._slide = wrapInRange(0, val, this.slideCount - 1);
 
-            if (lastSlide !== this._slide) {
-                this.slides[lastSlide].classList.remove('active');
-                this.slides[lastSlide].classList.add('fade', 'out');
-                this.slides[this._slide].classList.add('active', 'fade', 'in');
-            } else {
-                this.slides[this._slide].classList.add('active');
+            this.slides[lastSlide].classList.remove('active');
+            this.slides[this._slide].classList.add('active');
+
+            if (this._animation !== 'none' && lastSlide !== this._slide) {
+                this.slides[lastSlide].classList.add(this._animation, 'out');
+                this.slides[this._slide].classList.add(this._animation, 'in');
             }
 
             // Reflect the property to the element attribute
@@ -88,8 +89,8 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         _animationEnd(e) {
             const slide = e.target;
-            if (slide.classList.contains('fade')) {
-                slide.classList.remove('fade', 'in', 'out');
+            if (slide.classList.contains(this._animation)) {
+                slide.classList.remove(this._animation, 'in', 'out');
             }
         }
     };
