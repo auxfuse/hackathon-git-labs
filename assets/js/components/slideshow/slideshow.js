@@ -24,6 +24,9 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._nextBtn = null;
             this._prevBtn = null;
 
+            // State
+            this._animating = 0;
+
             // Slide timer
             this._timer = null;
             this._slideTimer = this._slideTimer.bind(this);
@@ -38,7 +41,7 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         get slide() { return this._slide; }
         set slide(val) {
-            if (!this.slideCount) return;
+            if (!this.slideCount || this._animating) return;
 
             // Reset slide timeout
             if (this._timeout) {
@@ -55,6 +58,7 @@ import { wrapInRange } from '../../modules/utilities.js';
             if (this._animation !== 'none' && lastSlide !== this._slide) {
                 this.slides[lastSlide].classList.add(this._animation, 'out');
                 this.slides[this._slide].classList.add(this._animation, 'in');
+
             }
 
             // Reflect the property to the element attribute
@@ -71,7 +75,8 @@ import { wrapInRange } from '../../modules/utilities.js';
             // Watch for slides being added or removed
             this._slides.addEventListener('slotchange', () => this.slide = 0);
             // Slide transition events
-            this._slides.addEventListener('animationend', this._animationEnd.bind(this));
+            this._slides.addEventListener('animationstart', this._animStart.bind(this));
+            this._slides.addEventListener('animationend', this._animEnd.bind(this));
 
             // Setup slideshow control events
             this._prevBtn.addEventListener('click', () => this.slide--);
@@ -87,10 +92,17 @@ import { wrapInRange } from '../../modules/utilities.js';
             }
         }
 
-        _animationEnd(e) {
+        _animStart(e) { 
+            const slide = e.target;
+            if (slide.classList.contains(this._animation)) {
+                this._animating++;
+            }
+        }
+        _animEnd(e) {
             const slide = e.target;
             if (slide.classList.contains(this._animation)) {
                 slide.classList.remove(this._animation, 'in', 'out');
+                this._animating--;
             }
         }
     };
@@ -106,6 +118,6 @@ import { wrapInRange } from '../../modules/utilities.js';
 //      Animations:
 //          none (no animation)                 ✓
 //          fade (fade out then fade in)        ✓
-//          crossfade (fade one to another)     x
+//          crossfade (fade one to another)     ✓
 //          swipe (swipe in from left or right) x
 //  Timer   ✓
