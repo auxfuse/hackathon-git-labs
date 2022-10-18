@@ -88,9 +88,9 @@ export const loadTemplate = file => {
         fetch(file)
             .then(response => response.text())
             .then(data => {
-                const template = document.createElement('template');
-                template.innerHTML = data;
-                resolve(template);
+                const templateEl = document.createElement('template');
+                templateEl.innerHTML = data;
+                resolve(templateEl);
             })
             .catch(reject)
     );

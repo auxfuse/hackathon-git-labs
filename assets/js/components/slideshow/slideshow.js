@@ -23,6 +23,10 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._slides = null;
             this._nextBtn = null;
             this._prevBtn = null;
+
+            // Slide timer
+            this._timer = null;
+            this._slideTimer = this._slideTimer.bind(this);
         }
 
         get slides() { return this._slides.assignedElements(); }
@@ -37,6 +41,12 @@ import { wrapInRange } from '../../modules/utilities.js';
             if (this.slideCount > 0) {
                 this._slide = wrapInRange(0, val, this.slideCount - 1);
                 this.slides[this._slide].scrollIntoView({block:'nearest'});
+
+                if (this._timeout) {
+                    clearTimeout(this._timer);
+                    this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
+                }
+
                 // Reflect the property to the element attribute
                 this.setAttribute('slide', this._slide);
             }
@@ -55,6 +65,15 @@ import { wrapInRange } from '../../modules/utilities.js';
             // Setup slideshow control events
             this._prevBtn.addEventListener('click', () => this.slide--);
             this._nextBtn.addEventListener('click', () => this.slide++);
+
+            // Start slide change timer
+            this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
+        }
+
+        _slideTimer() {
+            if (this._timeout) {
+                this.slide++;
+            }
         }
     };
 
@@ -67,6 +86,7 @@ import { wrapInRange } from '../../modules/utilities.js';
 // TODO:
 //  Animation on slide change
 //      Animations:
-//          none (no animation)
-//          crossfade (fade out then fade in)
-//          swipe (swipe in from left or right)
+//          none (no animation)                 ✓
+//          crossfade (fade out then fade in)   x
+//          swipe (swipe in from left or right) ✓
+//  Timer
