@@ -1,3 +1,5 @@
+
+
 /**
  * Creates an array of numbers in a given range
  * @param {Number} max - Maximum number in range 
@@ -39,3 +41,4 @@ export const wrapInRange = (min, val, max) => {
     else if (val > max) return min;
     return val;
 }
+

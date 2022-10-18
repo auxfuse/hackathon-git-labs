@@ -319,7 +319,7 @@ slide-show:not(:defined) .slideshow-link .card-title {
     text-align: end;
     color: var(--font-color-lt);
     background: linear-gradient(180deg, #072C3000 0%, #072C30FF 100%);
-    transition: all 0.5s 1s linear;
+    transition: all 0.5s 0.75s linear;
 }
 
 .slideshow-link:hover > .slideshow-link-text {

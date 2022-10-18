@@ -17,7 +17,7 @@ import { createParticipantesCards, createSkeletonLoaders } from './modules/cards
     template: document.querySelector("#showcases > .item-template")
   };
 
-  // Create Loaders
+  // Create Loaders for community section cards
   if (communityElements.container && communityElements.template) {
     createSkeletonLoaders(communityElements);
   }
@@ -44,6 +44,7 @@ import { createParticipantesCards, createSkeletonLoaders } from './modules/cards
     if (communityElements.container && communityElements.template) {
       // Alter count to show all cards
       communityElements.count = participants.length;
+      communityElements.container.innerHTML = "";
       createParticipantesCards(participants, emojis, communityElements);
     }
 

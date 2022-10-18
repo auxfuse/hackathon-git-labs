@@ -2,8 +2,9 @@ import { WebComponent, loadTemplate } from '../webcomponent.js';
 import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
-    
+
     class SlideShow extends WebComponent {
+        /* Type properties and methods */
         static get tagName() { return 'slide-show'; }
 
         static get attributes() { 
@@ -14,6 +15,7 @@ import { wrapInRange } from '../../modules/utilities.js';
             }; 
         }
 
+        /* Instance Properties and methods */
         constructor() {
             super();
             this._createShadow({mode: 'open'});

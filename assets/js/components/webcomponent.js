@@ -4,12 +4,23 @@
  * Handles much of the boiler plate and component creation code.
  */
 export class WebComponent extends HTMLElement {
+    /* Type properties and methods */
     static template = null;
 
+    /**
+     * Provides the attributes and their types this component recognises.
+     * eg:
+     * {'attribute1': {type:Number,default:0}}
+     */
     static get attributes() { return null; }
     
+    /**
+     * Provides the DOM tag name for this component
+     * @abstract
+     * @return {String} - tag name
+     */
     static get tagName() {
-        throw new Error('Component has no defined tag name');
+        throw new Error('Component has no defined tag name!');
     }
 
     static get observedAttributes() {
@@ -17,6 +28,7 @@ export class WebComponent extends HTMLElement {
         return Object.keys(this.attributes);
     }
 
+    /* Instance Properties and methods */
     constructor() {
         super();
 
@@ -40,6 +52,11 @@ export class WebComponent extends HTMLElement {
         }
     }
 
+    /**
+     * Creates and appends a shadow dom to the component with the properties passed
+     * @param {Object} properties - Shadow DOM properties
+     * @returns {Element} - Created shadow DOM
+     */
     _createShadow(properties) {
         const shadow = this.attachShadow(properties);
         shadow.append(this.constructor.template.content.cloneNode(true));
@@ -52,6 +69,7 @@ export class WebComponent extends HTMLElement {
         this[property] = this.constructor.attributes[property].type(newValue);
     }
 };
+
 
 /**
  * Loads a given template file and creates a DOM template object

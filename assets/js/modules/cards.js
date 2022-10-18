@@ -53,8 +53,6 @@ export const createParticipantesCards = (participants, emojis, elements, indexes
         if (!remaining) break;
     }
 
-    // Ensure the container is empty then add the new cards
-    elements.container.innerHTML = "";
     elements.container.appendChild(fragment);
 }
 
