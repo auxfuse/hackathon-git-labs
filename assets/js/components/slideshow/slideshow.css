@@ -34,10 +34,6 @@ slide-show:defined {
     display: block;
 }
 
-.slide-show {
-    visibility: visible;
-}
-
 /*
  * Animations
  */
