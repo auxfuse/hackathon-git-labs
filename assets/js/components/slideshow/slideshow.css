@@ -42,6 +42,11 @@ slide-show .active {
  * Animations
  */
 
+@keyframes slide-fade {
+    from { opacity: 0.0; }
+    to { opacity: 1.0; }
+}
+
 slide-show .fade.out {
     visibility: visible;
     animation: slide-fade 1s reverse both;
@@ -51,16 +56,15 @@ slide-show .fade.in {
     animation: slide-fade 1s 1s both;
 }
 
-@keyframes slide-fade {
-    from { opacity: 0.0; }
-    to { opacity: 1.0; }
+slide-show .crossfade.out {
+    visibility: visible;
+    animation: slide-fade 1s reverse both;
+}
+
+slide-show .crossfade.in {
+    animation: slide-fade 1s both;
 }
 
 /*
-
-none
-fade
-crossfade
 swipe
-
  */
