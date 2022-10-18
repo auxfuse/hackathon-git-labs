@@ -1,9 +1,8 @@
+html {
+  background: url(https://www.pexels.com/photo/pink-clouds-during-nighttime-2719301) no-repeat center fixed;
+  background-size: cover;
+}
+
 body {
-    color: black;
-    font-family: "Helvetica", serif;
-  }
-  h1,
-  h2,
-  h3 {
-    font-family: "Helvetica", sans-serif;
-  }
+  font-family: "Quicksand", sans-serif;
+}
