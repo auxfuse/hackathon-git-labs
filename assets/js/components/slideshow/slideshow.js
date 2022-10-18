@@ -10,7 +10,7 @@ import { wrapInRange } from '../../modules/utilities.js';
         static get attributes() { 
             return {
                 'timeout': {type: Number, default: 0},
-                'animation': {type: String, default: ''},
+                'animation': {type: String, default: 'none'},
                 'slide': {type: Number, default: 0}
             }; 
         }
@@ -27,11 +27,16 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         get slides() { return this._slides.assignedElements(); }
 
+        get slideCount() {
+            if (!this._slides) return 0;
+            return this._slides.assignedElements().length;
+        }
+
         get slide() { return this._slide; }
         set slide(val) {
             if (this.slideCount > 0) {
                 this._slide = wrapInRange(0, val, this.slideCount - 1);
-                this.slides[this._slide].scrollIntoView({block: 'nearest'});
+                this.slides[this._slide].scrollIntoView({block:'nearest'});
                 // Reflect the property to the element attribute
                 this.setAttribute('slide', this._slide);
             }
@@ -50,11 +55,6 @@ import { wrapInRange } from '../../modules/utilities.js';
             // Setup slideshow control events
             this._prevBtn.addEventListener('click', () => this.slide--);
             this._nextBtn.addEventListener('click', () => this.slide++);
-        }
-
-        get slideCount() {
-            if (!this._slides) return 0;
-            return this._slides.assignedElements().length;
         }
     };
 
