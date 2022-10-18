@@ -1,4 +1,4 @@
-import { WebComponent, loadTemplate } from '../webcomponent.js';
+import { WebComponent, loadTemplate, createComponent } from '../webcomponent.js';
 import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
@@ -40,6 +40,7 @@ import { wrapInRange } from '../../modules/utilities.js';
         }
 
         connectedCallback() {
+            // Grab component interactive elements from the shadow dom
             this._slides = this.shadowRoot.getElementById('slides');
             this._prevBtn = this.shadowRoot.getElementById('prev');
             this._nextBtn = this.shadowRoot.getElementById('next');
@@ -61,10 +62,6 @@ import { wrapInRange } from '../../modules/utilities.js';
 
     const templateUrl = new URL('slideshow.html', import.meta.url).href;
     loadTemplate(templateUrl)
-        .then(template => {
-            SlideShow.template = template;
-            
-            customElements.define(SlideShow.tagName, SlideShow)
-        });
+        .then(template => createComponent(SlideShow, template));
 
 })();

@@ -9,6 +9,7 @@ export class WebComponent extends HTMLElement {
 
     /**
      * Provides the attributes and their types this component recognises.
+     * @static
      * eg:
      * {'attribute1': {type:Number,default:0}}
      */
@@ -16,6 +17,7 @@ export class WebComponent extends HTMLElement {
     
     /**
      * Provides the DOM tag name for this component
+     * @static
      * @abstract
      * @return {String} - tag name
      */
@@ -63,6 +65,11 @@ export class WebComponent extends HTMLElement {
         return shadow;
     }
 
+    /**
+     * Provides this WebComponent's attached template element
+     */
+    get template() { return this.constructor.template; }
+
     attributeChangedCallback(property, oldValue, newValue) {
         if (oldValue === newValue) return;
         // Attributes are always strings, so decode it to the correct datatype
@@ -89,3 +96,32 @@ export const loadTemplate = file => {
     );
 };
 
+
+/**
+ * Creates a template element from the HTML and optional CSS strings passed.
+ * @param {String} html - String of HTML nodes for the template
+ * @param {String} styles - (optional) String of styles for the template
+ * @returns {Element} - Template element
+ */
+export const createTemplate = (html, styles = null) => {
+    const templateEl = document.createElement('template');
+    
+    if (styles) {
+        const styleEl = document.createElement('style');
+        styleEl.innerText = styles;
+        templateEl.append(styleEl);
+    }
+    templateEl.append(html);
+
+    return templateEl;
+};
+
+/**
+ * Creates a component from a WebComponent class implementation and template element
+ * @param {Object} component - WebComponent class implementation
+ * @param {Element} template - Template
+ */
+export const createComponent = (component, template = null) => {
+    component.template = template;
+    customElements.define(component.tagName, component);
+};
