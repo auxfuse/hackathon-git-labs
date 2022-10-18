@@ -34,6 +34,10 @@ slide-show:defined {
     display: block;
 }
 
-.show-slide {
+.slide-show {
     visibility: visible;
 }
+
+/*
+ * Animations
+ */

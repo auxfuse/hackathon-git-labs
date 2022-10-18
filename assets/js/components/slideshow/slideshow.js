@@ -25,15 +25,13 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._prevBtn = null;
         }
 
+        get slides() { return this._slides.assignedElements(); }
+
         get slide() { return this._slide; }
         set slide(val) {
             if (this.slideCount > 0) {
-                // Hide currently displayed slide
-                this._slides.assignedElements()[this._slide].classList.remove('show-slide');
-                // Ensure index is within range
                 this._slide = wrapInRange(0, val, this.slideCount - 1);
-                // Show the current selected slide
-                this._slides.assignedElements()[this._slide].classList.add('show-slide');
+                this.slides[this._slide].scrollIntoView({block: 'nearest'});
                 // Reflect the property to the element attribute
                 this.setAttribute('slide', this._slide);
             }
@@ -65,3 +63,10 @@ import { wrapInRange } from '../../modules/utilities.js';
         .then(template => createComponent(SlideShow, template));
 
 })();
+
+// TODO:
+//  Animation on slide change
+//      Animations:
+//          none (no animation)
+//          crossfade (fade out then fade in)
+//          swipe (swipe in from left or right)

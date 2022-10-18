@@ -2,7 +2,6 @@
 <style>
     #slide-container {
         position: relative;
-
         width: 100%;
         height: 100%;
     }
@@ -31,13 +30,18 @@
         stroke: var(--stroke-color, #000);
     }
 
-    #slides::slotted(*) {
-        visibility: hidden;
-        position: absolute !important;
-        top: 0; left: 0;
+    #slides {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        overflow: hidden;
+        scroll-snap-type: x mandatory;
         width: 100%;
         height: 100%;
-        z-index: 1;        
+    }
+
+    #slides::slotted(*) {
+        flex: 1 0 100%;
     }
 </style>
 
