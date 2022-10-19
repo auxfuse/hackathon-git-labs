@@ -79,12 +79,22 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._slides.addEventListener('animationend', this._animEnd.bind(this));
 
             // Setup slideshow control events
-            this._prevBtn.addEventListener('click', () => this.slide--);
-            this._nextBtn.addEventListener('click', () => this.slide++);
+            this._prevBtn.addEventListener('click', this.prevSlide.bind(this));
+            this._nextBtn.addEventListener('click', this.nextSlide.bind(this));
 
             // Start slide change timer
             this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
         }
+
+        prevSlide() {
+            this._slides.style.setProperty('--dir', -1);
+            this.slide--
+        }
+
+        nextSlide() {
+            this._slides.style.setProperty('--dir', 1);
+            this.slide++
+        }        
 
         _slideTimer() {
             if (this._timeout) {
@@ -113,11 +123,3 @@ import { wrapInRange } from '../../modules/utilities.js';
 
 })();
 
-// TODO:
-//  Animation on slide change
-//      Animations:
-//          none (no animation)                 ✓
-//          fade (fade out then fade in)        ✓
-//          crossfade (fade one to another)     ✓
-//          swipe (swipe in from left or right) x
-//  Timer   ✓
