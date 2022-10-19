@@ -264,6 +264,7 @@ h6 {
 
 .slideshow-slide {
     position: relative;
+    background: var(--background-color);
     width: 100%;
     height: 100%;
 }
