@@ -3,6 +3,8 @@ import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
 
+    // TODO: Slide indicators, slide scrolling
+
     class SlideShow extends WebComponent {
         /* Type properties and methods */
         static get tagName() { return 'slide-show'; }
@@ -41,24 +43,25 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         get slide() { return this._slide; }
         set slide(val) {
-            if (!this.slideCount || this._animating) return;
-
-            // Reset slide timeout
-            if (this._timeout) {
-                clearTimeout(this._timer);
-                this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
-            }
-
             const lastSlide = this._slide;
             this._slide = wrapInRange(0, val, this.slideCount - 1);
 
-            this.slides[lastSlide].classList.remove('active');
-            this.slides[this._slide].classList.add('active');
+            if (this.slideCount && !this._animating) {
 
-            if (this._animation !== 'none' && lastSlide !== this._slide) {
-                this._slides.style.setProperty('--dir', Math.sign(val - lastSlide));
-                this.slides[lastSlide].classList.add(this._animation, 'out');
-                this.slides[this._slide].classList.add(this._animation, 'in');
+                // Reset slide timeout
+                if (this._timeout) {
+                    clearTimeout(this._timer);
+                    this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
+                }
+
+                this.slides[lastSlide].classList.remove('active');
+                this.slides[this._slide].classList.add('active');
+
+                if (this._animation !== 'none' && lastSlide !== this._slide) {
+                    this._slides.style.setProperty('--dir', Math.sign(val - lastSlide));
+                    this.slides[lastSlide].classList.add(this._animation, 'out');
+                    this.slides[this._slide].classList.add(this._animation, 'in');
+                }
             }
 
             // Reflect the property to the element attribute
@@ -71,9 +74,9 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._prevBtn = this.shadowRoot.getElementById('prev');
             this._nextBtn = this.shadowRoot.getElementById('next');
 
-            this.slide = 0;
+            this.slide = this.slide;
             // Watch for slides being added or removed
-            this._slides.addEventListener('slotchange', () => this.slide = 0);
+            this._slides.addEventListener('slotchange', () => this.slide = this.slide);
             // Slide transition events
             this._slides.addEventListener('animationstart', this._animStart.bind(this));
             this._slides.addEventListener('animationend', this._animEnd.bind(this));

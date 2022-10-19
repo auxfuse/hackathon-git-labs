@@ -33,7 +33,6 @@ export class WebComponent extends HTMLElement {
     /* Instance Properties and methods */
     constructor() {
         super();
-
         // If this component has custom attributes
         if (this.constructor.attributes) {
             for (const [key, value] of Object.entries(this.constructor.attributes)) {
