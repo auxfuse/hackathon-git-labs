@@ -273,10 +273,9 @@ h6 {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 200%;
     height: 200%;
-
+    pointer-events: none;
     transform-origin: top left;
     transform: scale(0.5);
 }
@@ -290,7 +289,7 @@ h6 {
 .slideshow-link {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     position: absolute;
     top: 0;
     left: 0;
