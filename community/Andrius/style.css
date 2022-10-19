@@ -13,7 +13,6 @@ html {
 
 body {
   font-family: "Ubuntu", sans-serif;
-  /* background-color: #00f3ff; */
   background-image: linear-gradient(to right, #00f3ff, #33f5ff);
   height: 100vh;
   display: flex;
@@ -80,8 +79,6 @@ main {
 
 .about {
   min-width: 60rem;
-  /* max-width: 90%; */
-  /* height: 32rem; */
   height: 46rem;
   display: flex;
   flex-direction: column;
@@ -124,7 +121,6 @@ main {
 .content h2 {
   text-transform: capitalize;
   font-size: 2.4rem;
-  /* padding-left: 3.2rem; */
 }
 
 .about-content {
@@ -152,7 +148,6 @@ main {
 }
 
 .content.active {
-  /* display: block; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,9 +189,6 @@ main {
   background: rgba(73, 166, 233, 0.5);
   display: grid;
   place-items: center;
-  /* transition: width 2s, height 4s; */
-
-  /* below two lines hide modal */
   visibility: hidden;
   z-index: -10;
 }
@@ -339,6 +331,29 @@ textarea:focus {
   transform: scale(1.3);
 }
 
+/* --------------------------------------- Thank you page */
+.thankyou-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-container h1 {
+  font-size: 12.8rem;
+  letter-spacing: 9px;
+}
+
+.back-to-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.back-to-links a {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 91em) {
   h1 {
     line-height: 1;
@@ -413,14 +428,11 @@ textarea:focus {
 }
 
 @media only screen and (max-width: 54em) {
-  body {
-    height: 100%;
-  }
-
   main {
     flex-direction: column;
     gap: 2.4rem;
-    margin-top: 3.2rem;
+    margin-top: 12.8rem;
+    padding-top: 4.8rem;
   }
 
   .left-side {
@@ -469,8 +481,13 @@ textarea:focus {
 }
 
 @media only screen and (max-width: 32em) {
+  main {
+    margin-top: 12.8rem;
+    padding-top: 12.8rem;
+  }
+
   .left-side {
-    max-width: 60%;
+    max-width: 80%;
   }
 
   .left-side img {
@@ -478,7 +495,8 @@ textarea:focus {
   }
 
   h1 {
-    font-size: 4.4rem;
+    font-size: 3rem;
+    letter-spacing: 2px;
   }
 
   .tab-btn {
@@ -551,5 +569,15 @@ textarea:focus {
     font-size: 1.2rem;
     margin-top: 1.6rem;
     padding: 0.8rem 2.4rem;
+  }
+
+  .thankyou-container h1 {
+    font-size: 8.6rem;
+    letter-spacing: 4px;
+  }
+
+  .back-to-links {
+    margin-top: 1.6rem;
+    flex-direction: column-reverse;
   }
 }
