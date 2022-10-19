@@ -37,8 +37,7 @@ export const shuffle = (arr) => {
  * @returns {Number} between min and max
  */
 export const wrapInRange = (min, val, max) => {
-    if (val < min) return max;
-    else if (val > max) return min;
-    return val;
+    max++;
+    return (((val - min) % (max - min)) + (max - min)) % (max - min) + min;
 }
 
