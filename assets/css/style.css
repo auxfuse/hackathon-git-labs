@@ -299,11 +299,8 @@ h6 {
     text-decoration: none;
 }
 
-.slideshow-link .card-title {
-    align-self: flex-start;
-    margin: 0.5rem;
-    width: 100%;
-    max-width: 400px;
+.slide-title {
+    display: none;
 }
 
 .slideshow-link-text {
