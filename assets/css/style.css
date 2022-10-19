@@ -289,7 +289,6 @@ h6 {
 .slideshow-link {
     display: flex;
     flex-flow: column;
-    align-items: center;
     justify-content: space-between;
     position: absolute;
     top: 0;
@@ -301,6 +300,8 @@ h6 {
 }
 
 .slideshow-link .card-title {
+    align-self: flex-start;
+    margin: 0.5rem;
     width: 100%;
     max-width: 400px;
 }

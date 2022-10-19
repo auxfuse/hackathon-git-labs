@@ -22,7 +22,7 @@ export class WebComponent extends HTMLElement {
      * @return {String} - tag name
      */
     static get tagName() {
-        throw new Error('Component has no defined tag name!');
+        throw new Error('Component has no defined tag name! Have you provided a static get tagName method?');
     }
 
     static get observedAttributes() {
