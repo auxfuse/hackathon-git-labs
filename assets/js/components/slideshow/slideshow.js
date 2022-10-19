@@ -61,6 +61,8 @@ import { wrapInRange } from '../../modules/utilities.js';
                     this.slides[lastSlide].classList.add(this._animation, 'out');
                     this.slides[this._slide].classList.add(this._animation, 'in');
                 }
+                // Trigger slide change event
+                this.dispatchEvent(new CustomEvent('slide-changed', {detail: this._slide}));
             }
             // Reflect the property to the element attribute
             this.setAttribute('slide', this._slide);

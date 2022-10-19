@@ -40,6 +40,14 @@ import { createParticipantesCards, createSkeletonLoaders } from './modules/cards
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
       createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
+
+
+      document.getElementById('showcases-slideshow')
+        .addEventListener('slide-changed', e => {
+          console.log('slide changed: ', e.detail);
+        });
+    
+
     }
 
     if (communityElements.container && communityElements.template) {
