@@ -67,7 +67,7 @@ slide-show .crossfade.in {
 
 @keyframes slide-scroll {
     from {
-        transform: translateX(var(--pos));
+        transform: translateX(var(--offset));
     }
     to {
         transform: translateX(0);
@@ -75,12 +75,14 @@ slide-show .crossfade.in {
 }
 
 slide-show .scroll.out {
-    --pos: calc( 100% * (0 - var(--dir,1)) );
+    --offset: calc( 100% * (0 - var(--dir,1)) );
+
     visibility: visible;
     animation: slide-scroll 0.5s reverse ease-in-out both;
 }
 
 slide-show .scroll.in {
-    --pos: calc( 100% * var(--dir,1) );
+    --offset: calc( 100% * var(--dir,1) );
+    
     animation: slide-scroll 0.5s ease-in-out both;
 }

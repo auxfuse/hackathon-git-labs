@@ -56,9 +56,9 @@ import { wrapInRange } from '../../modules/utilities.js';
             this.slides[this._slide].classList.add('active');
 
             if (this._animation !== 'none' && lastSlide !== this._slide) {
+                this._slides.style.setProperty('--dir', Math.sin(val - lastSlide));
                 this.slides[lastSlide].classList.add(this._animation, 'out');
                 this.slides[this._slide].classList.add(this._animation, 'in');
-
             }
 
             // Reflect the property to the element attribute
@@ -87,12 +87,10 @@ import { wrapInRange } from '../../modules/utilities.js';
         }
 
         prevSlide() {
-            this._slides.style.setProperty('--dir', -1);
             this.slide--
         }
 
         nextSlide() {
-            this._slides.style.setProperty('--dir', 1);
             this.slide++
         }        
 
