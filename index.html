@@ -41,6 +41,7 @@
         <h1 class="primary-heading center-txt">Showcases</h1>
 
         <div id="showcases">
+            <div id="showcases-slide-title"></div>
             <!-- Custom slideshow element -->
             <slide-show id="showcases-slideshow" timeout="15" animation="scroll" slide="0"></slide-show>
             
@@ -50,10 +51,12 @@
                     <iframe src="" tabindex = "-1" frameborder="0" loading="lazy"
                         class="slideshow-contents" data-field="preview"></iframe>
                     <a class="slideshow-link" href="" data-field="link">
-                        <h2 class="slide-title">
-                            <span data-field="random_emoji"></span>
-                            <span data-field="name">_</span>
-                        </h2>
+                        <div class="slide-title">
+                            <h2 class="card-title">
+                                <span data-field="random_emoji"></span>
+                                <span data-field="name">_</span>
+                            </h2>
+                        </div>
                         <span class="slideshow-link-text">View Work ➡</span>
                     </a>
                 </div>

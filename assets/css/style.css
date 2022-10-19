@@ -245,6 +245,15 @@ h6 {
     margin-bottom: 7rem;
 }
 
+#showcases {
+    flex-flow: column nowrap;
+}
+
+#showcases-slide-title {
+    width: 100%;
+    max-width: 400px;
+}
+
 #showcases-slideshow {
     --fill-color: var(--font-color-lt);
     --stroke-color: var(--font-color);
@@ -253,7 +262,6 @@ h6 {
     max-width: 1000px;
     max-height: 75vh;
     aspect-ratio: 1/1.25;
-    margin-top: 1.5rem;
 }
 
 @media (orientation: landscape) {
