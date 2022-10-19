@@ -56,7 +56,7 @@ import { wrapInRange } from '../../modules/utilities.js';
             this.slides[this._slide].classList.add('active');
 
             if (this._animation !== 'none' && lastSlide !== this._slide) {
-                this._slides.style.setProperty('--dir', Math.sin(val - lastSlide));
+                this._slides.style.setProperty('--dir', Math.sign(val - lastSlide));
                 this.slides[lastSlide].classList.add(this._animation, 'out');
                 this.slides[this._slide].classList.add(this._animation, 'in');
             }
