@@ -43,10 +43,9 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         get slide() { return this._slide; }
         set slide(val) {
-            const lastSlide = this._slide;
-            this._slide = wrapInRange(0, val, this.slideCount - 1);
-
             if (this.slideCount && !this._animating) {
+                const lastSlide = this._slide;
+                this._slide = wrapInRange(0, val, this.slideCount - 1);
 
                 // Reset slide timeout
                 if (this._timeout) {
@@ -63,7 +62,6 @@ import { wrapInRange } from '../../modules/utilities.js';
                     this.slides[this._slide].classList.add(this._animation, 'in');
                 }
             }
-
             // Reflect the property to the element attribute
             this.setAttribute('slide', this._slide);
         }
