@@ -79,20 +79,12 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._slides.addEventListener('animationend', this._animEnd.bind(this));
 
             // Setup slideshow control events
-            this._prevBtn.addEventListener('click', this.prevSlide.bind(this));
-            this._nextBtn.addEventListener('click', this.nextSlide.bind(this));
+            this._prevBtn.addEventListener('click', () => this.slide--);
+            this._nextBtn.addEventListener('click', () => this.slide++);
 
             // Start slide change timer
             this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
         }
-
-        prevSlide() {
-            this.slide--
-        }
-
-        nextSlide() {
-            this.slide++
-        }        
 
         _slideTimer() {
             if (this._timeout) {
