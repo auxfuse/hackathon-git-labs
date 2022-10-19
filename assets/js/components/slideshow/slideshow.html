@@ -7,16 +7,25 @@
         height: 100%;
     }
 
-    .slide-btn {
+    #slide-controls {
+        display: flex;
+        justify-content: space-between;
         position: absolute;
         top: 0;
+        left: 0;
+        right: 0;
         bottom: 0;
-        width: 50px;
         z-index: 5;
+        pointer-events: none;
+    }
 
+    .slide-btn {
+        flex: 0 0 50px;
+        align-self: stretch;
         background: transparent;
         border: none;
         cursor: pointer;
+        pointer-events: all;
         opacity: 0.25;
         transition: opacity 0.5s;
     }
@@ -52,20 +61,24 @@
 
     <slot id="slides" part="slides"></slot>
 
-    <button id="prev" part="previous-btn" class="slide-btn">
-        <slot name="previous-slide-icon">
-            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
-                <path class="control-icon" d="m6.2851 1.0156 1.4142 1.4142-2.5702 2.5702 2.5702 2.5702-1.4142 1.4142-3.9844-3.9844z"/>
-            </svg>
-        </slot>
-    </button>
+    <div id="slide-controls">
+        <button id="prev" part="previous-btn" class="slide-btn">
+            <slot name="previous-slide-icon">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
+                    <path class="control-icon" d="m6.2851 1.0156 1.4142 1.4142-2.5702 2.5702 2.5702 2.5702-1.4142 1.4142-3.9844-3.9844z"/>
+                </svg>
+            </slot>
+        </button>
 
-    <button id="next" part="next-btn" class="slide-btn">
-        <slot name="next-slide-icon">
-            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
-                <path class="control-icon" d="m2.3007 2.4298 1.4142-1.4142 3.9844 3.9844-3.9844 3.9844-1.4142-1.4142 2.5702-2.5702z"/>
-            </svg>
-        </slot>
-    </button>
+        <button id="next" part="next-btn" class="slide-btn">
+            <slot name="next-slide-icon">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
+                    <path class="control-icon" d="m2.3007 2.4298 1.4142-1.4142 3.9844 3.9844-3.9844 3.9844-1.4142-1.4142 2.5702-2.5702z"/>
+                </svg>
+            </slot>
+        </button>
+
+        <!-- Indicators here -->
+    </div>
 
 </div>
