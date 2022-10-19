@@ -35,6 +35,32 @@
         opacity: 0.75;
     }
 
+    #slide-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+
+        flex: 1 1 100%;
+        align-self: flex-end;
+        
+        list-style: none;
+        padding: 0 0 10px 0;
+    }
+
+    #slide-indicators > * {
+        flex: 0 1 auto;
+        width: 20px;
+        height: 5px;
+        background: var(--fill-color, #FFF);
+        border: 2px solid var(--stroke-color, #000);
+        opacity: 0.25;
+    }
+
+    #slide-indicators > *.active {
+        width: 30px;
+        opacity: 0.75;
+    }
+
     .control-icon {
         fill: var(--fill-color, #FFF);
         stroke: var(--stroke-color, #000);
@@ -70,6 +96,8 @@
             </slot>
         </button>
 
+        <ul id="slide-indicators" part="slide-indicator-list"></ul>
+
         <button id="next" part="next-btn" class="slide-btn">
             <slot name="next-slide-icon">
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
@@ -77,8 +105,6 @@
                 </svg>
             </slot>
         </button>
-
-        <!-- Indicators here -->
     </div>
 
 </div>

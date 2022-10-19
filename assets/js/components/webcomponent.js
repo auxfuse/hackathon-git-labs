@@ -54,7 +54,9 @@ export class WebComponent extends HTMLElement {
     }
 
     /**
-     * Creates and appends a shadow dom to the component with the properties passed
+     * Creates and appends a shadow dom to the component with the properties passed.
+     * Intended only for use by derived classes.
+     * @protected
      * @param {Object} properties - Shadow DOM properties
      * @returns {Element} - Created shadow DOM
      */

@@ -3,7 +3,7 @@ import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
 
-    // TODO: Slide indicators, simplify state handling/property-attribute reflection
+    // TODO: Slide indicators
 
     class SlideShow extends WebComponent {
         /* Type properties and methods */
@@ -25,6 +25,7 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._slides = null;
             this._nextBtn = null;
             this._prevBtn = null;
+            this._indicators = null;
 
             // State
             this._animating = 0;
@@ -53,9 +54,16 @@ import { wrapInRange } from '../../modules/utilities.js';
                     this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
                 }
 
+                // Ensure only the current slide is active
                 this.slides[lastSlide].classList.remove('active');
                 this.slides[this._slide].classList.add('active');
+                // Update indicators
+                if (this._indicators) {
+                    this._indicators.childNodes[lastSlide].classList.remove('active');
+                    this._indicators.childNodes[this._slide].classList.add('active');
+                }
 
+                // Should the slide transition be animated?
                 if (this._animation !== 'none' && lastSlide !== this._slide) {
                     this._slides.style.setProperty('--dir', Math.sign(val - lastSlide));
                     this.slides[lastSlide].classList.add(this._animation, 'out');
@@ -73,6 +81,10 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._slides = this.shadowRoot.getElementById('slides');
             this._prevBtn = this.shadowRoot.getElementById('prev');
             this._nextBtn = this.shadowRoot.getElementById('next');
+            this._indicators = this.shadowRoot.getElementById("slide-indicators");
+
+            // Build indicators
+            this._createSlideIndicators();
 
             // Attempt to show initial slide
             this.slide = this.slide;
@@ -81,7 +93,10 @@ import { wrapInRange } from '../../modules/utilities.js';
              * Event handlers
              */
             // Watch for slides being added or removed
-            this._slides.addEventListener('slotchange', () => this.slide = this.slide);
+            this._slides.addEventListener('slotchange', () => {
+                this._createSlideIndicators();
+                this.slide = this.slide
+            });
             // Slide transition events
             this._slides.addEventListener('animationstart', e => {
                 const slide = e.target;
@@ -102,6 +117,18 @@ import { wrapInRange } from '../../modules/utilities.js';
 
             // Start slide change timer
             this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
+        }
+
+        _createSlideIndicators() {
+            if (this.slideCount) {
+                const count = this.slideCount;
+                const indicator = document.createElement('li');
+                indicator.setAttribute('part', 'slide-indicator');
+
+                this._indicators.innerHTML = '';
+                for (let i = 0; i < count; i++) this._indicators.append(indicator.cloneNode(false));
+                this._indicators.childNodes[this._slide].classList.add('active');
+            }
         }
 
         _slideTimer() {
