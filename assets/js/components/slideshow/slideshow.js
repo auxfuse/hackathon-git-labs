@@ -3,7 +3,7 @@ import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
 
-    // TODO: Slide indicators, slide scrolling
+    // TODO: Slide indicators, simplify state handling/property-attribute reflection
 
     class SlideShow extends WebComponent {
         /* Type properties and methods */
@@ -62,7 +62,7 @@ import { wrapInRange } from '../../modules/utilities.js';
                     this.slides[this._slide].classList.add(this._animation, 'in');
                 }
                 // Trigger slide change event
-                this.dispatchEvent(new CustomEvent('slide-changed', {detail: this._slide}));
+                this.dispatchEvent(new CustomEvent('slide-changed', {detail: this.slides[this._slide]}));
             }
             // Reflect the property to the element attribute
             this.setAttribute('slide', this._slide);
@@ -94,7 +94,7 @@ import { wrapInRange } from '../../modules/utilities.js';
                 if (slide.classList.contains(this._animation)) {
                     slide.classList.remove(this._animation, 'in', 'out');
                     this._animating--;
-                } 
+                }
             });
             // Setup slideshow control events
             this._prevBtn.addEventListener('click', () => this.slide--);
