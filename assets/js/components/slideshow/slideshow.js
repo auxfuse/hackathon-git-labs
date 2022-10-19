@@ -3,8 +3,6 @@ import { wrapInRange } from '../../modules/utilities.js';
 
 (() => {
 
-    // TODO: Slide indicators
-
     class SlideShow extends WebComponent {
         /* Type properties and methods */
         static get tagName() { return 'slide-show'; }
