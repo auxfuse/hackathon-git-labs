@@ -36,6 +36,7 @@ slide-show:defined {
 
 slide-show .active {
     visibility: visible;
+    z-index: 2;
 }
 
 /*
