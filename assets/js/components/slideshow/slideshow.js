@@ -72,13 +72,28 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._prevBtn = this.shadowRoot.getElementById('prev');
             this._nextBtn = this.shadowRoot.getElementById('next');
 
+            // Attempt to show initial slide
             this.slide = this.slide;
+
+            /*
+             * Event handlers
+             */
             // Watch for slides being added or removed
             this._slides.addEventListener('slotchange', () => this.slide = this.slide);
             // Slide transition events
-            this._slides.addEventListener('animationstart', this._animStart.bind(this));
-            this._slides.addEventListener('animationend', this._animEnd.bind(this));
-
+            this._slides.addEventListener('animationstart', e => {
+                const slide = e.target;
+                if (slide.classList.contains(this._animation)) {
+                    this._animating++;
+                }
+            });
+            this._slides.addEventListener('animationend', e => {
+                const slide = e.target;
+                if (slide.classList.contains(this._animation)) {
+                    slide.classList.remove(this._animation, 'in', 'out');
+                    this._animating--;
+                } 
+            });
             // Setup slideshow control events
             this._prevBtn.addEventListener('click', () => this.slide--);
             this._nextBtn.addEventListener('click', () => this.slide++);
@@ -92,20 +107,6 @@ import { wrapInRange } from '../../modules/utilities.js';
                 this.slide++;
             }
         }
-
-        _animStart(e) { 
-            const slide = e.target;
-            if (slide.classList.contains(this._animation)) {
-                this._animating++;
-            }
-        }
-        _animEnd(e) {
-            const slide = e.target;
-            if (slide.classList.contains(this._animation)) {
-                slide.classList.remove(this._animation, 'in', 'out');
-                this._animating--;
-            }
-        }
     };
 
     const templateUrl = new URL('slideshow.html', import.meta.url).href;
@@ -113,4 +114,3 @@ import { wrapInRange } from '../../modules/utilities.js';
         .then(template => createComponent(SlideShow, template));
 
 })();
-
