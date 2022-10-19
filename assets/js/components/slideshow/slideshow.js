@@ -40,6 +40,15 @@ import { wrapInRange } from '../../modules/utilities.js';
             return this._slides.assignedElements().length;
         }
 
+        get timeout() { return this._timeout; }
+        set timeout(val) {
+            this._timeout = val;
+            this.setAttribute('timeout', this.timeout);
+            
+            clearTimeout(this._timer);
+            if (this._timeout) this._timer = setTimeout(this._slideTimer, this._timeout * 1000); 
+        }
+
         get slide() { return this._slide; }
         set slide(val) {
             if (this.slideCount && !this._animating) {
@@ -47,10 +56,8 @@ import { wrapInRange } from '../../modules/utilities.js';
                 this._slide = wrapInRange(0, val, this.slideCount - 1);
 
                 // Reset slide timeout
-                if (this._timeout) {
-                    clearTimeout(this._timer);
-                    this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
-                }
+                clearTimeout(this._timer);
+                if (this._timeout) this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
 
                 // Ensure only the current slide is active
                 this.slides[lastSlide].classList.remove('active');
@@ -114,7 +121,7 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._nextBtn.addEventListener('click', () => this.slide++);
 
             // Start slide change timer
-            this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
+            if (this._timeout) this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
         }
 
         _createSlideIndicators() {
