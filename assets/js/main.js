@@ -1,29 +1,6 @@
 import { genIndexes, shuffle } from './modules/utilities.js';
 import { createParticipantesCards, createSkeletonLoaders } from './modules/cards.js';
 
-const attachShowcaseEvents = () => {
-  document.querySelectorAll('#showcases-slideshow > .slideshow-slide')
-    .forEach(el => el.addEventListener('wheel', function (e) {
-      // If this is the active slide allow content scrolling
-      if (this.classList.contains('active')) {
-        const content = this.querySelector('.slideshow-contents');
-        const scrollPos = content.contentWindow.scrollY + (e.deltaY * 2);
-        const scrollBottom = content.contentDocument.body.scrollHeight
-          - content.contentWindow.innerHeight;
-
-        content.contentWindow.scrollTo({
-          top: scrollPos,
-          left: 0,
-          behavior: 'smooth'
-        });
-
-        // Do we want to prevent the outer page from scrolling?
-        if (scrollPos > 0 && scrollPos < scrollBottom) {
-          e.preventDefault();
-        }
-      }
-    }));
-}
 
 (() => {
 
@@ -64,7 +41,6 @@ const attachShowcaseEvents = () => {
       const indexes = shuffle(genIndexes(participants.length));
       createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
     }
-    attachShowcaseEvents();
 
     if (communityElements.container && communityElements.template) {
       // Alter count to show all cards
