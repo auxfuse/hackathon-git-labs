@@ -193,7 +193,7 @@ main {
   background: rgba(73, 166, 233, 0.5);
   display: grid;
   place-items: center;
-  transition: width 2s, height 4s;
+  /* transition: width 2s, height 4s; */
 
   /* below two lines hide modal */
   visibility: hidden;
@@ -211,19 +211,54 @@ main {
   height: 70%;
   text-align: center;
   display: grid;
+  grid-template-columns: 1fr 0.75fr 1fr;
   place-items: center;
   position: relative;
 }
 
+.modal-container h3 {
+  font-size: 6.4rem;
+}
+
+.modal-container p {
+  font-size: 3rem;
+}
+
 form {
+  width: 40vh;
+  /* height: 80%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
+  gap: 2rem;
+}
+
+.form-left {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 2rem;
+  /* justify-content: space-between; */
+}
+
+.form-left input {
+  /* font-size: 2rem; */
+  padding: 1rem;
+}
+
+.form-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 form input,
 textarea {
+  width: 100%;
   font-size: 2rem;
 }
 .close-btn {
@@ -233,12 +268,11 @@ textarea {
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: var(--clr-red-dark);
+  color: red;
   cursor: pointer;
-  transition: var(--transition);
 }
 .close-btn:hover {
-  color: var(--clr-red-light);
+  color: orangered;
   transform: scale(1.3);
 }
 
