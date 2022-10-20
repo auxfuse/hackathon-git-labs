@@ -46,34 +46,30 @@ slide-show:defined > .active {
 @keyframes slide-none {}
 
 @keyframes slide-fade {
-    from { opacity: 0.0; }
-    to { opacity: 1.0; }
+    to { opacity: 0.0; }
 }
 
 slide-show:defined > .fade.out {
     visibility: visible;
-    animation: slide-fade 1s reverse both;
+    animation: slide-fade 1s both;
 }
 
 slide-show:defined > .fade.in {
-    animation: slide-fade 1s 1s both;
+    animation: slide-fade 1s 1s reverse both;
 }
 
 slide-show:defined > .crossfade.out {
     visibility: visible;
-    animation: slide-fade 1s reverse both;
-}
-
-slide-show:defined > .crossfade.in {
     animation: slide-fade 1s both;
 }
 
+slide-show:defined > .crossfade.in {
+    animation: slide-fade 1s reverse both;
+}
+
 @keyframes slide-scroll {
-    from {
-        transform: translateX(var(--offset));
-    }
     to {
-        transform: translateX(0);
+        transform: translateX(var(--offset));
     }
 }
 
@@ -81,13 +77,13 @@ slide-show:defined > .scroll.out {
     --offset: calc( 100% * (0 - var(--dir,1)) );
 
     visibility: visible;
-    animation: slide-scroll 0.5s reverse ease-in-out both;
+    animation: slide-scroll 0.5s ease-in-out both;
 }
 
 slide-show:defined > .scroll.in {
     --offset: calc( 100% * var(--dir,1) );
     
-    animation: slide-scroll 0.5s ease-in-out both;
+    animation: slide-scroll 0.5s reverse ease-in-out both;
 }
 
 @keyframes slide-shrink {
