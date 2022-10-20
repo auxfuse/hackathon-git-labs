@@ -43,6 +43,8 @@ slide-show:defined > .active {
  * Animations
  */
 
+@keyframes slide-none {}
+
 @keyframes slide-fade {
     from { opacity: 0.0; }
     to { opacity: 1.0; }
@@ -86,4 +88,18 @@ slide-show:defined > .scroll.in {
     --offset: calc( 100% * var(--dir,1) );
     
     animation: slide-scroll 0.5s ease-in-out both;
+}
+
+@keyframes slide-shrink {
+    to {transform: scale(0.0);}
+}
+
+slide-show:defined > .shrink.out {
+    z-index: 4;
+    visibility: visible;
+    animation: slide-shrink 1s both;
+}
+
+slide-show:defined > .shrink.in {
+    animation: slide-none 1s both;
 }
