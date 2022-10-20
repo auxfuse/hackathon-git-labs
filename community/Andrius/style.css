@@ -24,7 +24,6 @@ body {
 h1 {
   font-family: "Passions Conflict", cursive;
   font-size: 6.2rem;
-
   text-align: center;
   color: #001819;
   padding: 2rem;
@@ -530,8 +529,6 @@ textarea:focus {
   }
 
   .modal-container {
-    /* width: 100%; */
-    /* height: 100%; */
     padding: 2.4rem 0;
   }
 
