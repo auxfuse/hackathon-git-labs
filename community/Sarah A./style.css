@@ -1,37 +1,26 @@
-* {
-  font-family: 'Quicksand', sans-serif;}
+body {
+  font-family: "Quicksand", sans-serif;
+}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
   text-align: center;
-}
-
-.title {
-  color: darkmagenta;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: darkmagenta;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+  font-family: Quicksand;
 }
 
 a {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 30px;
   color: black;
+  padding: 6px;
 }
 
 button:hover, a:hover {
   opacity: 0.7;
+}
+
+footer {
+    text-align: center;
 }
