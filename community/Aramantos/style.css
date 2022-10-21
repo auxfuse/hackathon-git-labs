@@ -20,11 +20,11 @@ main {
     top: 8vh;
 }
 
-h1{
+.four-rem{
     font-size: 4rem;
 }
 
-p{
+.three-rem{
     font-size: 3rem;
 }
 
@@ -50,8 +50,9 @@ button {
 }
 
 #back {
-    position: absolute;
+    /* position: absolute; */
     font-size: x-large;
+    margin-left: 5px;
 }
 
 .carousel-inner {
