@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Road+Rage&display=swap');
 
 body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url(background.jpg) no-repeat;
+    background-size: 100%;
+}
+main {
     height: 100vh;
     font-family: 'Road Rage', cursive;
     color: aliceblue;
@@ -11,7 +13,7 @@ body {
     position: fixed;
     left: 5%;
     right: 0;
-    top: 18vh;
+    top: 8vh;
 }
 
 h1{
@@ -41,4 +43,9 @@ button {
     background: #a6292a;
     color: aliceblue;
     text-shadow: 0 0 5px black;
+}
+
+#back {
+    position: absolute;
+    font-size: x-large;
 }
