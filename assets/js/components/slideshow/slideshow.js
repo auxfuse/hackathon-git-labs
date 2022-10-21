@@ -62,10 +62,8 @@ import { wrapInRange } from '../../modules/utilities.js';
                 this.slides[lastSlide].classList.remove('active');
                 this.slides[this._slide].classList.add('active');
                 // Update indicators
-                if (this._indicators) {
-                    this._indicators.childNodes[lastSlide].classList.remove('active');
-                    this._indicators.childNodes[this._slide].classList.add('active');
-                }
+                this._indicators.childNodes[lastSlide].classList.remove('active');
+                this._indicators.childNodes[this._slide].classList.add('active');
 
                 // Should the slide transition be animated?
                 if (this._animation !== 'none' && lastSlide !== this._slide) {
