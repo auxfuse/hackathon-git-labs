@@ -5,6 +5,6 @@ $(document).ready(function () {
     engine.play();
     setTimeout(function () {
       document.location.href = "gallery.html"
-    }, 5000);
+    }, 3000);
   });
 });
