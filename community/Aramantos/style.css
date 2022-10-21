@@ -5,11 +5,15 @@ body {
     background-size: 100%;
 }
 main {
-    height: 100vh;
     font-family: 'Road Rage', cursive;
     color: aliceblue;
     text-shadow: 0 0 5px black;
     text-align: center;
+
+}
+
+#index {
+    height: 100vh;
     position: fixed;
     left: 5%;
     right: 0;
@@ -48,4 +52,12 @@ button {
 #back {
     position: absolute;
     font-size: x-large;
+}
+
+.carousel-inner {
+    height: 80vh;
+}
+
+img {
+    height: 80vh;
 }
