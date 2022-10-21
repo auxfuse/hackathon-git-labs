@@ -68,26 +68,22 @@ slide-show:defined > .crossfade.in {
 }
 
 @keyframes slide-scroll {
-    to {
-        transform: translateX(var(--offset));
-    }
+    to { transform: translateX(var(--offset)); }
 }
 
 slide-show:defined > .scroll.out {
     --offset: calc( 100% * (0 - var(--dir,1)) );
-
     visibility: visible;
     animation: slide-scroll 0.5s ease-in-out both;
 }
 
 slide-show:defined > .scroll.in {
     --offset: calc( 100% * var(--dir,1) );
-    
     animation: slide-scroll 0.5s reverse ease-in-out both;
 }
 
 @keyframes slide-shrink {
-    to {transform: scale(0.0);}
+    to { transform: scale(0.0); }
 }
 
 slide-show:defined > .shrink.out {
