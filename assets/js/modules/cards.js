@@ -16,7 +16,10 @@ export const generateCardFromTemplate = (participant, emojis, template) => {
         'default': field => field.innerText = participant[field.dataset.field],
         'random_emoji': field => field.innerText = getRandomEmoji(emojis),
         'preview': field => field.src = `community/${participant.name}`,
-        'link': field => field.setAttribute('href', `community/${participant.name}`)
+        'link': field => participant.showcase ? 
+            field.setAttribute('href', `community/${participant.name}`) :
+            field.removeAttribute('href')
+
     };
 
     for (const field of fields) {
