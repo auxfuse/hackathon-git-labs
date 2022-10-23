@@ -1,24 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Road+Rage&display=swap');
 
 body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    background: url(background.jpg) no-repeat;
+    background-size: 100%;
+    background-color: #2A6CA9!important;
+    overflow: hidden;
+}
+main {
     font-family: 'Road Rage', cursive;
     color: aliceblue;
     text-shadow: 0 0 5px black;
     text-align: center;
+}
+
+#gall-main {
+    height: 100vh;
+    overflow: scroll;
+}
+
+#index {
+    height: 100vh;
     position: fixed;
     left: 5%;
     right: 0;
-    top: 18vh;
+    top: 8vh;
 }
 
-h1{
+.four-rem{
     font-size: 4rem;
 }
 
-p{
+.three-rem{
     font-size: 3rem;
 }
 
@@ -41,4 +53,18 @@ button {
     background: #a6292a;
     color: aliceblue;
     text-shadow: 0 0 5px black;
+}
+
+#back {
+    /* position: absolute; */
+    font-size: x-large;
+    margin-left: 5px;
+}
+
+.carousel-inner {
+    height: 80vh;
+}
+
+img {
+    height: 80vh;
 }
