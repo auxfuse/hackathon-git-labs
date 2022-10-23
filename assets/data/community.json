@@ -379,5 +379,13 @@
     "favorite_language": "JavaScript",
     "currently_learning": "JavaScript",
     "showcase": true
+  },
+  {
+    "name": "Kshitij",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "JavaScript",
+    "showcase": true
   }
 ]
