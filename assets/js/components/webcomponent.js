@@ -40,7 +40,8 @@ export class WebComponent extends HTMLElement {
                 // Create a property and set it to the default value
                 this[propName] = value.default;
                 // If getters and setters don't already exist add them
-                if (!Object.getOwnPropertyDescriptor(Object.getPrototypeOf(this), key)) {
+                if (!(key in this)) {
+                    console.log(key);
                     Object.defineProperty(this, key, {
                         get() { return this[propName]; },
                         set(val) {
