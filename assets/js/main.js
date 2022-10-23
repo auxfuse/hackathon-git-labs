@@ -57,9 +57,8 @@ document.getElementById('showcases-slideshow')
     if (communityElements.container && communityElements.template) {
       // Alter count to show all cards
       communityElements.count = participants.length;
-      createParticipantesCards(participants, emojis, communityElements, indexes=pageParticipants);
       communityElements.container.innerHTML = "";
-      createParticipantesCards(participants, emojis, communityElements);
+      createParticipantesCards(participants, emojis, communityElements, pageParticipants);
     }
   });
 })();
@@ -108,16 +107,12 @@ function pagePagination(participants, currentPage, perPage) {
     paginationPrevLi.style.display = "none";
   };
   
-  let firstParticipantIndex = currentPage * perPage -6;
+  let firstParticipantIndex = currentPage * perPage - perPage;
   let lastParticipantIndex = currentPage * perPage -1;
-  let pageParticipants = [];
   
   if (lastParticipantIndex >= participants.length) {
     lastParticipantIndex = participants.length -1;
   };
   
-  for (let i = firstParticipantIndex; i <= lastParticipantIndex; i++) {
-    pageParticipants.push(i);
-  }
-  return pageParticipants;
+return genIndexes(lastParticipantIndex+1, firstParticipantIndex);
 };
