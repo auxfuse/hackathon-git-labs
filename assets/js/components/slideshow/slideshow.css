@@ -1,0 +1,89 @@
+/*
+ * These styles are applied to the custom element if, for some reason, it is 
+ * undefined. If undefined, the slide-show fallback is a series of horizontally
+ * scrollable elements, using pure css (no JS).
+ */
+slide-show:not(:defined) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+slide-show:not(:defined) > * {
+    flex: 1 0 100%;
+    scroll-snap-stop: always;
+    scroll-snap-align: center;
+}
+slide-show:not(:defined) > *:first-of-type {
+    scroll-snap-align: end;
+}
+slide-show:not(:defined) > *:last-of-type {
+    scroll-snap-align: start;
+}
+/* Ensures any overriding controls aren't shown if present */
+slide-show:not(:defined) > [slot="next-slide-icon"],
+slide-show:not(:defined) > [slot="previous-slide-icon"] {
+    display: none;
+}
+
+/*
+ * Styles applied if the custom element is defined
+ */
+slide-show:defined {
+    display: block;
+}
+
+slide-show:defined > .active {
+    visibility: visible;
+    z-index: 2;
+}
+
+/*
+ * Animations
+ */
+
+@keyframes slide-fade {
+    from { opacity: 0.0; }
+    to { opacity: 1.0; }
+}
+
+slide-show:defined > .fade.out {
+    visibility: visible;
+    animation: slide-fade 1s reverse both;
+}
+
+slide-show:defined > .fade.in {
+    animation: slide-fade 1s 1s both;
+}
+
+slide-show:defined > .crossfade.out {
+    visibility: visible;
+    animation: slide-fade 1s reverse both;
+}
+
+slide-show:defined > .crossfade.in {
+    animation: slide-fade 1s both;
+}
+
+@keyframes slide-scroll {
+    from {
+        transform: translateX(var(--offset));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+slide-show:defined > .scroll.out {
+    --offset: calc( 100% * (0 - var(--dir,1)) );
+
+    visibility: visible;
+    animation: slide-scroll 0.5s reverse ease-in-out both;
+}
+
+slide-show:defined > .scroll.in {
+    --offset: calc( 100% * var(--dir,1) );
+    
+    animation: slide-scroll 0.5s ease-in-out both;
+}

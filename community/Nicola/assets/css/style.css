@@ -1,0 +1,174 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,800);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700);
+*{
+  box-sizing:border-box;
+}
+html, body{
+  width:100%;
+  height:100%;
+}
+body{
+  background: #eee;
+  font-weight: 300;
+  font-size: 1em;
+  font-family: 'Raleway';
+}
+
+.container, figure{
+  width:450px;
+  height: 270px;
+}
+
+.container{
+  position:absolute;
+  perspective:1000;
+  margin-top:-135px;
+  top:50%;
+}
+
+.card{
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+figure{
+  background: #012622;
+  color: #fff;
+  backface-visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+}
+
+figure.front{
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.fa-brands, .fab, .fas{
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+figure.back,
+.card.flipped{
+  transform: rotateY(180deg);
+}
+
+figure img{
+  background: url();
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+  display: block;
+  min-height: 50%;
+  opacity: 0.2;
+}
+
+figure .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  backface-visibility: hidden;
+}
+
+.front .caption{
+  font-size: 1.25em;
+}
+
+.front:hover .caption:before{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.front h2{
+  word-spacing: -0.15em;
+  font-weight: 300;
+  font-size: 1.6em;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  transition: transform 0.35s, color 0.35s;
+  transform: translate3d(0,-50%,0);
+}
+
+.front p {
+  letter-spacing: 2px;
+  font-size: 68.5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 7em;
+  width: 100%;
+  opacity: 0;
+  transform: translate3d(0,10px,0);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.front h2:after{
+  position: absolute;
+  bottom: -10px;
+  left: 70px;
+  right: 70px;
+  height: 2px;
+  background: #ffd000;
+  content: '';
+  transition: transform 0.35s;
+  transform: translate3d(-130%,0,0);
+}
+
+.front:hover h2 {
+  color: #ffd000;
+  -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+  transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+.front:hover h2:after {
+  transform: translate3d(0,0,0);
+}
+
+.front:hover p {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+.icons {
+  margin-top: 130px;
+}
+
+.fab:hover{
+  opacity: 0.5;
+}
+
+.fas:hover{
+  opacity: 0.5;
+}
+
+.fab, .fas {
+  font-size: 30px;
+  padding: 3px;
+  color: #fff;
+}
+
+@media (min-width: 450px) {
+  .container{
+    left: 50%;
+    margin-left:-225px;
+  }
+} 
