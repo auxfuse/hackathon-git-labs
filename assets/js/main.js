@@ -56,7 +56,7 @@ const generateCardFromTemplate = (participant, emojis, template) => {
  * @param {Array} indexes - (Optional) List of participant indexes to use. If not present all participants are created in order. Indexes are assumed to be valid.
  * @param {Boolean} pages - (Optional) If true the partipant will only be added if they have a custom page
  */
-const createParticipantesCards = (participants, emojis, elements, currentPage, perPage, indexes = null, pages = false) => {
+const createParticipantesCards = (participants, emojis, elements, indexes = null, pages = false) => {
   /* By using a document fragment lots of little DOM mutations
       can be cached into one big one for better performance. */
   const fragment = new DocumentFragment();
@@ -138,23 +138,21 @@ const createSkeletonLoaders = elements => {
 
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
-      createParticipantesCards(participants, emojis, showcaseElements, currentPage, perPage, indexes, true);
+      createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
     }
 
     if (communityElements.container && communityElements.template) {
       communityElements.count = participants.length;
-      createParticipantesCards(participants, emojis, communityElements, currentPage, perPage, indexes=pageParticipants);
+      createParticipantesCards(participants, emojis, communityElements, indexes=pageParticipants);
     }
-
   });
-
 })();
 
 // pagination
 
-const paginationEl = document.getElementById("pagination");
 
 function pagePagination(participants, currentPage, perPage) {
+  const paginationEl = document.getElementById("pagination");
   const totalPages = Math.ceil(participants.length / perPage);
 
   const paginationNextLi = document.createElement('li')
@@ -165,9 +163,9 @@ function pagePagination(participants, currentPage, perPage) {
   paginationEl.appendChild(paginationNextLi);
   paginationNextLi.append(paginationNextButton);
 
-if (currentPage === totalPages) {
-  paginationNextLi.style.display = "none";
-};
+  if (currentPage === totalPages) {
+    paginationNextLi.style.display = "none";
+  };
 
   for (let i = 0; i < totalPages; i++) {
     const paginationLi = document.createElement('li');
