@@ -108,7 +108,7 @@ import { wrapInRange } from '../../modules/utilities.js';
             this._prevBtn.addEventListener('click', () => this.slide--);
             this._nextBtn.addEventListener('click', () => this.slide++);
             this._indicators.addEventListener('click', e => {
-                if (e.target.dataset.slide !== undefined) {
+                if ('slide' in e.target.dataset) {
                     this.slide = e.target.dataset.slide;
                 }
             });

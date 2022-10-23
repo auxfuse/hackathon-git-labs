@@ -398,6 +398,7 @@ h6 {
 .participant-link:not([href]) {
     opacity: 0.5;
     cursor: default;
+    pointer-events: none;
 }
 
 .participant-link[href]::before {
