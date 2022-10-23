@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <!-- Custom JS Files -->
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js" type="module"></script>
+    <!-- Custom Elements -->
+    <link rel="stylesheet" href="assets/js/components/slideshow/slideshow.css">
+    <script src="assets/js/components/slideshow/slideshow.js" type="module"></script>
 
     <title>Git Community - 🟠CI🟠</title>
 </head>
@@ -38,67 +41,64 @@
         <h1 class="primary-heading center-txt">Showcases</h1>
 
         <div id="showcases">
-
-            <!-- Showcase card template -->
+            <div id="showcases-slide-title"></div>
+            <!-- Custom slideshow element -->
+            <slide-show 
+                id="showcases-slideshow" 
+                timeout="15" 
+                animation="scroll"
+                slide="0">
+            </slide-show>
+            
+            <!-- Slideshow slide template -->
             <template class="item-template">
-                <div class="card">
-                    <h2 class="card-title">
-                        <span data-field="random_emoji"></span> 
-                        <span data-field="name">_</span>
-                    </h2>
-                    <h3 class="card-sub margin-yt-sm">
-                        📅 Started: <span data-field="course_start"></span>
-                    </h3>
-                    <h3 class="card-sub margin-yb-sm custom-underline">
-                        🎓 Stage: <span data-field="course_stage"></span>
-                    </h3>
-                    <h3 class="card-detail">
-                        Loves: <span data-field="favorite_language"></span> 😍 
-                    </h3>
-                    <h3 class="card-detail custom-underline">
-                        Learning: <span data-field="currently_learning"></span> 📚 
-                    </h3>
-                    <a class="participant-link" href="" data-content="View Work ➡" data-field="link">
-                        View Work ➡
+                <div class="slideshow-slide">
+                    <iframe src="" tabindex = "-1" frameborder="0" loading="lazy"
+                        class="slideshow-contents" data-field="preview"></iframe>
+                    <a class="slideshow-link" href="" data-field="link">
+                        <div class="slide-title">
+                            <h2 class="card-title">
+                                <span data-field="random_emoji"></span>
+                                <span data-field="name">_</span>
+                            </h2>
+                        </div>
+                        <span class="slideshow-link-text">View Work ➡</span>
                     </a>
                 </div>
             </template>
-
         </div>
+
     </section>
 
     <section id="community-section" class="margin-y-md">
-        <h1 class="primary-heading center-txt">Meet the Community</h1>
-
+        <h1 class="primary-heading center-txt">Meet the Community</h1> 
         <!-- Container to hold participant cards from JSON file -->
         <div id="community">
-
-            <!-- Community card template -->
-            <template class="item-template">
-                <div class="card">
-                    <h2 class="card-title">
-                        <span data-field="random_emoji"></span>
-                        <span data-field="name">_</span>
-                    </h2>
-                    <h3 class="card-sub margin-yt-sm">
-                        📅 Started: <span data-field="course_start"></span>
-                    </h3>
-                    <h3 class="card-sub margin-yb-sm custom-underline">
-                        🎓 Stage: <span data-field="course_stage"></span>
-                    </h3>
-                    <h3 class="card-detail">
-                        Loves: <span data-field="favorite_language"></span> 😍 
-                    </h3>
-                    <h3 class="card-detail custom-underline">
-                        Learning: <span data-field="currently_learning"></span> 📚 
-                    </h3>
-                    <a class="participant-link" href="" data-content="View Work ➡" data-field="link">
-                        View Work ➡
-                    </a>
-                </div>
-            </template>
-
         </div>
+        <!-- Community card template -->
+        <template class="item-template">
+        <div class="card">
+            <h2 class="card-title">
+                <span data-field="random_emoji"></span>
+                <span data-field="name">_</span>
+            </h2>
+            <h3 class="card-sub margin-yt-sm">
+                📅 Started: <span data-field="course_start"></span>
+            </h3>
+            <h3 class="card-sub margin-yb-sm custom-underline">
+                🎓 Stage: <span data-field="course_stage"></span>
+            </h3>
+            <h3 class="card-detail">
+                Loves: <span data-field="favorite_language"></span> 😍 
+            </h3>
+            <h3 class="card-detail custom-underline">
+                Learning: <span data-field="currently_learning"></span> 📚 
+            </h3>
+            <a class="participant-link" href="" data-content="View Work ➡" data-field="link">
+                View Work ➡
+            </a>
+        </div>
+    </template>
     </section>
 
     <ul id="pagination"></ul>

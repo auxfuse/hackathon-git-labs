@@ -2,7 +2,7 @@ notes.txt
 
 # ide/editor default files/directories
 .vscode
-.DS_Store
+.DS_Store*
 .idea/
 
 # dependencies
@@ -20,3 +20,6 @@ __pycache__/
 # local env files
 .env
 env.py
+
+# local workflow related files
+.github/

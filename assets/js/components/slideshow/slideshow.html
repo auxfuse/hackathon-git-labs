@@ -1,0 +1,109 @@
+
+<style>
+    #slide-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    #slide-controls {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .slide-btn {
+        flex: 0 0 50px;
+        align-self: stretch;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        pointer-events: all;
+        opacity: 0.25;
+        transition: opacity 0.5s;
+    }
+    #prev { left: 0; }
+    #next { right: 0; }
+    .slide-btn:hover {
+        opacity: 0.75;
+    }
+
+    #slide-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        flex: 1 1 100%;
+        align-self: flex-end;
+        list-style: none;
+        padding: 0 0 10px 0;
+    }
+
+    #slide-indicators > * {
+        flex: 0 1 auto;
+        width: 20px;
+        height: 5px;
+        background: var(--fill-color, #FFF);
+        border: 2px solid var(--stroke-color, #000);
+        opacity: 0.25;
+        transition: all 0.5s;
+    }
+
+    #slide-indicators > *.active {
+        width: 30px;
+        opacity: 0.75;
+    }
+
+    .control-icon {
+        fill: var(--fill-color, #FFF);
+        stroke: var(--stroke-color, #000);
+    }
+
+    #slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #slides::slotted(*) {
+        visibility: hidden;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+</style>
+
+<div id="slide-container">
+
+    <slot id="slides"></slot>
+
+    <div id="slide-controls" part="slide-controls">
+        <button id="prev" part="previous-btn" class="slide-btn">
+            <slot name="previous-slide-icon">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
+                    <path class="control-icon" d="m6.2851 1.0156 1.4142 1.4142-2.5702 2.5702 2.5702 2.5702-1.4142 1.4142-3.9844-3.9844z"/>
+                </svg>
+            </slot>
+        </button>
+
+        <ul id="slide-indicators" part="slide-indicator-list"></ul>
+
+        <button id="next" part="next-btn" class="slide-btn">
+            <slot name="next-slide-icon">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'>
+                    <path class="control-icon" d="m2.3007 2.4298 1.4142-1.4142 3.9844 3.9844-3.9844 3.9844-1.4142-1.4142 2.5702-2.5702z"/>
+                </svg>
+            </slot>
+        </button>
+    </div>
+
+</div>
