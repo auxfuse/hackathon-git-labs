@@ -56,7 +56,7 @@ const generateCardFromTemplate = (participant, emojis, template) => {
  * @param {Array} indexes - (Optional) List of participant indexes to use. If not present all participants are created in order. Indexes are assumed to be valid.
  * @param {Boolean} pages - (Optional) If true the partipant will only be added if they have a custom page
  */
-const createParticipantesCards = (participants, emojis, elements, indexes = null, pages = false) => {
+const createParticipantesCards = (participants, emojis, elements, currentPage, perPage, indexes = null, pages = false) => {
   /* By using a document fragment lots of little DOM mutations
       can be cached into one big one for better performance. */
   const fragment = new DocumentFragment();
@@ -131,15 +131,19 @@ const createSkeletonLoaders = elements => {
   ]).then((values) => {
     // When all data has loaded:
     const [participants, emojis] = values;
+    const perPage = 6;
+    let currentPage = Number(new URLSearchParams(window.location.search).get("page"));
+
+    let pageParticipants = pagePagination(participants, currentPage, perPage);
 
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
-      createParticipantesCards(participants, emojis, showcaseElements, indexes, true);
+      createParticipantesCards(participants, emojis, showcaseElements, currentPage, perPage, indexes, true);
     }
 
     if (communityElements.container && communityElements.template) {
       communityElements.count = participants.length;
-      createParticipantesCards(participants, emojis, communityElements);
+      createParticipantesCards(participants, emojis, communityElements, currentPage, perPage, indexes=pageParticipants);
     }
 
   });
@@ -149,11 +153,22 @@ const createSkeletonLoaders = elements => {
 // pagination
 
 const paginationEl = document.getElementById("pagination");
-const perPage = 6;
 
-function pagePagination(participants) {
+function pagePagination(participants, currentPage, perPage) {
   const totalPages = Math.ceil(participants.length / perPage);
+
+  const paginationNextLi = document.createElement('li')
+  const paginationNextButton = document.createElement('a');
   
+  paginationNextButton.textContent = "Next";
+  paginationNextButton.href = `?page=${currentPage + 1}`;
+  paginationEl.appendChild(paginationNextLi);
+  paginationNextLi.append(paginationNextButton);
+
+if (currentPage === totalPages) {
+  paginationNextLi.style.display = "none";
+};
+
   for (let i = 0; i < totalPages; i++) {
     const paginationLi = document.createElement('li');
     const paginationLink = document.createElement('a');
@@ -162,14 +177,34 @@ function pagePagination(participants) {
     paginationLink.href = `?page=${i+1}`;
     paginationEl.appendChild(paginationLi);
     paginationLi.append(paginationLink);
-    
-    console.log(paginationLink.href);
-    
-    const currentPage = window.location.pathname;
-    console.log(`${currentPage} - current page`);
+
+    if (currentPage == i + 1) {
+      paginationLink.classList.add("pagination-active");
+    };
   }
+
+  const paginationPrevLi = document.createElement('li')
+  const paginationPrevButton = document.createElement('a');
   
+  paginationPrevButton.textContent = "Previous";
+  paginationPrevButton.href = `?page=${currentPage - 1}`;
+  paginationEl.appendChild(paginationPrevLi);
+  paginationPrevLi.append(paginationPrevButton);
+
+  if (currentPage === 1) {
+    paginationPrevLi.style.display = "none";
+  };
   
-  console.log(Math.ceil(participants.length / perPage));
-  console.log(participants);
-}
+  let firstParticipantIndex = currentPage * perPage -6;
+  let lastParticipantIndex = currentPage * perPage -1;
+  let pageParticipants = [];
+  
+  if (lastParticipantIndex >= participants.length) {
+    lastParticipantIndex = participants.length -1;
+  };
+  
+  for (let i = firstParticipantIndex; i <= lastParticipantIndex; i++) {
+    pageParticipants.push(i);
+  }
+  return pageParticipants;
+};
