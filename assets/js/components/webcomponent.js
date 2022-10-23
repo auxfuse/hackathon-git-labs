@@ -25,6 +25,9 @@ export class WebComponent extends HTMLElement {
         throw new Error('Component has no defined tag name! Have you provided a static get tagName method?');
     }
 
+    /**
+     * API Use
+     */
     static get observedAttributes() {
         if (!this.attributes) return [];
         return Object.keys(this.attributes);
@@ -34,18 +37,18 @@ export class WebComponent extends HTMLElement {
     constructor() {
         super();
         // If this component has custom attributes
-        if (this.constructor.attributes) {
-            for (const [key, value] of Object.entries(this.constructor.attributes)) {
+        if (this.attributes) {
+            for (const [key, value] of Object.entries(this.attributes)) {
                 const propName = `_${key}`;
                 // Create a property and set it to the default value
                 this[propName] = value.default;
-                // If getters and setters don't already exist add them
+    
+                // If getters and setters don't already exist, add them
                 if (!(key in this)) {
-                    console.log(key);
                     Object.defineProperty(this, key, {
                         get() { return this[propName]; },
                         set(val) {
-                            this[propName] = val;
+                            this[propName] = this.attributes[key].type(val);
                             this.setAttribute(key, val);
                         }
                     });
@@ -63,7 +66,7 @@ export class WebComponent extends HTMLElement {
      */
     _createShadow(properties) {
         const shadow = this.attachShadow(properties);
-        shadow.append(this.constructor.template.content.cloneNode(true));
+        shadow.append(this.template.content.cloneNode(true));
         return shadow;
     }
 
@@ -72,10 +75,18 @@ export class WebComponent extends HTMLElement {
      */
     get template() { return this.constructor.template; }
 
+    /**
+     * Provides this WebComponent's observed attributes
+     */
+    get attributes() { return this.constructor.attributes; }
+
+    /**
+     * API use
+     */
     attributeChangedCallback(property, oldValue, newValue) {
         if (oldValue === newValue) return;
         // Attributes are always strings, so decode it to the correct datatype
-        const val = this.constructor.attributes[property].type(newValue);
+        const val = this.attributes[property].type(newValue);
         if (this[property] != val) this[property] = val;
     }
 };
@@ -114,7 +125,7 @@ export const createTemplate = (html, styles = null) => {
         styleEl.innerText = styles;
         templateEl.append(styleEl);
     }
-    templateEl.append(html);
+    templateEl.innerHTML = html;
 
     return templateEl;
 };
