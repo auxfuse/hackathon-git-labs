@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+#scene {
+    width: 100vw;
+    max-height: 100vh;
+    aspect-ratio: 1/1;
+}
+#base {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: radial-gradient(#ffffff66 0%, 35%, #ffffff00 50%);
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transform: rotateX(75deg);
+}
