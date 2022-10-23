@@ -107,6 +107,11 @@ import { wrapInRange } from '../../modules/utilities.js';
             // Setup slideshow control events
             this._prevBtn.addEventListener('click', () => this.slide--);
             this._nextBtn.addEventListener('click', () => this.slide++);
+            this._indicators.addEventListener('click', e => {
+                if (e.target.dataset.slide !== undefined) {
+                    this.slide = e.target.dataset.slide;
+                }
+            });
 
             // Start slide change timer
             if (this._timeout) this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
@@ -115,11 +120,17 @@ import { wrapInRange } from '../../modules/utilities.js';
         _createSlideIndicators() {
             if (this.slideCount) {
                 const count = this.slideCount;
-                const indicator = document.createElement('li');
-                indicator.setAttribute('part', 'slide-indicator');
+                const template = document.createElement('li');
+                template.setAttribute('part', 'slide-indicator');
+                template.setAttribute('role', 'button');
 
                 this._indicators.innerHTML = '';
-                for (let i = 0; i < count; i++) this._indicators.append(indicator.cloneNode(false));
+                for (let i = 0; i < count; i++) {
+                    const indicator = template.cloneNode(false);
+                    indicator.dataset.slide = i;
+                    this._indicators.append(indicator);
+                }
+
                 this._indicators.childNodes[this._slide].classList.add('active');
             }
         }
