@@ -3,29 +3,29 @@
     padding: 0;
     margin: 0;
 }
-body, html {
+
+body,
+html {
     width: 100vw;
     height: 100vh;
+    background-color: transparent;
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: black;
     transform-style: preserve-3d;
     perspective: 1000px;
 }
-#scene {
-    width: 100vw;
-    max-height: 100vh;
-    aspect-ratio: 1/1;
+
+css3d-cuboid {
+    width: 200px;
+    height: 200px;
+    animation: rotate 10s linear infinite;
+    background: green;
 }
-#base {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background: radial-gradient(#ffffff66 0%, 35%, #ffffff00 50%);
-    transform-style: preserve-3d;
-    transform-origin: center center;
-    transform: rotateX(75deg);
+
+@keyframes rotate {
+    from { transform: rotate3d(0); }
+    to { transform: rotate3d(1,1,0, 360deg);}
 }
