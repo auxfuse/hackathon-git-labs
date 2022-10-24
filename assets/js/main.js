@@ -1,4 +1,4 @@
-import { genIndexes, shuffle } from './modules/utilities.js';
+import { genIndexes, shuffle, clamp } from './modules/utilities.js';
 import { createParticipantesCards, createSkeletonLoaders } from './modules/cards.js';
 
 
@@ -69,6 +69,8 @@ function pagePagination(participants, currentPage, perPage) {
   const paginationEl = document.getElementById("pagination");
   const totalPages = Math.ceil(participants.length / perPage);
 
+  currentPage = clamp(currentPage, 1, totalPages)
+
   const paginationNextLi = document.createElement('li')
   const paginationNextButton = document.createElement('a');
   
@@ -77,9 +79,7 @@ function pagePagination(participants, currentPage, perPage) {
   paginationEl.appendChild(paginationNextLi);
   paginationNextLi.append(paginationNextButton);
 
-  if(!currentPage) {
-    window.location.href = '?page=1';
-  }
+  paginationNextLi.classList.add('next-button');
 
   if (currentPage === totalPages) {
     paginationNextLi.style.display = "none";
@@ -97,7 +97,9 @@ function pagePagination(participants, currentPage, perPage) {
     if (currentPage == i + 1) {
       paginationLink.classList.add("pagination-active");
     };
+    paginationLi.classList.add('pagination-numbers');
   }
+
 
   const paginationPrevLi = document.createElement('li')
   const paginationPrevButton = document.createElement('a');
@@ -106,6 +108,8 @@ function pagePagination(participants, currentPage, perPage) {
   paginationPrevButton.href = `?page=${currentPage - 1}`;
   paginationEl.appendChild(paginationPrevLi);
   paginationPrevLi.append(paginationPrevButton);
+
+  paginationPrevLi.classList.add('prev-button');
 
   if (currentPage === 1) {
     paginationPrevLi.style.display = "none";
