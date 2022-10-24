@@ -44,6 +44,10 @@ document.getElementById('showcases-slideshow')
   ]).then((values) => {
     // When all data has loaded:
     const [participants, emojis] = values;
+    const perPage = 6;
+    let currentPage = Number(new URLSearchParams(window.location.search).get("page"));
+
+    let pageParticipants = pagePagination(participants, currentPage, perPage);
 
     if (showcaseElements.container && showcaseElements.template) {
       const indexes = shuffle(genIndexes(participants.length));
@@ -54,9 +58,61 @@ document.getElementById('showcases-slideshow')
       // Alter count to show all cards
       communityElements.count = participants.length;
       communityElements.container.innerHTML = "";
-      createParticipantesCards(participants, emojis, communityElements);
+      createParticipantesCards(participants, emojis, communityElements, pageParticipants);
     }
-
   });
-
 })();
+
+// pagination
+
+function pagePagination(participants, currentPage, perPage) {
+  const paginationEl = document.getElementById("pagination");
+  const totalPages = Math.ceil(participants.length / perPage);
+
+  const paginationNextLi = document.createElement('li')
+  const paginationNextButton = document.createElement('a');
+  
+  paginationNextButton.textContent = "Next";
+  paginationNextButton.href = `?page=${currentPage + 1}`;
+  paginationEl.appendChild(paginationNextLi);
+  paginationNextLi.append(paginationNextButton);
+
+  if (currentPage === totalPages) {
+    paginationNextLi.style.display = "none";
+  };
+
+  for (let i = 0; i < totalPages; i++) {
+    const paginationLi = document.createElement('li');
+    const paginationLink = document.createElement('a');
+    
+    paginationLink.textContent = i + 1;
+    paginationLink.href = `?page=${i+1}`;
+    paginationEl.appendChild(paginationLi);
+    paginationLi.append(paginationLink);
+
+    if (currentPage == i + 1) {
+      paginationLink.classList.add("pagination-active");
+    };
+  }
+
+  const paginationPrevLi = document.createElement('li')
+  const paginationPrevButton = document.createElement('a');
+  
+  paginationPrevButton.textContent = "Previous";
+  paginationPrevButton.href = `?page=${currentPage - 1}`;
+  paginationEl.appendChild(paginationPrevLi);
+  paginationPrevLi.append(paginationPrevButton);
+
+  if (currentPage === 1) {
+    paginationPrevLi.style.display = "none";
+  };
+  
+  let firstParticipantIndex = currentPage * perPage - perPage;
+  let lastParticipantIndex = currentPage * perPage -1;
+  
+  if (lastParticipantIndex >= participants.length) {
+    lastParticipantIndex = participants.length -1;
+  };
+  
+return genIndexes(lastParticipantIndex+1, firstParticipantIndex);
+};
