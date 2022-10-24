@@ -121,9 +121,7 @@ export const createTemplate = (html, styles = null) => {
     const templateEl = document.createElement('template');
     
     if (styles) {
-        const styleEl = document.createElement('style');
-        styleEl.innerText = styles;
-        templateEl.append(styleEl);
+        html = `<style>${styles}</style>${html}`;
     }
     templateEl.innerHTML = html;
 
