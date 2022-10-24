@@ -77,6 +77,10 @@ function pagePagination(participants, currentPage, perPage) {
   paginationEl.appendChild(paginationNextLi);
   paginationNextLi.append(paginationNextButton);
 
+  if(!currentPage) {
+    window.location.href = '?page=1';
+  }
+
   if (currentPage === totalPages) {
     paginationNextLi.style.display = "none";
   };
