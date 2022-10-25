@@ -1,5 +1,6 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
 
+:root {
     --primary-color: rgb(19, 17, 28);
     --plastic: rgb(168, 205, 238, .6);
     --plastic-lighter: rgba(204, 231, 242);
@@ -18,10 +19,41 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     background-color: var(--primary-color);
+    color: var(--plastic-lighter);
+    font-family: 'Dosis', sans-serif;
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 10px;
+    color: var(--plastic-lighter);
+    background-color: var(--primary-color);
+    text-align: center;
+    letter-spacing: 1em; 
+}
+
+h1 {
+    padding: 0 60px;
+}
+
+i {
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    font-size: 2em;
+}
+
+#off {
+    display: none;
 }
 
 .animate {
@@ -69,7 +101,7 @@ main {
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 15px;
     width: fit-content;
-    margin: 50px auto;
+    margin-top: 150px;
     padding: 30px;
     border-radius: 50px;
     background-color: var(--plastic);
@@ -146,6 +178,11 @@ main {
     .animate {
         width: 250px;
     }
+
+    .main {
+        margin-top: 50px;
+    }
+
     .bubble {
         width: 100px;
     }
