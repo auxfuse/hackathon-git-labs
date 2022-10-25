@@ -12,6 +12,7 @@ export const genIndexes = (max, min = 0) => new Array(max - min).fill(0).map((_,
 /** Returns a random emoji from the emoji array passed */
 export const getRandomEmoji = emojis => emojis[Math.floor(Math.random() * emojis.length)];
 
+export const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 /**
  * In place shuffles array into a random order

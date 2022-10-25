@@ -737,3 +737,26 @@ select,
         margin-right: 7rem;
     }
 }
+
+/* pagination */
+
+#pagination {
+    list-style: none;
+    font-weight: bolder;
+}
+
+#pagination a {
+    text-decoration: none;
+}
+
+.pagination-active {
+    background-color: #94EBF1;
+    font-size: x-large;
+}
+
+.next-button:hover,
+.prev-button:hover,
+.pagination-numbers:hover {
+    background-color: #94EBF1;
+    width: fit-content;
+}
