@@ -20,10 +20,12 @@ import { wrapInRange } from '../../modules/utilities.js';
             super();
             this._createShadow({mode: 'open'});
             // Elements
-            this._slides = null;
-            this._nextBtn = null;
-            this._prevBtn = null;
-            this._indicators = null;
+            this._slides = this.shadowRoot.getElementById('slides');
+            this._prevBtn = this.shadowRoot.getElementById('prev');
+            this._nextBtn = this.shadowRoot.getElementById('next');
+            this._indicators = this.shadowRoot.getElementById("slide-indicators");
+            // Build indicators
+            this._createSlideIndicators();
 
             // State
             this._animating = 0;
@@ -35,16 +37,13 @@ import { wrapInRange } from '../../modules/utilities.js';
 
         get slides() { return this._slides.assignedElements(); }
 
-        get slideCount() {
-            if (!this._slides) return 0;
-            return this._slides.assignedElements().length;
-        }
+        get slideCount() { return this._slides.assignedElements().length; }
 
         get timeout() { return this._timeout; }
         set timeout(val) {
             this._timeout = val;
             this.setAttribute('timeout', this.timeout);
-            
+
             clearTimeout(this._timer);
             if (this._timeout) this._timer = setTimeout(this._slideTimer, this._timeout * 1000); 
         }
@@ -63,10 +62,8 @@ import { wrapInRange } from '../../modules/utilities.js';
                 this.slides[lastSlide].classList.remove('active');
                 this.slides[this._slide].classList.add('active');
                 // Update indicators
-                if (this._indicators) {
-                    this._indicators.childNodes[lastSlide].classList.remove('active');
-                    this._indicators.childNodes[this._slide].classList.add('active');
-                }
+                this._indicators.childNodes[lastSlide].classList.remove('active');
+                this._indicators.childNodes[this._slide].classList.add('active');
 
                 // Should the slide transition be animated?
                 if (this._animation !== 'none' && lastSlide !== this._slide) {
@@ -82,15 +79,6 @@ import { wrapInRange } from '../../modules/utilities.js';
         }
 
         connectedCallback() {
-            // Grab component interactive elements from the shadow dom
-            this._slides = this.shadowRoot.getElementById('slides');
-            this._prevBtn = this.shadowRoot.getElementById('prev');
-            this._nextBtn = this.shadowRoot.getElementById('next');
-            this._indicators = this.shadowRoot.getElementById("slide-indicators");
-
-            // Build indicators
-            this._createSlideIndicators();
-
             // Attempt to show initial slide
             this.slide = this.slide;
 
@@ -119,6 +107,11 @@ import { wrapInRange } from '../../modules/utilities.js';
             // Setup slideshow control events
             this._prevBtn.addEventListener('click', () => this.slide--);
             this._nextBtn.addEventListener('click', () => this.slide++);
+            this._indicators.addEventListener('click', e => {
+                if ('slide' in e.target.dataset) {
+                    this.slide = e.target.dataset.slide;
+                }
+            });
 
             // Start slide change timer
             if (this._timeout) this._timer = setTimeout(this._slideTimer, this._timeout * 1000);
@@ -127,11 +120,17 @@ import { wrapInRange } from '../../modules/utilities.js';
         _createSlideIndicators() {
             if (this.slideCount) {
                 const count = this.slideCount;
-                const indicator = document.createElement('li');
-                indicator.setAttribute('part', 'slide-indicator');
+                const template = document.createElement('li');
+                template.setAttribute('part', 'slide-indicator');
+                template.setAttribute('role', 'button');
 
                 this._indicators.innerHTML = '';
-                for (let i = 0; i < count; i++) this._indicators.append(indicator.cloneNode(false));
+                for (let i = 0; i < count; i++) {
+                    const indicator = template.cloneNode(false);
+                    indicator.dataset.slide = i;
+                    this._indicators.append(indicator);
+                }
+
                 this._indicators.childNodes[this._slide].classList.add('active');
             }
         }

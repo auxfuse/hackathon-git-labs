@@ -395,7 +395,13 @@ h6 {
     z-index: 2;
 }
 
-.participant-link::before {
+.participant-link:not([href]) {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.participant-link[href]::before {
     position: absolute;
     content: attr(data-content);
     color: var(--secondary-color);
@@ -404,7 +410,7 @@ h6 {
     transition: all 275ms ease-in-out;
 }
 
-.participant-link:hover::before {
+.participant-link[href]:hover::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 

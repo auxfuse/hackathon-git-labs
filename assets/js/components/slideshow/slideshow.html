@@ -51,8 +51,14 @@
         height: 5px;
         background: var(--fill-color, #FFF);
         border: 2px solid var(--stroke-color, #000);
+        pointer-events: all;
+        cursor: pointer;
         opacity: 0.25;
         transition: all 0.5s;
+    }
+
+    #slide-indicators > *:hover {
+        opacity: 0.75;
     }
 
     #slide-indicators > *.active {
