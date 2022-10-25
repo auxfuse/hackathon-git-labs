@@ -1,7 +1,8 @@
-import { createComponent, createTemplate, WebComponent } from '../../../../../../assets/js/components/webcomponent.js';
+
+import { createComponent, createTemplate, WebComponent } from '../../externals.js';
 
 (() => {
-    const genFace = id => `<div id=${id} class="face" part=${id}><slot name=${id}></slot></div>`;
+    const genFace = id => `<div id=${id} class="face"><slot name=${id}></slot></div>`;
 
     const styles = `
         :host {
@@ -21,8 +22,7 @@ import { createComponent, createTemplate, WebComponent } from '../../../../../..
         }
         .face {
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: 50%; top: 50%;
         }
         #front, #back { 
             width: var(--width);
