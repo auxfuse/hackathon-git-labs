@@ -1,0 +1,121 @@
+:root {
+
+    --primary-color: rgb(19, 17, 28);
+    --plastic: rgb(168, 205, 238, .6);
+    --plastic-lighter: rgba(204, 231, 242);
+    --plastic-darker: rgba(49, 96, 114, 0.471);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.animate {
+    position: absolute;
+    top: -5%;
+    width: 500px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    --color: rgb(221, 221, 110);
+    background-color: var(--color);
+    transform: translate(-50%, 30%);
+    animation: left_movement 5s linear 1s infinite alternate;
+}
+
+.animate:nth-child(2) {
+    --color: rgb(181, 63, 165);
+    top: 50%;
+    right: 10%;
+    animation: right_movement 6s linear 1s infinite alternate;
+}
+
+@keyframes left_movement {
+    from {
+        transform: translate(-50%, 30%);
+    }
+
+    to {
+        transform: translate(-60%, 20%);     
+    }
+}
+
+@keyframes right_movement {
+    from {
+        transform: translate(-30%, 40%);
+    }
+
+    to {
+        transform: translate(10%, 20%);     
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 50px;
+    background-color: var(--plastic);
+    backdrop-filter: blur(1px);
+}
+
+.bubble {
+    position: relative;
+    width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--plastic);
+    border: 1px solid var(--plastic-lighter);
+    isolation: isolate;
+    opacity: 1;
+    box-shadow: 20px 5px 10px var(--plastic-darker), 
+    inset -5px -15px 80px var(--plastic-lighter), 
+    inset 20px 20px 20px var(--plastic-darker);
+}
+
+.bubble::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: var(--plastic-lighter);
+    opacity: .15;
+}
+
+.bubble.popped {
+    opacity: .6;
+    box-shadow: -3px -3px 6px var(--plastic-lighter),
+    inset -15px -15px 20px var(--plastic-lighter), 
+    inset 5px 5px 30px var(--plastic-darker);
+}
+
+.bubble.popped::after {
+    top: 15%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--plastic-darker);
+    opacity: 1;
+    filter: blur(12px);
+}
