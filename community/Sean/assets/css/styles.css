@@ -45,7 +45,7 @@ body {
     color: white;
     aspect-ratio: 1/1;
     text-shadow: 1px 1px 5px black;
-    background: radial-gradient(circle, lightblue 0%, 55%, transparent 75%); 
+    background: radial-gradient(circle, lightblue 0%, transparent 75%); 
 }
 
 #cube-wrapper {
@@ -82,6 +82,7 @@ css3d-cuboid > div {
 }
 
 css3d-cuboid::part(face) {
+    outline: 1px solid #143A4480;
     transform-style: preserve-3d;
-    background: #00d5ffaa radial-gradient(circle, #00000000 0%, #000000AA 100%);
+    background: #00d5ffaa radial-gradient(circle, #00000000 0%, #000000AA 90%);
 }
