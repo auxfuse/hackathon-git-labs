@@ -82,8 +82,6 @@ css3d-cuboid > div {
 }
 
 css3d-cuboid::part(face) {
-    outline: 1px solid #006280EE;
     transform-style: preserve-3d;
-
-    background: #00d5ffaa radial-gradient(circle, #00000000 0%, #00000088 100%);
+    background: #00d5ffaa radial-gradient(circle, #00000000 0%, #000000AA 100%);
 }
