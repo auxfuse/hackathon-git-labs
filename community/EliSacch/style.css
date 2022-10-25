@@ -20,6 +20,7 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
     background-color: var(--primary-color);
 }
 
@@ -68,6 +69,7 @@ main {
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 15px;
     width: fit-content;
+    margin: 50px auto;
     padding: 30px;
     border-radius: 50px;
     background-color: var(--plastic);
@@ -76,7 +78,7 @@ main {
 
 .bubble {
     position: relative;
-    width: 300px;
+    width: 180px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--plastic);
@@ -94,7 +96,7 @@ main {
     top: 50%;
     left: 50%;
     width: 60px;
-    height: 60px;
+    aspect-ratio: 1/1;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -112,10 +114,49 @@ main {
 .bubble.popped::after {
     top: 15%;
     left: 15%;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--plastic-darker);
     opacity: 1;
     filter: blur(12px);
+}
+
+@media screen and (max-width: 930px) {
+
+    .animate {
+        width: 400px;
+    }
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .bubble {
+        width: 150px;
+    }
+
+    .bubble.popped::after {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .animate {
+        width: 250px;
+    }
+    .bubble {
+        width: 100px;
+    }
+
+    .bubble::after {
+        width: 30px;
+    }
+
+    .bubble.popped::after {
+        top: 20%;
+        left: 20%;
+        width: 40px;
+    }
 }
