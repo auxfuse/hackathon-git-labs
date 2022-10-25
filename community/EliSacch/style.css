@@ -154,6 +154,26 @@ main {
     filter: blur(12px);
 }
 
+.reset {
+    z-index: 10;
+    margin: 30px;
+    padding: .3em .5em;
+    font-size: 2em;
+    letter-spacing: .2em;
+    text-align: center;
+    color: inherit;
+    background-color: var(--plastic-darker);
+    border: 2px solid var(--plastic-lighter);
+}
+
+.reset:hover,
+.reset:focus {
+    background-color: var(--primary-color);
+    opacity: .8;
+}
+
+/* Media queries */
+
 @media screen and (max-width: 930px) {
 
     .animate {
