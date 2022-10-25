@@ -4,12 +4,12 @@ import { createComponent, createTemplate, WebComponent } from '../../externals.j
 (() => {
 
     const faces = [
-        {label: 'front', width: '--width', height: '--height', transform: 'rotateY(0deg) translateZ(var(--offsetZ))'},
-        {label: 'back', width: '--width', height: '--height', transform: 'rotateY(180deg) translateZ(var(--offsetZ))'},
-        {label: 'left', width: '--depth', height: '--height', transform: 'rotateY(-90deg) translateZ(var(--offsetX))'},
-        {label: 'right', width: '--depth', height: '--height', transform: 'rotateY(90deg) translateZ(var(--offsetX))'},
-        {label: 'top', width: '--width', height: '--depth', transform: 'rotateX(90deg) translateZ(var(--offsetY))'},
-        {label: 'bottom', width: '--width', height: '--depth', transform: 'rotateX(-90deg) translateZ(var(--offsetY))'}
+        {label: 'front', width: '--width', height: '--height', transform: 'rotateY(0deg) translateZ(calc(var(--depth) / 2))'},
+        {label: 'back', width: '--width', height: '--height', transform: 'rotateY(180deg) translateZ(calc(var(--depth) / 2))'},
+        {label: 'left', width: '--depth', height: '--height', transform: 'rotateY(-90deg) translateZ(calc(var(--width) / 2))'},
+        {label: 'right', width: '--depth', height: '--height', transform: 'rotateY(90deg) translateZ(calc(var(--width) / 2))'},
+        {label: 'top', width: '--width', height: '--depth', transform: 'rotateX(90deg) translateZ(calc(var(--height) / 2))'},
+        {label: 'bottom', width: '--width', height: '--depth', transform: 'rotateX(-90deg) translateZ(calc(var(--height) / 2))'}
     ];
 
     const styles = `
@@ -17,10 +17,6 @@ import { createComponent, createTemplate, WebComponent } from '../../externals.j
             transform-style: preserve-3d;
             width: var(--width);
             height: var(--height);
-
-            --offsetX: calc(var(--width) / 2);
-            --offsetY: calc(var(--height) / 2);
-            --offsetZ: calc(var(--depth) / 2);
         }
         #faces {
             width: 100%;
