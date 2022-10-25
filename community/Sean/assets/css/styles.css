@@ -35,5 +35,7 @@ css3d-cuboid > span {
     justify-content: center;
     align-items: center;
 
-    background-color: #FF000066;
+    outline: 1px solid #800000EE;
+
+    background: #FF0000AA radial-gradient(circle, #00000000 0%, #00000088 100%);
 }
