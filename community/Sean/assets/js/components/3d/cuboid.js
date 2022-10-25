@@ -2,7 +2,15 @@
 import { createComponent, createTemplate, WebComponent } from '../../externals.js';
 
 (() => {
-    const genFace = id => `<div id=${id} class="face"><slot name=${id}></slot></div>`;
+
+    const faces = [
+        {label: 'front', width: '--width', height: '--height', transform: 'rotateY(0deg) translateZ(var(--offsetZ))'},
+        {label: 'back', width: '--width', height: '--height', transform: 'rotateY(180deg) translateZ(var(--offsetZ))'},
+        {label: 'left', width: '--depth', height: '--height', transform: 'rotateY(-90deg) translateZ(var(--offsetX))'},
+        {label: 'right', width: '--depth', height: '--height', transform: 'rotateY(90deg) translateZ(var(--offsetX))'},
+        {label: 'top', width: '--width', height: '--depth', transform: 'rotateX(90deg) translateZ(var(--offsetY))'},
+        {label: 'bottom', width: '--width', height: '--depth', transform: 'rotateX(-90deg) translateZ(var(--offsetY))'}
+    ];
 
     const styles = `
         :host {
@@ -24,37 +32,20 @@ import { createComponent, createTemplate, WebComponent } from '../../externals.j
             position: absolute;
             left: 50%; top: 50%;
         }
-        #front, #back { 
-            width: var(--width);
-            height: var(--height);
-            transform: translate(-50%,-50%) rotateY(0deg) translateZ(var(--offsetZ)); 
-        }
-        #back { transform: translate(-50%,-50%) rotateY(180deg) translateZ(var(--offsetZ)); }
-    
-        #left, #right {
-            width: var(--depth);
-            height: var(--height);
-            transform: translate(-50%,-50%) rotateY(-90deg) translateZ(var(--offsetX));
-        }
-        #right { transform: translate(-50%,-50%) rotateY(90deg) translateZ(var(--offsetX)); }
-        
-        #top, #bottom {
-            width: var(--width);
-            height: var(--depth); 
-            transform: translate(-50%,-50%) rotateX(90deg) translateZ(var(--offsetY));
-        }
-        #bottom { transform: translate(-50%,-50%) rotateX(-90deg) translateZ(var(--offsetY)); }
+        ${faces.map(e => (
+            `#${e.label} {
+                width: var(${e.width});
+                height: var(${e.height});
+                transform: translate(-50%,-50%) ${e.transform};
+            }`
+        )).join('\n')}
     `;
 
     const html = `
-    <div id="faces">
-        ${genFace('front')}
-        ${genFace('right')}
-        ${genFace('left')}
-        ${genFace('back')}
-        ${genFace('top')}
-        ${genFace('bottom')}
-    </div>`;
+        <div id="faces">
+            ${faces.map(e => `<div id=${e.label} class="face"><slot name=${e.label}></slot></div>`).join('\n')}
+        </div>
+    `;
 
     class CSS3DCuboid extends WebComponent {
         static get tagName() { return 'css3d-cuboid'; }
