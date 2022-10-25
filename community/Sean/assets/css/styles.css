@@ -19,8 +19,6 @@ body {
 }
 
 css3d-cuboid {
-    width: 200px;
-    height: 200px;
     animation: rotate 10s linear infinite;
     border: 1px solid green;
 }
