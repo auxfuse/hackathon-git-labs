@@ -12,37 +12,51 @@ html {
 }
 body {
     display: flex;
-    justify-content: center;
+    position: relative;
+    flex-flow: column;
+    justify-content: space-evenly;
     align-items: center;
+    gap: 5em;
     transform-style: preserve-3d;
-    perspective: 1000px;
+    perspective: 1500px;
     background:
         radial-gradient(circle, #00314099 0%, #000000EE 50%), 
         url('../img/rough.png');
 }
 
 .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #FFFFFFAA;
-    width: 100px;
-    height: 100px;
+    color: #FFFFFFFF;
     text-align: center;
-    text-shadow: 0 0 5px black;
-    transform: translate(-50%, -50%);
-    filter: drop-shadow(0 0 15px black);
-    background: radial-gradient(circle, #FFFFFFAA 0%, #FFFFFF00 75%);
 }
 
-#banner {
-    position: absolute;
-    bottom: 0; left: 50%;
+.banner {
     font-size: 1.5em;
     width: 100%;
     text-align: center;
     color: white;
-    transform: translate(-50%, -100%);
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    aspect-ratio: 1/1;
+    text-shadow: 1px 1px 5px black;
+    background: radial-gradient(circle, lightblue 0%, 55%, transparent 75%); 
+}
+
+#cube-wrapper {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%);
 }
 
 css3d-cuboid {
@@ -51,12 +65,20 @@ css3d-cuboid {
 
 @keyframes rotate {
     from { transform: rotate3d(0); }
-    to { transform: rotate3d(2,1,0, 360deg);}
+    to { transform: rotate3d(1,1,0, 360deg);}
 }
 
 css3d-cuboid > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 100%;
     height: 100%;
+    color: #FFFFFFFF;
+    text-shadow: 1px 1px 5px black;
+
+    transform: translateZ(-10px);
 }
 
 css3d-cuboid::part(face) {
