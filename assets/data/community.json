@@ -400,5 +400,12 @@
     "course_stage": "Alumna",
     "favorite_language": "C#",
     "currently_learning": "SQL"
+  },
+  {
+    "name": "EliSacch",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Javascript",
+    "currently_learning": "Python"
   }
 ]
