@@ -33,6 +33,25 @@ export class WebComponent extends HTMLElement {
         return Object.keys(this.attributes);
     }
 
+    /**
+     * Creates the default accessor for this component for the property and attribute passed.
+     * Allows redefining of default accessor for derived classes, internal use only.
+     * @protected
+     * @param {Object} self - Web Component instance (this)
+     * @param {String} attr - attribute name
+     *      * @param {String} prop - property name
+     * @returns 
+     */
+    static _createDefaultAccessor(self, attr, prop) {
+        Object.defineProperty(self, attr, {
+            get() { return self[prop]; },
+            set(val) {
+                self[prop] = self.attributes[attr].type(val);
+                self.setAttribute(attr, val);
+            }
+        });
+    }
+
     /* Instance Properties and methods */
     constructor() {
         super();
@@ -45,13 +64,7 @@ export class WebComponent extends HTMLElement {
     
                 // If getters and setters don't already exist, add them
                 if (!(key in this)) {
-                    Object.defineProperty(this, key, {
-                        get() { return this[propName]; },
-                        set(val) {
-                            this[propName] = this.attributes[key].type(val);
-                            this.setAttribute(key, val);
-                        }
-                    });
+                    this.constructor._createDefaultAccessor(this, key, propName);
                 }
             }
         }
