@@ -20,22 +20,26 @@ body {
 
 css3d-cuboid {
     animation: rotate 10s linear infinite;
-    border: 1px solid green;
 }
 
 @keyframes rotate {
     from { transform: rotate3d(0); }
-    to { transform: rotate3d(1,1,0, 360deg);}
+    to { transform: rotate3d(2,1,0, 360deg);}
 }
 
-css3d-cuboid > span {
+css3d-cuboid > div {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
 
-    outline: 1px solid #800000EE;
+    transform: translateZ(5em);
+}
 
-    background: #FF0000AA radial-gradient(circle, #00000000 0%, #00000088 100%);
+css3d-cuboid::part(face) {
+    outline: 1px solid #006280EE;
+    transform-style: preserve-3d;
+
+    background: #00d5ffaa radial-gradient(circle, #00000000 0%, #00000088 100%);
 }

@@ -32,18 +32,20 @@ import { createComponent, createTemplate, WebComponent } from '../../externals.j
             position: absolute;
             left: 50%; top: 50%;
         }
-        ${faces.map(e => (
-            `#${e.label} {
-                width: var(${e.width});
-                height: var(${e.height});
-                transform: translate(-50%,-50%) ${e.transform};
-            }`
-        )).join('\n')}
+        ${
+            faces.map(e => (
+                `#${e.label} {
+                    width: var(${e.width});
+                    height: var(${e.height});
+                    transform: translate(-50%,-50%) ${e.transform};
+                }`
+            )).join('\n')
+        }
     `;
 
     const html = `
         <div id="faces">
-            ${faces.map(e => `<div id=${e.label} class="face"><slot name=${e.label}></slot></div>`).join('\n')}
+            ${faces.map(e => `<div id=${e.label} part="face" class="face"><slot name=${e.label}></slot></div>`).join('\n')}
         </div>
     `;
 
@@ -70,7 +72,6 @@ import { createComponent, createTemplate, WebComponent } from '../../externals.j
             super();
             this._createShadow({mode: 'open'});
         }
-        connectedCallback() {}
     }
 
     const template = createTemplate(html, styles);
