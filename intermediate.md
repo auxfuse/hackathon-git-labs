@@ -42,7 +42,7 @@ If at any stage you want to submit a PR to revise the content you already submit
 
 ![Participant Directory Community Sub-Folder](docs/images/dirFiles.png)
 
-* Before you create your custom creation, add one more Key/Value pair to your JSON onject in the [assets/data/community.json](https://github.com/auxfuse/hackathon-git-labs/blob/main/assets/data/community.json) file to add your new directory to the Showcase.
+* Before you create your custom creation, add one more Key/Value pair to your JSON object, (made by following the [basic.md](https://github.com/auxfuse/hackathon-git-labs/blob/main/basic.md) guide), in the [assets/data/community.json](https://github.com/auxfuse/hackathon-git-labs/blob/main/assets/data/community.json) file to add your new directory to the Showcase.
 
     Add the following key/value pair, and make sure to add the comma after the `currently_learning` key/value pair:
     ```json
