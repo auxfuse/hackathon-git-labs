@@ -36,8 +36,7 @@
     "course_start": "2020",
     "course_stage": "Staff",
     "favorite_language": "Python",
-    "currently_learning": "React",
-    "showcase": false
+    "currently_learning": "React"
   },
   {
     "name": "Hashim",
@@ -76,8 +75,7 @@
     "course_start": "2021",
     "course_stage": "Alumnus",
     "favorite_language": "Python",
-    "currently_learning": "React!",
-    "showcase": false
+    "currently_learning": "React!"
   },
   {
     "name": "Kera",
@@ -92,24 +90,21 @@
     "course_start": "2021",
     "course_stage": "Student",
     "favorite_language": "Python",
-    "currently_learning": "Django",
-    "showcase": false
+    "currently_learning": "Django"
   },
   {
     "name": "John",
     "course_start": "2021",
     "course_stage": "Student",
     "favorite_language": "JavaScript",
-    "currently_learning": "Agile Development",
-    "showcase": false
+    "currently_learning": "Agile Development"
   },
   {
     "name": "Zabeena",
     "course_start": "2022",
     "course_stage": "Student",
     "favorite_language": "Python",
-    "currently_learning": "JavaScript",
-    "showcase": false
+    "currently_learning": "JavaScript"
   },
   {
     "name": "Cafalchio",
@@ -124,8 +119,7 @@
     "course_start": "2022",
     "course_stage": "student",
     "favorite_language": "!JavaScript",
-    "currently_learning": "Python",
-    "showcase": false
+    "currently_learning": "Python"
   },
   {
     "name": "Farrukh",
@@ -140,8 +134,7 @@
     "course_start": "2019",
     "course_stage": "Alumni",
     "favorite_language": "Python",
-    "currently_learning": "PHP",
-    "showcase": false
+    "currently_learning": "PHP"
   },
   {
     "name": "joe",
@@ -164,16 +157,14 @@
     "course_start": "2022",
     "course_stage": "Student",
     "favorite_language": "Python",
-    "currently_learning": "Agile",
-    "showcase": false
+    "currently_learning": "Agile"
   },
   {
     "name": "Vikmah",
     "course_start": "2021",
     "course_stage": "Alumni",
     "favorite_language": "CSS",
-    "currently_learning": "React",
-    "showcase": false
+    "currently_learning": "React"
   },
   {
     "name": "Gerard",
@@ -188,8 +179,7 @@
     "course_start": "2021",
     "course_stage": "Alumni",
     "favorite_language": "Python",
-    "currently_learning": "Swift",
-    "showcase": false
+    "currently_learning": "Swift"
   },
   {
     "name": "Grace",
@@ -206,14 +196,6 @@
     "favorite_language": "JavaScript",
     "currently_learning": "Go",
     "showcase": true
-  },
-  {
-    "name": "Tinashe",
-    "course_start": "2020",
-    "course_stage": "Alumni",
-    "favorite_language": "Python",
-    "currently_learning": "Java",
-    "showcase": false
   },
   {
     "name": "Emanuel",
@@ -236,8 +218,7 @@
     "course_start": "2020",
     "course_stage": "Alumni",
     "favorite_language": "Typescript",
-    "currently_learning": "Python AI",
-    "showcase": false
+    "currently_learning": "Python AI"
   },
   {
     "name": "Daniel",
@@ -269,7 +250,7 @@
     "course_stage": "Alumni",
     "favorite_language": "Python",
     "currently_learning": "ReactJS",
-    "showcase": false
+    "showcase": true
   },
   {
     "name": "Andrius",
@@ -284,8 +265,7 @@
     "course_start": "2021",
     "course_stage": "Alumni",
     "favorite_language": "Python",
-    "currently_learning": "Java",
-    "showcase": false
+    "currently_learning": "Java"
   },
   {
     "name": "Sean",
@@ -325,7 +305,7 @@
     "course_stage": "Awaiting final grade",
     "favorite_language": "Python",
     "currently_learning": "NodeJS",
-    "showcase": false
+    "showcase": true
   },
   {
     "name": "IreneN3",
@@ -341,7 +321,7 @@
     "course_stage": "Student",
     "favorite_language": "JavaScript",
     "currently_learning": "Node.js",
-    "showcase": false
+    "showcase": true
   },
   {
     "name": "arioum",
@@ -349,7 +329,7 @@
     "course_stage": "Student",
     "favorite_language": "JavaScript",
     "currently_learning": "React Native",
-    "showcase": false
+    "showcase": true
   },
   {
     "name": "Muzhda",
@@ -363,14 +343,16 @@
     "course_start": "2021",
     "course_stage": "Alumni",
     "favorite_language": "Python",
-    "currently_learning": "React Native"
+    "currently_learning": "React Native",
+    "showcase": true
   },
   {
     "name": "Brian",
     "course_start": "2020",
     "course_stage": "Alumni",
     "favorite_language": "Typescript",
-    "currently_learning": "React Design Systems"
+    "currently_learning": "React Design Systems",
+    "showcase": true
   },
   {
     "name": "Mustafa",
@@ -385,27 +367,31 @@
     "course_start": "2022",
     "course_stage": "Student",
     "favorite_language": "Currently HTML",
-    "currently_learning": "CSS"
+    "currently_learning": "CSS",
+    "showcase": true
   },
   {
     "name": "NiclasTanskanen",
     "course_start": "2022",
     "course_stage": "Student",
     "favorite_language": "Python",
-    "currently_learning": "ReactJS"
+    "currently_learning": "ReactJS",
+    "showcase": true
   },
   {
     "name": "Anya",
     "course_start": "2021",
     "course_stage": "Alumna",
     "favorite_language": "C#",
-    "currently_learning": "SQL"
+    "currently_learning": "SQL",
+    "showcase": true
   },
   {
     "name": "EliSacch",
     "course_start": "2022",
     "course_stage": "Student",
     "favorite_language": "Javascript",
-    "currently_learning": "Python"
+    "currently_learning": "Python",
+    "showcase": true
   }
 ]

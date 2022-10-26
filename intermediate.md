@@ -42,6 +42,25 @@ If at any stage you want to submit a PR to revise the content you already submit
 
 ![Participant Directory Community Sub-Folder](docs/images/dirFiles.png)
 
+* Before you create your custom creation, add one more Key/Value pair to your JSON onject in the [assets/data/community.json](https://github.com/auxfuse/hackathon-git-labs/blob/main/assets/data/community.json) file to add your new directory to the Showcase.
+
+    Add the following key/value pair, and make sure to add the comma after the `currently_learning` key/value pair:
+    ```json
+    "showcase": true
+    ```
+
+    Your entire JSON object should now look like this:
+    ```json
+    {
+        "name": "auxfuse",
+        "course_start": "2019",
+        "course_stage": "Alumni",
+        "favorite_language": "CSS",
+        "currently_learning": "PHP/ThreeJS",
+        "showcase": true
+    }
+    ```
+
 * Then you can create your custom html/css piece.
 
     Make this unique. Be creative! Maybe it's a small frontend component, a card/navbar/section? What about a little portfolio piece? 🖌🎨🖼 Maybe consider keeping to a height of `100vh`!
