@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300&display=swap');
+
+:root {
+    /* Project Font Pairings */
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #94EBF1;
+    font-family: var(--primary-font);
+}
+
+.PrivacyP-header{
+    margin: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.policy-updated-header,
+.policy-updated-paragraph {
+    text-align: center;
+    margin: 30px;
+}
+
+.section-header {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.section-paragraph {
+    margin: 40px;
+    text-align: left;
+    font-weight: bold;
+}
