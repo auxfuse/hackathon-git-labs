@@ -61,6 +61,10 @@ body::after {
     pointer-events: none;
 }
 
+.privacy-body {
+    background-color: #94EBF1;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -619,6 +623,33 @@ select,
     margin-left: 30px;
     line-height: 30px;
   }
+
+/* privacy  */
+
+.privacyp-header {
+    margin: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.policy-updated-header,
+.policy-updated-paragraph {
+    text-align: center;
+    margin: 30px;
+}
+
+.section-header {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.section-paragraph {
+    margin: 40px;
+    text-align: left;
+    font-weight: bold;
+}
 
 /* Media Queries */
 @media (min-width: 576px) {
