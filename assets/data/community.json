@@ -393,5 +393,13 @@
     "favorite_language": "Javascript",
     "currently_learning": "Python",
     "showcase": true
+  },
+  {
+    "name": "Pedro",
+    "course_start": "2021",
+    "course_stage": "Awaiting final grade",
+    "favorite_language": "Javascript",
+    "currently_learning": "Python",
+    "showcase": true
   }
 ]
