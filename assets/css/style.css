@@ -61,10 +61,6 @@ body::after {
     pointer-events: none;
 }
 
-.privacy-body {
-    background-color: #94EBF1;
-}
-
 img {
     display: block;
     max-width: 100%;
@@ -611,7 +607,7 @@ select,
     background: rgba(0, 0, 0, 0.8);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-  
+
 .debug pre {
     color: #ffffff;
     font-size: 18px;
@@ -619,7 +615,7 @@ select,
     font-family: "Source Code Pro", monospace;
     font-weight: 300;
     white-space: pre-wrap;
-  }
+}
 
 #nameJSON, 
 #emailJSON,
@@ -628,9 +624,14 @@ select,
     margin-top: 10px;
     margin-left: 30px;
     line-height: 30px;
-  }
+}
 
-/* privacy  */
+/* Privacy Policy  */
+
+.privacy-body, 
+.accessibility-body {
+    background-color: #94EBF1;
+}
 
 .privacyp-header {
     margin: 30px;
@@ -655,6 +656,61 @@ select,
     margin: 40px;
     text-align: left;
     font-weight: bold;
+}
+
+/* Accessibility Policy   */
+
+.accessibility-section-header {
+    margin: 20px;
+    text-align: center;
+}
+
+.web-browser-section,
+.accessibility-ul {
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.accessibility-ul,
+.web-browser-section {
+    list-style-type: none;
+}
+
+.accessibility-header {
+    margin: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.accessibility-paragraph {
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* pagination */
+
+#pagination {
+    list-style: none;
+    font-weight: bolder;
+}
+
+#pagination a {
+    text-decoration: none;
+}
+
+.pagination-active {
+    background-color: #94EBF1;
+    font-size: x-large;
+}
+
+.next-button:hover,
+.prev-button:hover,
+.pagination-numbers:hover {
+    background-color: #94EBF1;
+    width: fit-content;
 }
 
 /* Media Queries */
@@ -767,27 +823,4 @@ select,
     #content-image {
         margin-right: 7rem;
     }
-}
-
-/* pagination */
-
-#pagination {
-    list-style: none;
-    font-weight: bolder;
-}
-
-#pagination a {
-    text-decoration: none;
-}
-
-.pagination-active {
-    background-color: #94EBF1;
-    font-size: x-large;
-}
-
-.next-button:hover,
-.prev-button:hover,
-.pagination-numbers:hover {
-    background-color: #94EBF1;
-    width: fit-content;
 }
