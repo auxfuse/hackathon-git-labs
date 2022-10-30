@@ -326,4 +326,90 @@ display: block;
 	}
 }
 
+/*******************************
+*                              *
+*         MEDIA QUERIES        *
+*                              *
+*******************************/
+@media only screen and (max-width: 800px) {
+    #left-col .text-box img {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:750px){
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .menu {
+     right: 35px
+    }
+
+    #close-icon {
+        right: 37px;
+    }
+
+    .menu-border {
+        right: 23px !important;
+    }
+    
+    #left-col{
+        border-bottom-right-radius: 0;
+    }
+    
+    #right-col{
+        border-bottom-left-radius: 0;
+    }
+
+    .text-box p{
+       width: 80%;
+       margin-left: 25px;
+       text-align: left;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    #hero .text-box p{
+        font-size: 0.8rem;
+    
+    }
+    #hero .container {
+        width: 90%;
+
+    }
+
+    #left-col .text-box img {
+        width: 100%;
+    }
+
+    #left-col .text-box h4 {
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .btn {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-height: 690px) and (max-width:800px) {
+
+    #hero h1 {
+        font-size: 1.2rem;
+       
+    }
+
+    #hero .text-box p{
+        font-size: 0.8rem;
+        line-height: 20px;
+    }
+
+}
+
+
    
