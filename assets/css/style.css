@@ -726,6 +726,14 @@ select,
 }
 
 /* Media Queries */
+@media (min-width: 320px) {
+    #footer-info {
+        margin-top: 17rem;
+        text-align: center;
+
+    }
+}
+
 @media (min-width: 576px) {
     #content {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
