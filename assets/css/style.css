@@ -127,22 +127,23 @@ h6 {
 }
 
 /* Skeleton Loading */
-.card.skeleton{
+.card.skeleton {
     animation: skeleton-loader 2s infinite;
 }
 
-.card.skeleton > * {
+.card.skeleton>* {
     position: relative;
     color: transparent;
     pointer-events: none;
 }
 
-.card.skeleton > *::before {
+.card.skeleton>*::before {
     content: '';
     position: absolute;
     background-color: var(--tertiary-color);
     height: 1.5rem;
-    left: 1rem; right: 1rem;
+    left: 1rem;
+    right: 1rem;
     z-index: 99;
 }
 
@@ -150,7 +151,8 @@ h6 {
     0%, 100% {
         opacity: 100%;
     }
-    45%,55% {
+
+    45%, 55% {
         opacity: 10%;
     }
 }
@@ -323,7 +325,7 @@ h6 {
     transition: all 0.5s 0.75s linear;
 }
 
-.slideshow-link:hover > .slideshow-link-text {
+.slideshow-link:hover>.slideshow-link-text {
     padding: 2rem 2rem 0.25rem;
     height: 4.25rem;
 }
@@ -437,6 +439,16 @@ footer::before {
     display: block;
     background-color: var(--primary-color);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+#footer-info p {
+    text-decoration: underline;
+
+}
+
+#footer-info a {
+    padding-left: 10px;
+
 }
 
 #repo-go {
@@ -617,7 +629,7 @@ select,
     white-space: pre-wrap;
 }
 
-#nameJSON, 
+#nameJSON,
 #emailJSON,
 #queryJSON,
 #messageJSON {
@@ -628,7 +640,7 @@ select,
 
 /* Privacy Policy  */
 
-.privacy-body, 
+.privacy-body,
 .accessibility-body {
     background-color: #94EBF1;
 }
@@ -714,6 +726,14 @@ select,
 }
 
 /* Media Queries */
+@media (min-width: 320px) {
+    #footer-info {
+        margin-top: 17rem;
+        text-align: center;
+
+    }
+}
+
 @media (min-width: 576px) {
     #content {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -730,6 +750,12 @@ select,
     /* Footer */
     footer::before {
         clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    #footer-info {
+        margin-top: 15rem;
+        text-align: center;
+
     }
 }
 
@@ -776,6 +802,12 @@ select,
     #additional-info {
         margin-top: 10.5rem;
     }
+
+    #footer-info {
+        margin-top: 12rem;
+        text-align: center;
+
+    }
 }
 
 @media (min-width: 992px) {
@@ -807,6 +839,12 @@ select,
 
     #additional-info {
         margin-top: 10rem;
+    }
+
+    #footer-info {
+        margin-top: 10rem;
+        text-align: center;
+
     }
 }
 
