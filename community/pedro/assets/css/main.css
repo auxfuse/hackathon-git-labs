@@ -287,4 +287,43 @@ display: block;
 #menu-icon{
    z-index:1 ;
 }
+
+/*******************************
+*                              *
+*           KEYFRAMES          *
+*                              *
+*******************************/
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	} 100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	} 100% {
+		width: 0;
+		left: 100%;
+	}
+}
+
+@keyframes text_reveal {
+	100% {
+		color: var(--color--white);
+	}
+}
+
+@keyframes text_reveal_name {
+	100% {
+		color: var(--color--green);
+		font-weight: 500;
+	}
+}
+
    
