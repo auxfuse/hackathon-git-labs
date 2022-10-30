@@ -210,4 +210,81 @@ a{
        width: 70%;
        margin: 0 auto;
    }
+
+   /*******************************
+*                              *
+*         PANEL SECTION        *
+*                              *
+*******************************/
+#left-col, #right-col{
+    flex-basis: 50%;
+    height: 100vh;
+    background: var(--color--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+#left-col .text-box {
+display: block;
+}
+
+#left-col .text-box img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+#left-col .text-box h3 {
+    margin: 15px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+#left-col .text-box h4 {
+    margin: 15px 0 25px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+#left-col{
+    transform: translateX(-100%);
+    border-bottom-right-radius: 35%;
+}
+
+#right-col{
+    transform: translateX(100%);
+    border-bottom-left-radius: 35%;
+}
+
+.span-line{
+    width: 25%;
+    height: 5px;
+    background: black;
+    display: inline-block;
+}
+
+#right-col .fab:hover{
+    color: var(--color--black);
+   
+}
+
+#right-col div {
+    border-left: 2px solid #fff;
+    padding-left: 40px;
+
+}
+
+#close-icon{
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+}
+
+#menu-icon{
+   z-index:1 ;
+}
    
