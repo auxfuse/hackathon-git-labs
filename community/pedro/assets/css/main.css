@@ -1,0 +1,76 @@
+/*******************************
+*                              *
+*        GOOGLE FONTS          *
+*                              *
+*******************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/*******************************
+*                              *
+*        GENERAL STYLES        *
+*                              *
+*******************************/
+
+:root {
+    --color--white: rgb(255, 255, 255);
+    --color--black: rgb(8, 4, 4);
+    --color--green: rgb(83, 212, 105);
+    --color--dark--green: rgb(42, 77, 38);
+  
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    transition: all ease-in-out .8s;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.row{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: absolute;
+     top: 0;
+}
+
+.btn {
+    border: 1px solid var(--color--black);
+    padding: 10px 15px;
+    background: var(--color--white);
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color--black);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: var(--color--black);
+    color: var(--color--white);
+}
+
+.fancy-text {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.fab {
+    display: block;
+    font-size: 45px;
+    color: var(--color--white);
+    text-align: center;
+    margin: 40px auto;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.pb-25 {
+    padding-bottom: 25px;
+}
