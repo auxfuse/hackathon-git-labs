@@ -401,5 +401,12 @@
     "favorite_language": "Javascript",
     "currently_learning": "Python",
     "showcase": true
-  }
+  },
+  {
+    "name": "Gitanjali",
+    "course_start": "2020",
+    "course_stage":"Student",
+    "favorite_language":"Currently HTML",
+    "currently_learning":"JavaScript"
+   }
 ]
