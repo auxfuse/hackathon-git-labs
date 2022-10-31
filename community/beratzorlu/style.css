@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+
+img {
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+}
+.orange-center {
+    font-family: 'Times New Roman', sans-serif;
+    text-align: center;
+    color: orange;
+    z-index: 3;
+}
+
