@@ -1,0 +1,427 @@
+/*******************************
+*                              *
+*        GOOGLE FONTS          *
+*                              *
+*******************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/*******************************
+*                              *
+*        GENERAL STYLES        *
+*                              *
+*******************************/
+
+:root {
+    --color--white: rgb(255, 255, 255);
+    --color--black: rgb(8, 4, 4);
+    --color--green: rgb(83, 212, 105);
+    --color--dark--green: rgb(42, 77, 38);
+  
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    transition: all ease-in-out .8s;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.row{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: absolute;
+     top: 0;
+}
+
+.btn {
+    border: 1px solid var(--color--black);
+    padding: 10px 15px;
+    background: var(--color--white);
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--color--black);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: var(--color--black);
+    color: var(--color--white);
+}
+
+.fancy-text {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.fab {
+    display: block;
+    font-size: 45px;
+    color: var(--color--white);
+    text-align: center;
+    margin: 40px auto;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.pb-25 {
+    padding-bottom: 25px;
+}
+
+/*******************************
+*                              *
+*          HERO SECTION        *
+*                              *
+*******************************/
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url(../images/screenshot.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+   
+   }
+   
+   #hero-2 {
+       position: absolute;
+       top: 0;
+       right: 0%;
+       right: inherit;
+       overflow: hidden;
+       display: none; 
+       z-index: 1;
+   }
+   
+   .navbar{
+       width: 100%;
+       position:fixed;
+       top:0;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 40px 100px;
+       box-sizing: border-box;
+       z-index: 1;
+   }
+   
+   .menu-border {
+       border: 2px solid var(--color--white);
+       display: block;
+       position: absolute;
+       right: 88px;
+       top: 27px;
+       width: 50px;
+       height: 50px;
+       border-radius: 25%;
+   }
+   
+   .menu{
+       width: 30px;
+       cursor: pointer;
+       position: absolute;
+       right: 100px;
+       top: 40px;
+       animation: hamburger_puls 2s ease infinite;
+   }
+   
+   #hero .container {
+       background: var(--color--black);
+       padding: 50px 0;
+       width: 70%;
+       margin: 0 auto;
+       border-radius: 5px;
+       box-shadow: 0 5px 25px var(--color--dark--green);
+     
+       
+   }
+   
+   #hero h1 {
+       font-size: 3rem;
+       width: fit-content;
+       margin: 0 auto;
+       position: relative;
+       color: transparent;
+       animation: text_reveal normal .5s ease forwards;
+       animation-delay: 1s;
+   }
+   
+   #hero h1:nth-child(1) {
+       animation-delay: 1s;
+   }
+   
+   #hero h1:nth-child(2) {
+       animation-delay: 2s;
+   }
+   #hero h1:nth-child(3) {
+       animation: text_reveal_name .5s ease forwards;
+       animation-delay: 3s;
+   }
+   
+   #hero h1 span {
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 80%;
+       width: 0;
+       background-color: var(--color--green);
+       animation: text_reveal_box 1s ease;
+       animation-delay: .5s;
+   }
+   
+   #hero h1:nth-child(1) span {
+       animation-delay: .5s;
+   }
+   
+   #hero h1:nth-child(2) span {
+       animation-delay: 1.5s;
+   }
+   
+   #hero h1:nth-child(3) span {
+       animation-delay: 2.5s;
+   }
+   
+   #hero .container .fa-code {
+       font-size: 1.8rem;
+       margin-top: 25px;
+       color: var(--color--green);
+   }
+   
+   #hero .text-box {
+       color: var(--color--white);
+       width: 100%;
+       text-align: center;
+   }
+   
+   #hero .text-box p{
+       font-size: 1.2rem;
+       line-height: 30px;
+       width: 70%;
+       margin: 0 auto;
+   }
+
+   /*******************************
+*                              *
+*         PANEL SECTION        *
+*                              *
+*******************************/
+#left-col, #right-col{
+    flex-basis: 50%;
+    height: 100vh;
+    background: var(--color--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+#left-col .text-box {
+display: block;
+}
+
+#left-col .text-box img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+#left-col .text-box h3 {
+    margin: 15px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+#left-col .text-box h4 {
+    margin: 15px 0 25px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+#left-col{
+    transform: translateX(-100%);
+    border-bottom-right-radius: 35%;
+}
+
+#right-col{
+    transform: translateX(100%);
+    border-bottom-left-radius: 35%;
+}
+
+.span-line{
+    width: 25%;
+    height: 5px;
+    background: black;
+    display: inline-block;
+}
+
+#right-col .fab:hover{
+    color: var(--color--black);
+   
+}
+
+#right-col div {
+    border-left: 2px solid #fff;
+    padding-left: 40px;
+
+}
+
+#close-icon{
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+}
+
+#menu-icon{
+   z-index:1 ;
+}
+
+/*******************************
+*                              *
+*           KEYFRAMES          *
+*                              *
+*******************************/
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	} 100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	} 100% {
+		width: 0;
+		left: 100%;
+	}
+}
+
+@keyframes text_reveal {
+	100% {
+		color: var(--color--white);
+	}
+}
+
+@keyframes text_reveal_name {
+	100% {
+		color: var(--color--green);
+		font-weight: 500;
+	}
+}
+
+/*******************************
+*                              *
+*         MEDIA QUERIES        *
+*                              *
+*******************************/
+@media only screen and (max-width: 800px) {
+    #left-col .text-box img {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:750px){
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .menu {
+     right: 35px
+    }
+
+    #close-icon {
+        right: 37px;
+    }
+
+    .menu-border {
+        right: 23px !important;
+    }
+    
+    #left-col{
+        border-bottom-right-radius: 0;
+    }
+    
+    #right-col{
+        border-bottom-left-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #hero .text-box p{
+        font-size: 0.8rem;
+        text-align: left;
+    
+    }
+    #hero .container {
+        width: 90%;
+    }
+
+    .menu,
+    #close-icon {
+        width: 20px;
+    }
+
+    .menu {
+        right: 35px;
+       }
+   
+       #close-icon {
+           right: 37px;
+       }
+   
+       .menu-border {
+           right: 28px !important;
+           top: 32px;
+           width: 30px;
+           height: 30px;
+       }
+
+    #left-col .text-box img {
+        width: 100%;
+    }
+
+    #left-col .text-box h4 {
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .btn {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-height: 690px) and (max-width:800px) {
+
+    #hero h1 {
+        font-size: 1.2rem;
+       
+    }
+
+    #hero .text-box p{
+        line-height: 20px;
+    }
+
+}
+
+
+   
