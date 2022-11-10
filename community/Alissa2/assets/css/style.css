@@ -167,6 +167,20 @@ p.about {
 	font-size: 1rem;
 }
 
+img {
+	width: 60%;
+	height: auto;
+}
+
+.card {
+}
+
+.img {
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+
 /* --------------- Skills */
 
 #skills {
