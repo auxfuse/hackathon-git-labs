@@ -437,5 +437,12 @@
     "course_stage": "student",
     "favorite_language": "JavaScript",
     "currently_learning": "CSS"
+  },
+  {
+    "name": "tomislav",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "python, javascript",
+    "currently_learning": "javascript"
   }
 ]
