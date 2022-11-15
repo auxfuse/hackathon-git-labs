@@ -431,4 +431,11 @@
     "favorite_language": "Javascript",
     "currently_learning": "Python"
   }
+  {
+    "name": "sirinya",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "CSS"
+  }
 ]
