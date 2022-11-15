@@ -1,5 +1,12 @@
 [
   {
+    "name": "Richard",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Java",
+    "currently_learning": "HTML/CSS"
+  },
+  {
     "name": "auxfuse",
     "course_start": "2019",
     "course_stage": "Alumni",
