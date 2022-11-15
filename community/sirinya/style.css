@@ -1,0 +1,75 @@
+:root {
+    --button-color: hsl(202,32%,15%);
+    --toggle-color: hsl(32,100%,64%);
+    --menu-width: 60px;
+    --menu-height: 45px;
+    --button-dimensions: 130px;
+    --shadow: rgba(0, 0, 0, 0.35);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#menu-toggle {
+display: no 
+}
+
+.menu-button-wrapper {
+    display: block;
+    width: var(--button-dimensions);
+    height: var(--button-dimensions);
+    background-color: var(--button-color);
+    border-radius: 0 0 var(--button-dimensions) 0;
+    transition: all 0.5s ease-in-out 0.1s;
+    box-shadow: var(--shadow) 0px 5px 15px;
+}
+
+.menu-toggle:checked ~ .menu-button-wrapper {
+    --button-dimensions: 500px;
+}
+
+.menu-button {
+    width: var(--menu-width);
+    height: var(--menu-height);
+    position: absolute;
+    margin-left: calc(var(--menu-width) / 2);
+    margin-top: calc(var(--menu-height) / 2);
+}
+
+.menu-button span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background-color: var(--toggle-color);
+    border-radius: 9px;
+    opacity: 1;
+    inset: 0 0 0 0; 
+    transform: rotate(0deg);
+    transition: .4s ease-in-out;
+    transform-origin: left center;
+}
+
+.menu-toggle:checked ~ .menu-button-wrapper .menu-button span:nth-child(1) {
+    transform: rotate(45deg);
+    inset: -3px 0 0 8px; 
+}
+
+.menu-button span:nth-child(2) {
+    inset: 18px 0 0 0; 
+}
+
+.menu-toggle:checked ~ .menu-button-wrapper .menu-button span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button span:nth-child(3) {
+    inset: 36px 0 0 0; 
+}
+
+.menu-toggle:checked ~ .menu-button-wrapper .menu-button span:nth-child(3) {
+    transform: rotate(-45deg);
+    inset: 39px 0 0 8px; 
+}
