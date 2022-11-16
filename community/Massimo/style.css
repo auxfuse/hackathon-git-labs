@@ -1,0 +1,11 @@
+.content, html {
+    background: rgb(174, 216, 174);
+  }
+
+.card {
+    background-image: url('/community/Massimo/assets/img/SC_Background01.jpg');
+}
+
+.content {
+    margin-top: 25vh;
+}

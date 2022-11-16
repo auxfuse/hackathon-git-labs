@@ -465,6 +465,7 @@
     "course_start": "2022",
     "course_stage": "alumni",
     "favorite_language": "Python",
-    "currently_learning": "Hackathon"
+    "currently_learning": "Hackathon",
+    "showcase": true
   }
 ]
