@@ -452,5 +452,12 @@
     "favorite_language": "python, javascript",
     "currently_learning": "javascript",
     "showcase": true
+  },
+  {
+    "name": "Penny",
+    "course_start": "2022",
+    "course_stage": "student_project-1",
+    "favorite_language": "CSS",
+    "currently_learning": "HTML_CSS_Grid_Flexbox_Gitpod"
   }
 ]
