@@ -452,5 +452,12 @@
     "favorite_language": "python, javascript",
     "currently_learning": "javascript",
     "showcase": true
+  },
+  {
+    "name": "Dean",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "python",
+    "currently_learning": "Django"
   }
 ]
