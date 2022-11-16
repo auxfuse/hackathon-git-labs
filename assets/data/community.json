@@ -439,6 +439,13 @@
     "currently_learning": "CSS"
   },
   {
+    "name": "Gina",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "Python",
+    "currently_learning": "React"
+  },
+  {
     "name": "tomislav",
     "course_start": "2022",
     "course_stage": "student",
