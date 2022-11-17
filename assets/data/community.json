@@ -465,6 +465,7 @@
     "course_start": "2022",
     "course_stage": "Finished PP1",
     "favorite_language": "Python",
-    "currently_learning": "comparative programming languages"
+    "currently_learning": "comparative programming languages",
+    "showcase": true
 }
 ]
