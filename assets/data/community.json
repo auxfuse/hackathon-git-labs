@@ -455,6 +455,12 @@
     "showcase": true
   },
   {
+    "name": "Sarah",
+    "course_start": "2021",
+    "course_stage": "student",
+    "favorite_language": "CSS, python",
+    "currently_learning": "Django"
+  },
     "name": "Penny",
     "course_start": "2022",
     "course_stage": "student_project-1",
