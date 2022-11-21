@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background-image: url("../Gina/brick-wall.jpeg");
+    font-family: 'Montserrat', sans-serif;
+    background-size: 100vw;
+    color: whitesmoke;
+}
+
+footer {
+    position: relative;
+    padding-top: 8rem;
+    height: 15rem;
+}
+
+a {
+    color: whitesmoke;
+}
+
+.card {
+    padding: 2.5rem 2.5rem;
+    border-radius: .5%;
+    filter: contrast(120%);
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card-title {
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+    margin: 0 0 .3em;
+}
+
+.card-description {
+    font-size: 2rem;
+    letter-spacing: .25rem;
+    padding-bottom: .5rem;
+}
+
+.card-links {
+    letter-spacing: 2px;
+    padding: .75rem 0;
+}
+
+.card-links a {
+    text-decoration: none;
+}
+
+.social-media-links {
+    text-align: left;
+}
+
+.social-media-links li {
+    padding-right: 1.5rem;
+    display: inline;
+    font-size: 2rem;
+}

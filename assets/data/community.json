@@ -443,7 +443,8 @@
     "course_start": "2022",
     "course_stage": "student",
     "favorite_language": "Python",
-    "currently_learning": "React"
+    "currently_learning": "React",
+    "showcase": true
   },
   {
     "name": "tomislav",
@@ -459,5 +460,19 @@
     "course_stage": "student",
     "favorite_language": "CSS, python",
     "currently_learning": "Django"
-}
+  },
+    "name": "Penny",
+    "course_start": "2022",
+    "course_stage": "student_project-1",
+    "favorite_language": "CSS",
+    "currently_learning": "HTML_CSS_Grid_Flexbox_Gitpod"
+  },
+  {
+    "name": "Massimo",
+    "course_start": "2022",
+    "course_stage": "alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Hackathon",
+    "showcase": true
+  }
 ]
