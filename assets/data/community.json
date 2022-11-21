@@ -418,6 +418,64 @@
     "showcase": true
   },
   {
+    "name": "jack",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Java"
+  },
+  {
+    "name": "agustin",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Javascript",
+    "currently_learning": "Python"
+  },
+  {
+    "name": "sirinya",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "CSS"
+  },
+  {
+    "name": "Gina",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "Python",
+    "currently_learning": "React",
+    "showcase": true
+  },
+  {
+    "name": "tomislav",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "python, javascript",
+    "currently_learning": "javascript",
+    "showcase": true
+  },
+  {
+    "name": "Sarah",
+    "course_start": "2021",
+    "course_stage": "student",
+    "favorite_language": "CSS, python",
+    "currently_learning": "Django"
+  },
+    "name": "Penny",
+    "course_start": "2022",
+    "course_stage": "student_project-1",
+    "favorite_language": "CSS",
+    "currently_learning": "HTML_CSS_Grid_Flexbox_Gitpod"
+  },
+  {
+    "name": "Massimo",
+    "course_start": "2022",
+    "course_stage": "alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Hackathon",
+    "showcase": true
+  },
+  {
     "name": "Richard",
     "course_start": "2022",
     "course_stage": "Student",
