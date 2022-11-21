@@ -474,5 +474,12 @@
     "favorite_language": "Python",
     "currently_learning": "Hackathon",
     "showcase": true
+  },
+  {
+    "name": "Richard",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Java",
+    "currently_learning": "HTML/CSS"
   }
 ]
