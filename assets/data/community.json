@@ -488,6 +488,7 @@
     "course_start": "2022",
     "course_stage": "Student",
     "favorite_language": "JavaScript",
-    "currently_learning": "Phaser"
+    "currently_learning": "Phaser",
+    "showcase": true
   }
 ]
