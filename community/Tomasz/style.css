@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --main-color: #ef476f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: wheat;
+}
+.title {
+  height: 48px;
+  margin-bottom: 1em;
+}
+.title-text {
+  font-size: 2em;
+  line-height: 48px;
+  margin-left: 0.3em;
+  vertical-align: top;
+}
+.info-text {
+  vertical-align: top;
+  margin-left: 0.2em;
+  font-size: 1.2em;
+}
+.container {
+  font-family: 'Roboto', sans-serif;
+  background-color: #161b22;
+  color: #f0f6fc;
+  padding-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img-container {
+  width: 200px;
+  height: 200px;
+}
+.personal-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.personal-item {
+  height: 1.4em;
+  margin: 0 1.5em 1em 1.5em;
+  font-weight: lighter;
+  color: #e3fbe3;
+}
+.social-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 150px));
+  gap: 1.5em;
+  padding: 0 20px 0 20px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateY(50%);
+}
+.social-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  background-color: #30363d;
+  border-radius: 0.4em;
+}
+.social-item span {
+  text-align: center;
+  padding: 0.5em 0 0.5em 0;
+  text-transform: uppercase;
+}
+.num {
+  color: white;
+  font-size: 1.6em;
+}
+.social-label {
+  font-size: 0.6em;
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+}
+#userImg {
+  width: 100%;
+  box-sizing: border-box;
+  border: solid 5px var(--main-color);
+  border-radius: 100%;
+}
+#userName {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+#userLogin {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: var(--main-color);
+}
+.material-icons.md-em {
+  font-size: 1.4em;
+  color: #e3fbe3;
+}
+
+/*////////////////////////////////////////////////////
+///  DATA SECTION 
+//////////////////////////////////////////////////*/
+
+.data-wrap {
+  font-family: 'Roboto', sans-serif;
+  background-color: whitesmoke;
+  color: #24292e;
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+
+.graph-container {
+  width: 600px;
+}
+.graph-header {
+  height: 48px;
+  margin-bottom: 1em;
+}
+.graph-title {
+  font-size: 2em;
+  line-height: 48px;
+  margin-left: 0.3em;
+  vertical-align: top;
+}
+.graph-body {
+  border-left: 5px solid var(--main-color);
+  box-sizing: border-box;
+}
+.graph-label {
+  width: 100%;
+  height: 2em;
+  background-color: transparent;
+}
+.graph-bar {
+  width: 100%;
+  height: 3em;
+  background-color: blue;
+}
+.graph-body span {
+  margin-left: 0.7em;
+  font-size: 0.9em;
+  vertical-align: top;
+}
+
+/*/////////////////////////////////////////
+////          MEDIA QUERIES
+////////////////////////////////////////*/
+
+@media screen and (max-width: 768px) {
+  .personal-info {
+    flex-direction: column;
+  }
+  .personal-item {
+    margin: 0 0 1em 0;
+  }
+  .social-info {
+    gap: 0.5em;
+  }
+  .graph-container {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .social-item {
+    padding: 0.5em;
+  }
+  .social-label {
+    font-size: 0.5em;
+  }
+  .num {
+    font-size: 1.2em;
+  }
+  .graph-bar {
+    height: 2em;
+  }
+  .graph-label {
+    height: 1.3em;
+  }
+  .graph-label span {
+    font-size: 0.7em;
+  }
+  .graph-title {
+    font-size: 1.5em;
+  }
+}
