@@ -482,5 +482,12 @@
     "course_stage": "Student",
     "favorite_language": "Java",
     "currently_learning": "HTML/CSS"
+  },
+  {
+    "name": "Tomasz",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Phaser"
   }
 ]
