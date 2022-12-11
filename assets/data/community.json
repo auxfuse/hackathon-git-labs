@@ -490,5 +490,12 @@
     "favorite_language": "JavaScript",
     "currently_learning": "Phaser",
     "showcase": true
-  }
+  },
+  {
+    "name": "Andrew",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "Python"
+}
 ]
