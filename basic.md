@@ -2,8 +2,6 @@
 
 By following the below guide, your actions will have created a card on the Landing page of the project, with some information displayed about you. It's a fun little exercise that gives you the steps to navigate the project and make your first Open Source Contribution to this project (or maybe it is your very first ever!) via Pull Request (PR). 🤜
 
-***Any PR satisfying this guide will not be applicable for Hacktoberfest 2022!*** 🎃🌐💻 Please follow the [intermediate.md](intermediate.md) guide for Hacktoberfest 2022 submissions. 🤜
-
 Get started! Make your first PR and get going into the world of open source! 
 
 ## 👇 Participant steps: 👇
