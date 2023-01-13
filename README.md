@@ -28,9 +28,9 @@ This is a fundamental competency that most don't realise along their Coding jour
 
 🎃🌐💻
 
-This project is all about Open Source and learning how to submit your first Pull Requests. As it is now Hacktoberfest (today is 01/10/2022), we are now accepting Pull Requests that meet the `intermediate.md` specification. That is, a fully custom directory added to the Community utilising HTML, CSS & JS and of course with your details added to the `data/community.json` file!
+Hacktoberfest 2022 was a resounding success for this project and those who contributed to it. Thank you to everyone for giving up your time, energy, and skillsets to make this project what it is today.
 
-Please still use the `basic.md` guide! It would be great to get your first Pull Request in using that guide, and then to see you come back to the `intermediate.md` guide adding your own custom creations to this platform! We can then review your PR, approve it, and merge it. And if you manage to submit 4 accepting PRs in the month of Hacktoberfest to repos with the Hacktoberfest topic, you can grab yourself some neat swag! Check it out here: [Hacktoberfest](https://hacktoberfest.com/)
+This project was my first iteration of open source, and Hacktoberfest 2023 has an even bigger project with some flashy specs and functionality. Hope to see you there. 🤜
 
 🎃🌐💻
 
