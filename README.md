@@ -56,9 +56,6 @@ The [Basic](basic.md) stream for this project will enable the user to learn & de
   - Cloning the Forked project to their local development IDE/Editor
   - Creating a branch from within the IDE/Editor using the Command Line Interface
 - Adding to a JSON file following a pre-defined format
-
-  **_Any PR that only satisfies this guide will not be Hacktoberfest approved and valid. For Hacktoberfest submissions, please utilise the `intermediate.md` guide._**
-
 - Commiting work to their branch
 - Creating a PR
 - Completing the PR template
@@ -70,8 +67,6 @@ The [Intermediate](intermediate.md) stream for this project will enable the user
 - HTML/CSS mini-creation which will be automatically linked to from the Landing Page.
 
   Sometimes, it's great to showcase your work in a directory like this. You never know who you might one day be sitting beside for work 🙂😀 So use this as an opportunity to create something bespoke and unique, showcasing your skills using HTML & CSS.
-
-  **_Any PR that satisfies this guide will be Hacktoberfest approved and valid 👏👏_**
 
 - Directory surfing and creating sub-directories
 - Optional review and delve into the default files of the project where you will find Grid, Flexbox, Root variables, Fetch API, JSON etc. All of these are are done in vanilla languages, and this project is completely framework-LESS.
@@ -94,6 +89,7 @@ Special Shoutout to these people 🙌:
   - [Gwen Bradbury](https://github.com/Gwen-Bradbury)
   - [Andrew Dempsey](https://github.com/andrewdempsey2018)
   - [Alissa Troiano](https://github.com/alissatroiano)
+  - [John Doyle](https://github.com/aramantos)
 
   Community leaders, people who have shown passion and ample knowledge to others in need. This team is a cornerstone to the Community Hackathons. From providing support, to initiative and collaboration of their own to help the community flourish.
 
