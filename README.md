@@ -28,9 +28,9 @@ This is a fundamental competency that most don't realise along their Coding jour
 
 🎃🌐💻
 
-This project is all about Open Source and learning how to submit your first Pull Requests. As it is now Hacktoberfest (today is 01/10/2022), we are now accepting Pull Requests that meet the `intermediate.md` specification. That is, a fully custom directory added to the Community utilising HTML, CSS & JS and of course with your details added to the `data/community.json` file!
+Hacktoberfest 2022 was a resounding success for this project and those who contributed to it. Thank you to everyone for giving up your time, energy, and skillsets to make this project what it is today.
 
-Please still use the `basic.md` guide! It would be great to get your first Pull Request in using that guide, and then to see you come back to the `intermediate.md` guide adding your own custom creations to this platform! We can then review your PR, approve it, and merge it. And if you manage to submit 4 accepting PRs in the month of Hacktoberfest to repos with the Hacktoberfest topic, you can grab yourself some neat swag! Check it out here: [Hacktoberfest](https://hacktoberfest.com/)
+This project was my first iteration of open source, and Hacktoberfest 2023 has an even bigger project with some flashy specs and functionality. Hope to see you there. 🤜
 
 🎃🌐💻
 
@@ -56,9 +56,6 @@ The [Basic](basic.md) stream for this project will enable the user to learn & de
   - Cloning the Forked project to their local development IDE/Editor
   - Creating a branch from within the IDE/Editor using the Command Line Interface
 - Adding to a JSON file following a pre-defined format
-
-  **_Any PR that only satisfies this guide will not be Hacktoberfest approved and valid. For Hacktoberfest submissions, please utilise the `intermediate.md` guide._**
-
 - Commiting work to their branch
 - Creating a PR
 - Completing the PR template
@@ -70,8 +67,6 @@ The [Intermediate](intermediate.md) stream for this project will enable the user
 - HTML/CSS mini-creation which will be automatically linked to from the Landing Page.
 
   Sometimes, it's great to showcase your work in a directory like this. You never know who you might one day be sitting beside for work 🙂😀 So use this as an opportunity to create something bespoke and unique, showcasing your skills using HTML & CSS.
-
-  **_Any PR that satisfies this guide will be Hacktoberfest approved and valid 👏👏_**
 
 - Directory surfing and creating sub-directories
 - Optional review and delve into the default files of the project where you will find Grid, Flexbox, Root variables, Fetch API, JSON etc. All of these are are done in vanilla languages, and this project is completely framework-LESS.
@@ -94,6 +89,7 @@ Special Shoutout to these people 🙌:
   - [Gwen Bradbury](https://github.com/Gwen-Bradbury)
   - [Andrew Dempsey](https://github.com/andrewdempsey2018)
   - [Alissa Troiano](https://github.com/alissatroiano)
+  - [John Doyle](https://github.com/aramantos)
 
   Community leaders, people who have shown passion and ample knowledge to others in need. This team is a cornerstone to the Community Hackathons. From providing support, to initiative and collaboration of their own to help the community flourish.
 
