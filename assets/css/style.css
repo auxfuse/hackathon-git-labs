@@ -228,6 +228,10 @@ h6 {
     cursor: pointer;
 }
 
+#community-section {
+    display: relative;
+}
+
 #showcases-section h1::after,
 #community-section h1::after {
     content: '';
@@ -707,6 +711,11 @@ select,
 #pagination {
     list-style: none;
     font-weight: bolder;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    transition: all 0.2s ease-in-out;
+    padding-inline-start: 20px;
 }
 
 #pagination a {
