@@ -713,7 +713,7 @@ select,
     font-weight: bolder;
     opacity: 0;
     position: fixed;
-    top: 50%;
+    top: 20%;
     transition: all 0.2s ease-in-out;
     padding-inline-start: 20px;
 }
@@ -724,14 +724,12 @@ select,
 
 .pagination-active {
     background-color: #94EBF1;
-    font-size: x-large;
 }
 
-.next-button:hover,
-.prev-button:hover,
-.pagination-numbers:hover {
-    background-color: #94EBF1;
-    width: fit-content;
+.next-button,
+.prev-button,
+.pagination-numbers {
+    font-size: 1.5rem;
 }
 
 /* Media Queries */

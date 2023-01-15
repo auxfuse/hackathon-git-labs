@@ -91,8 +91,8 @@ function pagePagination(participants, currentPage, perPage) {
     const paginationNextLi = document.createElement("li");
     const paginationNextButton = document.createElement("a");
 
-    paginationNextButton.textContent = "Next";
-    paginationNextButton.href = `?page=${currentPage + 1}`;
+    paginationNextButton.textContent = "➡️";
+    paginationNextButton.href = `?page=${currentPage + 1}#community-section`;
     paginationEl.appendChild(paginationNextLi);
     paginationNextLi.append(paginationNextButton);
 
@@ -107,7 +107,7 @@ function pagePagination(participants, currentPage, perPage) {
         const paginationLink = document.createElement("a");
 
         paginationLink.textContent = i + 1;
-        paginationLink.href = `?page=${i + 1}`;
+        paginationLink.href = `?page=${i + 1}#community-section`;
         paginationEl.appendChild(paginationLi);
         paginationLi.append(paginationLink);
 
@@ -120,8 +120,8 @@ function pagePagination(participants, currentPage, perPage) {
     const paginationPrevLi = document.createElement("li");
     const paginationPrevButton = document.createElement("a");
 
-    paginationPrevButton.textContent = "Previous";
-    paginationPrevButton.href = `?page=${currentPage - 1}`;
+    paginationPrevButton.textContent = "⬅️";
+    paginationPrevButton.href = `?page=${currentPage - 1}#community-section`;
     paginationEl.appendChild(paginationPrevLi);
     paginationPrevLi.append(paginationPrevButton);
 
