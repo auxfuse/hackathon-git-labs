@@ -504,6 +504,7 @@
   "course_start": "2022",
   "course_stage": "student",
   "favorite_language": "CSS",
-  "currently_learning": "HTML/CSS"
+  "currently_learning": "HTML/CSS",
+  "showcase": true
 }
 ]
