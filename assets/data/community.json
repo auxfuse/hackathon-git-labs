@@ -505,5 +505,12 @@
   "course_stage": "student",
   "favorite_language": "CSS",
   "currently_learning": "HTML/CSS"
+},
+{
+  "name": "Monica",
+  "course_start": "2022",
+  "course_stage": "Student",
+  "favorite_language": "Python",
+  "currently_learning": "JS testing with Jest"
 }
 ]
