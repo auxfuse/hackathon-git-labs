@@ -82,6 +82,7 @@ document
 // pagination
 const paginationParent = document.getElementById("community-section");
 const paginationEl = document.getElementById("pagination");
+let isMobile = window.matchMedia("only screen and (max-width: 480px)").matches;
 
 function pagePagination(participants, currentPage, perPage) {
     const totalPages = Math.ceil(participants.length / perPage);
@@ -113,6 +114,11 @@ function pagePagination(participants, currentPage, perPage) {
 
         if (currentPage == i + 1) {
             paginationLink.classList.add("pagination-active");
+            if(paginationLink.classList.contains("pagination-active")) {
+                if(!isMobile) {
+                    paginationLink.innerHTML += "🐱‍🏍";
+                }
+            }
         }
         paginationLi.classList.add("pagination-numbers");
     }
@@ -143,13 +149,11 @@ function pagePagination(participants, currentPage, perPage) {
 
 // pagination observer
 
-let isMobile = window.matchMedia("only screen and (max-width: 480px)").matches;
-
 let tHold;
 if(isMobile) {
-    tHold = 0.2;
+    tHold = 0.25;
 } else {
-    tHold = 0.4;
+    tHold = 0.6;
 }
 
 const options = {
