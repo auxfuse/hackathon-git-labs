@@ -507,6 +507,12 @@
   "currently_learning": "HTML/CSS"
 },
 {
+  "name": "jtm",
+  "course_start": "2021",
+  "course_stage": "Alumnus",
+  "favorite_language": "Python",
+  "currently_learning": "React"
+ },
   "name": "Monica",
   "course_start": "2022",
   "course_stage": "Student",
