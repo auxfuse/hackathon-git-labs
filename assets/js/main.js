@@ -116,7 +116,7 @@ function pagePagination(participants, currentPage, perPage) {
             paginationLink.classList.add("pagination-active");
             if(paginationLink.classList.contains("pagination-active")) {
                 if(!isMobile) {
-                    paginationLink.innerHTML += "🐱‍🏍";
+                    paginationLink.innerHTML = `🐱‍🏍${i + 1}`;
                 }
             }
         }
