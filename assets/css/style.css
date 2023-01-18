@@ -7,7 +7,8 @@
     --font-color: #202020;
     --font-color-lt: #f3f3f3;
     --primary-color: #94ebf1;
-    --secondary-color: #072c30;
+    --primary-color-lt: #c9e7e9;
+    --secondary-color: #1e3d41;
     --secondary-color-lt: #1f5d64;
     --tertiary-color: #94b0b3;
     --tertiary-color-dk: #434f50;
@@ -228,6 +229,10 @@ h6 {
     cursor: pointer;
 }
 
+#community-section {
+    display: relative;
+}
+
 #showcases-section h1::after,
 #community-section h1::after {
     content: '';
@@ -244,7 +249,7 @@ h6 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 7rem;
+    margin: 0 3.5rem 7rem;
 }
 
 #showcases {
@@ -706,23 +711,35 @@ select,
 
 #pagination {
     list-style: none;
-    font-weight: bolder;
+    opacity: 0;
+    position: fixed;
+    top: 20%;
+    transition: all 0.2s ease-in-out;
+    padding-inline-start: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    z-index: 1;
 }
 
 #pagination a {
     text-decoration: none;
+    color: var(--secondary-color-lt);
 }
 
-.pagination-active {
-    background-color: #94EBF1;
-    font-size: x-large;
+#pagination a.pagination-active {
+    padding: 8px;
+    color: var(--secondary-color);
+    font-weight: bolder;
+    border-radius: 0px 8px 8px 0;
+    border-left: 1px solid var(--secondary-color-lt);
 }
 
-.next-button:hover,
-.prev-button:hover,
-.pagination-numbers:hover {
-    background-color: #94EBF1;
-    width: fit-content;
+.next-button,
+.prev-button,
+.pagination-numbers {
+    font-size: 1.5rem;
 }
 
 /* Media Queries */
@@ -745,6 +762,10 @@ select,
 
     #content-column p {
         word-spacing: 5px;
+    }
+
+    #pagination {
+        padding-inline-start: 2.5rem;
     }
 
     /* Footer */
