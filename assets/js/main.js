@@ -89,18 +89,17 @@ function pagePagination(participants, currentPage, perPage) {
 
     currentPage = clamp(currentPage, 1, totalPages);
 
-    const paginationNextLi = document.createElement("li");
-    const paginationNextButton = document.createElement("a");
+    const paginationPrevLi = document.createElement("li");
+    const paginationPrevButton = document.createElement("a");
+    paginationPrevButton.textContent = "⬅️";
+    paginationPrevButton.href = `?page=${currentPage - 1}#community-section`;
+    paginationEl.appendChild(paginationPrevLi);
+    paginationPrevLi.append(paginationPrevButton);
+    
+    paginationPrevLi.classList.add("prev-button");
 
-    paginationNextButton.textContent = "➡️";
-    paginationNextButton.href = `?page=${currentPage + 1}#community-section`;
-    paginationEl.appendChild(paginationNextLi);
-    paginationNextLi.append(paginationNextButton);
-
-    paginationNextLi.classList.add("next-button");
-
-    if (currentPage === totalPages) {
-        paginationNextLi.style.display = "none";
+    if (currentPage === 1) {
+        paginationPrevLi.style.display = "none";
     }
 
     for (let i = 0; i < totalPages; i++) {
@@ -123,18 +122,17 @@ function pagePagination(participants, currentPage, perPage) {
         paginationLi.classList.add("pagination-numbers");
     }
 
-    const paginationPrevLi = document.createElement("li");
-    const paginationPrevButton = document.createElement("a");
+    const paginationNextLi = document.createElement("li");
+    const paginationNextButton = document.createElement("a");
+    paginationNextButton.textContent = "➡️";
+    paginationNextButton.href = `?page=${currentPage + 1}#community-section`;
+    paginationEl.appendChild(paginationNextLi);
+    paginationNextLi.append(paginationNextButton);
 
-    paginationPrevButton.textContent = "⬅️";
-    paginationPrevButton.href = `?page=${currentPage - 1}#community-section`;
-    paginationEl.appendChild(paginationPrevLi);
-    paginationPrevLi.append(paginationPrevButton);
+    paginationNextLi.classList.add("next-button");
 
-    paginationPrevLi.classList.add("prev-button");
-
-    if (currentPage === 1) {
-        paginationPrevLi.style.display = "none";
+    if (currentPage === totalPages) {
+        paginationNextLi.style.display = "none";
     }
 
     let firstParticipantIndex = currentPage * perPage - perPage;
