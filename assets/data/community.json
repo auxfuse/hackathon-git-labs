@@ -8,6 +8,13 @@
     "showcase": true
   },
   {
+    "name": "Pavlo",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python🐍",
+    "currently_learning": "Flask"
+  },
+  {
     "name": "alissa",
     "course_start": "2020",
     "course_stage": "Alumni",
@@ -405,11 +412,11 @@
   {
     "name": "Gitanjali",
     "course_start": "2020",
-    "course_stage":"Student",
-    "favorite_language":"Currently HTML",
-    "currently_learning":"JavaScript"
-   },
-   {
+    "course_stage": "Student",
+    "favorite_language": "Currently HTML",
+    "currently_learning": "JavaScript"
+  },
+  {
     "name": "beratzorlu",
     "course_start": "2022",
     "course_stage": "Student",
@@ -498,27 +505,27 @@
     "favorite_language": "Python",
     "currently_learning": "Python",
     "showcase": true
-},
-{
-  "name": "Ant",
-  "course_start": "2022",
-  "course_stage": "student",
-  "favorite_language": "CSS",
-  "currently_learning": "HTML/CSS",
-  "showcase": true
-},
-{
-  "name": "jtm",
-  "course_start": "2021",
-  "course_stage": "Alumnus",
-  "favorite_language": "Python",
-  "currently_learning": "React"
- },
- {
-  "name": "Monica",
-  "course_start": "2022",
-  "course_stage": "Student",
-  "favorite_language": "Python",
-  "currently_learning": "JS testing with Jest"
- }
+  },
+  {
+    "name": "Ant",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "CSS",
+    "currently_learning": "HTML/CSS",
+    "showcase": true
+  },
+  {
+    "name": "jtm",
+    "course_start": "2021",
+    "course_stage": "Alumnus",
+    "favorite_language": "Python",
+    "currently_learning": "React"
+  },
+  {
+    "name": "Monica",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "JS testing with Jest"
+  }
 ]
