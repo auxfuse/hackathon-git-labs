@@ -8,13 +8,6 @@
     "showcase": true
   },
   {
-    "name": "Pavlo",
-    "course_start": "2022",
-    "course_stage": "Student",
-    "favorite_language": "Python🐍",
-    "currently_learning": "Flask"
-  },
-  {
     "name": "alissa",
     "course_start": "2020",
     "course_stage": "Alumni",
@@ -412,9 +405,9 @@
   {
     "name": "Gitanjali",
     "course_start": "2020",
-    "course_stage": "Student",
-    "favorite_language": "Currently HTML",
-    "currently_learning": "JavaScript"
+    "course_stage":"Student",
+    "favorite_language":"Currently HTML",
+    "currently_learning":"JavaScript"
   },
   {
     "name": "beratzorlu",
@@ -534,5 +527,12 @@
   "course_stage": "student",
   "favorite_language": "CSS",
   "currently_learning": "Python"
-}
+},
+  {
+    "name": "Pavlo",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python🐍",
+    "currently_learning": "Flask"
+  }
 ]
