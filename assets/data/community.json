@@ -534,5 +534,12 @@
         "course_stage": "Student",
         "favorite_language": "Python🐍",
         "currently_learning": "Flask"
+    },
+    {
+        "name": "louibens",
+        "course_start": "2022",
+        "course_stage": "student",
+        "favorite_language": "CSS",
+        "currently_learning": "JavaScript"
     }
 ]
