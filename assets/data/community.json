@@ -80,9 +80,9 @@
     {
         "name": "Kera",
         "course_start": "2021",
-        "course_stage": "Student",
+        "course_stage": "Alumna",
         "favorite_language": "Python",
-        "currently_learning": "Django",
+        "currently_learning": "Reactjs",
         "showcase": true
     },
     {
