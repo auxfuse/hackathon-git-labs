@@ -554,6 +554,7 @@
         "course_start": "2022",
         "course_stage": "Student",
         "favorite_language": "Python",
-        "currently_learning": "ML"
+        "currently_learning": "ML",
+        "showcase": true
     }
 ]

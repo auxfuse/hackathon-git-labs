@@ -1,0 +1,92 @@
+body {
+    background: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+a {
+    color: #6462e4;
+    text-decoration: none;
+}
+
+h2, h3 {
+    margin: 0.5em;
+}
+
+p {
+    margin-top: -1.2em;
+}
+
+.container {
+    width: 50%;
+    max-width: 80%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 3em;
+    background: rgb(252, 253, 255);
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.5), -2px -2px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+}
+
+/* Cursor Styling */
+
+.cursor::after {
+    content: '';
+    display: inline-block;
+    margin-left: 3px;
+    background-color: #6462e4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    height: 18px;
+    width: 10px;
+}
+
+#quote{
+    background-color: #333;
+}
+
+#quote h3 {
+    color: rgb(233, 229, 233);
+}
+
+.cursor h3:last-child {
+    margin-top: -0.5em;
+}
+
+#quote h3:first-child {
+    margin-bottom: -0.5em;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
