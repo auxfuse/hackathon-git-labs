@@ -563,5 +563,12 @@
         "course_stage": "Student",
         "favorite_language": "HTML, CSS",
         "currently_learning": "JavaScript"
+    },
+    {
+        "name": "yames",
+        "course_start": "2023",
+        "course_stage": "Student",
+        "favorite_language": "HTML",
+        "currently_learning": "CSS"
     }
 ]
