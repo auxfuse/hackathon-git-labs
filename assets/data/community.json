@@ -577,5 +577,12 @@
         "course_stage": "final project",
         "favorite_language": "python",
         "currently_learning": "React"
+    },
+    {
+        "name": "Adam",
+        "course_start": "2022",
+        "course_stage": "Student",
+        "favorite_language": "JS",
+        "currently_learning": "Full Stack Frameworks - Django"
     }
 ]
