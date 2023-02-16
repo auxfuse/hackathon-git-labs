@@ -562,7 +562,6 @@
         "course_start": "2022",
         "course_stage": "Student",
         "favorite_language": "JS",
-        "currently_learning": "Full Stack Frameworks - Django",
-        "showcase": true
+        "currently_learning": "Full Stack Frameworks - Django"
     }
 ]
