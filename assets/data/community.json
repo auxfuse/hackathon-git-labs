@@ -558,6 +558,27 @@
         "showcase": true
     },
     {
+        "name": "Killol Sevak ",
+        "course_start": "Nov 2022",
+        "course_stage": "Student",
+        "favorite_language": "HTML, CSS",
+        "currently_learning": "JavaScript"
+    },
+    {
+        "name": "yames",
+        "course_start": "2023",
+        "course_stage": "Student",
+        "favorite_language": "HTML",
+        "currently_learning": "CSS"
+    },
+    {
+        "name": "Hannah",
+        "course_start": "2023",
+        "course_stage": "final project",
+        "favorite_language": "python",
+        "currently_learning": "React"
+    },
+    {
         "name": "Adam",
         "course_start": "2022",
         "course_stage": "Student",
