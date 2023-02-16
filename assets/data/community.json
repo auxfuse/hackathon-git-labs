@@ -570,5 +570,12 @@
         "course_stage": "Student",
         "favorite_language": "HTML",
         "currently_learning": "CSS"
+    },
+    {
+        "name": "Hannah",
+        "course_start": "2023",
+        "course_stage": "final project",
+        "favorite_language": "python",
+        "currently_learning": "React"
     }
 ]
