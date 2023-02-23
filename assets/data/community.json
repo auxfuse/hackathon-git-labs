@@ -584,5 +584,12 @@
         "course_stage": "Student",
         "favorite_language": "JS",
         "currently_learning": "Full Stack Frameworks - Django"
+    },
+    {
+        "name": "Tina",
+        "course_start": "2022",
+        "course_stage": "Student",
+        "favorite_language": "JS",
+        "currently_learning": "Full Stack Frameworks - Django"
     }
 ]
