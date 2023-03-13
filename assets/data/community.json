@@ -591,5 +591,12 @@
         "course_stage": "student",
         "favorite_language": "HTML- i dont know any more yet",
         "currently_learning": "PP1"
-    }
+    },
+    {
+        "name": "Tina",
+        "course_start": "2022",
+        "course_stage": "student",
+        "favorite_language": "JS",
+        "currently_learning": "Full Stack Frameworks - Django"
+    },
 ]
