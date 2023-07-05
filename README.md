@@ -16,7 +16,9 @@ Community Stats:
 
 ## About the ... Dev, Project, Scope. 🤔
 
-Hey there! 👋 I'm Anthony (aka Auxfuse), a Frontend Developer and an avid open source hackathon enthusiast, especially those held by [Code Institute's Community](https://codeinstitute.net/ie/). I built this project as a structured approach to submitting your first, of hopefully many, Pull Requests to Open Source. To learn more about me and follow my other work, click here 👉 [Auxfuse](https://github.com/auxfuse). One small tidbit about me, I love Emojis, they are so damn colorful and can really help to spice up a wall of text. 📃
+Hey there! 👋 I'm Anthony (aka Auxfuse), a Frontend Developer and an avid open source hackathon enthusiast. I built this project as a structured approach to submitting your first, of hopefully many, Pull Requests to Open Source.
+
+To learn more about me and follow my other work, click here 👉 [Auxfuse](https://github.com/auxfuse). One small tidbit about me, I love Emojis, they are so damn colorful and can really help to spice up a wall of text. 📃
 
 It's common knowledge that the inner workings to Git are often the initial stumbling blocks to most people making their first Pull Request (PR) to a project. It can be frustrating, confusing and just a bit of an undertaking trying to get to grips with it.
 
@@ -75,22 +77,10 @@ The [Intermediate](intermediate.md) stream for this project will enable the user
 
 ## Credits/Acknowledgements/Afterthoughts 💭
 
-My formal accomplishments as a student are because of [Code Institute](https://codeinstitute.net/ie/)'s Curriculum, but more impactfully, to it's Community. Not only have I made some of the greatest friends, but I've gotten to work alongside so many of them in the Community Hackathons. If you think being a developer is something you are interested in, I would definitely endorse CI for their current curriculum and the community at large. Learning can be lonely, but it doesn't have to be. 🤜
-
 Special Shoutout to these people 🙌:
 
 - [Tim Nelson](https://github.com/TravelTimN) - My friend and a constant reflection of how the community is now thanks to his efforts as not only a Student, but as a Lead, Tutor, Assessor, Content Creator and now a Mentor.
-- [Stefan Dworschak](https://github.com/stefdworschak) - My introduction to Open Source could of been very painless. But Stefan, ushered me through with incredible patience and a wealth of knowledge to boot. I owe my entire start to Open Source to him.
-- [Jim Morel](https://github.com/JimLynx) - It's not a jeep! 😅 An inside joke between us both. Student, turned friend, and now the face of Code Institute's Community. The man behind Slackbot responses, and the lead program. Jim shows incredible attention to detail to the community, and it's a good thing too, as the community is quite possibly CI's biggest and greatest asset. 🤜
-- The Hackathon Team Leads:
-
-  - [Naoise Gaffney](https://github.com/NaoiseGaffney)
-  - [Aideen Malone](https://github.com/AideenM12)
-  - [Gwen Bradbury](https://github.com/Gwen-Bradbury)
-  - [Andrew Dempsey](https://github.com/andrewdempsey2018)
-  - [Alissa Troiano](https://github.com/alissatroiano)
-  - [John Doyle](https://github.com/aramantos)
-
-  Community leaders, people who have shown passion and ample knowledge to others in need. This team is a cornerstone to the Community Hackathons. From providing support, to initiative and collaboration of their own to help the community flourish.
+- [Jim Morel](https://github.com/JimLynx) - It's not a jeep! 😅 An inside joke between us both. Student, turned friend, and still quite possibly CI's biggest and greatest asset. 🤜
+- The Project Maintainers, [Andrew Dempsey](https://github.com/andrewdempsey2018) & [John Doyle](https://github.com/aramantos). The boys! 👏 This project would not be possible without them.
 
 282GB 🕸🕸🕸🕸
