@@ -745,7 +745,7 @@ select,
 /* Media Queries */
 @media (min-width: 320px) {
     #footer-info {
-        margin-top: 17rem;
+        margin-top: 18rem;
         text-align: center;
 
     }
@@ -774,7 +774,7 @@ select,
     }
 
     #footer-info {
-        margin-top: 15rem;
+        margin-top: 16rem;
         text-align: center;
 
     }
@@ -825,7 +825,7 @@ select,
     }
 
     #footer-info {
-        margin-top: 12rem;
+        margin-top: 13rem;
         text-align: center;
 
     }
@@ -863,7 +863,7 @@ select,
     }
 
     #footer-info {
-        margin-top: 10rem;
+        margin-top: 11rem;
         text-align: center;
 
     }
