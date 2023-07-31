@@ -605,5 +605,12 @@
     "course_stage": "Completed and awating result",
     "favorite_language": "Python",
     "currently_learning": "More python and learning to work in team through hackathons"
+    },
+    {
+        "name": "MariaH",
+        "course_start": "2023",
+        "course_stage": "Student",
+        "favorite_language": "html",
+        "currently_learning": "Git"
     }
 ]
