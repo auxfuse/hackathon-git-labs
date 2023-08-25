@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Yanone+Kaffeesatz:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
 
 :root {
     --white: #fff;
-    --purple: #170022;
+    --light-purple: #d5bcda;
+    --purple: #6148a8;
+    --grey: #464A4E;
 }
 
 body {
     margin:0 auto;
-    background: linear-gradient(90deg, rgb(94, 57, 243) 0%, rgb(143, 74, 159) 50%, rgb(176, 159, 243) 100%);
-    color: var(--white);
+    background: var(--light-purple);
+    color: var(--grey);
     margin-bottom: 175px;
 }
 
 h1{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Playfair Display', serif;
     letter-spacing: 2px;
     font-weight: 500;
     font-size: 50px;
@@ -22,10 +24,9 @@ h1{
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
     font-size:14px;
-    color: var(--white);
 }
 
 p:last-of-type {
@@ -34,6 +35,18 @@ p:last-of-type {
 
 a {
     text-decoration: underline;
+    color: var(--grey);
+    cursor: grab;
+}
+
+.home__link {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--grey);
+    cursor: grab;
+}
+
+.socials {
     color: var(--purple);
     cursor: grab;
 }
@@ -91,7 +104,7 @@ li {
 /* Wave Animation */
 /* Simple CSS Waves animation code from: https://codepen.io/goodkatz/pen/LYPGxQz */
 .parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 .parallax > use:nth-child(1) {
     animation-delay: -2s;
