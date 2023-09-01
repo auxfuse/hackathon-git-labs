@@ -612,5 +612,12 @@
         "course_stage": "Student",
         "favorite_language": "html",
         "currently_learning": "Git"
+    },
+    {
+        "name": "Georgina",
+        "course_start": "2023",
+        "course_stage": "Student",
+        "favorite_language": "JavaScript",
+        "currently_learning": "Design Thinking"
     }
 ]
