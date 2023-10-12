@@ -619,5 +619,13 @@
         "course_stage": "Student",
         "favorite_language": "JavaScript",
         "currently_learning": "Design Thinking"
+    },
+    {
+        "name": "Joanne",
+        "course_start": "2020",
+        "course_stage": "Alumni",
+        "favorite_language": "Python",
+        "currently_learning": "React"
     }
+
 ]
