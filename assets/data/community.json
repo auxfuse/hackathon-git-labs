@@ -1,630 +1,637 @@
 [
-    {
-        "name": "auxfuse",
-        "course_start": "2019",
-        "course_stage": "Alumni",
-        "favorite_language": "CSS",
-        "currently_learning": "PHP/ThreeJS",
-        "showcase": true
-    },
-    {
-        "name": "alissa",
-        "course_start": "2020",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "PHP",
-        "showcase": true
-    },
-    {
-        "name": "Andrew",
-        "course_start": "2019",
-        "course_stage": "Alumni",
-        "favorite_language": "Javascript",
-        "currently_learning": "C++",
-        "showcase": true
-    },
-    {
-        "name": "Aramantos",
-        "course_start": "2019",
-        "course_stage": "Alumni",
-        "favorite_language": "Swift",
-        "currently_learning": "C#, PHP",
-        "showcase": true
-    },
-    {
-        "name": "Jim",
-        "course_start": "2020",
-        "course_stage": "Staff",
-        "favorite_language": "Python",
-        "currently_learning": "React"
-    },
-    {
-        "name": "Hashim",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "CSS, python",
-        "currently_learning": "python",
-        "showcase": true
-    },
-    {
-        "name": "Ciara",
-        "course_start": "2021",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "Django",
-        "showcase": true
-    },
-    {
-        "name": "Ale",
-        "course_start": "2021",
-        "course_stage": "Student",
-        "favorite_language": "Javascript",
-        "currently_learning": "Python",
-        "showcase": true
-    },
-    {
-        "name": "DaveWatters",
-        "course_start": "2021",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "Hackathon-ing!",
-        "showcase": true
-    },
-    {
-        "name": "SuzyBeeeee",
-        "course_start": "2021",
-        "course_stage": "Alumnus",
-        "favorite_language": "Python",
-        "currently_learning": "React!"
-    },
-    {
-        "name": "Kera",
-        "course_start": "2021",
-        "course_stage": "Alumna",
-        "favorite_language": "Python",
-        "currently_learning": "Reactjs",
-        "showcase": true
-    },
-    {
-        "name": "Cillian",
-        "course_start": "2021",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "Django"
-    },
-    {
-        "name": "John",
-        "course_start": "2021",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Agile Development"
-    },
-    {
-        "name": "Zabeena",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "JavaScript"
-    },
-    {
-        "name": "Cafalchio",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "CSS",
-        "showcase": true
-    },
-    {
-        "name": "Shaun Bonner",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "!JavaScript",
-        "currently_learning": "Python"
-    },
-    {
-        "name": "Farrukh",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "JavaScript",
-        "showcase": true
-    },
-    {
-        "name": "alyssa",
-        "course_start": "2019",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "PHP"
-    },
-    {
-        "name": "joe",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "Python",
-        "currently_learning": "JavaScript",
-        "showcase": true
-    },
-    {
-        "name": "amy",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "CSS",
-        "currently_learning": "CSS",
-        "showcase": true
-    },
-    {
-        "name": "Cinthia Fontoura",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "Agile"
-    },
-    {
-        "name": "Vikmah",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "CSS",
-        "currently_learning": "React"
-    },
-    {
-        "name": "Gerard",
-        "course_start": "2022",
-        "course_stage": "StudentP4",
-        "favorite_language": "Python",
-        "currently_learning": "Flask",
-        "showcase": true
-    },
-    {
-        "name": "Neil",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "Swift"
-    },
-    {
-        "name": "Grace",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Python",
-        "showcase": true
-    },
-    {
-        "name": "Eventyret",
-        "course_start": "2017",
-        "course_stage": "Mentor",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Go",
-        "showcase": true
-    },
-    {
-        "name": "Emanuel",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "Ruby",
-        "showcase": true
-    },
-    {
-        "name": "Jason",
-        "course_start": "2021",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "React",
-        "showcase": true
-    },
-    {
-        "name": "Gwen",
-        "course_start": "2020",
-        "course_stage": "Alumni",
-        "favorite_language": "Typescript",
-        "currently_learning": "Python AI"
-    },
-    {
-        "name": "Daniel",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Gosu",
-        "showcase": true
-    },
-    {
-        "name": "Alissa2",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Python",
-        "showcase": true
-    },
-    {
-        "name": "IreneN",
-        "course_start": "2022",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "JavaScript",
-        "showcase": true
-    },
-    {
-        "name": "CluelessBiker",
-        "course_start": "2022",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "ReactJS",
-        "showcase": true
-    },
-    {
-        "name": "Andrius",
-        "course_start": "2020",
-        "course_stage": "Alumni",
-        "favorite_language": "CSS",
-        "currently_learning": "NodeJS",
-        "showcase": true
-    },
-    {
-        "name": "Tinashe",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "Java"
-    },
-    {
-        "name": "Sean",
-        "course_start": "2020",
-        "course_stage": "Alumni",
-        "favorite_language": "JavaScript",
-        "currently_learning": "React",
-        "showcase": true
-    },
-    {
-        "name": "IreneN2",
-        "course_start": "2022",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "JavaScript",
-        "showcase": true
-    },
-    {
-        "name": "Abi",
-        "course_start": "2020",
-        "course_stage": "Alumni",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Next.js",
-        "showcase": true
-    },
-    {
-        "name": "Vaibhav",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "React",
-        "showcase": true
-    },
-    {
-        "name": "EmanuelGustafzon",
-        "course_start": "2022",
-        "course_stage": "Awaiting final grade",
-        "favorite_language": "Python",
-        "currently_learning": "NodeJS",
-        "showcase": true
-    },
-    {
-        "name": "IreneN3",
-        "course_start": "2022",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "JavaScript",
-        "showcase": true
-    },
-    {
-        "name": "Shubham",
-        "course_start": "2020",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Node.js",
-        "showcase": true
-    },
-    {
-        "name": "arioum",
-        "course_start": "2021",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "React Native",
-        "showcase": true
-    },
-    {
-        "name": "Muzhda",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Java",
-        "currently_learning": "JavaScript"
-    },
-    {
-        "name": "Nicola",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "React Native",
-        "showcase": true
-    },
-    {
-        "name": "Brian",
-        "course_start": "2020",
-        "course_stage": "Alumni",
-        "favorite_language": "Typescript",
-        "currently_learning": "React Design Systems",
-        "showcase": true
-    },
-    {
-        "name": "Mustafa",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "JavaScript",
-        "showcase": true
-    },
-    {
-        "name": "SarahA",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Currently HTML",
-        "currently_learning": "CSS",
-        "showcase": true
-    },
-    {
-        "name": "NiclasTanskanen",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "ReactJS",
-        "showcase": true
-    },
-    {
-        "name": "Anya",
-        "course_start": "2021",
-        "course_stage": "Alumna",
-        "favorite_language": "C#",
-        "currently_learning": "SQL",
-        "showcase": true
-    },
-    {
-        "name": "EliSacch",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Javascript",
-        "currently_learning": "Python",
-        "showcase": true
-    },
-    {
-        "name": "Pedro",
-        "course_start": "2021",
-        "course_stage": "Awaiting final grade",
-        "favorite_language": "Javascript",
-        "currently_learning": "Python",
-        "showcase": true
-    },
-    {
-        "name": "Gitanjali",
-        "course_start": "2020",
-        "course_stage": "Student",
-        "favorite_language": "Currently HTML",
-        "currently_learning": "JavaScript"
-    },
-    {
-        "name": "beratzorlu",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "CSS",
-        "showcase": true
-    },
-    {
-        "name": "jack",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "Python",
-        "currently_learning": "Java"
-    },
-    {
-        "name": "agustin",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Javascript",
-        "currently_learning": "Python"
-    },
-    {
-        "name": "sirinya",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "CSS"
-    },
-    {
-        "name": "Gina",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "Python",
-        "currently_learning": "React",
-        "showcase": true
-    },
-    {
-        "name": "tomislav",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "python, javascript",
-        "currently_learning": "javascript",
-        "showcase": true
-    },
-    {
-        "name": "Sarah",
-        "course_start": "2021",
-        "course_stage": "student",
-        "favorite_language": "CSS, python",
-        "currently_learning": "Django"
-    },
-    {
-        "name": "Penny",
-        "course_start": "2022",
-        "course_stage": "student_project-1",
-        "favorite_language": "CSS",
-        "currently_learning": "HTML_CSS_Grid_Flexbox_Gitpod"
-    },
-    {
-        "name": "Massimo",
-        "course_start": "2022",
-        "course_stage": "alumni",
-        "favorite_language": "Python",
-        "currently_learning": "Hackathon",
-        "showcase": true
-    },
-    {
-        "name": "Richard",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Java",
-        "currently_learning": "HTML/CSS"
-    },
-    {
-        "name": "Tomasz",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Phaser",
-        "showcase": true
-    },
-    {
-        "name": "AndrewK",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "Python",
-        "showcase": true
-    },
-    {
-        "name": "Ant",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "CSS",
-        "currently_learning": "HTML/CSS",
-        "showcase": true
-    },
-    {
-        "name": "jtm",
-        "course_start": "2021",
-        "course_stage": "Alumnus",
-        "favorite_language": "Python",
-        "currently_learning": "React"
-    },
-    {
-        "name": "Monica",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "JS testing with Jest"
-    },
-    {
-        "name": "Orlagh",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "CSS",
-        "currently_learning": "Python"
-    },
-    {
-        "name": "Pavlo",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python🐍",
-        "currently_learning": "Flask"
-    },
-    {
-        "name": "louibens",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "CSS",
-        "currently_learning": "JavaScript"
-    },
-    {
-        "name": "Carmen",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "Django"
-    },
-    {
-        "name": "Oksana",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "Python",
-        "currently_learning": "ML",
-        "showcase": true
-    },
-    {
-        "name": "Killol Sevak ",
-        "course_start": "Nov 2022",
-        "course_stage": "Student",
-        "favorite_language": "HTML, CSS",
-        "currently_learning": "JavaScript"
-    },
-    {
-        "name": "yames",
-        "course_start": "2023",
-        "course_stage": "Student",
-        "favorite_language": "HTML",
-        "currently_learning": "CSS"
-    },
-    {
-        "name": "Hannah",
-        "course_start": "2023",
-        "course_stage": "final project",
-        "favorite_language": "python",
-        "currently_learning": "React"
-    },
-    {
-        "name": "Adam",
-        "course_start": "2022",
-        "course_stage": "Student",
-        "favorite_language": "JS",
-        "currently_learning": "Full Stack Frameworks - Django"
-    },
-    {
-        "name": "Benji_5P",
-        "course_start": "2023",
-        "course_stage": "student",
-        "favorite_language": "HTML- i dont know any more yet",
-        "currently_learning": "PP1"
-    },
-    {
-        "name": "Tina",
-        "course_start": "2022",
-        "course_stage": "student",
-        "favorite_language": "JS",
-        "currently_learning": "Full Stack Frameworks - Django"
-    },
-    {
+  {
+    "name": "auxfuse",
+    "course_start": "2019",
+    "course_stage": "Alumni",
+    "favorite_language": "CSS",
+    "currently_learning": "PHP/ThreeJS",
+    "showcase": true
+  },
+  {
+    "name": "alissa",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "PHP",
+    "showcase": true
+  },
+  {
+    "name": "Andrew",
+    "course_start": "2019",
+    "course_stage": "Alumni",
+    "favorite_language": "Javascript",
+    "currently_learning": "C++",
+    "showcase": true
+  },
+  {
+    "name": "Aramantos",
+    "course_start": "2019",
+    "course_stage": "Alumni",
+    "favorite_language": "Swift",
+    "currently_learning": "C#, PHP",
+    "showcase": true
+  },
+  {
+    "name": "Jim",
+    "course_start": "2020",
+    "course_stage": "Staff",
+    "favorite_language": "Python",
+    "currently_learning": "React"
+  },
+  {
+    "name": "Hashim",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "CSS, python",
+    "currently_learning": "python",
+    "showcase": true
+  },
+  {
+    "name": "Ciara",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "Django",
+    "showcase": true
+  },
+  {
+    "name": "Ale",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "Javascript",
+    "currently_learning": "Python",
+    "showcase": true
+  },
+  {
+    "name": "DaveWatters",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "Hackathon-ing!",
+    "showcase": true
+  },
+  {
+    "name": "SuzyBeeeee",
+    "course_start": "2021",
+    "course_stage": "Alumnus",
+    "favorite_language": "Python",
+    "currently_learning": "React!"
+  },
+  {
+    "name": "Kera",
+    "course_start": "2021",
+    "course_stage": "Alumna",
+    "favorite_language": "Python",
+    "currently_learning": "Reactjs",
+    "showcase": true
+  },
+  {
+    "name": "Cillian",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "Django"
+  },
+  {
+    "name": "John",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Agile Development"
+  },
+  {
+    "name": "Zabeena",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript"
+  },
+  {
+    "name": "Cafalchio",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "CSS",
+    "showcase": true
+  },
+  {
+    "name": "Shaun Bonner",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "!JavaScript",
+    "currently_learning": "Python"
+  },
+  {
+    "name": "Farrukh",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript",
+    "showcase": true
+  },
+  {
+    "name": "alyssa",
+    "course_start": "2019",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "PHP"
+  },
+  {
+    "name": "joe",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript",
+    "showcase": true
+  },
+  {
+    "name": "amy",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "CSS",
+    "currently_learning": "CSS",
+    "showcase": true
+  },
+  {
+    "name": "Cinthia Fontoura",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "Agile"
+  },
+  {
+    "name": "Vikmah",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "CSS",
+    "currently_learning": "React"
+  },
+  {
+    "name": "Gerard",
+    "course_start": "2022",
+    "course_stage": "StudentP4",
+    "favorite_language": "Python",
+    "currently_learning": "Flask",
+    "showcase": true
+  },
+  {
+    "name": "Neil",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Swift"
+  },
+  {
+    "name": "Grace",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Python",
+    "showcase": true
+  },
+  {
+    "name": "Eventyret",
+    "course_start": "2017",
+    "course_stage": "Mentor",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Go",
+    "showcase": true
+  },
+  {
+    "name": "Emanuel",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Ruby",
+    "showcase": true
+  },
+  {
+    "name": "Jason",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "React",
+    "showcase": true
+  },
+  {
+    "name": "Gwen",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "Typescript",
+    "currently_learning": "Python AI"
+  },
+  {
+    "name": "Daniel",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Gosu",
+    "showcase": true
+  },
+  {
+    "name": "Alissa2",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Python",
+    "showcase": true
+  },
+  {
+    "name": "IreneN",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript",
+    "showcase": true
+  },
+  {
+    "name": "CluelessBiker",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "ReactJS",
+    "showcase": true
+  },
+  {
+    "name": "Andrius",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "CSS",
+    "currently_learning": "NodeJS",
+    "showcase": true
+  },
+  {
+    "name": "Tinashe",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Java"
+  },
+  {
+    "name": "Sean",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "React",
+    "showcase": true
+  },
+  {
+    "name": "IreneN2",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript",
+    "showcase": true
+  },
+  {
+    "name": "Abi",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Next.js",
+    "showcase": true
+  },
+  {
+    "name": "Vaibhav",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "React",
+    "showcase": true
+  },
+  {
+    "name": "EmanuelGustafzon",
+    "course_start": "2022",
+    "course_stage": "Awaiting final grade",
+    "favorite_language": "Python",
+    "currently_learning": "NodeJS",
+    "showcase": true
+  },
+  {
+    "name": "IreneN3",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "JavaScript",
+    "showcase": true
+  },
+  {
+    "name": "Shubham",
+    "course_start": "2020",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Node.js",
+    "showcase": true
+  },
+  {
+    "name": "arioum",
+    "course_start": "2021",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "React Native",
+    "showcase": true
+  },
+  {
+    "name": "Muzhda",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Java",
+    "currently_learning": "JavaScript"
+  },
+  {
+    "name": "Nicola",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "React Native",
+    "showcase": true
+  },
+  {
+    "name": "Brian",
+    "course_start": "2020",
+    "course_stage": "Alumni",
+    "favorite_language": "Typescript",
+    "currently_learning": "React Design Systems",
+    "showcase": true
+  },
+  {
+    "name": "Mustafa",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "JavaScript",
+    "showcase": true
+  },
+  {
+    "name": "SarahA",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Currently HTML",
+    "currently_learning": "CSS",
+    "showcase": true
+  },
+  {
+    "name": "NiclasTanskanen",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "ReactJS",
+    "showcase": true
+  },
+  {
+    "name": "Anya",
+    "course_start": "2021",
+    "course_stage": "Alumna",
+    "favorite_language": "C#",
+    "currently_learning": "SQL",
+    "showcase": true
+  },
+  {
+    "name": "EliSacch",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Javascript",
+    "currently_learning": "Python",
+    "showcase": true
+  },
+  {
+    "name": "Pedro",
+    "course_start": "2021",
+    "course_stage": "Awaiting final grade",
+    "favorite_language": "Javascript",
+    "currently_learning": "Python",
+    "showcase": true
+  },
+  {
+    "name": "Gitanjali",
+    "course_start": "2020",
+    "course_stage": "Student",
+    "favorite_language": "Currently HTML",
+    "currently_learning": "JavaScript"
+  },
+  {
+    "name": "beratzorlu",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "CSS",
+    "showcase": true
+  },
+  {
+    "name": "jack",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Java"
+  },
+  {
+    "name": "agustin",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Javascript",
+    "currently_learning": "Python"
+  },
+  {
+    "name": "sirinya",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "CSS"
+  },
+  {
+    "name": "Gina",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "Python",
+    "currently_learning": "React",
+    "showcase": true
+  },
+  {
+    "name": "tomislav",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "python, javascript",
+    "currently_learning": "javascript",
+    "showcase": true
+  },
+  {
+    "name": "Sarah",
+    "course_start": "2021",
+    "course_stage": "student",
+    "favorite_language": "CSS, python",
+    "currently_learning": "Django"
+  },
+  {
+    "name": "Penny",
+    "course_start": "2022",
+    "course_stage": "student_project-1",
+    "favorite_language": "CSS",
+    "currently_learning": "HTML_CSS_Grid_Flexbox_Gitpod"
+  },
+  {
+    "name": "Massimo",
+    "course_start": "2022",
+    "course_stage": "alumni",
+    "favorite_language": "Python",
+    "currently_learning": "Hackathon",
+    "showcase": true
+  },
+  {
+    "name": "Richard",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Java",
+    "currently_learning": "HTML/CSS"
+  },
+  {
+    "name": "Tomasz",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Phaser",
+    "showcase": true
+  },
+  {
+    "name": "AndrewK",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "Python",
+    "showcase": true
+  },
+  {
+    "name": "Ant",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "CSS",
+    "currently_learning": "HTML/CSS",
+    "showcase": true
+  },
+  {
+    "name": "jtm",
+    "course_start": "2021",
+    "course_stage": "Alumnus",
+    "favorite_language": "Python",
+    "currently_learning": "React"
+  },
+  {
+    "name": "Monica",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "JS testing with Jest"
+  },
+  {
+    "name": "Orlagh",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "CSS",
+    "currently_learning": "Python"
+  },
+  {
+    "name": "Pavlo",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python🐍",
+    "currently_learning": "Flask"
+  },
+  {
+    "name": "louibens",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "CSS",
+    "currently_learning": "JavaScript"
+  },
+  {
+    "name": "Carmen",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "Django"
+  },
+  {
+    "name": "Oksana",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "ML",
+    "showcase": true
+  },
+  {
+    "name": "Killol Sevak ",
+    "course_start": "Nov 2022",
+    "course_stage": "Student",
+    "favorite_language": "HTML, CSS",
+    "currently_learning": "JavaScript"
+  },
+  {
+    "name": "yames",
+    "course_start": "2023",
+    "course_stage": "Student",
+    "favorite_language": "HTML",
+    "currently_learning": "CSS"
+  },
+  {
+    "name": "Hannah",
+    "course_start": "2023",
+    "course_stage": "final project",
+    "favorite_language": "python",
+    "currently_learning": "React"
+  },
+  {
+    "name": "Adam",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JS",
+    "currently_learning": "Full Stack Frameworks - Django"
+  },
+  {
+    "name": "Benji_5P",
+    "course_start": "2023",
+    "course_stage": "student",
+    "favorite_language": "HTML- i dont know any more yet",
+    "currently_learning": "PP1"
+  },
+  {
+    "name": "Tina",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "JS",
+    "currently_learning": "Full Stack Frameworks - Django"
+  },
+  {
     "name": "Greg_rn",
     "course_start": "2022",
     "course_stage": "Completed and awating result",
     "favorite_language": "Python",
     "currently_learning": "More python and learning to work in team through hackathons"
-    },
-    {
-        "name": "MariaH",
-        "course_start": "2023",
-        "course_stage": "Student",
-        "favorite_language": "html",
-        "currently_learning": "Git"
-    },
-    {
-        "name": "Georgina",
-        "course_start": "2023",
-        "course_stage": "Student",
-        "favorite_language": "JavaScript",
-        "currently_learning": "Design Thinking"
-    },
-    {
-        "name": "Joanne",
-        "course_start": "2021",
-        "course_stage": "Alumni",
-        "favorite_language": "JavaScript",
-        "currently_learning": "React!"
-    }
+  },
+  {
+    "name": "MariaH",
+    "course_start": "2023",
+    "course_stage": "Student",
+    "favorite_language": "html",
+    "currently_learning": "Git"
+  },
+  {
+    "name": "Georgina",
+    "course_start": "2023",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Design Thinking"
+  },
+  {
+    "name": "Joanne",
+    "course_start": "2021",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "React!"
+  },
+  {
+    "name": "Armando",
+    "course_start": "2023",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "fullstackopen.com"
+  }
 ]
