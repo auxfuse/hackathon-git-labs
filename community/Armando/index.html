@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/31149d48b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: #000b1a;
+        background-image: radial-gradient(
+            at 0% 0%,
+            hsla(222, 100%, 11%, 1) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            hsla(222, 100%, 11%, 1) 0px,
+            transparent 50%
+          );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        text-align: left;
+      }
+      .card-text {
+        paddin: 20px;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: #9f6739;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      a {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="card col-lg-6">
+          <h1 class="card-title">Armando Urquiola Cabrera</h1>
+          <p class="card-text">
+            Hi there! My name is Armando Urquiola Cabrera, I'm a fullstack
+            developer based in Berlin. I have big passion for creating beautiful
+            and functional web interfaces. My strongest skills are HTML, CSS,
+            Python and JavaScript. I'm constantly expanding my knowledge with
+            new technologies and tools. Also I'm comfortable working with
+            frameworks like React, Bootstrap and Django. I'm a fast learner and
+            I'm always looking for new challenges.
+          </p>
+
+          <a
+            href="https://github.com/patchamama"
+            target="_blank"
+            class="btn btn-primary"
+            ><i class="navbar-icon fab fa-github"></i> GitHub</a
+          >
+          <a href="https://urquiola.dev" target="_blank" class="btn btn-primary"
+            ><i class="fas fa-file-alt"></i> Portfolio</a
+          >
+          <a
+            href="https://www.linkedin.com/in/urquioladev"
+            target="_blank"
+            class="btn btn-primary"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a
+            href="mailto:me@urquiola.dev"
+            target="_blank"
+            class="btn btn-primary"
+            ><i class="fas fa-envelope"></i> Email</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $.getJSON("../../assets/data/community.json", function (data) {
+          var currentlyLearning = "";
+          $.each(data, function (key, value) {
+            if (value.name === "Armando") {
+              currentlyLearning = value.currently_learning;
+            }
+          });
+          $(".card-text").append(
+            "<p></p><p><strong>Currently Learning:</strong> " +
+              currentlyLearning +
+              "</p>"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
