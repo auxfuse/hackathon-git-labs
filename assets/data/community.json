@@ -633,5 +633,12 @@
         "course_stage": "Alumni",
         "favorite_language": "JavaScript",
         "currently_learning": "fullstackopen.com"
+    },
+    {
+        "name": "Mimmi",
+        "course_start": "2022",
+        "course_stage": "Alumni",
+        "favorite_language": "JavaScript",
+        "currently_learning": "More React"
     }
 ]
