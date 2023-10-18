@@ -641,5 +641,13 @@
     "favorite_language": "JavaScript",
     "currently_learning": "fullstackopen.com",
     "showcase": true
+  },
+  {
+    "name": "Samuel",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "JavaScript/Python",
+    "currently_learning": "React",
+    "showcase": true
   }
 ]
