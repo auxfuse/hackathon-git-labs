@@ -641,5 +641,12 @@
     "favorite_language": "JavaScript",
     "currently_learning": "fullstackopen.com",
     "showcase": true
-  }
+  },
+  {
+    "name": "LordGabbers",
+    "course_start": "2022",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "ReactJS"
+}
 ]
