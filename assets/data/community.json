@@ -649,5 +649,12 @@
     "favorite_language": "JavaScript/Python",
     "currently_learning": "React",
     "showcase": true
-  }
+  },
+  {
+    "name": "KevinK",
+    "course_start": "2022",
+    "course_stage": "Alumni",
+    "favorite_language": "Javascript",
+    "currently_learning": "React/Typescript"
+}
 ]
