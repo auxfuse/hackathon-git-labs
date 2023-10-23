@@ -1,0 +1,57 @@
+body {
+    background: linear-gradient(45deg, #006699, #33ccff);
+    height: 90vh;
+}
+
+.container {
+    padding: 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+}
+
+.box-main {
+    background-color: white;
+    width: 50%;
+    margin-top: 15vh;
+    border-radius: 0.6rem;
+    
+    border: 5px solid #006699;
+}
+
+.box-header {
+    background-color: #006699;
+    padding: 1rem;
+}
+
+.box-header h4 {
+    color: white;
+    /* float: right; */
+}
+
+.box-header p {
+    color: #33ccff;
+}
+
+.box-header img {
+    max-width: 100px;
+    /* float: left; */
+    border-radius: 50%;
+    border: 5px solid #33ccff;
+}
+
+.box-about {
+    padding: 1.2rem;
+    text-align: justify;;
+}
+
+.box-links {
+    padding-bottom: 1rem;
+}
+
+.box-links i {
+    color: #006699;
+    cursor: pointer;
+}
+
+.box-links i:hover {
+    color: #33ccff;
+}

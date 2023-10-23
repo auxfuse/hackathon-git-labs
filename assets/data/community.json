@@ -655,6 +655,7 @@
     "course_start": "2022",
     "course_stage": "Alumni",
     "favorite_language": "Javascript",
-    "currently_learning": "React/Typescript"
-}
+    "currently_learning": "React/Typescript",
+    "showcase": true
+  }
 ]
