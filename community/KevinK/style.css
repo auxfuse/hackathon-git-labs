@@ -55,3 +55,19 @@ body {
 .box-links i:hover {
     color: #33ccff;
 }
+
+.return-link {
+    text-align: center;
+    padding-top: 1rem;
+    color: white;
+}
+
+.return-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.return-link a:hover {
+    text-decoration: underline;
+}
