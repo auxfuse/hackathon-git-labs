@@ -657,5 +657,12 @@
     "favorite_language": "Javascript",
     "currently_learning": "React/Typescript",
     "showcase": true
+  },
+  {
+    "name": "Douglas",
+    "course_start": "2023",
+    "course_stage": "Student",
+    "favorite_language": "JavaScript",
+    "currently_learning": "Python"
   }
 ]
