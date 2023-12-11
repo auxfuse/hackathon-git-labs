@@ -664,5 +664,12 @@
     "course_stage": "Student",
     "favorite_language": "JavaScript",
     "currently_learning": "Python"
-  }
+  },
+  {
+    "name": "Caleom",
+    "course_start": "2023",
+    "course_stage": "Student",
+    "favorite_language": "Python",
+    "currently_learning": "CSS"
+}
 ]
