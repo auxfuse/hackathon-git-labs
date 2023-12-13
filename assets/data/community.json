@@ -684,6 +684,7 @@
   "course_start": "2022",
   "course_stage": "student",
   "favorite_language": "Python",
-  "currently_learning": "Working on PP5"
+  "currently_learning": "Working on PP5",
+  "showcase": true
 }
 ]
