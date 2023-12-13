@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+header {
+    background-image: url('/community/Yulia/header.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px;
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center; 
+}
+
+header p {
+    margin: 0;  
+    width: 100%;  
+    font-size: 1.5em;
+}
+
+header h1 {
+    font-size: 3.5em;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    flex: 1; 
+}
+
+.divider {
+    height: 2px; 
+    background-color: #064b6f;  
+    margin: 0 20px;  
+}
+
+
+h2 {
+    color: #064b6f; 
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #064b6f;
+    color: white;
+    margin-top: auto; 
+}
+
+footer a {
+    color: white; 
+    text-decoration: none; 
+}
+
+footer a:hover {
+    color: #ccc; 
+    text-decoration: underline; 
+}
