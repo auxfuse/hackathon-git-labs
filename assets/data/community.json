@@ -671,27 +671,34 @@
     "course_stage": "Student",
     "favorite_language": "Python",
     "currently_learning": "CSS"
-},
-{
-  "name": "Caylin",
-  "course_start": "2023",
-  "course_stage": "student",
-  "favorite_language": "Python🐍",
-  "currently_learning": "More python and learning to work in team through hackathons"
-},
-{
-  "name": "Yulia",
-  "course_start": "2022",
-  "course_stage": "student",
-  "favorite_language": "Python",
-  "currently_learning": "Working on PP5",
-  "showcase": true
-},
-{
-  "name": "Cal-Rex",
-  "course_start": "2022",
-  "course_stage": "alumni",
-  "favorite_language": "JavaScript",
-  "currently_learning": "how to work in a team"
-}
+  },
+  {
+    "name": "Caylin",
+    "course_start": "2023",
+    "course_stage": "student",
+    "favorite_language": "Python🐍",
+    "currently_learning": "More python and learning to work in team through hackathons"
+  },
+  {
+    "name": "Yulia",
+    "course_start": "2022",
+    "course_stage": "student",
+    "favorite_language": "Python",
+    "currently_learning": "Working on PP5",
+    "showcase": true
+  },
+  {
+    "name": "Cal-Rex",
+    "course_start": "2022",
+    "course_stage": "alumni",
+    "favorite_language": "JavaScript",
+    "currently_learning": "how to work in a team"
+  },
+  {
+    "name": "Jefferson",
+    "course_start": "2023",
+    "course_stage": "P1",
+    "favorite_language": "React",
+    "currently_learning": "Git"
+  }
 ]
