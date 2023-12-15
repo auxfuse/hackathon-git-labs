@@ -1,5 +1,12 @@
 [
   {
+    "name": "Shadouranna",
+    "course_start": "2023",
+    "course_stage": "Alumni",
+    "favorite_language": "Python",
+    "currently_learning": "React"
+  },
+  {
     "name": "auxfuse",
     "course_start": "2019",
     "course_stage": "Alumni",
