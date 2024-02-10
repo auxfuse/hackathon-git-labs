@@ -700,5 +700,12 @@
   "course_stage": "Alumni",
   "favorite_language": "Python",
   "currently_learning": "React"
+},
+{
+  "name": "Charlie",
+  "course_start": "2023",
+  "course_stage": "student",
+  "favorite_language": "CSS",
+  "currently_learning": "JavaScript"
 }
 ]
